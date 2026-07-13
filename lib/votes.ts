@@ -74,8 +74,15 @@ export async function getAggregate(politicianId: string): Promise<VoteAggregate 
     const agg = aggFromMem(politicianId);
     return agg.total > 0 ? agg : undefined;
   }
-  const snap = await db.collection('vote_aggregates').doc(politicianId).get();
-  return snap.exists ? (snap.data() as VoteAggregate) : undefined;
+  try {
+    const snap = await db.collection('vote_aggregates').doc(politicianId).get();
+    return snap.exists ? (snap.data() as VoteAggregate) : undefined;
+  } catch (err) {
+    // e.g. free-tier read quota exhausted — degrade to "no ratings" rather than
+    // failing the page render.
+    console.error('[votes] vote_aggregates read failed:', err);
+    return undefined;
+  }
 }
 
 export async function getSentiment(politicianId: string): Promise<SentimentScore> {

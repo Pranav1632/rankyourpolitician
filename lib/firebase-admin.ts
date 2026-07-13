@@ -36,6 +36,15 @@ function initApp(): App {
 
 /** Returns a Firestore handle, or null when Firestore isn't configured. */
 export function getDb(): Firestore | null {
+  // Never read Firestore during `next build`: prerendering ~600 static pages
+  // would exhaust the free Spark 50k-reads/day quota on a single deploy (and an
+  // uncaught quota error fails the build). The build renders from the committed
+  // seed snapshot — which is what we publish from, so it matches Firestore at
+  // deploy time. Live data (votes) is read at runtime. Override for a full
+  // Firestore-backed build with FORCE_FIRESTORE_AT_BUILD=1.
+  if (process.env.NEXT_PHASE === 'phase-production-build' && !process.env.FORCE_FIRESTORE_AT_BUILD) {
+    return null;
+  }
   if (_db !== undefined) return _db;
   if (!isFirestoreConfigured()) {
     _db = null;

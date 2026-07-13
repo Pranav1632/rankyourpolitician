@@ -92,6 +92,9 @@ function loadFromSeed(): Dataset {
 }
 
 async function loadDataset(): Promise<Dataset> {
+  // getDb() returns null during `next build` (free-tier quota guard), so this
+  // transparently uses the committed seed snapshot at build time and Firestore
+  // at runtime.
   return (await loadFromFirestore()) ?? loadFromSeed();
 }
 
@@ -218,6 +221,7 @@ export interface PersonView {
   sources: [string, string][];
   identity_source?: { url: string; name: string; retrieved_date: string };
   party_note?: string;
+  party_history?: { party: string; from: string; until?: string; current?: boolean }[];
 }
 
 /** Canonical id for a minister: their linked MP id if any, else their own id. */
@@ -265,6 +269,7 @@ export async function getPerson(
         sources: [...new Map([...p.facts.map((f) => [f.source_url, f.source_name] as [string, string]), ...extraSources])],
         identity_source: p.identity_source,
         party_note: p.party_note,
+        party_history: p.party_history,
       },
     };
   }

@@ -5605,7 +5605,7 @@
     "districts": [],
     "current_position": "Member of Parliament, Lok Sabha",
     "is_minister": false,
-    "neutral_summary": "Priyanka Gandhi is the Member of Parliament for the Wayanad constituency in Kerala, in the 18th Lok Sabha (elected in the 2024 Indian general election). Current party affiliation: Indian National Congress.",
+    "neutral_summary": "Priyanka Gandhi is the Member of Parliament for the Wayanad constituency in Kerala, in the 18th Lok Sabha (won the by-election on 23 November 2024). Current party affiliation: Indian National Congress.",
     "metrics": {},
     "facts": [],
     "active": true,
@@ -6709,7 +6709,7 @@
     "districts": [],
     "current_position": "Member of Parliament, Lok Sabha",
     "is_minister": false,
-    "neutral_summary": "Nagesh Aashtikar Patil is the Member of Parliament for the Hingoli constituency in Maharashtra, in the 18th Lok Sabha (elected in the 2024 Indian general election). Current party affiliation: Shiv Sena.",
+    "neutral_summary": "Nagesh Aashtikar Patil is the Member of Parliament for the Hingoli constituency in Maharashtra, in the 18th Lok Sabha (elected in the 2024 Indian general election). Elected in 2024 as Shiv Sena (UBT); current party: Shiv Sena.",
     "metrics": {},
     "facts": [],
     "active": true,
@@ -6719,7 +6719,18 @@
       "name": "Election Commission of India — 2024 general election results (18th Lok Sabha members list)",
       "retrieved_date": "2026-07-13"
     },
-    "party_note": "Switched from Shiv Sena (UBT) to Shiv Sena on 22 June 2026."
+    "party_history": [
+      {
+        "party": "Shiv Sena (UBT)",
+        "from": "Elected 2024",
+        "until": "22 June 2026"
+      },
+      {
+        "party": "Shiv Sena",
+        "from": "22 June 2026",
+        "current": true
+      }
+    ]
   },
   {
     "id": "jalgaon-smita-wagh",
@@ -6950,7 +6961,7 @@
     "districts": [],
     "current_position": "Member of Parliament, Lok Sabha",
     "is_minister": false,
-    "neutral_summary": "Sanjay Dina Patil is the Member of Parliament for the Mumbai North East constituency in Maharashtra, in the 18th Lok Sabha (elected in the 2024 Indian general election). Current party affiliation: Shiv Sena.",
+    "neutral_summary": "Sanjay Dina Patil is the Member of Parliament for the Mumbai North East constituency in Maharashtra, in the 18th Lok Sabha (elected in the 2024 Indian general election). Elected in 2024 as Shiv Sena (UBT); current party: Shiv Sena.",
     "metrics": {},
     "facts": [],
     "active": true,
@@ -6960,7 +6971,18 @@
       "name": "Election Commission of India — 2024 general election results (18th Lok Sabha members list)",
       "retrieved_date": "2026-07-13"
     },
-    "party_note": "Switched from Shiv Sena (UBT) to Shiv Sena on 22 June 2026."
+    "party_history": [
+      {
+        "party": "Shiv Sena (UBT)",
+        "from": "Elected 2024",
+        "until": "22 June 2026"
+      },
+      {
+        "party": "Shiv Sena",
+        "from": "22 June 2026",
+        "current": true
+      }
+    ]
   },
   {
     "id": "mumbai-north-west-ravindra-waikar",
@@ -7071,7 +7093,7 @@
     "districts": [],
     "current_position": "Member of Parliament, Lok Sabha",
     "is_minister": false,
-    "neutral_summary": "Ravindra Vasantrao Chavan is the Member of Parliament for the Nanded constituency in Maharashtra, in the 18th Lok Sabha (elected in the 2024 Indian general election). Current party affiliation: Indian National Congress.",
+    "neutral_summary": "Ravindra Vasantrao Chavan is the Member of Parliament for the Nanded constituency in Maharashtra, in the 18th Lok Sabha (won the by-election on 23 November 2024). Current party affiliation: Indian National Congress.",
     "metrics": {},
     "facts": [],
     "active": true,
@@ -7143,7 +7165,7 @@
     "districts": [],
     "current_position": "Member of Parliament, Lok Sabha",
     "is_minister": false,
-    "neutral_summary": "Omprakash Rajenimbalkar is the Member of Parliament for the Osmanabad constituency in Maharashtra, in the 18th Lok Sabha (elected in the 2024 Indian general election). Current party affiliation: Shiv Sena.",
+    "neutral_summary": "Omprakash Rajenimbalkar is the Member of Parliament for the Osmanabad constituency in Maharashtra, in the 18th Lok Sabha (elected in the 2024 Indian general election). Elected in 2024 as Shiv Sena (UBT); current party: Shiv Sena.",
     "metrics": {},
     "facts": [],
     "active": true,
@@ -7153,7 +7175,18 @@
       "name": "Election Commission of India — 2024 general election results (18th Lok Sabha members list)",
       "retrieved_date": "2026-07-13"
     },
-    "party_note": "Switched from Shiv Sena (UBT) to Shiv Sena on 22 June 2026."
+    "party_history": [
+      {
+        "party": "Shiv Sena (UBT)",
+        "from": "Elected 2024",
+        "until": "22 June 2026"
+      },
+      {
+        "party": "Shiv Sena",
+        "from": "22 June 2026",
+        "current": true
+      }
+    ]
   },
   {
     "id": "palghar-hemant-savara",
@@ -7192,7 +7225,7 @@
     "districts": [],
     "current_position": "Member of Parliament, Lok Sabha",
     "is_minister": false,
-    "neutral_summary": "Sanjay Jadhav is the Member of Parliament for the Parbhani constituency in Maharashtra, in the 18th Lok Sabha (elected in the 2024 Indian general election). Current party affiliation: Shiv Sena.",
+    "neutral_summary": "Sanjay Jadhav is the Member of Parliament for the Parbhani constituency in Maharashtra, in the 18th Lok Sabha (elected in the 2024 Indian general election). Elected in 2024 as Shiv Sena (UBT); current party: Shiv Sena.",
     "metrics": {},
     "facts": [],
     "active": true,
@@ -7202,7 +7235,18 @@
       "name": "Election Commission of India — 2024 general election results (18th Lok Sabha members list)",
       "retrieved_date": "2026-07-13"
     },
-    "party_note": "Switched from Shiv Sena (UBT) to Shiv Sena on 22 June 2026."
+    "party_history": [
+      {
+        "party": "Shiv Sena (UBT)",
+        "from": "Elected 2024",
+        "until": "22 June 2026"
+      },
+      {
+        "party": "Shiv Sena",
+        "from": "22 June 2026",
+        "current": true
+      }
+    ]
   },
   {
     "id": "pune-murlidhar-mohol",
@@ -7385,7 +7429,7 @@
     "districts": [],
     "current_position": "Member of Parliament, Lok Sabha",
     "is_minister": false,
-    "neutral_summary": "Bhausaheb Wakchaure is the Member of Parliament for the Shirdi constituency in Maharashtra, in the 18th Lok Sabha (elected in the 2024 Indian general election). Current party affiliation: Shiv Sena.",
+    "neutral_summary": "Bhausaheb Wakchaure is the Member of Parliament for the Shirdi constituency in Maharashtra, in the 18th Lok Sabha (elected in the 2024 Indian general election). Elected in 2024 as Shiv Sena (UBT); current party: Shiv Sena.",
     "metrics": {},
     "facts": [],
     "active": true,
@@ -7395,7 +7439,18 @@
       "name": "Election Commission of India — 2024 general election results (18th Lok Sabha members list)",
       "retrieved_date": "2026-07-13"
     },
-    "party_note": "Switched from Shiv Sena (UBT) to Shiv Sena on 22 June 2026."
+    "party_history": [
+      {
+        "party": "Shiv Sena (UBT)",
+        "from": "Elected 2024",
+        "until": "22 June 2026"
+      },
+      {
+        "party": "Shiv Sena",
+        "from": "22 June 2026",
+        "current": true
+      }
+    ]
   },
   {
     "id": "shirur-amol-kolhe",
@@ -7506,7 +7561,7 @@
     "districts": [],
     "current_position": "Member of Parliament, Lok Sabha",
     "is_minister": false,
-    "neutral_summary": "Sanjay Deshmukh is the Member of Parliament for the Yavatmal–Washim constituency in Maharashtra, in the 18th Lok Sabha (elected in the 2024 Indian general election). Current party affiliation: Shiv Sena.",
+    "neutral_summary": "Sanjay Deshmukh is the Member of Parliament for the Yavatmal–Washim constituency in Maharashtra, in the 18th Lok Sabha (elected in the 2024 Indian general election). Elected in 2024 as Shiv Sena (UBT); current party: Shiv Sena.",
     "metrics": {},
     "facts": [],
     "active": true,
@@ -7516,7 +7571,18 @@
       "name": "Election Commission of India — 2024 general election results (18th Lok Sabha members list)",
       "retrieved_date": "2026-07-13"
     },
-    "party_note": "Switched from Shiv Sena (UBT) to Shiv Sena on 22 June 2026."
+    "party_history": [
+      {
+        "party": "Shiv Sena (UBT)",
+        "from": "Elected 2024",
+        "until": "22 June 2026"
+      },
+      {
+        "party": "Shiv Sena",
+        "from": "22 June 2026",
+        "current": true
+      }
+    ]
   },
   {
     "id": "inner-manipur-angomcha-bimol-akoijam",
@@ -12571,7 +12637,7 @@
     "districts": [],
     "current_position": "Member of Parliament, Lok Sabha",
     "is_minister": false,
-    "neutral_summary": "Mitali Bag is the Member of Parliament for the Arambagh constituency in West Bengal, in the 18th Lok Sabha (elected in the 2024 Indian general election). Current party affiliation: Nationalist Citizens Party of India.",
+    "neutral_summary": "Mitali Bag is the Member of Parliament for the Arambagh constituency in West Bengal, in the 18th Lok Sabha (elected in the 2024 Indian general election). Elected in 2024 as All India Trinamool Congress; current party: Nationalist Citizens Party of India.",
     "metrics": {},
     "facts": [],
     "active": true,
@@ -12581,7 +12647,18 @@
       "name": "Election Commission of India — 2024 general election results (18th Lok Sabha members list)",
       "retrieved_date": "2026-07-13"
     },
-    "party_note": "Switched from AITC to NCPI on 14 June 2026."
+    "party_history": [
+      {
+        "party": "All India Trinamool Congress",
+        "from": "Elected 2024",
+        "until": "14 June 2026"
+      },
+      {
+        "party": "Nationalist Citizens Party of India",
+        "from": "14 June 2026",
+        "current": true
+      }
+    ]
   },
   {
     "id": "asansol-shatrughan-sinha",
@@ -12620,7 +12697,7 @@
     "districts": [],
     "current_position": "Member of Parliament, Lok Sabha",
     "is_minister": false,
-    "neutral_summary": "Yusuf Pathan is the Member of Parliament for the Baharampur constituency in West Bengal, in the 18th Lok Sabha (elected in the 2024 Indian general election). Current party affiliation: Nationalist Citizens Party of India.",
+    "neutral_summary": "Yusuf Pathan is the Member of Parliament for the Baharampur constituency in West Bengal, in the 18th Lok Sabha (elected in the 2024 Indian general election). Elected in 2024 as All India Trinamool Congress; current party: Nationalist Citizens Party of India.",
     "metrics": {},
     "facts": [],
     "active": true,
@@ -12630,7 +12707,18 @@
       "name": "Election Commission of India — 2024 general election results (18th Lok Sabha members list)",
       "retrieved_date": "2026-07-13"
     },
-    "party_note": "Switched from AITC to NCPI on 14 June 2026."
+    "party_history": [
+      {
+        "party": "All India Trinamool Congress",
+        "from": "Elected 2024",
+        "until": "14 June 2026"
+      },
+      {
+        "party": "Nationalist Citizens Party of India",
+        "from": "14 June 2026",
+        "current": true
+      }
+    ]
   },
   {
     "id": "balurghat-sukanta-majumdar",
@@ -12693,7 +12781,7 @@
     "districts": [],
     "current_position": "Member of Parliament, Lok Sabha",
     "is_minister": false,
-    "neutral_summary": "Arup Chakraborty is the Member of Parliament for the Bankura constituency in West Bengal, in the 18th Lok Sabha (elected in the 2024 Indian general election). Current party affiliation: Nationalist Citizens Party of India.",
+    "neutral_summary": "Arup Chakraborty is the Member of Parliament for the Bankura constituency in West Bengal, in the 18th Lok Sabha (elected in the 2024 Indian general election). Elected in 2024 as All India Trinamool Congress; current party: Nationalist Citizens Party of India.",
     "metrics": {},
     "facts": [],
     "active": true,
@@ -12703,7 +12791,18 @@
       "name": "Election Commission of India — 2024 general election results (18th Lok Sabha members list)",
       "retrieved_date": "2026-07-13"
     },
-    "party_note": "Switched from AITC to NCPI on 14 June 2026."
+    "party_history": [
+      {
+        "party": "All India Trinamool Congress",
+        "from": "Elected 2024",
+        "until": "14 June 2026"
+      },
+      {
+        "party": "Nationalist Citizens Party of India",
+        "from": "14 June 2026",
+        "current": true
+      }
+    ]
   },
   {
     "id": "barasat-kakoli-ghosh-dastidar",
@@ -12718,7 +12817,7 @@
     "districts": [],
     "current_position": "Member of Parliament, Lok Sabha",
     "is_minister": false,
-    "neutral_summary": "Kakoli Ghosh Dastidar is the Member of Parliament for the Barasat constituency in West Bengal, in the 18th Lok Sabha (elected in the 2024 Indian general election). Current party affiliation: Nationalist Citizens Party of India.",
+    "neutral_summary": "Kakoli Ghosh Dastidar is the Member of Parliament for the Barasat constituency in West Bengal, in the 18th Lok Sabha (elected in the 2024 Indian general election). Elected in 2024 as All India Trinamool Congress; current party: Nationalist Citizens Party of India.",
     "metrics": {},
     "facts": [],
     "active": true,
@@ -12728,7 +12827,18 @@
       "name": "Election Commission of India — 2024 general election results (18th Lok Sabha members list)",
       "retrieved_date": "2026-07-13"
     },
-    "party_note": "Switched from AITC to NCPI on 14 June 2026."
+    "party_history": [
+      {
+        "party": "All India Trinamool Congress",
+        "from": "Elected 2024",
+        "until": "14 June 2026"
+      },
+      {
+        "party": "Nationalist Citizens Party of India",
+        "from": "14 June 2026",
+        "current": true
+      }
+    ]
   },
   {
     "id": "bardhaman-purba-sharmila-sarkar",
@@ -12743,7 +12853,7 @@
     "districts": [],
     "current_position": "Member of Parliament, Lok Sabha",
     "is_minister": false,
-    "neutral_summary": "Sharmila Sarkar is the Member of Parliament for the Bardhaman Purba constituency in West Bengal, in the 18th Lok Sabha (elected in the 2024 Indian general election). Current party affiliation: Nationalist Citizens Party of India.",
+    "neutral_summary": "Sharmila Sarkar is the Member of Parliament for the Bardhaman Purba constituency in West Bengal, in the 18th Lok Sabha (elected in the 2024 Indian general election). Elected in 2024 as All India Trinamool Congress; current party: Nationalist Citizens Party of India.",
     "metrics": {},
     "facts": [],
     "active": true,
@@ -12753,7 +12863,18 @@
       "name": "Election Commission of India — 2024 general election results (18th Lok Sabha members list)",
       "retrieved_date": "2026-07-13"
     },
-    "party_note": "Switched from AITC to NCPI on 14 June 2026."
+    "party_history": [
+      {
+        "party": "All India Trinamool Congress",
+        "from": "Elected 2024",
+        "until": "14 June 2026"
+      },
+      {
+        "party": "Nationalist Citizens Party of India",
+        "from": "14 June 2026",
+        "current": true
+      }
+    ]
   },
   {
     "id": "bardhaman-durgapur-kirti-azad",
@@ -12792,7 +12913,7 @@
     "districts": [],
     "current_position": "Member of Parliament, Lok Sabha",
     "is_minister": false,
-    "neutral_summary": "Partha Bhowmick is the Member of Parliament for the Barrackpur constituency in West Bengal, in the 18th Lok Sabha (elected in the 2024 Indian general election). Current party affiliation: Nationalist Citizens Party of India.",
+    "neutral_summary": "Partha Bhowmick is the Member of Parliament for the Barrackpur constituency in West Bengal, in the 18th Lok Sabha (elected in the 2024 Indian general election). Elected in 2024 as All India Trinamool Congress; current party: Nationalist Citizens Party of India.",
     "metrics": {},
     "facts": [],
     "active": true,
@@ -12802,7 +12923,18 @@
       "name": "Election Commission of India — 2024 general election results (18th Lok Sabha members list)",
       "retrieved_date": "2026-07-13"
     },
-    "party_note": "Switched from AITC to NCPI on 14 June 2026."
+    "party_history": [
+      {
+        "party": "All India Trinamool Congress",
+        "from": "Elected 2024",
+        "until": "14 June 2026"
+      },
+      {
+        "party": "Nationalist Citizens Party of India",
+        "from": "14 June 2026",
+        "current": true
+      }
+    ]
   },
   {
     "id": "birbhum-satabdi-roy",
@@ -12817,7 +12949,7 @@
     "districts": [],
     "current_position": "Member of Parliament, Lok Sabha",
     "is_minister": false,
-    "neutral_summary": "Satabdi Roy is the Member of Parliament for the Birbhum constituency in West Bengal, in the 18th Lok Sabha (elected in the 2024 Indian general election). Current party affiliation: Nationalist Citizens Party of India.",
+    "neutral_summary": "Satabdi Roy is the Member of Parliament for the Birbhum constituency in West Bengal, in the 18th Lok Sabha (elected in the 2024 Indian general election). Elected in 2024 as All India Trinamool Congress; current party: Nationalist Citizens Party of India.",
     "metrics": {},
     "facts": [],
     "active": true,
@@ -12827,7 +12959,18 @@
       "name": "Election Commission of India — 2024 general election results (18th Lok Sabha members list)",
       "retrieved_date": "2026-07-13"
     },
-    "party_note": "Switched from AITC to NCPI on 14 June 2026."
+    "party_history": [
+      {
+        "party": "All India Trinamool Congress",
+        "from": "Elected 2024",
+        "until": "14 June 2026"
+      },
+      {
+        "party": "Nationalist Citizens Party of India",
+        "from": "14 June 2026",
+        "current": true
+      }
+    ]
   },
   {
     "id": "bishnupur-saumitra-khan",
@@ -12866,7 +13009,7 @@
     "districts": [],
     "current_position": "Member of Parliament, Lok Sabha",
     "is_minister": false,
-    "neutral_summary": "Asit Kumar Mal is the Member of Parliament for the Bolpur constituency in West Bengal, in the 18th Lok Sabha (elected in the 2024 Indian general election). Current party affiliation: Nationalist Citizens Party of India.",
+    "neutral_summary": "Asit Kumar Mal is the Member of Parliament for the Bolpur constituency in West Bengal, in the 18th Lok Sabha (elected in the 2024 Indian general election). Elected in 2024 as All India Trinamool Congress; current party: Nationalist Citizens Party of India.",
     "metrics": {},
     "facts": [],
     "active": true,
@@ -12876,7 +13019,18 @@
       "name": "Election Commission of India — 2024 general election results (18th Lok Sabha members list)",
       "retrieved_date": "2026-07-13"
     },
-    "party_note": "Switched from AITC to NCPI on 14 June 2026."
+    "party_history": [
+      {
+        "party": "All India Trinamool Congress",
+        "from": "Elected 2024",
+        "until": "14 June 2026"
+      },
+      {
+        "party": "Nationalist Citizens Party of India",
+        "from": "14 June 2026",
+        "current": true
+      }
+    ]
   },
   {
     "id": "cooch-behar-jagadish-chandra-barma-basunia",
@@ -12891,7 +13045,7 @@
     "districts": [],
     "current_position": "Member of Parliament, Lok Sabha",
     "is_minister": false,
-    "neutral_summary": "Jagadish Chandra Barma Basunia is the Member of Parliament for the Cooch Behar constituency in West Bengal, in the 18th Lok Sabha (elected in the 2024 Indian general election). Current party affiliation: Nationalist Citizens Party of India.",
+    "neutral_summary": "Jagadish Chandra Barma Basunia is the Member of Parliament for the Cooch Behar constituency in West Bengal, in the 18th Lok Sabha (elected in the 2024 Indian general election). Elected in 2024 as All India Trinamool Congress; current party: Nationalist Citizens Party of India.",
     "metrics": {},
     "facts": [],
     "active": true,
@@ -12901,7 +13055,18 @@
       "name": "Election Commission of India — 2024 general election results (18th Lok Sabha members list)",
       "retrieved_date": "2026-07-13"
     },
-    "party_note": "Switched from AITC to NCPI on 14 June 2026."
+    "party_history": [
+      {
+        "party": "All India Trinamool Congress",
+        "from": "Elected 2024",
+        "until": "14 June 2026"
+      },
+      {
+        "party": "Nationalist Citizens Party of India",
+        "from": "14 June 2026",
+        "current": true
+      }
+    ]
   },
   {
     "id": "darjeeling-raju-bista",
@@ -12988,7 +13153,7 @@
     "districts": [],
     "current_position": "Member of Parliament, Lok Sabha",
     "is_minister": false,
-    "neutral_summary": "Deepak Adhikari is the Member of Parliament for the Ghatal constituency in West Bengal, in the 18th Lok Sabha (elected in the 2024 Indian general election). Current party affiliation: Nationalist Citizens Party of India.",
+    "neutral_summary": "Deepak Adhikari is the Member of Parliament for the Ghatal constituency in West Bengal, in the 18th Lok Sabha (elected in the 2024 Indian general election). Elected in 2024 as All India Trinamool Congress; current party: Nationalist Citizens Party of India.",
     "metrics": {},
     "facts": [],
     "active": true,
@@ -12998,7 +13163,18 @@
       "name": "Election Commission of India — 2024 general election results (18th Lok Sabha members list)",
       "retrieved_date": "2026-07-13"
     },
-    "party_note": "Switched from AITC to NCPI on 14 June 2026."
+    "party_history": [
+      {
+        "party": "All India Trinamool Congress",
+        "from": "Elected 2024",
+        "until": "14 June 2026"
+      },
+      {
+        "party": "Nationalist Citizens Party of India",
+        "from": "14 June 2026",
+        "current": true
+      }
+    ]
   },
   {
     "id": "hooghly-rachana-banerjee",
@@ -13013,7 +13189,7 @@
     "districts": [],
     "current_position": "Member of Parliament, Lok Sabha",
     "is_minister": false,
-    "neutral_summary": "Rachana Banerjee is the Member of Parliament for the Hooghly constituency in West Bengal, in the 18th Lok Sabha (elected in the 2024 Indian general election). Current party affiliation: Nationalist Citizens Party of India.",
+    "neutral_summary": "Rachana Banerjee is the Member of Parliament for the Hooghly constituency in West Bengal, in the 18th Lok Sabha (elected in the 2024 Indian general election). Elected in 2024 as All India Trinamool Congress; current party: Nationalist Citizens Party of India.",
     "metrics": {},
     "facts": [],
     "active": true,
@@ -13023,7 +13199,18 @@
       "name": "Election Commission of India — 2024 general election results (18th Lok Sabha members list)",
       "retrieved_date": "2026-07-13"
     },
-    "party_note": "Switched from AITC to NCPI on 14 June 2026."
+    "party_history": [
+      {
+        "party": "All India Trinamool Congress",
+        "from": "Elected 2024",
+        "until": "14 June 2026"
+      },
+      {
+        "party": "Nationalist Citizens Party of India",
+        "from": "14 June 2026",
+        "current": true
+      }
+    ]
   },
   {
     "id": "howrah-prasun-banerjee",
@@ -13038,7 +13225,7 @@
     "districts": [],
     "current_position": "Member of Parliament, Lok Sabha",
     "is_minister": false,
-    "neutral_summary": "Prasun Banerjee is the Member of Parliament for the Howrah constituency in West Bengal, in the 18th Lok Sabha (elected in the 2024 Indian general election). Current party affiliation: Nationalist Citizens Party of India.",
+    "neutral_summary": "Prasun Banerjee is the Member of Parliament for the Howrah constituency in West Bengal, in the 18th Lok Sabha (elected in the 2024 Indian general election). Elected in 2024 as All India Trinamool Congress; current party: Nationalist Citizens Party of India.",
     "metrics": {},
     "facts": [],
     "active": true,
@@ -13048,7 +13235,18 @@
       "name": "Election Commission of India — 2024 general election results (18th Lok Sabha members list)",
       "retrieved_date": "2026-07-13"
     },
-    "party_note": "Switched from AITC to NCPI on 14 June 2026."
+    "party_history": [
+      {
+        "party": "All India Trinamool Congress",
+        "from": "Elected 2024",
+        "until": "14 June 2026"
+      },
+      {
+        "party": "Nationalist Citizens Party of India",
+        "from": "14 June 2026",
+        "current": true
+      }
+    ]
   },
   {
     "id": "jadavpur-saayoni-ghosh",
@@ -13063,7 +13261,7 @@
     "districts": [],
     "current_position": "Member of Parliament, Lok Sabha",
     "is_minister": false,
-    "neutral_summary": "Saayoni Ghosh is the Member of Parliament for the Jadavpur constituency in West Bengal, in the 18th Lok Sabha (elected in the 2024 Indian general election). Current party affiliation: Nationalist Citizens Party of India.",
+    "neutral_summary": "Saayoni Ghosh is the Member of Parliament for the Jadavpur constituency in West Bengal, in the 18th Lok Sabha (elected in the 2024 Indian general election). Elected in 2024 as All India Trinamool Congress; current party: Nationalist Citizens Party of India.",
     "metrics": {},
     "facts": [],
     "active": true,
@@ -13073,7 +13271,18 @@
       "name": "Election Commission of India — 2024 general election results (18th Lok Sabha members list)",
       "retrieved_date": "2026-07-13"
     },
-    "party_note": "Switched from AITC to NCPI on 14 June 2026."
+    "party_history": [
+      {
+        "party": "All India Trinamool Congress",
+        "from": "Elected 2024",
+        "until": "14 June 2026"
+      },
+      {
+        "party": "Nationalist Citizens Party of India",
+        "from": "14 June 2026",
+        "current": true
+      }
+    ]
   },
   {
     "id": "jalpaiguri-jayanta-kumar-roy",
@@ -13112,7 +13321,7 @@
     "districts": [],
     "current_position": "Member of Parliament, Lok Sabha",
     "is_minister": false,
-    "neutral_summary": "Khalilur Rahaman is the Member of Parliament for the Jangipur constituency in West Bengal, in the 18th Lok Sabha (elected in the 2024 Indian general election). Current party affiliation: Nationalist Citizens Party of India.",
+    "neutral_summary": "Khalilur Rahaman is the Member of Parliament for the Jangipur constituency in West Bengal, in the 18th Lok Sabha (elected in the 2024 Indian general election). Elected in 2024 as All India Trinamool Congress; current party: Nationalist Citizens Party of India.",
     "metrics": {},
     "facts": [],
     "active": true,
@@ -13122,7 +13331,18 @@
       "name": "Election Commission of India — 2024 general election results (18th Lok Sabha members list)",
       "retrieved_date": "2026-07-13"
     },
-    "party_note": "Switched from AITC to NCPI on 14 June 2026."
+    "party_history": [
+      {
+        "party": "All India Trinamool Congress",
+        "from": "Elected 2024",
+        "until": "14 June 2026"
+      },
+      {
+        "party": "Nationalist Citizens Party of India",
+        "from": "14 June 2026",
+        "current": true
+      }
+    ]
   },
   {
     "id": "jaynagar-pratima-mondal",
@@ -13161,7 +13381,7 @@
     "districts": [],
     "current_position": "Member of Parliament, Lok Sabha",
     "is_minister": false,
-    "neutral_summary": "Kalipada Soren is the Member of Parliament for the Jhargram constituency in West Bengal, in the 18th Lok Sabha (elected in the 2024 Indian general election). Current party affiliation: Nationalist Citizens Party of India.",
+    "neutral_summary": "Kalipada Soren is the Member of Parliament for the Jhargram constituency in West Bengal, in the 18th Lok Sabha (elected in the 2024 Indian general election). Elected in 2024 as All India Trinamool Congress; current party: Nationalist Citizens Party of India.",
     "metrics": {},
     "facts": [],
     "active": true,
@@ -13171,7 +13391,18 @@
       "name": "Election Commission of India — 2024 general election results (18th Lok Sabha members list)",
       "retrieved_date": "2026-07-13"
     },
-    "party_note": "Switched from AITC to NCPI on 14 June 2026."
+    "party_history": [
+      {
+        "party": "All India Trinamool Congress",
+        "from": "Elected 2024",
+        "until": "14 June 2026"
+      },
+      {
+        "party": "Nationalist Citizens Party of India",
+        "from": "14 June 2026",
+        "current": true
+      }
+    ]
   },
   {
     "id": "kanthi-soumendu-adhikari",
@@ -13210,7 +13441,7 @@
     "districts": [],
     "current_position": "Member of Parliament, Lok Sabha",
     "is_minister": false,
-    "neutral_summary": "Mala Roy is the Member of Parliament for the Kolkata Dakshin constituency in West Bengal, in the 18th Lok Sabha (elected in the 2024 Indian general election). Current party affiliation: Nationalist Citizens Party of India.",
+    "neutral_summary": "Mala Roy is the Member of Parliament for the Kolkata Dakshin constituency in West Bengal, in the 18th Lok Sabha (elected in the 2024 Indian general election). Elected in 2024 as All India Trinamool Congress; current party: Nationalist Citizens Party of India.",
     "metrics": {},
     "facts": [],
     "active": true,
@@ -13220,7 +13451,18 @@
       "name": "Election Commission of India — 2024 general election results (18th Lok Sabha members list)",
       "retrieved_date": "2026-07-13"
     },
-    "party_note": "Switched from AITC to NCPI on 14 June 2026."
+    "party_history": [
+      {
+        "party": "All India Trinamool Congress",
+        "from": "Elected 2024",
+        "until": "14 June 2026"
+      },
+      {
+        "party": "Nationalist Citizens Party of India",
+        "from": "14 June 2026",
+        "current": true
+      }
+    ]
   },
   {
     "id": "kolkata-uttar-sudip-bandyopadhyay",
@@ -13235,7 +13477,7 @@
     "districts": [],
     "current_position": "Member of Parliament, Lok Sabha",
     "is_minister": false,
-    "neutral_summary": "Sudip Bandyopadhyay is the Member of Parliament for the Kolkata Uttar constituency in West Bengal, in the 18th Lok Sabha (elected in the 2024 Indian general election). Current party affiliation: Nationalist Citizens Party of India.",
+    "neutral_summary": "Sudip Bandyopadhyay is the Member of Parliament for the Kolkata Uttar constituency in West Bengal, in the 18th Lok Sabha (elected in the 2024 Indian general election). Elected in 2024 as All India Trinamool Congress; current party: Nationalist Citizens Party of India.",
     "metrics": {},
     "facts": [],
     "active": true,
@@ -13245,7 +13487,18 @@
       "name": "Election Commission of India — 2024 general election results (18th Lok Sabha members list)",
       "retrieved_date": "2026-07-13"
     },
-    "party_note": "Switched from AITC to NCPI on 14 June 2026."
+    "party_history": [
+      {
+        "party": "All India Trinamool Congress",
+        "from": "Elected 2024",
+        "until": "14 June 2026"
+      },
+      {
+        "party": "Nationalist Citizens Party of India",
+        "from": "14 June 2026",
+        "current": true
+      }
+    ]
   },
   {
     "id": "krishnanagar-mahua-moitra",
@@ -13332,7 +13585,7 @@
     "districts": [],
     "current_position": "Member of Parliament, Lok Sabha",
     "is_minister": false,
-    "neutral_summary": "Bapi Halder is the Member of Parliament for the Mathurapur constituency in West Bengal, in the 18th Lok Sabha (elected in the 2024 Indian general election). Current party affiliation: Nationalist Citizens Party of India.",
+    "neutral_summary": "Bapi Halder is the Member of Parliament for the Mathurapur constituency in West Bengal, in the 18th Lok Sabha (elected in the 2024 Indian general election). Elected in 2024 as All India Trinamool Congress; current party: Nationalist Citizens Party of India.",
     "metrics": {},
     "facts": [],
     "active": true,
@@ -13342,7 +13595,18 @@
       "name": "Election Commission of India — 2024 general election results (18th Lok Sabha members list)",
       "retrieved_date": "2026-07-13"
     },
-    "party_note": "Switched from AITC to NCPI on 14 June 2026."
+    "party_history": [
+      {
+        "party": "All India Trinamool Congress",
+        "from": "Elected 2024",
+        "until": "14 June 2026"
+      },
+      {
+        "party": "Nationalist Citizens Party of India",
+        "from": "14 June 2026",
+        "current": true
+      }
+    ]
   },
   {
     "id": "medinipur-june-malia",
@@ -13357,7 +13621,7 @@
     "districts": [],
     "current_position": "Member of Parliament, Lok Sabha",
     "is_minister": false,
-    "neutral_summary": "June Malia is the Member of Parliament for the Medinipur constituency in West Bengal, in the 18th Lok Sabha (elected in the 2024 Indian general election). Current party affiliation: Nationalist Citizens Party of India.",
+    "neutral_summary": "June Malia is the Member of Parliament for the Medinipur constituency in West Bengal, in the 18th Lok Sabha (elected in the 2024 Indian general election). Elected in 2024 as All India Trinamool Congress; current party: Nationalist Citizens Party of India.",
     "metrics": {},
     "facts": [],
     "active": true,
@@ -13367,7 +13631,18 @@
       "name": "Election Commission of India — 2024 general election results (18th Lok Sabha members list)",
       "retrieved_date": "2026-07-13"
     },
-    "party_note": "Switched from AITC to NCPI on 14 June 2026."
+    "party_history": [
+      {
+        "party": "All India Trinamool Congress",
+        "from": "Elected 2024",
+        "until": "14 June 2026"
+      },
+      {
+        "party": "Nationalist Citizens Party of India",
+        "from": "14 June 2026",
+        "current": true
+      }
+    ]
   },
   {
     "id": "murshidabad-abu-taher-khan",
@@ -13382,7 +13657,7 @@
     "districts": [],
     "current_position": "Member of Parliament, Lok Sabha",
     "is_minister": false,
-    "neutral_summary": "Abu Taher Khan is the Member of Parliament for the Murshidabad constituency in West Bengal, in the 18th Lok Sabha (elected in the 2024 Indian general election). Current party affiliation: Nationalist Citizens Party of India.",
+    "neutral_summary": "Abu Taher Khan is the Member of Parliament for the Murshidabad constituency in West Bengal, in the 18th Lok Sabha (elected in the 2024 Indian general election). Elected in 2024 as All India Trinamool Congress; current party: Nationalist Citizens Party of India.",
     "metrics": {},
     "facts": [],
     "active": true,
@@ -13392,7 +13667,18 @@
       "name": "Election Commission of India — 2024 general election results (18th Lok Sabha members list)",
       "retrieved_date": "2026-07-13"
     },
-    "party_note": "Switched from AITC to NCPI on 14 June 2026."
+    "party_history": [
+      {
+        "party": "All India Trinamool Congress",
+        "from": "Elected 2024",
+        "until": "14 June 2026"
+      },
+      {
+        "party": "Nationalist Citizens Party of India",
+        "from": "14 June 2026",
+        "current": true
+      }
+    ]
   },
   {
     "id": "purulia-jyotirmay-singh-mahato",

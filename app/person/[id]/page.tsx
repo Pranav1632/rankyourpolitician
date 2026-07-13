@@ -155,6 +155,23 @@ export default async function PersonPage({ params }: { params: Promise<{ id: str
         <section className="mt-5 rounded-3xl border border-line bg-white p-5 shadow-soft sm:p-6">
           <h2 className="text-xl font-bold text-ink">{tr('profile.aboutTitle')}</h2>
           {person.neutral_summary && <p className="mt-2 text-ink-soft">{person.neutral_summary}</p>}
+          {person.party_history && person.party_history.length > 0 && (
+            <div className="mt-4 rounded-xl border border-line bg-paper-soft p-4">
+              <p className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-ink-faint">
+                <Icon name="layers" size={14} /> {tr('profile.partyHistory')}
+              </p>
+              <ol className="mt-3 space-y-3">
+                {person.party_history.map((h, i) => (
+                  <li key={i} className="flex flex-wrap items-center gap-2">
+                    <span className={`inline-block h-2.5 w-2.5 shrink-0 rounded-full ${h.current ? 'bg-brand' : 'bg-line'}`} aria-hidden />
+                    <PartyChip party={h.party} />
+                    <span className="text-sm text-ink-faint">{h.until ? `${h.from} – ${h.until}` : `${tr('profile.since')} ${h.from}`}</span>
+                    {h.current && <Chip tone="brand">{tr('profile.current')}</Chip>}
+                  </li>
+                ))}
+              </ol>
+            </div>
+          )}
           {person.party_note && (
             <div className="mt-3 flex items-start gap-2 rounded-xl bg-amber-50 p-3 text-sm text-ink">
               <span className="mt-0.5 shrink-0"><Icon name="info" size={16} className="text-rating-ink" /></span>

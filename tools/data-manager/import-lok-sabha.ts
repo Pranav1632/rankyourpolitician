@@ -70,12 +70,34 @@ function nameFrom(cell: string | undefined): string | null {
   const l = cell.match(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/);
   return l ? clean(l[2] || l[1]) : clean(cell) || null;
 }
-function efnFrom(cell: string | undefined): string | null {
+// Party abbreviations used in the source's switch notes -> canonical full names.
+const PARTY_ABBR: Record<string, string> = {
+  AITC: 'All India Trinamool Congress', TMC: 'All India Trinamool Congress',
+  NCPI: 'Nationalist Citizens Party of India', BJP: 'Bharatiya Janata Party',
+  INC: 'Indian National Congress', NCP: 'Nationalist Congress Party',
+  'NCP(SP)': 'Nationalist Congress Party (Sharadchandra Pawar)',
+  'SS(UBT)': 'Shiv Sena (UBT)', SS: 'Shiv Sena',
+};
+const expandParty = (s: string) => { const k = clean(s).replace(/\.\s*$/, '').trim(); return PARTY_ABBR[k] || PARTY_ABBR[k.toUpperCase()] || k; };
+
+interface Switch { from: string; to: string; date: string; }
+function switchesFrom(cell: string | undefined): Switch[] {
+  if (!cell) return [];
+  const out: Switch[] = [];
+  for (const m of cell.matchAll(/Switched from (.+?) to (.+?) on ([^.|}]+)/gi)) {
+    out.push({ from: expandParty(m[1]), to: expandParty(m[2]), date: clean(m[3]) });
+  }
+  return out;
+}
+// A non-switch by-election/status note (switches are captured structurally above).
+// Handles both {{efn|...}} footnotes and {{small|''(...)''}} inline annotations.
+function noteFrom(cell: string | undefined): string | null {
   if (!cell) return null;
-  const m = cell.match(/\{\{efn\|([^|}]+)/i);
+  const m = cell.match(/\{\{(?:efn|small)\|([^}]+)\}\}/i);
   if (!m) return null;
-  const t = m[1].trim().replace(/\s+/g, ' ');
-  return /(switch|join|merg|elected on|by-election|byelection|resign|expel|left |died|passed away)/i.test(t) ? t : null;
+  const t = m[1].split('|')[0].replace(/''/g, '').replace(/^\s*\(|\)\s*$/g, '').trim().replace(/\.$/, '').replace(/\s+/g, ' ');
+  if (/switched from/i.test(t)) return null;
+  return /(elected on|by-election|byelection|resign|died|passed away|expel|left )/i.test(t) ? t : null;
 }
 function partyFrom(row: string): string | null {
   const full = row.match(/Full party name with colou?r\s*\|\s*([^|}\n]+)/i);
@@ -93,7 +115,7 @@ function partyFrom(row: string): string | null {
   return null;
 }
 
-interface Seat { code: string; cons: string; name?: string; party?: string; vacant?: boolean; note?: string; }
+interface Seat { code: string; cons: string; name?: string; party?: string; vacant?: boolean; note?: string; switches?: Switch[]; }
 
 function parseRoster(wt: string): Seat[] {
   const parts = wt.split(/^==\s*(.+?)\s*==\s*$/m);
@@ -115,7 +137,8 @@ function parseRoster(wt: string): Seat[] {
       let name: string | null = nameFrom(arr[ci + 1]);
       let party: string | null = partyFrom(row) || curParty;
       if (party) curParty = party;
-      let note: string | undefined = efnFrom(arr[ci + 1]) || undefined;
+      let note: string | undefined = noteFrom(arr[ci + 1]) || undefined;
+      let switches: Switch[] = switchesFrom(arr[ci + 1]);
       let vacant = false;
       for (let k = 1; k < span; k++) {
         const cont = rows[i + k] || '';
@@ -123,11 +146,15 @@ function parseRoster(wt: string): Seat[] {
         if (cp) curParty = cp;
         const cn = nameFrom(cellsOf(cont)[0]);
         if (cn === '(vacant)') { vacant = true; name = null; }
-        else if (cn) { name = cn; party = cp || curParty; vacant = false; note = efnFrom(cellsOf(cont)[0]) || note; }
+        else if (cn) {
+          name = cn; party = cp || curParty; vacant = false;
+          note = noteFrom(cellsOf(cont)[0]) || note;
+          switches = switches.concat(switchesFrom(cellsOf(cont)[0]));
+        }
       }
       i += span - 1;
       if (vacant || !name || name === '(vacant)') seats.push({ code, cons, vacant: true });
-      else seats.push({ code, cons, name, party: party || undefined, note });
+      else seats.push({ code, cons, name, party: party || undefined, note, switches: switches.length ? switches : undefined });
     }
   }
   return seats;
@@ -197,7 +224,17 @@ async function main() {
 
     const districts = consById.get(constituencyId)?.districts ?? [];
     const party = seat.party || 'Independent';
-    const summary = `${seat.name} is the Member of Parliament for the ${seat.cons} constituency in ${state}, in the 18th Lok Sabha (elected in the 2024 Indian general election). Current party affiliation: ${party}.`;
+    // Build the party-affiliation timeline for the current term (only when switched).
+    let party_history: Politician['party_history'];
+    if (seat.switches && seat.switches.length) {
+      const sw = seat.switches;
+      party_history = [{ party: sw[0].from, from: 'Elected 2024', until: sw[0].date }];
+      sw.forEach((s, i) => party_history!.push({ party: s.to, from: s.date, until: sw[i + 1]?.date, current: i === sw.length - 1 }));
+    }
+    const byDate = seat.note && /elected on/i.test(seat.note) ? seat.note.replace(/.*elected on/i, '').trim() : null;
+    const electedClause = byDate ? `won the by-election on ${byDate}` : 'elected in the 2024 Indian general election';
+    const partyClause = party_history ? ` Elected in 2024 as ${party_history[0].party}; current party: ${party}.` : ` Current party affiliation: ${party}.`;
+    const summary = `${seat.name} is the Member of Parliament for the ${seat.cons} constituency in ${state}, in the 18th Lok Sabha (${electedClause}).${partyClause}`;
     politicians.push({
       id: slug(`${seat.cons}-${seat.name}`),
       name: seat.name!,
@@ -217,7 +254,8 @@ async function main() {
       active: true,
       generated: true,
       identity_source: { url: WIKI_URL, name: 'Election Commission of India — 2024 general election results (18th Lok Sabha members list)', retrieved_date: today },
-      ...(seat.note ? { party_note: seat.note } : {}),
+      ...(seat.note && !byDate ? { party_note: seat.note } : {}),
+      ...(party_history ? { party_history } : {}),
     });
   }
 
@@ -262,10 +300,11 @@ async function main() {
   writeFileSync(resolve(SEED_DIR, 'constituencies.json'), JSON.stringify(constituencies, null, 2) + '\n');
   writeFileSync(resolve(SEED_DIR, 'central_government.json'), JSON.stringify(central, null, 2) + '\n');
 
+  const withHistory = politicians.filter((p) => p.party_history?.length).length;
   const withNote = politicians.filter((p) => p.party_note).length;
   console.log(`\n✓ Wrote ${politicians.length} politicians (${curated.length} curated preserved), ${constituencies.length} constituencies.`);
   console.log(`✓ Ministers linked to an MP profile: ${linked}/${central.length}.`);
-  console.log(`✓ Party-change / by-election notes captured: ${withNote}.`);
+  console.log(`✓ Party-switch timelines captured: ${withHistory}. By-election/status notes: ${withNote}.`);
   console.log(`ℹ Vacant seats (no sitting member): ${vacant.map((v) => `${v.cons} (${v.code})`).join(', ')}`);
   if (unmatched.length) console.log(`⚠ Lok Sabha ministers not auto-linked (review): ${unmatched.join('; ')}`);
   console.log('\nNext: npm run dm -- validate   then   npm run dm -- publish');
