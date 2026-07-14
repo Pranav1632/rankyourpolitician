@@ -53,6 +53,12 @@ async function main() {
       await import('./import-rajya-sabha');
       break;
     }
+    case 'import-mlas': {
+      // Add ~4,100 MLAs from each state assembly's Wikipedia members roster.
+      process.argv[2] = process.argv[3] || '';
+      await import('./import-mlas');
+      break;
+    }
     case 'enrich-mps': {
       // Add cited per-member detail (bio, career, photo) from Wikidata.
       await import('./enrich-mps');

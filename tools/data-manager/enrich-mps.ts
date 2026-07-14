@@ -34,15 +34,15 @@ const LIMIT = process.env.ENRICH_LIMIT ? parseInt(process.env.ENRICH_LIMIT, 10) 
 
 async function api(base: string, params: Record<string, string>): Promise<any> {
   const u = base + '?format=json&formatversion=2&origin=*&' + new URLSearchParams(params);
-  for (let attempt = 0; attempt < 3; attempt++) {
+  for (let attempt = 0; attempt < 5; attempt++) {
     try {
       const r = await fetch(u, { headers: { 'User-Agent': UA } });
       if (r.ok) return r.json();
-      if (r.status < 500) throw new Error(`HTTP ${r.status}`);
+      if (r.status < 500 && r.status !== 429) throw new Error(`HTTP ${r.status}`);
     } catch (e) {
-      if (attempt === 2) throw e;
+      if (attempt === 4) throw e;
     }
-    await new Promise((res) => setTimeout(res, 800 * (attempt + 1)));
+    await new Promise((res) => setTimeout(res, 1200 * (attempt + 1)));
   }
 }
 
