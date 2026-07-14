@@ -6,7 +6,7 @@ export interface SearchIndexFile {
   v: 1;
   builtAt: string;
   states: [string, string][]; // [code, name]
-  people: (string | undefined)[][]; // [id, name, partyShort, place, stateCode, role, nameHi?]
+  people: (string | undefined)[][]; // [id, name, partyShort, place, stateCode, role, nameHi?, photo?]
   areas: [string, string, string, string][]; // [id, name, stateCode, type]
   districts: [string, string][]; // [stateCode, name]
 }
@@ -18,6 +18,7 @@ export interface PersonHit {
   place: string;
   state: string;
   role: string;
+  photo?: string;
 }
 export interface AreaHit {
   id: string;
@@ -80,6 +81,7 @@ export function prepareIndex(raw: SearchIndexFile): PreparedIndex {
       place: r[3] || '',
       state: sn(r[4]),
       role: r[5] || '',
+      photo: r[7] || undefined,
     };
     return {
       nameN: norm(item.name) + (r[6] ? ' ' + norm(r[6]) : ''),

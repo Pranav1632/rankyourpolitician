@@ -96,6 +96,11 @@ async function main() {
       await import('./link-ministers');
       break;
     }
+    case 'enrich-photos': {
+      // Raise photo coverage from Hindi/regional-Wikipedia lead images (Commons).
+      await import('./enrich-photos');
+      break;
+    }
     case 'import-state-gov': {
       // Build state_government.json from the ryp-state-governments workflow output.
       process.argv[2] = process.argv[3] || '';

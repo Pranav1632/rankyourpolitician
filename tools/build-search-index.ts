@@ -67,6 +67,7 @@ function build(): SearchIndexFile {
       p.stateCode,
       ROLE_BY_HOUSE[p.house] || p.house,
       p.name_hi,
+      p.photo_url, // [7] photo — so search results show faces, not just an icon
     ]);
   }
 
@@ -77,8 +78,9 @@ function build(): SearchIndexFile {
     const existing = people.get(id);
     if (existing) {
       existing[5] = `${role} · ${existing[5]}`;
+      if (!existing[7] && m.photo_url) existing[7] = m.photo_url;
     } else {
-      people.set(id, [id, m.name, partyShort(m.party), m.portfolios[0] || '', '', role]);
+      people.set(id, [id, m.name, partyShort(m.party), m.portfolios[0] || '', '', role, undefined, m.photo_url]);
     }
   }
 
@@ -93,8 +95,9 @@ function build(): SearchIndexFile {
       const existing = people.get(id);
       if (existing) {
         if (sm.rank === 'CM' || sm.rank === 'DyCM') existing[5] = `${role.split(',')[0]} · ${existing[5]}`;
+        if (!existing[7] && sm.photo_url) existing[7] = sm.photo_url;
       } else {
-        people.set(id, [id, sm.name, partyShort(sm.party), '', sm.stateCode, role]);
+        people.set(id, [id, sm.name, partyShort(sm.party), '', sm.stateCode, role, undefined, sm.photo_url]);
       }
     }
   }

@@ -10,6 +10,7 @@ import { useSearch, addRecentSearch, getRecentSearches, clearRecentSearches } fr
 import type { SearchHits } from '@/lib/search-core';
 import { norm } from '@/lib/search-core';
 import Icon, { type IconName } from './Icon';
+import { Avatar } from './ui';
 import { clsx } from 'clsx';
 
 interface FlatRow {
@@ -18,6 +19,8 @@ interface FlatRow {
   sub?: string;
   icon: IconName;
   group: string;
+  isPerson?: boolean;
+  photo?: string;
 }
 
 function flatten(hits: SearchHits, labels: Record<string, string>): FlatRow[] {
@@ -29,6 +32,8 @@ function flatten(hits: SearchHits, labels: Record<string, string>): FlatRow[] {
       sub: [p.role, p.place, p.state].filter(Boolean).join(' · ') + (p.party ? ` · ${p.party}` : ''),
       icon: 'people',
       group: labels.people,
+      isPerson: true,
+      photo: p.photo,
     });
   }
   for (const a of hits.areas) {
@@ -216,7 +221,7 @@ export default function SearchBox({ variant = 'header' }: { variant?: 'header' |
         <div
           id={listId}
           role="listbox"
-          className="glass-overlay absolute left-0 right-0 z-40 mt-2 max-h-[26rem] overflow-auto rounded-2xl p-1.5 animate-scale-in origin-top"
+          className="glass-overlay absolute left-0 right-0 z-40 mt-2 max-h-[26rem] overflow-auto rounded-2xl bg-white p-1.5 animate-scale-in origin-top"
         >
           {showRecents && (
             <div className="py-1">
@@ -292,9 +297,13 @@ export default function SearchBox({ variant = 'header' }: { variant?: 'header' |
                         cursor === i ? 'bg-brand-soft' : 'hover:bg-brand-soft/60',
                       )}
                     >
-                      <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-paper-sink text-ink-faint">
-                        <Icon name={row.icon} size={16} />
-                      </span>
+                      {row.isPerson ? (
+                        <Avatar name={row.title} src={row.photo} size={34} />
+                      ) : (
+                        <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-paper-sink text-ink-faint">
+                          <Icon name={row.icon} size={16} />
+                        </span>
+                      )}
                       <span className="min-w-0">
                         <span className="block truncate font-medium text-ink">
                           <Highlight text={row.title} q={q} />

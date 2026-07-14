@@ -97,7 +97,7 @@ export default function SearchResults() {
                       href={`/person/${p.id}`}
                       className="pressable flex items-center gap-3 rounded-2xl border border-line/70 bg-white/85 p-3 hover:border-brand/40 hover:shadow-soft"
                     >
-                      <Avatar name={p.name} size={44} />
+                      <Avatar name={p.name} src={p.photo} size={44} />
                       <span className="min-w-0">
                         <span className="block truncate font-semibold text-ink">{p.name}</span>
                         <span className="block truncate text-xs text-ink-faint">
