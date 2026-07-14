@@ -163,10 +163,12 @@ export default function SearchBox({ variant = 'header' }: { variant?: 'header' |
     }
   }
 
+  // Text-entry fields are always SOLID — you read and type in them, so glass
+  // translucency never applies here (this is the "search box too transparent" fix).
   const box =
     variant === 'hero'
-      ? 'w-full rounded-2xl border-2 border-brand/25 bg-white/95 px-5 py-4 text-lg shadow-glass backdrop-blur-xl focus:border-brand focus:bg-white'
-      : 'w-full rounded-full border border-line bg-white/95 px-4 py-2.5 text-sm backdrop-blur focus:border-brand focus:bg-white';
+      ? 'w-full rounded-2xl border-2 border-brand/25 bg-white px-5 py-4 text-lg text-ink shadow-glass placeholder:text-ink-faint focus:border-brand'
+      : 'w-full rounded-full border border-line bg-white px-4 py-2.5 text-sm text-ink placeholder:text-ink-faint focus:border-brand';
 
   const showRecents = open && !q.trim() && recents.length > 0;
   const showPanel = open && (q.trim() || showRecents);

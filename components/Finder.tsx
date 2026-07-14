@@ -159,7 +159,7 @@ export default function Finder() {
               id="who-state"
               value={stateCode}
               onChange={(e) => selectState(e.target.value)}
-              className="w-full rounded-xl border border-line bg-white/85 px-3 py-2.5 text-sm outline-none focus:border-brand"
+              className="w-full rounded-xl border border-line bg-white px-3 py-2.5 text-sm text-ink outline-none focus:border-brand"
             >
               <option value="">{t('who.pickStateFirst')}</option>
               {states.map(([code, name]) => (
@@ -174,7 +174,7 @@ export default function Finder() {
               value={district}
               onChange={(e) => setDistrict(e.target.value)}
               disabled={!stateFile || loadingState}
-              className="w-full rounded-xl border border-line bg-white/85 px-3 py-2.5 text-sm outline-none focus:border-brand disabled:opacity-50"
+              className="w-full rounded-xl border border-line bg-white px-3 py-2.5 text-sm text-ink outline-none focus:border-brand disabled:opacity-50"
             >
               <option value="">{loadingState ? t('common.loading') : t('who.pickDistrictFirst')}</option>
               {districtNames.map((d) => (

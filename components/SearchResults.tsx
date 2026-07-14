@@ -47,7 +47,7 @@ export default function SearchResults() {
           onChange={(e) => onChange(e.target.value)}
           placeholder={t('search.placeholder')}
           aria-label={t('search.placeholder')}
-          className="w-full rounded-2xl border-2 border-brand/25 bg-white/95 px-5 py-4 text-lg shadow-glass outline-none backdrop-blur-xl transition-shadow focus:border-brand focus:shadow-glow"
+          className="w-full rounded-2xl border-2 border-brand/25 bg-white px-5 py-4 text-lg text-ink shadow-glass outline-none placeholder:text-ink-faint transition-shadow focus:border-brand focus:shadow-glow"
         />
         <span className="absolute right-4 top-1/2 -translate-y-1/2">
           {q.trim() && status !== 'ready' && status !== 'error' ? (

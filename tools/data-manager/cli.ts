@@ -70,9 +70,25 @@ async function main() {
       await import('./enrich-mps');
       break;
     }
+    case 'enrich-wikidata': {
+      // General Wikidata enrichment across ALL tiers (MPs, RS, MLAs, MLCs):
+      // resolve missing QIDs + fill bio/career/photo gaps, cited, fill-only.
+      await import('./enrich-wikidata');
+      break;
+    }
     case 'enrich-affidavits': {
       // Add declared assets/liabilities/criminal cases from MyNeta (ADR).
       await import('./enrich-affidavits');
+      break;
+    }
+    case 'enrich-affidavits-states': {
+      // Same, for sitting MLAs from each state-assembly election (name-guarded).
+      await import('./enrich-affidavits-states');
+      break;
+    }
+    case 'normalize-fields': {
+      // Post-enrichment data-quality cleanup (party role prefixes, bad ages).
+      await import('./normalize-fields');
       break;
     }
     case 'import-state-gov': {

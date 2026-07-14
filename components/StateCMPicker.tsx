@@ -32,7 +32,7 @@ export default function StateCMPicker({ states }: { states: CmSummary[] }) {
         id="cm-picker"
         value={code}
         onChange={(e) => setCode(e.target.value)}
-        className="mt-2 w-full rounded-xl border border-line bg-white/80 px-3 py-2.5 text-sm outline-none backdrop-blur focus:border-brand"
+        className="mt-2 w-full rounded-xl border border-line bg-white px-3 py-2.5 text-sm text-ink outline-none focus:border-brand"
       >
         <option value="">{t('hierarchyPage.pickStatePlaceholder')}</option>
         {states.map((s) => (
