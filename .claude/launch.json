@@ -20,6 +20,12 @@
       "port": 3210
     },
     {
+      "name": "web-auto",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "autoPort": true
+    },
+    {
       "name": "prod-3101",
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "start", "--", "-p", "3101"],

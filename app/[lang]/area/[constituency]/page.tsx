@@ -14,7 +14,9 @@ import { SectionCard, Avatar, PartyChip, Chip, PageHero } from '@/components/ui'
 import { Reveal } from '@/components/motion';
 import Icon from '@/components/Icon';
 
-export const revalidate = 300;
+// Daily self-heal only - content changes arrive via deploy or /api/revalidate,
+// and every ISR regeneration is a billed write (see README "How data flows").
+export const revalidate = 86400;
 
 // Prebuild every constituency page for English (~4.6k) so first hits are CDN
 // cache hits; other locales render on demand and ISR-cache.

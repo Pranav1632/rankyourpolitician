@@ -1,10 +1,34 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getPerson } from '@/lib/data';
+import { getPerson, getPersonSentiment } from '@/lib/data';
 import { recordVote } from '@/lib/votes';
 import { getClientIp, verifyTurnstile, checkRateLimit, voterKey } from '@/lib/vote-integrity';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
+
+/** Live sentiment for one person. VoteWidget fetches this on mount because
+ *  profile HTML is ISR-cached for up to a day - the page stays a cheap static
+ *  serve while the numbers stay fresh. Reads the in-process TTL-cached
+ *  aggregates (zero extra Firestore reads) and is CDN-cached for 5 minutes,
+ *  so most page views never even invoke the function. */
+export async function GET(req: NextRequest) {
+  const politicianId = req.nextUrl.searchParams.get('politicianId');
+  if (!politicianId) return NextResponse.json({ error: 'bad-request' }, { status: 400 });
+
+  const res = await getPerson(politicianId);
+  if (!res || (!res.person && !res.redirectTo)) return NextResponse.json({ error: 'not-found' }, { status: 404 });
+  // Appointed officials are information-only and carry no ratings.
+  if (res.person && res.person.kind === 'official') return NextResponse.json({ error: 'not-ratable' }, { status: 403 });
+
+  const s = await getPersonSentiment(res.redirectTo ?? politicianId);
+  return NextResponse.json(
+    {
+      ok: true,
+      sentiment: { mean: s.raw_mean, votes: s.n_votes, distribution: s.distribution, confidence: s.confidence },
+    },
+    { headers: { 'cache-control': 'public, max-age=0, s-maxage=300, stale-while-revalidate=600' } },
+  );
+}
 
 export async function POST(req: NextRequest) {
   let body: { politicianId?: string; rating?: number; fingerprint?: string; turnstileToken?: string };

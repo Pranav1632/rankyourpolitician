@@ -66,12 +66,26 @@ This is the most important thing to understand before changing `lib/data.ts`:
   vote aggregates refresh at most every 5 minutes, government collections every 30 minutes, per
   warm instance. The cache stores the *promise*, so a burst of concurrent requests shares one load
   instead of stampeding the database.
-- **ISR sits on top** (`revalidate = 300` on most pages), so rendering is cached too.
+- **ISR sits on top, but only as a daily self-heal** (`revalidate = 86400` on every page).
+  Pages are still served straight from Vercel's CDN cache - same speed as before - they just
+  stop re-rendering every 5 minutes. Vercel bills each background regeneration as an ISR
+  write, and with ~6k person pages x 23 locales the crawl-driven long tail was regenerating
+  around the clock for data that changes rarely.
+- **Freshness is handled where the data actually changes, not by re-rendering everything:**
+  - *Votes* - `VoteWidget` re-fetches the live score from `GET /api/vote` on mount
+    (CDN-cached 5 min, served from the in-process aggregate cache: zero extra Firestore
+    reads). The static HTML can be up to a day old; the numbers on screen never are.
+  - *Data publishes* - `npm run dm -- publish` calls `POST /api/revalidate` (Bearer
+    `REVALIDATE_SECRET`), which sweeps the page cache; each page regenerates on its next
+    visit. A page that regenerates within ~30 min of a publish can still bake the previous
+    in-process TTL snapshot - the daily revalidate self-heals it.
+  - *Seed changes* still require a redeploy, which resets the whole cache anyway.
 - **Nothing reads Firestore during `next build`** - prerendering the ~5,330 person pages would
   otherwise blow the free quota on a single deploy. Override with `FORCE_FIRESTORE_AT_BUILD=1`.
 
-Consequence: a voter sees their own score update instantly (the API returns it), but a
-page's public score can lag a vote by up to ~10 minutes. That is by design, not a bug.
+Consequence: a voter sees their own score update instantly (the API returns it), but the
+score other visitors see can lag a vote by up to ~10 minutes (5 min CDN cache on the
+sentiment GET + 5 min aggregate TTL). That is by design, not a bug.
 
 ## Project structure
 
@@ -85,7 +99,9 @@ app/                          Next.js routes
   person/[id]/                unified profile (MP/MLA and/or minister, or appointed official)
   rankings/  search/  who/    full rankings, search, "who fixes what"
   accountability/ methodology/ about/ privacy/ terms/ grievance/
-  api/vote/                   vote endpoint (Turnstile + rate-limit + Firestore transaction)
+  api/vote/                   vote endpoint (POST: Turnstile + rate-limit + Firestore
+                              transaction; GET: live sentiment for the widget, CDN-cached)
+  api/revalidate/             on-demand cache sweep after `dm publish` (Bearer secret)
   api/health/                 liveness probe (zero Firestore reads)
 components/                   UI (map, search, ranking, vote widget, i18n switcher, …)
 lib/                          types, data layer, ranking math, i18n, geo projection, vote integrity

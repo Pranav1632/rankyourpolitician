@@ -8,7 +8,7 @@ import dotenv from 'dotenv';
 dotenv.config({ path: '.env.local' });
 dotenv.config();
 
-import { validateDataset, datasetStats, publishDataset } from './publish';
+import { validateDataset, datasetStats, publishDataset, requestSiteRevalidation } from './publish';
 
 async function main() {
   const cmd = process.argv[2] || 'help';
@@ -40,6 +40,7 @@ async function main() {
         `✓ Published ${res.politicians} politicians, ${res.constituencies} constituencies, ` +
           `${res.central_government} ministers, ${res.office_seats} office seats.`,
       );
+      await requestSiteRevalidation();
       break;
     }
     case 'refresh-mps': {

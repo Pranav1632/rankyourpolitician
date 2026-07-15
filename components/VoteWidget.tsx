@@ -2,6 +2,7 @@
 import { useState, useEffect, useRef } from 'react';
 import Script from 'next/script';
 import { useI18n } from '@/lib/i18n/provider';
+import { Stars } from '@/components/viz';
 
 const SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
@@ -63,6 +64,22 @@ export default function VoteWidget({
       const prev = localStorage.getItem(`vote:${politicianId}`);
       if (prev) setSelected(Number(prev));
     } catch {}
+  }, [politicianId]);
+
+  // The page HTML is ISR-cached for up to a day, so the server-rendered score
+  // can be stale. Refresh it from the live aggregate on mount (the GET is
+  // CDN-cached for 5 minutes); on any failure keep the server-rendered numbers.
+  useEffect(() => {
+    let cancelled = false;
+    fetch(`/api/vote?politicianId=${encodeURIComponent(politicianId)}`)
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data) => {
+        if (!cancelled && data?.sentiment) setSentiment(data.sentiment);
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
   }, [politicianId]);
 
   function renderTurnstile() {
@@ -148,7 +165,12 @@ export default function VoteWidget({
   const confKey =
     'vote.confidence' + sentiment.confidence.charAt(0).toUpperCase() + sentiment.confidence.slice(1);
   // "1 ratings" reads as a bug; t() has no plural support, so pick the form.
-  const votesLabel = sentiment.votes === 1 ? t('ranking.voteOne') : t('ranking.votes', { n: sentiment.votes });
+  const votesLabel =
+    sentiment.votes === 0
+      ? t('vote.confidenceNone')
+      : sentiment.votes === 1
+        ? t('ranking.voteOne')
+        : t('ranking.votes', { n: sentiment.votes });
 
   return (
     <div>
@@ -160,7 +182,20 @@ export default function VoteWidget({
         />
       )}
 
-      <p className="text-sm text-ink-soft">{t('vote.prompt')}</p>
+      {/* The plain average of the votes cast - NOT the Bayesian score used for
+          ordering. This sits directly above the vote breakdown, so a shrunk
+          number here would visibly contradict it (five 1-star votes reading
+          as "2.3"). Thin samples are conveyed by the vote count + confidence,
+          not by silently moving the number toward neutral. */}
+      <div className="mt-4 flex items-center gap-3">
+        <span className="text-4xl font-extrabold text-rating-ink">{sentiment.mean != null ? sentiment.mean.toFixed(1) : '-'}</span>
+        <div>
+          <Stars value={sentiment.mean} size={20} />
+          <p className="mt-0.5 text-xs text-ink-faint">{votesLabel}</p>
+        </div>
+      </div>
+
+      <p className="mt-4 border-t border-line pt-4 text-sm text-ink-soft">{t('vote.prompt')}</p>
 
       <div className="mt-3 flex items-center gap-2">
         {[1, 2, 3, 4, 5].map((n) => (

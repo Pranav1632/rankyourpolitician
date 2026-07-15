@@ -14,7 +14,9 @@ import { Reveal, CountUp } from '@/components/motion';
 import Icon, { type IconName } from '@/components/Icon';
 import { Analytics } from '@vercel/analytics/next';
 
-export const revalidate = 300;
+// Daily self-heal only - content changes arrive via deploy or /api/revalidate,
+// and every ISR regeneration is a billed write (see README "How data flows").
+export const revalidate = 86400;
 export { allLocaleStaticParams as generateStaticParams } from '@/lib/i18n/server';
 
 export default async function HomePage({ params }: { params: Promise<LangParams> }) {

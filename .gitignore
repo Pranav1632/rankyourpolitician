@@ -5,6 +5,8 @@
 
 # next.js
 /.next/
+# isolated build output when NEXT_DIST_DIR is set (see next.config.mjs)
+/.next-*/
 /out/
 next-env.d.ts
 

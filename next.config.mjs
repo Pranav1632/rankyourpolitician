@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  // Several sessions/terminals often run this project at once on one machine;
+  // `next dev` and `next build` sharing .next corrupts the build output. Point
+  // NEXT_DIST_DIR at a scratch dir to build/start in isolation. Unset (Vercel,
+  // normal dev) it is the default .next.
+  distDir: process.env.NEXT_DIST_DIR || '.next',
   // We keep our own type checking in `npm run typecheck`; do not let a stray
   // lint config block deploys. Types are still enforced at build time.
   eslint: { ignoreDuringBuilds: true },

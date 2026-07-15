@@ -6,7 +6,10 @@ import RankingsExplorer from '@/components/RankingsExplorer';
 import AdSlot from '@/components/AdSlot';
 import { PageHero } from '@/components/ui';
 
-export const revalidate = 3600;
+// Daily self-heal only - the page body is dict-only and the table data comes
+// from the build-time /rankings.json (live ratings load client-side), so
+// hourly regeneration was pure billed-ISR-write waste.
+export const revalidate = 86400;
 export { allLocaleStaticParams as generateStaticParams } from '@/lib/i18n/server';
 
 export async function generateMetadata({ params }: { params: Promise<LangParams> }): Promise<Metadata> {

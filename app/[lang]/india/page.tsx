@@ -13,7 +13,9 @@ import Icon from '@/components/Icon';
 import LastUpdated from '@/components/LastUpdated';
 import AdSlot from '@/components/AdSlot';
 
-export const revalidate = 300;
+// Daily self-heal only - content changes arrive via deploy or /api/revalidate,
+// and every ISR regeneration is a billed write (see README "How data flows").
+export const revalidate = 86400;
 export { allLocaleStaticParams as generateStaticParams } from '@/lib/i18n/server';
 export const metadata: Metadata = {
   title: 'Government of India - Prime Minister & Union Ministers',

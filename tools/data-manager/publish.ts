@@ -118,3 +118,30 @@ export async function publishDataset(): Promise<{
     office_seats: officials.length,
   };
 }
+
+/** Ask the deployed site to drop its page cache (POST /api/revalidate) so the
+ *  publish shows up on the next visit instead of the next daily revalidation.
+ *  No-op unless REVALIDATE_URL and REVALIDATE_SECRET are set in .env.local,
+ *  and never fatal: the publish itself already succeeded, and every page
+ *  self-heals within a day regardless. */
+export async function requestSiteRevalidation(): Promise<void> {
+  const base = process.env.REVALIDATE_URL;
+  const secret = process.env.REVALIDATE_SECRET;
+  if (!base || !secret) {
+    console.log('i Skipped site revalidation (REVALIDATE_URL / REVALIDATE_SECRET not set) - pages refresh within a day.');
+    return;
+  }
+  try {
+    const res = await fetch(new URL('/api/revalidate', base), {
+      method: 'POST',
+      headers: { authorization: `Bearer ${secret}` },
+    });
+    console.log(
+      res.ok
+        ? '✓ Site cache invalidated - pages regenerate on next visit.'
+        : `⚠ Site revalidation returned ${res.status} - pages refresh within a day.`,
+    );
+  } catch (err) {
+    console.log(`⚠ Site revalidation failed (${err instanceof Error ? err.message : err}) - pages refresh within a day.`);
+  }
+}
