@@ -6,6 +6,76 @@
   --font-sans: 'Segoe UI', system-ui, -apple-system, 'Noto Sans', 'Noto Sans Devanagari',
     'Noto Sans Tamil', 'Noto Sans Bengali', sans-serif;
   --font-display: var(--font-sans);
+
+  --color-ink: 28 32 42;
+  --color-ink-soft: 74 81 96;
+  --color-ink-faint: 124 132 150;
+  
+  --color-paper: 255 255 255;
+  --color-paper-soft: 248 247 244;
+  --color-paper-sink: 240 238 232;
+  
+  --color-line: 232 228 220;
+
+  --color-brand: 79 70 229;
+  --color-brand-ink: 55 48 163;
+  --color-brand-soft: 238 241 255;
+  --color-brand-deep: 49 46 129;
+
+  --color-accent: 249 115 22;
+  --color-accent-ink: 194 65 12;
+  --color-accent-soft: 255 243 233;
+
+  --color-perf: 13 148 136;
+  --color-perf-ink: 15 118 110;
+  --color-perf-soft: 230 245 243;
+
+  --color-rating: 245 158 11;
+  --color-rating-ink: 180 83 9;
+  --color-rating-soft: 254 244 226;
+
+  --color-map-terrain: #ebe6da;
+  --color-map-ramp-0: #dfe3fb;
+  --color-map-ramp-1: #c3cbf7;
+  --color-map-ramp-2: #a5b0f2;
+  --color-map-ramp-3: #7f8cec;
+  --color-map-ramp-4: #5b66e3;
+}
+
+.dark {
+  --color-ink: 240 240 240;
+  --color-ink-soft: 180 180 180;
+  --color-ink-faint: 120 120 120;
+  
+  --color-paper: 18 18 18;
+  --color-paper-soft: 0 0 0;
+  --color-paper-sink: 30 30 30;
+  
+  --color-line: 43 43 43;
+
+  --color-brand: 99 102 241;
+  --color-brand-ink: 199 210 254;
+  --color-brand-soft: 28 27 45;
+  --color-brand-deep: 67 56 202;
+
+  --color-accent: 251 146 60;
+  --color-accent-ink: 255 237 213;
+  --color-accent-soft: 44 22 10;
+
+  --color-perf: 20 184 166;
+  --color-perf-ink: 204 251 241;
+  --color-perf-soft: 6 43 37;
+
+  --color-rating: 251 191 36;
+  --color-rating-ink: 254 243 199;
+  --color-rating-soft: 59 37 3;
+
+  --color-map-terrain: #121212;
+  --color-map-ramp-0: #1c1c1c;
+  --color-map-ramp-1: #2e2e2e;
+  --color-map-ramp-2: #4a4a4a;
+  --color-map-ramp-3: #666666;
+  --color-map-ramp-4: #4f46e5;
 }
 
 html {
@@ -217,7 +287,7 @@ button:focus-visible,
 select:focus-visible,
 input:focus-visible,
 [tabindex]:focus-visible {
-  outline: 3px solid #4f46e5;
+  outline: 3px solid rgb(var(--color-brand));
   outline-offset: 2px;
   border-radius: 6px;
 }
@@ -254,4 +324,53 @@ details > summary::-webkit-details-marker {
     opacity: 1;
     transform: none;
   }
+}
+
+/* ---------------------------------------------------------------------------
+ * Dark Mode Class Overrides
+ * ------------------------------------------------------------------------- */
+.dark .glass {
+  background: rgba(18, 18, 18, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow:
+    0 1px 1px rgba(255, 255, 255, 0.04) inset,
+    0 1px 2px rgba(0, 0, 0, 0.15),
+    0 12px 32px rgba(0, 0, 0, 0.25);
+}
+.dark .glass-strong {
+  background: rgba(18, 18, 18, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+.dark .glass-overlay {
+  background: #1e1e1e;
+  border: 1px solid #2b2b2b;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.15),
+    0 18px 44px rgba(0, 0, 0, 0.35);
+}
+.dark .skeleton {
+  background: linear-gradient(90deg, #1e1e1e 25%, #121212 50%, #1e1e1e 75%);
+}
+.dark .aurora {
+  display: none;
+}
+
+/* Override hardcoded white components background in dark mode */
+.dark .bg-white {
+  background-color: rgb(var(--color-paper-sink)) !important;
+}
+.dark .bg-white\/90 {
+  background-color: rgba(var(--color-paper-sink) / 0.9) !important;
+}
+.dark .bg-white\/85 {
+  background-color: rgba(var(--color-paper-sink) / 0.85) !important;
+}
+.dark .bg-white\/80 {
+  background-color: rgba(var(--color-paper-sink) / 0.8) !important;
+}
+.dark .bg-white\/70 {
+  background-color: rgba(var(--color-paper-sink) / 0.7) !important;
+}
+.dark .bg-white\/15 {
+  background-color: rgba(255, 255, 255, 0.1) !important;
 }

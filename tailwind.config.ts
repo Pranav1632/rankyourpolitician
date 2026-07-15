@@ -14,13 +14,38 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: { DEFAULT: '#1c202a', soft: '#4a5160', faint: '#7c8496' },
-        paper: { DEFAULT: '#ffffff', soft: '#f8f7f4', sink: '#f0eee8' },
-        line: '#e8e4dc',
-        brand: { DEFAULT: '#4f46e5', ink: '#3730a3', soft: '#eef1ff', deep: '#312e81' },
-        accent: { DEFAULT: '#f97316', ink: '#c2410c', soft: '#fff3e9' },
-        perf: { DEFAULT: '#0d9488', ink: '#0f766e', soft: '#e6f5f3' }, // verified performance
-        rating: { DEFAULT: '#f59e0b', ink: '#b45309', soft: '#fef4e2' }, // public rating
+        ink: {
+          DEFAULT: 'rgb(var(--color-ink) / <alpha-value>)',
+          soft: 'rgb(var(--color-ink-soft) / <alpha-value>)',
+          faint: 'rgb(var(--color-ink-faint) / <alpha-value>)',
+        },
+        paper: {
+          DEFAULT: 'rgb(var(--color-paper) / <alpha-value>)',
+          soft: 'rgb(var(--color-paper-soft) / <alpha-value>)',
+          sink: 'rgb(var(--color-paper-sink) / <alpha-value>)',
+        },
+        line: 'rgb(var(--color-line) / <alpha-value>)',
+        brand: {
+          DEFAULT: 'rgb(var(--color-brand) / <alpha-value>)',
+          ink: 'rgb(var(--color-brand-ink) / <alpha-value>)',
+          soft: 'rgb(var(--color-brand-soft) / <alpha-value>)',
+          deep: 'rgb(var(--color-brand-deep) / <alpha-value>)',
+        },
+        accent: {
+          DEFAULT: 'rgb(var(--color-accent) / <alpha-value>)',
+          ink: 'rgb(var(--color-accent-ink) / <alpha-value>)',
+          soft: 'rgb(var(--color-accent-soft) / <alpha-value>)',
+        },
+        perf: {
+          DEFAULT: 'rgb(var(--color-perf) / <alpha-value>)',
+          ink: 'rgb(var(--color-perf-ink) / <alpha-value>)',
+          soft: 'rgb(var(--color-perf-soft) / <alpha-value>)',
+        },
+        rating: {
+          DEFAULT: 'rgb(var(--color-rating) / <alpha-value>)',
+          ink: 'rgb(var(--color-rating-ink) / <alpha-value>)',
+          soft: 'rgb(var(--color-rating-soft) / <alpha-value>)',
+        },
         good: '#16a34a',
         warn: '#d97706',
       },

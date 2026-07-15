@@ -15,6 +15,45 @@ const NAV: { href: string; key: string; icon: IconName; show: string }[] = [
   { href: '/about', key: 'nav.about', icon: 'info', show: 'hidden sm:flex' },
 ];
 
+function ThemeToggle() {
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    const saved = localStorage.getItem('theme');
+    if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      setTheme('dark');
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const next = theme === 'light' ? 'dark' : 'light';
+    setTheme(next);
+    localStorage.setItem('theme', next);
+    if (next === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  };
+
+  if (!mounted) {
+    return <div className="h-9 w-9" aria-hidden="true" />;
+  }
+
+  return (
+    <button
+      onClick={toggleTheme}
+      className="pressable grid h-9 w-9 place-items-center rounded-full text-ink-soft hover:bg-paper-sink"
+      aria-label={theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme'}
+      title={theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme'}
+    >
+      <Icon name={theme === 'light' ? 'moon' : 'sun'} size={18} />
+    </button>
+  );
+}
+
 export default function Header() {
   const { t } = useI18n();
   const pathname = usePathname();
@@ -68,6 +107,7 @@ export default function Header() {
               );
             })}
             <LanguageSwitcher />
+            <ThemeToggle />
           </nav>
         </div>
 

@@ -7,7 +7,7 @@ export type IconName =
   | 'info' | 'warn' | 'check' | 'megaphone' | 'cap' | 'briefcase' | 'calendar'
   | 'link' | 'sparkle' | 'scales' | 'flag' | 'layers' | 'x'
   | 'map' | 'compass' | 'building' | 'phone' | 'mail' | 'external' | 'network' | 'grid'
-  | 'code';
+  | 'code' | 'sun' | 'moon';
 
 const P: Record<IconName, React.ReactNode> = {
   search: <><circle cx="11" cy="11" r="7" /><path d="M21 21l-4.3-4.3" /></>,
@@ -46,6 +46,8 @@ const P: Record<IconName, React.ReactNode> = {
   network: <><circle cx="12" cy="5" r="2.5" /><circle cx="5" cy="18" r="2.5" /><circle cx="19" cy="18" r="2.5" /><path d="M12 7.5V12m0 0l-5.5 4M12 12l5.5 4" /></>,
   grid: <><rect x="4" y="4" width="7" height="7" rx="1.5" /><rect x="13" y="4" width="7" height="7" rx="1.5" /><rect x="4" y="13" width="7" height="7" rx="1.5" /><rect x="13" y="13" width="7" height="7" rx="1.5" /></>,
   code: <><path d="M8 6l-5 6 5 6M16 6l5 6-5 6" /></>,
+  sun: <><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" /></>,
+  moon: <><path d="M12 3a6 6 0 009 9 9 9 0 11-9-9z" /></>,
 };
 
 export default function Icon({

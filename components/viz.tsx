@@ -43,7 +43,7 @@ export function ScoreRing({
       aria-label={sublabel ?? aria}
     >
       <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} className="-rotate-90" aria-hidden>
-        <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="#e9e6df" strokeWidth={stroke} />
+        <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="currentColor" className="text-line" strokeWidth={stroke} />
         {value != null && (
           <circle
             cx={size / 2}

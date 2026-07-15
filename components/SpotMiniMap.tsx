@@ -27,7 +27,7 @@ export default function SpotMiniMap({
       role="img"
       aria-label={label}
     >
-      <path d={outline} fill="#ece7db" stroke="#d8d2c4" strokeWidth={1} strokeLinejoin="round" className="animate-map-in" />
+      <path d={outline} fill="var(--color-map-terrain)" stroke="rgb(var(--color-line))" strokeWidth={1} strokeLinejoin="round" className="animate-map-in" />
       <path d={spot} fill="#f97316" stroke="#fff" strokeWidth={0.8} strokeLinejoin="round" className="animate-scale-in" opacity={0.92} />
       <g className="pointer-events-none">
         <circle cx={spotCx} cy={spotCy} r={6} fill="none" stroke="#f97316" strokeWidth={1.6} opacity={0.5}>

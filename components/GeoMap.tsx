@@ -22,8 +22,14 @@ export interface GeoMapShape {
   highlighted?: boolean;
 }
 
-const RAMP = ['#dfe3fb', '#c3cbf7', '#a5b0f2', '#7f8cec', '#5b66e3'];
-const TERRAIN = '#ebe6da';
+const RAMP = [
+  'var(--color-map-ramp-0)',
+  'var(--color-map-ramp-1)',
+  'var(--color-map-ramp-2)',
+  'var(--color-map-ramp-3)',
+  'var(--color-map-ramp-4)',
+];
+const TERRAIN = 'var(--color-map-terrain)';
 const HIGHLIGHT = '#f97316';
 
 function fillFor(s: GeoMapShape): string {
