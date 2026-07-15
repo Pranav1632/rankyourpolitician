@@ -4,12 +4,12 @@
  * MLAs have no enwiki article, yet DO have a portrait on their Hindi or
  * regional-language Wikipedia. This pass, for every photoless record with a
  * Wikidata QID, checks each language edition it is linked to and takes the
- * page's lead image — but ONLY when that file lives on Wikimedia Commons (i.e.
+ * page's lead image - but ONLY when that file lives on Wikimedia Commons (i.e.
  * is freely licensed). Local fair-use uploads return "missing" on Commons and
  * are dropped, so we never attach an unlicensed image. Fill-only.
  *
  * Usage:  npm run dm -- enrich-photos
- *         PHOTO_LIMIT=200 npm run dm -- enrich-photos   (first 200 — testing)
+ *         PHOTO_LIMIT=200 npm run dm -- enrich-photos   (first 200 - testing)
  */
 import { readFileSync, writeFileSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
@@ -90,7 +90,7 @@ async function main() {
     process.stdout.write(`  ${db}: scanned ${entries.length}\n`);
   }
 
-  // 3. Commons license gate — keep only files that live on Commons (free).
+  // 3. Commons license gate - keep only files that live on Commons (free).
   const files = [...new Set([...fileByQid.values()].map((v) => v.file))].map((f) => `File:${f}`);
   console.log(`Verifying ${files.length} candidate images on Commons…`);
   const license = new Map<string, string>();

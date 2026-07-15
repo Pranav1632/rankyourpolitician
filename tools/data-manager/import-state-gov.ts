@@ -45,7 +45,7 @@ function main() {
       const name = decode(p?.name || '');
       if (!name || name.length < 2) return null;
       if (/president'?s rule|vacant seat/i.test(name)) return null;
-      if (/^(n\/?a|unknown|tbd|none|nil|vacant|—|-)$/i.test(name)) return null; // standalone placeholders only
+      if (/^(n\/?a|unknown|tbd|none|nil|vacant|-|-)$/i.test(name)) return null; // standalone placeholders only
       let id = slug(`${name}-${s.stateCode}`);
       const n = (seen.get(id) || 0) + 1; seen.set(id, n);
       if (n > 1) id = `${id}-${n}`;

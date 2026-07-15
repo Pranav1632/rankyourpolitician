@@ -1,10 +1,10 @@
 'use client';
 // The "actual people" ladder: for a problem + district, the real humans to
 // contact in ESCALATION ORDER, local-first:
-//   1. Level 1 — the office in your area (GP secretary / SHO / JE / ward office)
-//   2. Level 2 — the block/tehsil/sub-division officer above it
-//   3. Your MLA — the elected leader for YOUR assembly constituency (pickable)
-//   4. District administration — DM (SP first for police matters)
+//   1. Level 1 - the office in your area (GP secretary / SHO / JE / ward office)
+//   2. Level 2 - the block/tehsil/sub-division officer above it
+//   3. Your MLA - the elected leader for YOUR assembly constituency (pickable)
+//   4. District administration - DM (SP first for police matters)
 //   5. State minister for the department → Chief Minister (the LAST resort,
 //      not the first stop)
 // plus the district's MPs as the parallel national lever. Shared by the /who
@@ -186,7 +186,7 @@ export default function ResponsiblePeople({
   return (
     <div>
       <ol className="mt-1">
-        {/* 1 — LEVEL 1: the office in your area. Carries the one published number
+        {/* 1 - LEVEL 1: the office in your area. Carries the one published number
              that reaches it, so the first stop is actionable, not just described. */}
         <Step n={++n} icon="home" title={t('who.stepLevel1')}>
           <OfficeCard
@@ -197,7 +197,7 @@ export default function ResponsiblePeople({
           />
         </Step>
 
-        {/* 2 — LEVEL 2: block / tehsil / sub-division, before anything district-wide */}
+        {/* 2 - LEVEL 2: block / tehsil / sub-division, before anything district-wide */}
         {level2.length > 0 && (
           <Step n={++n} icon="layers" title={t('who.stepLevel2')}>
             <div className="space-y-2">
@@ -208,7 +208,7 @@ export default function ResponsiblePeople({
           </Step>
         )}
 
-        {/* 3 — YOUR MLA: the elected leader for your own assembly seat */}
+        {/* 3 - YOUR MLA: the elected leader for your own assembly seat */}
         {people.mlas.length > 0 && (
           <Step n={++n} icon="people" title={t('who.stepMla')}>
             {people.mlas.length > 1 && (
@@ -247,7 +247,7 @@ export default function ResponsiblePeople({
           </Step>
         )}
 
-        {/* 4 — district administration: SP for police issues, DM for the rest */}
+        {/* 4 - district administration: SP for police issues, DM for the rest */}
         <Step n={++n} icon="shield" title={t('who.stepDistrict')}>
           <div className="space-y-2">
             {(police ? (['sp_district', 'collector_dm'] as const) : (['collector_dm'] as const)).map((ot) => {
@@ -277,7 +277,7 @@ export default function ResponsiblePeople({
                       </p>
                     </div>
                   ) : (
-                    // We don't name most DMs/SPs — officers transfer too often to
+                    // We don't name most DMs/SPs - officers transfer too often to
                     // track nationally. The actual ways in are rendered ONCE below
                     // for the whole step rather than repeated under each officer.
                     <p className="mt-1 text-sm text-ink-faint">
@@ -297,7 +297,7 @@ export default function ResponsiblePeople({
           )}
         </Step>
 
-        {/* 5 — the state minister who runs this department, then the CM.
+        {/* 5 - the state minister who runs this department, then the CM.
              The political executive is the LAST resort, not the first stop.
              When the CM keeps the department (common for Home), the CM IS this
              step, so the separate CM step below is skipped. */}
@@ -342,7 +342,7 @@ export default function ResponsiblePeople({
         })()}
       </ol>
 
-      {/* Parallel national lever — the district's MPs (MLAs now sit in the ladder) */}
+      {/* Parallel national lever - the district's MPs (MLAs now sit in the ladder) */}
       {people.mps.length > 0 && (
         <div className="mt-2 rounded-3xl border border-perf/25 bg-perf-soft/40 p-4">
           <p className="flex items-center gap-1.5 text-sm font-bold text-perf-ink">

@@ -1,5 +1,5 @@
 /**
- * Data-manager step: add the MLCs — sitting members of the state LEGISLATIVE
+ * Data-manager step: add the MLCs - sitting members of the state LEGISLATIVE
  * COUNCILS (Vidhan Parishad), the upper house of a state legislature. Only six
  * states have a Council: Andhra Pradesh, Bihar, Karnataka, Maharashtra,
  * Telangana and Uttar Pradesh (Article 168). ~426 seats in total.
@@ -7,14 +7,14 @@
  * MLCs are NOT elected by the general public from a territorial seat: about a
  * third by the state's MLAs, a third by local-body members, a twelfth each by
  * registered graduates and teachers, and the rest nominated by the Governor
- * (Article 171). So — exactly like a Rajya Sabha member — an MLC carries a state
+ * (Article 171). So - exactly like a Rajya Sabha member - an MLC carries a state
  * and an electorate ("MLA quota" / "… Local Authorities" / "… Graduates" /
  * "… Teachers" / "Nominated") but NO constituencyId.
  *
  * Source: each council's Wikipedia "List of members of the … Legislative
  * Council". Some of those pages are chronological (they also list past members),
  * so we keep only rows whose six-year term is *currently* running
- * (term start ≤ today < term end) — the rigorous test for a sitting member.
+ * (term start ≤ today < term end) - the rigorous test for a sitting member.
  *
  * Identity-only here (name, party, state, electorate, term); bio/photo come from
  * the shared Wikidata enrichment (`enrich-mps`, which enriches any record that
@@ -46,7 +46,7 @@ const PAGE: Record<string, string> = {
   TG: 'List of members of the Telangana Legislative Council',
   UP: 'List of members of the Uttar Pradesh Legislative Council',
 };
-// Sanctioned strength of each Council — a structural check against parse drift.
+// Sanctioned strength of each Council - a structural check against parse drift.
 const EXPECTED: Record<string, number> = { AP: 58, BR: 75, KA: 75, MH: 78, TG: 40, UP: 100 };
 
 const slug = (s: string) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
@@ -55,7 +55,7 @@ const clean = (s: string) => stripRefs(s)
   .replace(/\[\[[^\]|]*\|([^\]]+)\]\]/g, '$1').replace(/\[\[([^\]]+)\]\]/g, '$1')
   .replace(/\{\{[^}]*\}\}/g, '').replace(/'''?/g, '').replace(/<br\s*\/?>/gi, ' ').replace(/<[^>]+>/g, '')
   .replace(/\*+\s*$/, '').replace(/\s+/g, ' ').trim();
-const normParty = (p: string) => clean(p).replace(/\s*\((?:19|20)\d\d[–-](?:present|\d\d\d\d)\)\s*$/i, '').trim();
+const normParty = (p: string) => clean(p).replace(/\s*\((?:19|20)\d\d[--](?:present|\d\d\d\d)\)\s*$/i, '').trim();
 
 const MONTHS: Record<string, number> = { jan: 0, feb: 1, mar: 2, apr: 3, may: 4, jun: 5, jul: 6, aug: 7, sep: 8, oct: 9, nov: 10, dec: 11 };
 const DATE_G = /(\d{1,2})[\s-]([A-Za-z]{3,9})[\s-](\d{4})/g;
@@ -135,7 +135,7 @@ function rowCells(row: string): string[] {
   for (const line of row.split('\n')) {
     const t = line.trim();
     if (!t.startsWith('|') || t.startsWith('|-') || t.startsWith('|+') || t.startsWith('|}')) continue;
-    // A cell line can be `| content` or `| attr="…" | content` — strip a leading
+    // A cell line can be `| content` or `| attr="…" | content` - strip a leading
     // attribute prefix (…" |) so the returned string is the cell's real content.
     let c = t.replace(/^\|+/, '');
     c = c.replace(/^\s*[a-z-]+="[^"]*"\s*\|(?!\|)/i, ''); // drop one leading attr="…" | prefix
@@ -185,7 +185,7 @@ function parseMembers(wt: string, code: string): MLC[] {
     let electorate = '', electorateIdx = -1;
     for (let i = dateIdx - 1; i >= 0; i--) { if (!isAttr(cells[i])) { const c = clean(cells[i]); if (c && !DATE_T.test(c)) { electorate = c; electorateIdx = i; break; } } }
 
-    // Party — priority: (1) {{party (name with) colo(u)r|X}} template, then
+    // Party - priority: (1) {{party (name with) colo(u)r|X}} template, then
     // (2) a plain party wikilink in the party cell (between name and electorate;
     // Karnataka gives one rowspanned template then plain [[BJP]]-style links).
     // A rowspan-continuation row has NO party cell → curParty carries forward.
@@ -280,12 +280,12 @@ async function main() {
         districts: [],
         current_position: `Member of the Legislative Council (MLC), ${state}`,
         is_minister: false,
-        neutral_summary: `${m.name} is a Member of the Legislative Council (MLC) in ${state} — the Vidhan Parishad, the upper house of the state legislature — ${elected}. Current party affiliation: ${m.party}. Current term: ${m.termStart} to ${m.termEnd}.`,
+        neutral_summary: `${m.name} is a Member of the Legislative Council (MLC) in ${state} - the Vidhan Parishad, the upper house of the state legislature - ${elected}. Current party affiliation: ${m.party}. Current term: ${m.termStart} to ${m.termEnd}.`,
         metrics: {},
         facts: [],
         active: true,
         generated: true,
-        identity_source: { url: `https://en.wikipedia.org/wiki/${encodeURIComponent(PAGE[code].replace(/ /g, '_'))}`, name: `Wikipedia — ${PAGE[code]}`, retrieved_date: TODAY },
+        identity_source: { url: `https://en.wikipedia.org/wiki/${encodeURIComponent(PAGE[code].replace(/ /g, '_'))}`, name: `Wikipedia - ${PAGE[code]}`, retrieved_date: TODAY },
         ...(qid ? { wikidata_qid: qid } : {}),
       });
       totalAdded++;

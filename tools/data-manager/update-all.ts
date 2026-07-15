@@ -38,9 +38,9 @@ const STEPS: Step[] = [
   { name: 'Wikidata bio / career / photos / QIDs', cmd: 'enrich-wikidata', heavy: true },
   { name: 'Verify stored QIDs (strip wrong photos/facts)', cmd: 'verify-wikidata', heavy: true },
   { name: 'Extra photos (Hindi + regional Wikipedia)', cmd: 'enrich-photos', heavy: true },
-  { name: 'Affidavits — Lok Sabha (MyNeta/ADR)', cmd: 'enrich-affidavits' },
-  { name: 'Affidavits — state assemblies (MyNeta/ADR)', cmd: 'enrich-affidavits-states' },
-  { name: 'Performance — MPs (Digital Sansad)', cmd: 'enrich-performance', env: refresh ? { PERF_REFRESH: '1' } : {} },
+  { name: 'Affidavits - Lok Sabha (MyNeta/ADR)', cmd: 'enrich-affidavits' },
+  { name: 'Affidavits - state assemblies (MyNeta/ADR)', cmd: 'enrich-affidavits-states' },
+  { name: 'Performance - MPs (Digital Sansad)', cmd: 'enrich-performance', env: refresh ? { PERF_REFRESH: '1' } : {} },
   { name: 'Link ministers → real profiles', cmd: 'link-ministers' },
   { name: 'Data-quality normalisation', cmd: 'normalize-fields' },
 ];
@@ -60,7 +60,7 @@ function run(label: string, args: string[], env: Record<string, string> = {}): b
 }
 
 async function main() {
-  console.log('RankYourPolitician — update all data from sources\n' + '='.repeat(56));
+  console.log('RankYourPolitician - update all data from sources\n' + '='.repeat(56));
   const results: { name: string; ok: boolean; skipped?: boolean }[] = [];
 
   for (const s of STEPS) {
@@ -78,7 +78,7 @@ async function main() {
   console.log(`  ${rebuilt ? '✓' : '✗ FAILED'}  Rebuild indexes`);
   console.log(`  ${valid ? '✓' : '✗ FAILED'}  Validate`);
   const failed = results.filter((r) => !r.ok && !r.skipped).length + (rebuilt ? 0 : 1) + (valid ? 0 : 1);
-  console.log(failed ? `\n${failed} step(s) failed — review the log above.` : '\n✓ All steps complete. Commit the seed + rebuilt indexes, then redeploy.');
+  console.log(failed ? `\n${failed} step(s) failed - review the log above.` : '\n✓ All steps complete. Commit the seed + rebuilt indexes, then redeploy.');
   process.exit(failed ? 1 : 0);
 }
 

@@ -2107,7 +2107,7 @@
   {
     "id": "ac-ar-borduria-bagapani",
     "type": "AC",
-    "name": "Borduria–Bagapani",
+    "name": "Borduria-Bagapani",
     "state": "Arunachal Pradesh",
     "stateCode": "AR",
     "districts": [
@@ -2303,7 +2303,7 @@
   {
     "id": "ac-ar-longding-pumao",
     "type": "AC",
-    "name": "Longding–Pumao",
+    "name": "Longding-Pumao",
     "state": "Arunachal Pradesh",
     "stateCode": "AR",
     "districts": [
@@ -2599,7 +2599,7 @@
   {
     "id": "ac-ar-tuting-yingkiong",
     "type": "AC",
-    "name": "Tuting–Yingkiong",
+    "name": "Tuting-Yingkiong",
     "state": "Arunachal Pradesh",
     "stateCode": "AR",
     "districts": []
@@ -2617,7 +2617,7 @@
   {
     "id": "ac-ar-ziro-hapoli",
     "type": "AC",
-    "name": "Ziro–Hapoli",
+    "name": "Ziro-Hapoli",
     "state": "Arunachal Pradesh",
     "stateCode": "AR",
     "districts": [
@@ -2635,7 +2635,7 @@
   {
     "id": "ac-as-algapur-katlicherra",
     "type": "AC",
-    "name": "Algapur–Katlicherra",
+    "name": "Algapur-Katlicherra",
     "state": "Assam",
     "stateCode": "AS",
     "districts": []
@@ -2745,7 +2745,7 @@
   {
     "id": "ac-as-bhowanipur-sorbhog",
     "type": "AC",
-    "name": "Bhowanipur–Sorbhog",
+    "name": "Bhowanipur-Sorbhog",
     "state": "Assam",
     "stateCode": "AS",
     "districts": []
@@ -2827,7 +2827,7 @@
   {
     "id": "ac-as-boko-chaygaon",
     "type": "AC",
-    "name": "Boko–Chaygaon",
+    "name": "Boko-Chaygaon",
     "state": "Assam",
     "stateCode": "AS",
     "districts": []
@@ -2853,7 +2853,7 @@
   {
     "id": "ac-as-chabua-lahowal",
     "type": "AC",
-    "name": "Chabua–Lahowal",
+    "name": "Chabua-Lahowal",
     "state": "Assam",
     "stateCode": "AS",
     "districts": []
@@ -2889,7 +2889,7 @@
   {
     "id": "pc-as-darrang-udalguri",
     "type": "PC",
-    "name": "Darrang–Udalguri",
+    "name": "Darrang-Udalguri",
     "state": "Assam",
     "stateCode": "AS",
     "districts": []
@@ -3205,7 +3205,7 @@
   {
     "id": "ac-as-hajo-sualkuchi",
     "type": "AC",
-    "name": "Hajo–Sualkuchi",
+    "name": "Hajo-Sualkuchi",
     "state": "Assam",
     "stateCode": "AS",
     "districts": []
@@ -3573,7 +3573,7 @@
   {
     "id": "ac-as-nagaon-batadraba",
     "type": "AC",
-    "name": "Nagaon–Batadraba",
+    "name": "Nagaon-Batadraba",
     "state": "Assam",
     "stateCode": "AS",
     "districts": []
@@ -3769,7 +3769,7 @@
   {
     "id": "ac-as-sidli-chirang",
     "type": "AC",
-    "name": "Sidli–Chirang",
+    "name": "Sidli-Chirang",
     "state": "Assam",
     "stateCode": "AS",
     "districts": []
@@ -6827,7 +6827,7 @@
     "state": "Chhattisgarh",
     "stateCode": "CG",
     "districts": [
-      "Kanker *"
+      "Kanker"
     ]
   },
   {
@@ -6878,7 +6878,7 @@
     "stateCode": "CG",
     "districts": [
       "Bastar",
-      "Dantewada*"
+      "Dantewada"
     ]
   },
   {
@@ -6918,7 +6918,7 @@
     "state": "Chhattisgarh",
     "stateCode": "CG",
     "districts": [
-      "Kanker *"
+      "Kanker"
     ]
   },
   {
@@ -6966,7 +6966,7 @@
     "state": "Chhattisgarh",
     "stateCode": "CG",
     "districts": [
-      "Dantewada*"
+      "Dantewada"
     ]
   },
   {
@@ -7044,7 +7044,7 @@
     "state": "Chhattisgarh",
     "stateCode": "CG",
     "districts": [
-      "Dantewada*"
+      "Dantewada"
     ]
   },
   {
@@ -7180,7 +7180,7 @@
   {
     "id": "pc-cg-janjgir-champa",
     "type": "PC",
-    "name": "Janjgir–Champa",
+    "name": "Janjgir-Champa",
     "state": "Chhattisgarh",
     "stateCode": "CG",
     "districts": [
@@ -7207,7 +7207,7 @@
       "Bastar",
       "Dhamtari",
       "Durg",
-      "Kanker *"
+      "Kanker"
     ]
   },
   {
@@ -7217,7 +7217,7 @@
     "state": "Chhattisgarh",
     "stateCode": "CG",
     "districts": [
-      "Kanker *"
+      "Kanker"
     ]
   },
   {
@@ -7247,7 +7247,7 @@
     "state": "Chhattisgarh",
     "stateCode": "CG",
     "districts": [
-      "Kawardha *"
+      "Kawardha"
     ]
   },
   {
@@ -7317,7 +7317,7 @@
     "state": "Chhattisgarh",
     "stateCode": "CG",
     "districts": [
-      "Dantewada*"
+      "Dantewada"
     ]
   },
   {
@@ -7519,7 +7519,7 @@
     "state": "Chhattisgarh",
     "stateCode": "CG",
     "districts": [
-      "Kawardha *"
+      "Kawardha"
     ]
   },
   {
@@ -7650,7 +7650,7 @@
     "state": "Chhattisgarh",
     "stateCode": "CG",
     "districts": [
-      "Kawardha *",
+      "Kawardha",
       "Rajnandgaon"
     ]
   },
@@ -11222,7 +11222,7 @@
   {
     "id": "pc-hr-bhiwani-mahendragarh",
     "type": "PC",
-    "name": "Bhiwani–Mahendragarh",
+    "name": "Bhiwani-Mahendragarh",
     "state": "Haryana",
     "stateCode": "HR",
     "districts": [
@@ -12810,7 +12810,7 @@
   {
     "id": "pc-jk-anantnag-rajouri",
     "type": "PC",
-    "name": "Anantnag–Rajouri",
+    "name": "Anantnag-Rajouri",
     "state": "Jammu & Kashmir",
     "stateCode": "JK",
     "districts": []
@@ -13187,7 +13187,7 @@
   {
     "id": "ac-jk-kalakote-sunderbani",
     "type": "AC",
-    "name": "Kalakote–Sunderbani",
+    "name": "Kalakote-Sunderbani",
     "state": "Jammu & Kashmir",
     "stateCode": "JK",
     "districts": []
@@ -13347,7 +13347,7 @@
   {
     "id": "ac-jk-padder-nagseni",
     "type": "AC",
-    "name": "Padder–Nagseni",
+    "name": "Padder-Nagseni",
     "state": "Jammu & Kashmir",
     "stateCode": "JK",
     "districts": []
@@ -13473,7 +13473,7 @@
   {
     "id": "ac-jk-rs-pora-jammu-south",
     "type": "AC",
-    "name": "RS Pora–Jammu South",
+    "name": "RS Pora-Jammu South",
     "state": "Jammu & Kashmir",
     "stateCode": "JK",
     "districts": []
@@ -13491,7 +13491,7 @@
   {
     "id": "ac-jk-shangus-anantnag-east",
     "type": "AC",
-    "name": "Shangus–Anantnag East",
+    "name": "Shangus-Anantnag East",
     "state": "Jammu & Kashmir",
     "stateCode": "JK",
     "districts": []
@@ -13537,7 +13537,7 @@
   {
     "id": "ac-jk-srigufwara-bijbehara",
     "type": "AC",
-    "name": "Srigufwara–Bijbehara",
+    "name": "Srigufwara-Bijbehara",
     "state": "Jammu & Kashmir",
     "stateCode": "JK",
     "districts": []
@@ -13651,7 +13651,7 @@
   {
     "id": "ac-jk-wagoora-kreeri",
     "type": "AC",
-    "name": "Wagoora–Kreeri",
+    "name": "Wagoora-Kreeri",
     "state": "Jammu & Kashmir",
     "stateCode": "JK",
     "districts": []
@@ -21725,7 +21725,7 @@
   {
     "id": "pc-mh-bhandara-gondiya",
     "type": "PC",
-    "name": "Bhandara–Gondiya",
+    "name": "Bhandara-Gondiya",
     "state": "Maharashtra",
     "stateCode": "MH",
     "districts": [
@@ -22238,7 +22238,7 @@
   {
     "id": "pc-mh-gadchiroli-chimur",
     "type": "PC",
-    "name": "Gadchiroli–Chimur",
+    "name": "Gadchiroli-Chimur",
     "state": "Maharashtra",
     "stateCode": "MH",
     "districts": [
@@ -23900,7 +23900,7 @@
   {
     "id": "pc-mh-ratnagiri-sindhudurg",
     "type": "PC",
-    "name": "Ratnagiri–Sindhudurg",
+    "name": "Ratnagiri-Sindhudurg",
     "state": "Maharashtra",
     "stateCode": "MH",
     "districts": []
@@ -24590,7 +24590,7 @@
   {
     "id": "pc-mh-yavatmal-washim",
     "type": "PC",
-    "name": "Yavatmal–Washim",
+    "name": "Yavatmal-Washim",
     "state": "Maharashtra",
     "stateCode": "MH",
     "districts": [
@@ -26449,7 +26449,7 @@
   {
     "id": "ac-nl-longkhim-chare",
     "type": "AC",
-    "name": "Longkhim–Chare",
+    "name": "Longkhim-Chare",
     "state": "Nagaland",
     "stateCode": "NL",
     "districts": [
@@ -26624,7 +26624,7 @@
   {
     "id": "ac-nl-pungro-kiphire",
     "type": "AC",
-    "name": "Pungro–Kiphire",
+    "name": "Pungro-Kiphire",
     "state": "Nagaland",
     "stateCode": "NL",
     "districts": [
@@ -26654,7 +26654,7 @@
   {
     "id": "ac-nl-seyochung-sitimi",
     "type": "AC",
-    "name": "Seyochung–Sitimi",
+    "name": "Seyochung-Sitimi",
     "state": "Nagaland",
     "stateCode": "NL",
     "districts": []
@@ -26662,7 +26662,7 @@
   {
     "id": "ac-nl-shamator-chessore",
     "type": "AC",
-    "name": "Shamator–Chessore",
+    "name": "Shamator-Chessore",
     "state": "Nagaland",
     "stateCode": "NL",
     "districts": []
@@ -27236,7 +27236,7 @@
     "state": "Odisha",
     "stateCode": "OD",
     "districts": [
-      "Sonapur  *"
+      "Sonapur"
     ]
   },
   {
@@ -27257,7 +27257,7 @@
     "stateCode": "OD",
     "districts": [
       "Balangir",
-      "Sonapur  *"
+      "Sonapur"
     ]
   },
   {
@@ -28398,7 +28398,7 @@
     "state": "Odisha",
     "stateCode": "OD",
     "districts": [
-      "Sonapur  *"
+      "Sonapur"
     ]
   },
   {
@@ -28930,7 +28930,7 @@
     "stateCode": "PB",
     "districts": [
       "Hoshiarpur",
-      "Nawanshahr *",
+      "Nawanshahr",
       "Rupnagar"
     ]
   },
@@ -28981,7 +28981,7 @@
     "state": "Punjab",
     "stateCode": "PB",
     "districts": [
-      "Nawanshahr *"
+      "Nawanshahr"
     ]
   },
   {
@@ -29001,7 +29001,7 @@
     "state": "Punjab",
     "stateCode": "PB",
     "districts": [
-      "Nawanshahr *"
+      "Nawanshahr"
     ]
   },
   {
@@ -29777,7 +29777,7 @@
     "state": "Punjab",
     "stateCode": "PB",
     "districts": [
-      "Nawanshahr *"
+      "Nawanshahr"
     ]
   },
   {
@@ -31052,7 +31052,7 @@
   {
     "id": "pc-rj-jhalawar-baran",
     "type": "PC",
-    "name": "Jhalawar–Baran",
+    "name": "Jhalawar-Baran",
     "state": "Rajasthan",
     "stateCode": "RJ",
     "districts": [
@@ -31165,7 +31165,7 @@
   {
     "id": "pc-rj-karauli-dholpur",
     "type": "PC",
-    "name": "Karauli–Dholpur",
+    "name": "Karauli-Dholpur",
     "state": "Rajasthan",
     "stateCode": "RJ",
     "districts": [
@@ -32290,7 +32290,7 @@
   {
     "id": "pc-rj-tonk-sawai-madhopur",
     "type": "PC",
-    "name": "Tonk–Sawai Madhopur",
+    "name": "Tonk-Sawai Madhopur",
     "state": "Rajasthan",
     "stateCode": "RJ",
     "districts": [
@@ -32442,7 +32442,7 @@
   {
     "id": "ac-sk-gnathang-machong",
     "type": "AC",
-    "name": "Gnathang–Machong",
+    "name": "Gnathang-Machong",
     "state": "Sikkim",
     "stateCode": "SK",
     "districts": [
@@ -32452,7 +32452,7 @@
   {
     "id": "ac-sk-gyalshing-barnyak",
     "type": "AC",
-    "name": "Gyalshing–Barnyak",
+    "name": "Gyalshing-Barnyak",
     "state": "Sikkim",
     "stateCode": "SK",
     "districts": [
@@ -32462,7 +32462,7 @@
   {
     "id": "ac-sk-kabi-lungchok",
     "type": "AC",
-    "name": "Kabi–Lungchok",
+    "name": "Kabi-Lungchok",
     "state": "Sikkim",
     "stateCode": "SK",
     "districts": []
@@ -32470,7 +32470,7 @@
   {
     "id": "ac-sk-khamdong-singtam",
     "type": "AC",
-    "name": "Khamdong–Singtam",
+    "name": "Khamdong-Singtam",
     "state": "Sikkim",
     "stateCode": "SK",
     "districts": [
@@ -32480,7 +32480,7 @@
   {
     "id": "ac-sk-lachen-mangan",
     "type": "AC",
-    "name": "Lachen–Mangan",
+    "name": "Lachen-Mangan",
     "state": "Sikkim",
     "stateCode": "SK",
     "districts": [
@@ -32490,7 +32490,7 @@
   {
     "id": "ac-sk-maneybong-dentam",
     "type": "AC",
-    "name": "Maneybong–Dentam",
+    "name": "Maneybong-Dentam",
     "state": "Sikkim",
     "stateCode": "SK",
     "districts": []
@@ -32498,7 +32498,7 @@
   {
     "id": "ac-sk-martam-rumtek",
     "type": "AC",
-    "name": "Martam–Rumtek",
+    "name": "Martam-Rumtek",
     "state": "Sikkim",
     "stateCode": "SK",
     "districts": [
@@ -32526,7 +32526,7 @@
   {
     "id": "ac-sk-namchi-singhithang",
     "type": "AC",
-    "name": "Namchi–Singhithang",
+    "name": "Namchi-Singhithang",
     "state": "Sikkim",
     "stateCode": "SK",
     "districts": [
@@ -32536,7 +32536,7 @@
   {
     "id": "ac-sk-namthang-rateypani",
     "type": "AC",
-    "name": "Namthang–Rateypani",
+    "name": "Namthang-Rateypani",
     "state": "Sikkim",
     "stateCode": "SK",
     "districts": [
@@ -32546,7 +32546,7 @@
   {
     "id": "ac-sk-poklok-kamrang",
     "type": "AC",
-    "name": "Poklok–Kamrang",
+    "name": "Poklok-Kamrang",
     "state": "Sikkim",
     "stateCode": "SK",
     "districts": [
@@ -32556,7 +32556,7 @@
   {
     "id": "ac-sk-rangang-yangang",
     "type": "AC",
-    "name": "Rangang–Yangang",
+    "name": "Rangang-Yangang",
     "state": "Sikkim",
     "stateCode": "SK",
     "districts": [
@@ -32586,7 +32586,7 @@
   {
     "id": "ac-sk-salghari-zoom",
     "type": "AC",
-    "name": "Salghari–Zoom",
+    "name": "Salghari-Zoom",
     "state": "Sikkim",
     "stateCode": "SK",
     "districts": [
@@ -32627,7 +32627,7 @@
   {
     "id": "ac-sk-soreng-chakung",
     "type": "AC",
-    "name": "Soreng–Chakung",
+    "name": "Soreng-Chakung",
     "state": "Sikkim",
     "stateCode": "SK",
     "districts": []
@@ -32635,7 +32635,7 @@
   {
     "id": "ac-sk-temi-namphing",
     "type": "AC",
-    "name": "Temi–Namphing",
+    "name": "Temi-Namphing",
     "state": "Sikkim",
     "stateCode": "SK",
     "districts": [
@@ -32645,7 +32645,7 @@
   {
     "id": "ac-sk-tumin-lingee",
     "type": "AC",
-    "name": "Tumin–Lingee",
+    "name": "Tumin-Lingee",
     "state": "Sikkim",
     "stateCode": "SK",
     "districts": []
@@ -32693,7 +32693,7 @@
   {
     "id": "ac-sk-yoksam-tashiding",
     "type": "AC",
-    "name": "Yoksam–Tashiding",
+    "name": "Yoksam-Tashiding",
     "state": "Sikkim",
     "stateCode": "SK",
     "districts": [
@@ -39394,7 +39394,7 @@
     "stateCode": "UP",
     "districts": [
       "Aligarh",
-      "Hathras *"
+      "Hathras"
     ]
   },
   {
@@ -39404,7 +39404,7 @@
     "state": "Uttar Pradesh",
     "stateCode": "UP",
     "districts": [
-      "Hathras *"
+      "Hathras"
     ]
   },
   {
@@ -41408,7 +41408,7 @@
     "state": "Uttar Pradesh",
     "stateCode": "UP",
     "districts": [
-      "Hathras *"
+      "Hathras"
     ]
   },
   {
@@ -41830,7 +41830,7 @@
     "state": "Uttar Pradesh",
     "stateCode": "UP",
     "districts": [
-      "Hathras *"
+      "Hathras"
     ]
   },
   {
@@ -42673,7 +42673,7 @@
   {
     "id": "pc-uk-nainital-udhamsingh-nagar",
     "type": "PC",
-    "name": "Nainital–Udhamsingh Nagar",
+    "name": "Nainital-Udhamsingh Nagar",
     "state": "Uttarakhand",
     "stateCode": "UK",
     "districts": []
@@ -43309,7 +43309,7 @@
   {
     "id": "pc-wb-bardhaman-durgapur",
     "type": "PC",
-    "name": "Bardhaman–Durgapur",
+    "name": "Bardhaman-Durgapur",
     "state": "West Bengal",
     "stateCode": "WB",
     "districts": [
@@ -44689,7 +44689,7 @@
   {
     "id": "ac-wb-kashipur-belgachhia",
     "type": "AC",
-    "name": "Kashipur–Belgachhia",
+    "name": "Kashipur-Belgachhia",
     "state": "West Bengal",
     "stateCode": "WB",
     "districts": [
@@ -45159,7 +45159,7 @@
   {
     "id": "ac-wb-matigara-naxalbari",
     "type": "AC",
-    "name": "Matigara–Naxalbari",
+    "name": "Matigara-Naxalbari",
     "state": "West Bengal",
     "stateCode": "WB",
     "districts": [

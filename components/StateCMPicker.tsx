@@ -1,5 +1,5 @@
 'use client';
-// "Find your state's government" — a personalised slice of the org chart.
+// "Find your state's government" - a personalised slice of the org chart.
 import { useState } from 'react';
 import Link from 'next/link';
 import { useI18n } from '@/lib/i18n/provider';

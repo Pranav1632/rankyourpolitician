@@ -18,6 +18,12 @@
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev", "--", "-p", "3210"],
       "port": 3210
+    },
+    {
+      "name": "prod-3101",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "start", "--", "-p", "3101"],
+      "port": 3101
     }
   ]
 }

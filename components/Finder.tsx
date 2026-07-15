@@ -2,7 +2,7 @@
 // The responsibility finder: problem + YOUR district → the actual people
 // responsible, in escalation order. Location is remembered on this device and
 // deep-linkable (?state=TG&district=Adilabad). People data comes from the
-// prebuilt static /who/{ST}.json payloads — no server work per lookup.
+// prebuilt static /who/{ST}.json payloads - no server work per lookup.
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -244,7 +244,7 @@ export default function Finder() {
                 <div className="skeleton h-16 w-11/12" />
               </div>
             ) : (
-              // No district picked yet — role-level guidance + a nudge.
+              // No district picked yet - role-level guidance + a nudge.
               <>
                 <p className="mt-3 flex items-center gap-2 rounded-2xl bg-accent-soft p-3 text-sm font-semibold text-accent-ink">
                   <Icon name="pin" size={16} /> {t('who.pickForPeople')}
@@ -272,7 +272,7 @@ export default function Finder() {
               </>
             )}
 
-            {/* Full role-based reporting chain (verified) — collapsed reference */}
+            {/* Full role-based reporting chain (verified) - collapsed reference */}
             <details className="group mt-5 rounded-2xl border border-line/70 bg-white/80">
               <summary className="flex cursor-pointer items-center justify-between px-4 py-3 text-sm font-semibold text-brand">
                 <span className="flex items-center gap-1.5"><Icon name="layers" size={15} /> {t('finder.escalationTitle')}</span>

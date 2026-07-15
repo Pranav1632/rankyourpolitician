@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useI18n } from '@/lib/i18n/provider';
 import Icon from './Icon';
 
-const REPO_URL = 'https://github.com/vikas0706/rankyourpolitician';
+const REPO_URL = 'https://github.com/ForPublicOrg/rankyourpolitician';
 
 export default function Footer() {
   const { t } = useI18n();

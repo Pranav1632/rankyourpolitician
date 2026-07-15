@@ -20,7 +20,7 @@ async function main() {
       for (const i of issues) {
         console.log(`${i.severity === 'error' ? '✗ ERROR' : '⚠ warn '}  ${i.name}: ${i.message}`);
       }
-      console.log(ok ? '\n✓ No blocking errors — safe to publish.' : '\n✗ Fix errors before publishing.');
+      console.log(ok ? '\n✓ No blocking errors - safe to publish.' : '\n✗ Fix errors before publishing.');
       process.exit(ok ? 0 : 1);
       break;
     }

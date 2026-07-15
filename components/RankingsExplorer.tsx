@@ -1,5 +1,5 @@
 'use client';
-// Full national rankings, fetched lazily from the prebuilt /rankings.json —
+// Full national rankings, fetched lazily from the prebuilt /rankings.json -
 // nothing here is serialized into the page payload, so the route stays light
 // (this is the fix for multi-second navigation to ranking-heavy pages).
 import { useEffect, useMemo, useState } from 'react';

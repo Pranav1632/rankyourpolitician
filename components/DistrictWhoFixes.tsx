@@ -1,5 +1,5 @@
 'use client';
-// "Who fixes what here" — embedded on every district page. Pick a problem,
+// "Who fixes what here" - embedded on every district page. Pick a problem,
 // see the actual responsible people for THIS district immediately (data comes
 // server-side as props; no fetch). Deep-links into /who for the full finder.
 import { useState } from 'react';

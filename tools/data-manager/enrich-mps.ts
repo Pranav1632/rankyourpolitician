@@ -1,6 +1,6 @@
 /**
  * Data-manager step: ENRICH the existing Lok Sabha roster with real, cited
- * per-member detail from Wikidata (CC0) — so every profile carries facts, not
+ * per-member detail from Wikidata (CC0) - so every profile carries facts, not
  * just an identity line. For each MP we resolve their Wikipedia article (linked
  * from the canonical 18th-Lok-Sabha list) to a Wikidata QID, then pull:
  *   - date of birth  -> age            (fact: age)
@@ -12,11 +12,11 @@
  *
  * Every added fact is cited to the member's Wikidata item with today's date.
  * CURATED facts already present for a field are NEVER overwritten (Wikidata only
- * fills gaps). No financial/criminal numbers here — those come from the ECI
+ * fills gaps). No financial/criminal numbers here - those come from the ECI
  * affidavit importer with their own official source.
  *
  * Usage:  npm run dm -- enrich-mps            (all MPs, live)
- *         ENRICH_LIMIT=20 npm run dm -- enrich-mps   (first 20 — for testing)
+ *         ENRICH_LIMIT=20 npm run dm -- enrich-mps   (first 20 - for testing)
  */
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
@@ -236,7 +236,7 @@ async function main() {
     // Notable prior/other offices (dedupe by label; show a compact list with years).
     const seen = new Set<string>();
     const prev = others.filter((o) => { if (seen.has(o.label)) return false; seen.add(o.label); return true; })
-      .map((o) => (o.from ? `${o.label} (${o.from}${o.to && o.to !== o.from ? `–${o.to}` : o.to ? '' : '–present'})` : o.label))
+      .map((o) => (o.from ? `${o.label} (${o.from}${o.to && o.to !== o.from ? `-${o.to}` : o.to ? '' : '-present'})` : o.label))
       .slice(0, 6);
     if (prev.length) facts.push({ field_type: 'previous_positions', value: prev.join('; '), ...cite });
 
@@ -264,7 +264,7 @@ async function main() {
   }
 
   writeFileSync(resolve(SEED_DIR, 'politicians.json'), JSON.stringify(pols, null, 2) + '\n');
-  console.log(`\n✓ Enriched ${enriched} MPs — added ${factsAdded} facts, ${photos} photos.`);
+  console.log(`\n✓ Enriched ${enriched} MPs - added ${factsAdded} facts, ${photos} photos.`);
   if (missing.length) console.log(`ℹ No Wikidata detail for ${missing.length}: ${missing.slice(0, 12).join(', ')}${missing.length > 12 ? '…' : ''}`);
   console.log('\nNext: npm run dm -- validate   then   npm run dm -- publish');
 }

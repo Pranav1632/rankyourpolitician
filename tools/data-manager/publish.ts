@@ -54,7 +54,7 @@ export function validateDataset(): { issues: Issue[]; ok: boolean } {
       if (!f.retrieved_date) push(p, 'warn', `fact "${f.field_type}" has no retrieved_date`);
     }
     if (!p.is_minister && Object.keys(p.metrics || {}).length === 0)
-      push(p, 'warn', 'no scored metrics — performance percentile will be unavailable');
+      push(p, 'warn', 'no scored metrics - performance percentile will be unavailable');
   }
   return { issues, ok: !issues.some((i) => i.severity === 'error') };
 }

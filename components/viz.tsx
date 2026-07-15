@@ -1,11 +1,11 @@
-// Pure visual primitives (no hooks) — big, friendly, scannable.
+// Pure visual primitives (no hooks) - big, friendly, scannable.
 // Entrance animations are CSS-only (see tailwind keyframes), so these stay
 // server-safe and work without JavaScript.
 import Icon, { type IconName } from './Icon';
 import { clsx } from 'clsx';
 
 /** Circular progress ring for the Verified Performance percentile.
- *  `value` is a 0–100 percentile (higher = better); it is DISPLAYED as
+ *  `value` is a 0-100 percentile (higher = better); it is DISPLAYED as
  *  "top X%" (percentile 87 → "top 13%") so the number reads the way people
  *  say it. The arc fills with the percentile itself.
  *  The arc sweeps in on first paint (CSS `ring-fill` keyframe). */
@@ -63,7 +63,7 @@ export function ScoreRing({
       <div className="absolute inset-0 grid place-items-center text-center" aria-hidden>
         {value == null ? (
           <div className="px-1">
-            <span className="block font-bold leading-none text-ink-faint" style={{ fontSize: size * 0.28 }}>—</span>
+            <span className="block font-bold leading-none text-ink-faint" style={{ fontSize: size * 0.28 }}>-</span>
             {emptyLabel && (
               <span className="mt-0.5 block font-medium leading-tight text-ink-faint" style={{ fontSize: Math.max(8, size * 0.11) }}>
                 {emptyLabel}
@@ -152,12 +152,12 @@ export function RankBadge({ rank }: { rank: number | null }) {
           : 'bg-paper-sink text-ink-faint';
   return (
     <span className={clsx('grid h-9 w-9 shrink-0 place-items-center rounded-full text-sm font-extrabold', medal)}>
-      {rank ?? '–'}
+      {rank ?? '-'}
     </span>
   );
 }
 
-/** Horizontal meter for a single metric — fills in on first paint. */
+/** Horizontal meter for a single metric - fills in on first paint. */
 export function Meter({ value, label, value2, color = '#0d9488' }: { value: number | null; label: string; value2?: string; color?: string }) {
   return (
     <div>
@@ -173,7 +173,7 @@ export function Meter({ value, label, value2, color = '#0d9488' }: { value: numb
 }
 
 /** Proportional composition bar (e.g. house seats by party) with a legend.
- *  Neutral tints only — parties are NEVER given their brand colours. */
+ *  Neutral tints only - parties are NEVER given their brand colours. */
 export function CompositionBar({
   segments,
   total,

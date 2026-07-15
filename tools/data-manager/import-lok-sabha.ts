@@ -2,7 +2,7 @@
  * Data-manager step: rebuild the national Lok Sabha roster from the canonical,
  * ECI-sourced "List of members of the 18th Lok Sabha" (Wikipedia), which is kept
  * current for by-elections, defections and mergers. This gives every one of the
- * 543 seats — name, party, constituency, state — CITED to that list.
+ * 543 seats - name, party, constituency, state - CITED to that list.
  *
  * It is deliberately identity-only: NO financial/criminal/performance numbers are
  * invented here. Those are added per-member through the guided data-manager flow,
@@ -11,7 +11,7 @@
  *
  * Ministers are linked to their MP profile (so a profile shows all portfolios).
  * Genuinely vacant seats (incumbent died/resigned, by-election pending) are kept
- * as constituencies with no sitting member — shown honestly, never back-filled.
+ * as constituencies with no sitting member - shown honestly, never back-filled.
  *
  * Usage:  npm run dm -- refresh-mps        (fetches live)
  *         npx tsx tools/data-manager/import-lok-sabha.ts [cached.wikitext]
@@ -43,7 +43,7 @@ const CODE2STATE: Record<string, string> = {
   ML: 'Meghalaya', MZ: 'Mizoram', NL: 'Nagaland', OD: 'Odisha', PY: 'Puducherry', PB: 'Punjab', RJ: 'Rajasthan',
   SK: 'Sikkim', TN: 'Tamil Nadu', TG: 'Telangana', TR: 'Tripura', UP: 'Uttar Pradesh', UK: 'Uttarakhand', WB: 'West Bengal',
 };
-// Expected 2024 seat counts — a hard structural check against silent parse drift.
+// Expected 2024 seat counts - a hard structural check against silent parse drift.
 const EXPECTED: Record<string, number> = {
   AN: 1, AP: 25, AR: 2, AS: 14, BR: 40, CH: 1, CG: 11, DN: 2, DL: 7, GA: 2, GJ: 26, HR: 10, HP: 4, JK: 5, JH: 14,
   KA: 28, KL: 20, LA: 1, LD: 1, MP: 29, MH: 48, MN: 2, ML: 2, MZ: 1, NL: 1, OD: 21, PY: 1, PB: 13, RJ: 25, SK: 1,
@@ -61,7 +61,7 @@ const clean = (s: string) => stripTags(s)
   .replace(/\[\[[^\]|]*\|([^\]]+)\]\]/g, '$1').replace(/\[\[([^\]]+)\]\]/g, '$1')
   .replace(/\{\{[^}]*\}\}/g, '').replace(/'''?/g, '').replace(/<br\s*\/?>/gi, ' ').replace(/<[^>]+>/g, '')
   .replace(/\s+/g, ' ').trim();
-const normParty = (p: string | null) => p ? clean(p).replace(/\s*\((?:19|20)\d\d[–-](?:present|\d\d\d\d)\)\s*$/i, '').trim() : p;
+const normParty = (p: string | null) => p ? clean(p).replace(/\s*\((?:19|20)\d\d[--](?:present|\d\d\d\d)\)\s*$/i, '').trim() : p;
 const cellsOf = (row: string) => ('\n' + row).split(/\n\s*[|!]\s?/).map((c) => c.trim()).filter((c) => c.length);
 
 function nameFrom(cell: string | undefined): string | null {
@@ -190,12 +190,12 @@ async function main() {
   const { ok, bad } = validateCounts(seats);
   if (!ok) {
     console.error(`✗ Seat-count validation FAILED (${seats.length}/543). Mismatched: ${bad.join(', ')}`);
-    console.error('  Aborting — the source layout may have changed. Not overwriting the seed.');
+    console.error('  Aborting - the source layout may have changed. Not overwriting the seed.');
     process.exit(1);
   }
   const mps = seats.filter((s) => !s.vacant);
   const vacant = seats.filter((s) => s.vacant);
-  console.log(`✓ Parsed & validated: 543 seats (36/36 state counts match) — ${mps.length} sitting MPs, ${vacant.length} vacant.`);
+  console.log(`✓ Parsed & validated: 543 seats (36/36 state counts match) - ${mps.length} sitting MPs, ${vacant.length} vacant.`);
 
   // Load existing seed. Preserve CURATED records (any with facts) and their constituencies.
   const existingPols: Politician[] = existsSync(resolve(SEED_DIR, 'politicians.json'))
@@ -253,7 +253,7 @@ async function main() {
       facts: [],
       active: true,
       generated: true,
-      identity_source: { url: WIKI_URL, name: 'Election Commission of India — 2024 general election results (18th Lok Sabha members list)', retrieved_date: today },
+      identity_source: { url: WIKI_URL, name: 'Election Commission of India - 2024 general election results (18th Lok Sabha members list)', retrieved_date: today },
       ...(seat.note && !byDate ? { party_note: seat.note } : {}),
       ...(party_history ? { party_history } : {}),
     });

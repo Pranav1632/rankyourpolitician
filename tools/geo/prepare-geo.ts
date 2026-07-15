@@ -1,15 +1,15 @@
 // One-time geo preparation. Consumes the DataMeet (Survey-of-India-conforming)
 // boundary files and produces:
-//   data/geo/india-districts.json  — census-2011 district polygons {d, s}
-//   data/geo/india-acs.json        — assembly-constituency polygons {ac, d, pc, s}
-//   data/geo/india-pcs.json        — parliamentary-constituency polygons {pc, s, hi}
+//   data/geo/india-districts.json  - census-2011 district polygons {d, s}
+//   data/geo/india-acs.json        - assembly-constituency polygons {ac, d, pc, s}
+//   data/geo/india-pcs.json        - parliamentary-constituency polygons {pc, s, hi}
 // and enriches the committed seed:
 //   politicians.json / constituencies.json → districts[] filled from the
 //   ECI-delimitation AC→district mapping (AC = its district; PC = union of the
-//   districts of its ACs). Join is by normalised name WITHIN a state — never
+//   districts of its ACs). Join is by normalised name WITHIN a state - never
 //   fuzzy across states. Unmatched rows are left empty and reported honestly.
 //
-// Sources: github.com/datameet/maps (CC-BY 2.5 IN) — states file already in repo.
+// Sources: github.com/datameet/maps (CC-BY 2.5 IN) - states file already in repo.
 // Run: npx tsx tools/geo/prepare-geo.ts <scratchpad-dir>
 import { readFileSync, writeFileSync, mkdirSync } from 'fs';
 import { join } from 'path';
@@ -78,7 +78,7 @@ const STATE_CODE: Record<string, string> = {
 };
 const stateCode = (name: string): string | null => STATE_CODE[normName(name)] ?? null;
 
-// 2011/2008 files predate Telangana (2014) and Ladakh (2019) — reassign.
+// 2011/2008 files predate Telangana (2014) and Ladakh (2019) - reassign.
 const TG_OLD_DISTRICTS = new Set([
   'adilabad', 'nizamabad', 'karimnagar', 'medak', 'hyderabad', 'rangareddy',
   'rangareddi', 'kvrangareddy', 'mahbubnagar', 'mahabubnagar', 'nalgonda',
@@ -102,7 +102,7 @@ function titleCase(s: string): string {
 }
 
 // ============================================================================
-// 1. Districts — canonical polygons + canonical (proper-case) names.
+// 1. Districts - canonical polygons + canonical (proper-case) names.
 // ============================================================================
 const distRaw = readJSON(join(SCRATCH, 'india-districts-raw.json'));
 interface DistFeature {
@@ -147,7 +147,7 @@ function canonicalDistrict(code: string, rawName: string): string {
 }
 
 // ============================================================================
-// 2. Assembly constituencies — polygons + AC→district→PC mapping.
+// 2. Assembly constituencies - polygons + AC→district→PC mapping.
 // ============================================================================
 const acRaw = readJSON(join(SCRATCH, 'india-acs-raw.json'));
 interface AcFeature {
@@ -185,7 +185,7 @@ for (const f of acRaw.features) {
 }
 
 // ============================================================================
-// 3. Parliamentary constituencies (2019 file — post-2014 states are correct).
+// 3. Parliamentary constituencies (2019 file - post-2014 states are correct).
 // ============================================================================
 const pcRaw = readJSON(join(SCRATCH, 'india_pc_2019_simplified.geojson'));
 interface PcFeature {
@@ -219,7 +219,7 @@ mkdirSync(geoDir, { recursive: true });
 const writeFC = (file: string, features: unknown[]) => {
   const out = JSON.stringify({ type: 'FeatureCollection', features });
   writeFileSync(join(geoDir, file), out);
-  console.log(`✓ data/geo/${file} — ${features.length} features, ${(out.length / 1024 / 1024).toFixed(2)} MB`);
+  console.log(`✓ data/geo/${file} - ${features.length} features, ${(out.length / 1024 / 1024).toFixed(2)} MB`);
 };
 writeFC('india-districts.json', distFeatures);
 writeFC('india-acs.json', acFeatures);
@@ -240,7 +240,7 @@ const stat = (code: string) => {
 };
 
 /** Same-name district in this state (exact or edit-distance ≤ 2), if any.
- *  Many constituencies are named after their district — a safe identity join. */
+ *  Many constituencies are named after their district - a safe identity join. */
 function sameNamedDistrict(code: string, consName: string): string | null {
   const m = censusDistricts.get(code);
   if (!m) return null;
@@ -292,7 +292,7 @@ function districtsFor(code: string, type: string, consName: string, record = tru
     if (s) s.pcMiss++;
     return null;
   }
-  return null; // RS / MLC — no territorial constituency
+  return null; // RS / MLC - no territorial constituency
 }
 
 let polUpdated = 0;
@@ -314,8 +314,8 @@ for (const c of constituencies) {
 
 writeFileSync(polPath, JSON.stringify(politicians, null, 2));
 writeFileSync(conPath, JSON.stringify(constituencies, null, 2));
-console.log(`✓ politicians.json — districts filled for ${polUpdated}/${politicians.length}`);
-console.log(`✓ constituencies.json — districts filled for ${conUpdated}/${constituencies.length}`);
+console.log(`✓ politicians.json - districts filled for ${polUpdated}/${politicians.length}`);
+console.log(`✓ constituencies.json - districts filled for ${conUpdated}/${constituencies.length}`);
 
 // Honest per-state join report (worst first).
 console.log('\nPer-state join report (AC hit/miss, PC hit/miss):');

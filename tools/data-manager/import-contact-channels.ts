@@ -39,7 +39,7 @@ const OFFICIAL_HOST = /(^|\.)(gov\.in|nic\.in)$/i;
 /**
  * Bodies that are the authoritative publisher of their own service but do not
  * sit on a .gov.in domain. Almost all are state electricity distribution
- * companies (DISCOMs) — state-owned utilities that publish their consumer
+ * companies (DISCOMs) - state-owned utilities that publish their consumer
  * complaint numbers on their own sites; a power-cut helpline exists nowhere
  * else, so a .gov.in-only rule would silently drop one of the things citizens
  * most need. Each host here is the operator of the service it publishes, and
@@ -138,19 +138,19 @@ function clean(raw: RawChannel[], scope: 'national' | 'state', where: string, dr
   for (const c of raw || []) {
     const label = (c.label || '').trim();
     const src = (c.source_url || '').trim();
-    if (!label || !src) { drops.push(`${where}: "${label || '?'}" — missing label/source`); continue; }
-    if (!isOfficialSource(src)) { drops.push(`${where}: "${label}" — source not an official .gov.in/.nic.in page (${src})`); continue; }
+    if (!label || !src) { drops.push(`${where}: "${label || '?'}" - missing label/source`); continue; }
+    if (!isOfficialSource(src)) { drops.push(`${where}: "${label}" - source not an official .gov.in/.nic.in page (${src})`); continue; }
     const topic = (c.topic || 'general').trim() as ContactTopic;
-    if (!VALID_TOPICS.has(topic)) { drops.push(`${where}: "${label}" — unknown topic "${c.topic}"`); continue; }
+    if (!VALID_TOPICS.has(topic)) { drops.push(`${where}: "${label}" - unknown topic "${c.topic}"`); continue; }
 
     let value: string | null;
     const kind = c.kind === 'url' ? 'url' : 'phone';
     if (kind === 'phone') {
       value = normalisePhone(c.value || '');
-      if (!value) { drops.push(`${where}: "${label}" — implausible phone ${JSON.stringify(c.value)}`); continue; }
+      if (!value) { drops.push(`${where}: "${label}" - implausible phone ${JSON.stringify(c.value)}`); continue; }
     } else {
       value = normaliseUrl(c.value || '');
-      if (!value) { drops.push(`${where}: "${label}" — bad url ${JSON.stringify(c.value)}`); continue; }
+      if (!value) { drops.push(`${where}: "${label}" - bad url ${JSON.stringify(c.value)}`); continue; }
     }
 
     const k = `${kind}:${value}`;
@@ -179,7 +179,7 @@ function main() {
   const national = clean(wf.national || [], 'national', 'IN', drops);
   const nationalValues = new Set(national.map((c) => `${c.kind}:${c.value}`));
 
-  // Match the workflow's states onto the seed's codes BY NAME — the workflow used
+  // Match the workflow's states onto the seed's codes BY NAME - the workflow used
   // CT/OR/UT where the seed uses CG/OD/UK, and a silent code mismatch would drop
   // three whole states' helplines.
   const codeByName = new Map<string, string>();

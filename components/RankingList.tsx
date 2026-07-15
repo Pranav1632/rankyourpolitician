@@ -45,7 +45,7 @@ export default function RankingList({
   }, [entries, sort, limit]);
 
   // Entries WITHOUT a value under the current sort are never given a rank
-  // number — an alphabetical tail is not a ranking. They render after a
+  // number - an alphabetical tail is not a ranking. They render after a
   // divider, badge-less, so "not enough data" can't be mistaken for "worst".
   const rankedCount = useMemo(() => {
     const key = (e: RankingEntry) => (sort === 'performance' ? e.performance_percentile : e.sentiment_mean);
@@ -71,7 +71,7 @@ export default function RankingList({
   return (
     <div>
       <div ref={topRef} className="scroll-mt-20" />
-      {/* Sort — friendly segmented control */}
+      {/* Sort - friendly segmented control */}
       <div className="mb-4 flex flex-wrap items-center gap-2">
         <span className="text-sm text-ink-faint">{t('ranking.sortBy')}:</span>
         <div className="inline-flex rounded-full bg-paper-sink p-1 text-sm font-semibold">

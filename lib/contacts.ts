@@ -7,7 +7,7 @@
 // falls back to channels that DON'T rot: the district's own Who's Who directory
 // (the district keeps it current), the state's grievance helpline, and the
 // national helpline for that kind of problem. A citizen with a burst water main
-// needs a number to call — not the name of an officer who was transferred.
+// needs a number to call - not the name of an officer who was transferred.
 import type { ContactChannel, ContactTopic, ProblemType } from './types';
 
 /**
@@ -47,7 +47,7 @@ export function channelsForProblem(
   const rank = (c: ContactChannel) => {
     const ti = topics.indexOf(c.topic);
     if (ti === -1) return 999;
-    // Same topic: state channel first, then national. Phones before portals —
+    // Same topic: state channel first, then national. Phones before portals -
     // a number is the faster lever when something is actually broken.
     return ti * 10 + (c.scope === 'state' ? 0 : 2) + (c.kind === 'phone' ? 0 : 1);
   };
@@ -79,7 +79,7 @@ export function primaryPhone(all: ContactChannel[], problem: ProblemType): Conta
 }
 
 /**
- * The state's own directory of district websites — every state publishes one,
+ * The state's own directory of district websites - every state publishes one,
  * and it is the backstop for the ~17% of districts whose individual site we
  * could not verify: the citizen still lands one click from their collectorate
  * instead of nowhere.
@@ -105,7 +105,7 @@ export function hasContactFallback(
   );
 }
 
-/** tel: href — Indian short codes (112, 1098) must not be prefixed with +91. */
+/** tel: href - Indian short codes (112, 1098) must not be prefixed with +91. */
 export function telHref(value: string): string {
   const v = value.replace(/[^\d]/g, '');
   if (v.length <= 5) return `tel:${v}`;           // short code, dial as-is

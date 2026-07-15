@@ -60,8 +60,19 @@ export default function GeoMap({
   const router = useRouter();
   const wrapRef = useRef<HTMLDivElement>(null);
   const [tip, setTip] = useState<{ x: number; y: number; shape: GeoMapShape } | null>(null);
+  // Prefetch a shape's route the moment the pointer touches it, so the click
+  // (or Enter) that follows navigates instantly. Set-guarded: pointermove
+  // fires continuously but each href is only prefetched once.
+  const prefetched = useRef<Set<string>>(new Set());
+
+  function prefetch(href?: string) {
+    if (!href || prefetched.current.has(href)) return;
+    prefetched.current.add(href);
+    router.prefetch(href);
+  }
 
   function moveTip(e: React.PointerEvent, shape: GeoMapShape) {
+    prefetch(shape.href);
     const rect = wrapRef.current?.getBoundingClientRect();
     if (!rect) return;
     setTip({ x: e.clientX - rect.left, y: e.clientY - rect.top, shape });
@@ -87,10 +98,11 @@ export default function GeoMap({
             style={animate ? ({ '--geo-delay': `${Math.round(i * step)}ms` } as React.CSSProperties) : undefined}
             tabIndex={s.href ? 0 : -1}
             role={s.href ? 'link' : undefined}
-            aria-label={s.href ? `${s.name}${s.sub ? ` — ${s.sub}` : ''}` : undefined}
+            aria-label={s.href ? `${s.name}${s.sub ? ` - ${s.sub}` : ''}` : undefined}
             onPointerMove={(e) => moveTip(e, s)}
             onPointerLeave={() => setTip(null)}
             onFocus={() => {
+              prefetch(s.href);
               const rect = wrapRef.current?.getBoundingClientRect();
               if (rect) setTip({ x: (s.cx / w) * rect.width, y: (s.cy / h) * rect.height, shape: s });
             }}
@@ -104,7 +116,7 @@ export default function GeoMap({
             }}
           />
         ))}
-        {/* Pulse marker on the highlighted shape — "you are here". */}
+        {/* Pulse marker on the highlighted shape - "you are here". */}
         {shapes
           .filter((s) => s.highlighted)
           .map((s, i) => (

@@ -1,7 +1,7 @@
 // Constituency-level geometry: assembly seats (2008 delimitation) and Lok
 // Sabha seats (2019 file). Server-only; used for the "where is this area"
 // mini-maps. Constituencies from newer delimitations (Assam 2023, J&K 2022)
-// may have no polygon — callers must handle null and degrade honestly.
+// may have no polygon - callers must handle null and degrade honestly.
 import acsGeo from '@/data/geo/india-acs.json';
 import pcsGeo from '@/data/geo/india-pcs.json';
 import statesGeo from '@/data/geo/india-states.json';

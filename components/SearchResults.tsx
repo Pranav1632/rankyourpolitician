@@ -1,5 +1,5 @@
 'use client';
-// Full search page — same local index as the SearchBox dropdown, richer layout.
+// Full search page - same local index as the SearchBox dropdown, richer layout.
 // URL-synced (?q=) so results are shareable and the back button works.
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';

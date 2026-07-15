@@ -1,6 +1,6 @@
 /**
  * Data-manager step: PARLIAMENTARY PERFORMANCE metrics for MPs from the
- * OFFICIAL Digital Sansad APIs (sansad.in) — the primary source, so every
+ * OFFICIAL Digital Sansad APIs (sansad.in) - the primary source, so every
  * number is a government record, not an aggregator's.
  *
  *   Lok Sabha (18th):
@@ -37,7 +37,7 @@ const TODAY = new Date().toISOString().slice(0, 10);
 const LIMIT = process.env.PERF_LIMIT ? parseInt(process.env.PERF_LIMIT, 10) : Infinity;
 const SKIP_RS = process.env.PERF_SKIP_RS === '1';
 // PERF_REFRESH re-fetches even MPs that already have metrics and OVERWRITES them
-// (attendance/questions grow each session) — used by `update-all` to stay current.
+// (attendance/questions grow each session) - used by `update-all` to stay current.
 const REFRESH = process.env.PERF_REFRESH === '1';
 // Public token sansad.in's own frontend ships for the RS attendance service.
 const RS_BEARER = 'Y0hKaFltaGhkQzVyYVhKaGJn';
@@ -98,7 +98,7 @@ async function main() {
     state: m.stateName || '',
   })).filter((m) => m.mpsno);
   console.log(`LS: ${members.length} sitting members from sansad.in`);
-  if (!members.length) throw new Error('LS member list empty — API shape changed?');
+  if (!members.length) throw new Error('LS member list empty - API shape changed?');
 
   // Sessions of the 18th Lok Sabha (for attendance aggregation).
   const sess = await getJson('https://sansad.in/api_ls/business/getAllLoksabhaAndSession');
@@ -141,7 +141,7 @@ async function main() {
   }
   console.log(`LS matched ${pairs.length}/${members.length}; unmatched ${unmatched.length}`);
   // Resumable per metric: checkpoints write the seed every 25 MPs, and each
-  // metric is fetched only if still missing — so a re-run backfills exactly
+  // metric is fetched only if still missing - so a re-run backfills exactly
   // the gaps (e.g. a questions-only pass costs one request per MP).
   // In REFRESH mode we re-do everyone and overwrite (metrics grow each session).
   const isPerfFact = (f: Fact) => /Digital Sansad/i.test(f.source_name || '');
@@ -159,7 +159,7 @@ async function main() {
 
   const lsCite = (path: string): Omit<Fact, 'field_type' | 'value'> => ({
     source_url: `https://sansad.in${path}`,
-    source_name: 'Digital Sansad — Lok Sabha (official)',
+    source_name: 'Digital Sansad - Lok Sabha (official)',
     retrieved_date: TODAY,
     as_of: '18th Lok Sabha, all sessions to date',
   } as any);
@@ -236,7 +236,7 @@ async function main() {
     const rl = await getJson('https://sansad.in/api_rs/member/sitting-members?state=&party=&gender=&page=1&size=300&mpFlag=1&locale=en');
     const rsMembers: any[] = rl?.records || [];
     const sl = await getJson('https://integration.rajyasabha.digital/api-ext/api/v1/attendance/sessionlist', { Authorization: `Bearer ${RS_BEARER}` });
-    // Rows: { sessionno: "271", period: start, period2: end, noofsittings } —
+    // Rows: { sessionno: "271", period: start, period2: end, noofsittings } -
     // keep only sessions that have ENDED (271 is a future Monsoon session), take
     // the most recent 6, and use each session's own noofsittings as denominator.
     const now = Date.now();
@@ -287,9 +287,9 @@ async function main() {
               field_type: 'attendance_pct',
               value: `${pct}% (${days} of ${totalSittings} sitting days, recent sessions)`,
               source_url: 'https://sansad.in/rs/attendance',
-              source_name: 'Digital Sansad — Rajya Sabha (official)',
+              source_name: 'Digital Sansad - Rajya Sabha (official)',
               retrieved_date: TODAY,
-              as_of: `Rajya Sabha sessions ${rsSessions[rsSessions.length - 1].no}–${rsSessions[0].no}`,
+              as_of: `Rajya Sabha sessions ${rsSessions[rsSessions.length - 1].no}-${rsSessions[0].no}`,
             } as any);
             factsAdded++;
           }

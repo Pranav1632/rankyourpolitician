@@ -1,5 +1,5 @@
 // Formatting helpers. Dates are localised where the runtime supports the locale
-// (many Eighth-Schedule codes aren't valid Intl locales — we fall back to en-IN).
+// (many Eighth-Schedule codes aren't valid Intl locales - we fall back to en-IN).
 import type { Politician, PerfMetric } from './types';
 import { PERF_METRIC_META } from './types';
 

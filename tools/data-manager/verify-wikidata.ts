@@ -6,11 +6,11 @@
  *
  * Entity-level strip (removes qid + QID-cited facts + Commons photo) when:
  *   - the API reports the entity missing/deleted, or
- *   - the entity is not a human (P31 ≠ Q5 — e.g. a district item), or
+ *   - the entity is not a human (P31 ≠ Q5 - e.g. a district item), or
  *   - its label/aliases do not match the member's name (transliteration-aware
  *     compact 6-gram overlap), or
  *   - its only assembly/council memberships (P39) are for a DIFFERENT state
- *     and nothing else (constituency/party) ties it to ours — the namesake trap.
+ *     and nothing else (constituency/party) ties it to ours - the namesake trap.
  *
  * Photo-level strip (photo only) when the Commons filename is clearly not a
  * portrait of this person: an .svg, a generic scene (map/beach/road/rally…),
@@ -110,7 +110,7 @@ function nameMatches(p: Politician, e: Entity): boolean {
   const labels: string[] = [];
   if (e?.labels?.en?.value) labels.push(e.labels.en.value);
   for (const a of e?.aliases?.en || []) if (a?.value) labels.push(a.value);
-  if (labels.length === 0) return true; // nothing to judge by — don't strip on absence
+  if (labels.length === 0) return true; // nothing to judge by - don't strip on absence
   const ours = norm(p.name).split(' ').filter(Boolean);
   const cn = compact(p.name);
   for (const l of labels) {
@@ -178,7 +178,7 @@ function photoStripReason(p: Politician): string | null {
   const fnToks = fn.split(' ').filter((t) => /^[a-z]+$/.test(t) && t.length >= 4);
   if (fnToks.some((ft) => nameToks.some((nt) => tokenAgree(nt, ft)))) return null;
   const latin = base.replace(/[^A-Za-z]/g, '');
-  if (latin.length < 4) return null; // native-script or camera-code name — keep
+  if (latin.length < 4) return null; // native-script or camera-code name - keep
   if (GENERIC_SCENE.test(fn)) return `generic scene filename ("${raw}")`;
   const alphaToks = fn.split(' ').filter((t) => /^[a-z]+$/.test(t) && t.length >= 4 && !STOP_TOKENS.has(t));
   if (alphaToks.length >= 2) return `filename names someone else ("${raw}")`;
@@ -247,7 +247,7 @@ async function main() {
   for (const p of withQid) {
     const qid = p.wikidata_qid!;
     const e = entities.get(qid);
-    if (!e) continue; // batch fetch failed — never strip on a network gap
+    if (!e) continue; // batch fetch failed - never strip on a network gap
     if (e.missing !== undefined) {
       stripEntity(p, 'entity deleted on Wikidata');
       continue;
@@ -262,7 +262,7 @@ async function main() {
       stripEntity(p, `label "${e.labels?.en?.value || '?'}" does not match name`);
       continue;
     }
-    // Namesake trap — ONLY for sitting assembly/council members: the item's
+    // Namesake trap - ONLY for sitting assembly/council members: the item's
     // assembly memberships are all for a DIFFERENT state and nothing ties it
     // to ours. NOT applied to MPs (careers legitimately span states via the
     // Rajya Sabha / earlier assembly stints), and bifurcation partners
@@ -314,7 +314,7 @@ async function main() {
     writeFileSync(SEED, JSON.stringify(politicians, null, 2) + '\n');
     console.log(`\n✓ wrote ${SEED}`);
   } else {
-    console.log('\n(dry run — nothing written)');
+    console.log('\n(dry run - nothing written)');
   }
 }
 

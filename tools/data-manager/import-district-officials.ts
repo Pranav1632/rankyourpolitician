@@ -2,7 +2,7 @@
  * Data-manager step: ingest the district-officials sourcing-workflow output and
  * write data/seed/district_officials.json as OfficeSeat[] with incumbents.
  * ONLY high-confidence, official-source names are published (named serving
- * officials — caution first). Office contact only; never personal data.
+ * officials - caution first). Office contact only; never personal data.
  *
  * Usage: npx tsx tools/data-manager/import-district-officials.ts <path-to-output.json>
  */
@@ -47,7 +47,7 @@ function main() {
     const s = seat(d.stateCode, d.district, 'sp_district', d.sp);
     out.push(c, s);
     report.push(
-      `${d.district} (${d.stateCode}): DC ${'incumbent' in c ? (c as any).incumbent.name : '— (being verified)'} | SP ${'incumbent' in s ? (s as any).incumbent.name : '— (being verified)'}`,
+      `${d.district} (${d.stateCode}): DC ${'incumbent' in c ? (c as any).incumbent.name : '- (being verified)'} | SP ${'incumbent' in s ? (s as any).incumbent.name : '- (being verified)'}`,
     );
   }
 

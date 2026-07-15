@@ -1,11 +1,11 @@
 // Role-based ESCALATION CHAINS: who reports to whom in the appointed bureaucracy,
 // so a citizen can see the next authority up when an office does not act. These
-// are chains of COMMAND among appointed officials — NOT elected representatives
+// are chains of COMMAND among appointed officials - NOT elected representatives
 // (an MLA/MP/Mayor is a separate, parallel lever, never a rung here).
 //
 // GENERATED from a research + adversarial-verification workflow (all chains
 // returned "high" confidence); regenerate via tools/data-manager. Titles/thresholds
-// vary by state — see each chain's `variesNote`. `sources` cite the references used.
+// vary by state - see each chain's `variesNote`. `sources` cite the references used.
 import type { IconName } from '@/components/Icon';
 import type { ProblemType, OfficeType } from './types';
 
@@ -89,7 +89,7 @@ export const ESCALATION_CHAINS: Record<ChainKey, EscalationChainDef> = {
         "level": "state",
         "jurisdiction": "The entire state / UT police force",
         "handles": "Head of the state police; final internal escalation for systemic inaction, and the office linked to the State Police Complaints Authority process.",
-        "escalateWhen": "If internal police channels are exhausted, escalate outside the force — Magistrate under BNSS Sec 175(3) (old CrPC 156(3)), State/National Human Rights Commission, State/District Police Complaints Authority, or the High Court."
+        "escalateWhen": "If internal police channels are exhausted, escalate outside the force - Magistrate under BNSS Sec 175(3) (old CrPC 156(3)), State/National Human Rights Commission, State/District Police Complaints Authority, or the High Court."
       },
       {
         "id": "home-secretary",
@@ -98,11 +98,11 @@ export const ESCALATION_CHAINS: Record<ChainKey, EscalationChainDef> = {
         "level": "state",
         "jurisdiction": "State government's administrative control over the police",
         "handles": "Civil-service head of the Home Department to whom the police report administratively; approach for policy-level or systemic grievances the DGP cannot or will not address.",
-        "escalateWhen": "Beyond this, the levers are the Chief Secretary, the political executive (Home Minister/CM) or the courts — not a further police reporting rung."
+        "escalateWhen": "Beyond this, the levers are the Chief Secretary, the political executive (Home Minister/CM) or the courts - not a further police reporting rung."
       }
     ],
     "citizenStartIndex": 0,
-    "variesNote": "Structure varies by state. In commissionerate cities (metros) the district/range tiers are replaced by ACP → DCP → Joint/Addl CP → Commissioner of Police, who also holds magisterial powers. Not every state uses both 'range' (DIG) and 'zone' (IG/ADGP) layers — smaller states may have SP reporting closer to the DGP. Rank-wise ADGP is actually senior to IG (it sits just below DGP); they are grouped at 'zone' level here only because a zone may be headed by either. SHO rank also varies (Inspector in most states, sometimes Sub-Inspector for smaller stations).",
+    "variesNote": "Structure varies by state. In commissionerate cities (metros) the district/range tiers are replaced by ACP → DCP → Joint/Addl CP → Commissioner of Police, who also holds magisterial powers. Not every state uses both 'range' (DIG) and 'zone' (IG/ADGP) layers - smaller states may have SP reporting closer to the DGP. Rank-wise ADGP is actually senior to IG (it sits just below DGP); they are grouped at 'zone' level here only because a zone may be headed by either. SHO rank also varies (Inspector in most states, sometimes Sub-Inspector for smaller stations).",
     "sources": [
       "https://en.wikipedia.org/wiki/Police_ranks_and_insignia_of_India",
       "https://www.cyberlawconsulting.com/police_does_not_take_fir.php",
@@ -139,7 +139,7 @@ export const ESCALATION_CHAINS: Record<ChainKey, EscalationChainDef> = {
         "level": "tehsil",
         "jurisdiction": "One tehsil / taluka / mandal (a sub-district)",
         "handles": "The key deciding officer at ground level: sanctions/rejects mutations, issues caste, income, residence/domicile and other revenue certificates, orders demarcation and partition, and hears minor land-record disputes.",
-        "escalateWhen": "Escalate (first appeal) to the SDM/SDO if the Tehsildar wrongly rejects/sanctions a mutation, refuses a certificate, or you dispute the order — typically within 30 days."
+        "escalateWhen": "Escalate (first appeal) to the SDM/SDO if the Tehsildar wrongly rejects/sanctions a mutation, refuses a certificate, or you dispute the order - typically within 30 days."
       },
       {
         "id": "sdm-sdo-rdo",
@@ -148,7 +148,7 @@ export const ESCALATION_CHAINS: Record<ChainKey, EscalationChainDef> = {
         "level": "sub-division",
         "jurisdiction": "A revenue sub-division (a group of tehsils within a district)",
         "handles": "First appellate/revenue court above the Tehsildar: hears appeals against Tehsildar's mutation and certificate orders, decides bigger partition/boundary disputes, and supervises all Tehsils in the sub-division.",
-        "escalateWhen": "Escalate to the District Collector/DM if the SDM's order is unsatisfactory or the dispute is of district-wide significance — typically within 30-60 days."
+        "escalateWhen": "Escalate to the District Collector/DM if the SDM's order is unsatisfactory or the dispute is of district-wide significance - typically within 30-60 days."
       },
       {
         "id": "dc-dm-collector",
@@ -157,7 +157,7 @@ export const ESCALATION_CHAINS: Record<ChainKey, EscalationChainDef> = {
         "level": "district",
         "jurisdiction": "The whole district",
         "handles": "Chief revenue officer and appellate authority of the district: hears appeals against SDM orders, is the district-level authority on land revenue, records and major land disputes, and controls certificate issuance across the district.",
-        "escalateWhen": "Escalate to the Divisional Commissioner if the Collector's revenue order is disputed or the Collectorate does not resolve the matter — typically within 60 days."
+        "escalateWhen": "Escalate to the Divisional Commissioner if the Collector's revenue order is disputed or the Collectorate does not resolve the matter - typically within 60 days."
       },
       {
         "id": "div-commissioner",
@@ -170,12 +170,12 @@ export const ESCALATION_CHAINS: Record<ChainKey, EscalationChainDef> = {
       },
       {
         "id": "board-of-revenue-pr-secy-revenue",
-        "title": "Board of Revenue / Financial Commissioner / Principal Secretary (Revenue) — under the Chief Secretary",
+        "title": "Board of Revenue / Financial Commissioner / Principal Secretary (Revenue) - under the Chief Secretary",
         "short": "Board of Revenue / Pr. Secy (Revenue)",
         "level": "state",
         "jurisdiction": "The entire state / UT",
-        "handles": "Apex revenue authority: the Board of Revenue (or Financial Commissioner in states without a Board) is the highest revenue court/revision authority, while the Principal Secretary (Revenue) heads the department for policy, rules and administrative complaints — the top of the revenue chain below the political executive.",
-        "escalateWhen": "Beyond this, remedies lie outside the administrative chain — the High Court (writ/revision) or civil courts."
+        "handles": "Apex revenue authority: the Board of Revenue (or Financial Commissioner in states without a Board) is the highest revenue court/revision authority, while the Principal Secretary (Revenue) heads the department for policy, rules and administrative complaints - the top of the revenue chain below the political executive.",
+        "escalateWhen": "Beyond this, remedies lie outside the administrative chain - the High Court (writ/revision) or civil courts."
       }
     ],
     "citizenStartIndex": 0,
@@ -197,7 +197,7 @@ export const ESCALATION_CHAINS: Record<ChainKey, EscalationChainDef> = {
         "short": "JE / SI",
         "level": "zone",
         "jurisdiction": "One ward (or a cluster of streets within a ward)",
-        "handles": "First point of contact for the problem on the ground — potholes, a burst/leaking water line, choked drain, dead streetlight (JE), or uncollected garbage and dirty streets (SI).",
+        "handles": "First point of contact for the problem on the ground - potholes, a burst/leaking water line, choked drain, dead streetlight (JE), or uncollected garbage and dirty streets (SI).",
         "escalateWhen": "Escalate if the complaint is logged but no field crew shows up, or the fix is beyond the field officer's small-works/spot-repair mandate."
       },
       {
@@ -215,7 +215,7 @@ export const ESCALATION_CHAINS: Record<ChainKey, EscalationChainDef> = {
         "short": "EE / Zonal DC",
         "level": "zone",
         "jurisdiction": "A zone (several wards)",
-        "handles": "Zone-level head for a service line — approves larger road/water/drain works, coordinates sanitation across wards, and handles complaints unresolved at ward level.",
+        "handles": "Zone-level head for a service line - approves larger road/water/drain works, coordinates sanitation across wards, and handles complaints unresolved at ward level.",
         "escalateWhen": "Escalate if the zonal office fails to act, or the matter needs a corporation-wide/inter-department decision or budget."
       },
       {
@@ -251,7 +251,7 @@ export const ESCALATION_CHAINS: Record<ChainKey, EscalationChainDef> = {
         "short": "Prin. Secy, UD",
         "level": "state",
         "jurisdiction": "State urban-development policy and the entire municipal system",
-        "handles": "Administrative head of the state department that owns urban local governance — the top of the appointed reporting chain for civic administration in the state.",
+        "handles": "Administrative head of the state department that owns urban local governance - the top of the appointed reporting chain for civic administration in the state.",
         "escalateWhen": "This is the top of the departmental chain; beyond it lie the Chief Secretary, elected government, courts or constitutional bodies rather than the reporting hierarchy."
       }
     ],
@@ -292,7 +292,7 @@ export const ESCALATION_CHAINS: Record<ChainKey, EscalationChainDef> = {
         "short": "EE",
         "level": "division",
         "jurisdiction": "One division (typically a district or part of a district)",
-        "handles": "The key public-facing PWD officer for a district — approves and monitors road/building works, awards contracts within limits, and resolves grievances the sub-division could not.",
+        "handles": "The key public-facing PWD officer for a district - approves and monitors road/building works, awards contracts within limits, and resolves grievances the sub-division could not.",
         "escalateWhen": "Escalate to the Superintending Engineer if the division is unresponsive, the matter involves larger contracts/policy, or you are dissatisfied with the EE's decision."
       },
       {
@@ -319,7 +319,7 @@ export const ESCALATION_CHAINS: Record<ChainKey, EscalationChainDef> = {
         "short": "EinC",
         "level": "state",
         "jurisdiction": "Whole state (technical head of the PWD engineering cadre)",
-        "handles": "Topmost technical/engineering authority in the department — final internal escalation for engineering decisions, standards, and statewide works.",
+        "handles": "Topmost technical/engineering authority in the department - final internal escalation for engineering decisions, standards, and statewide works.",
         "escalateWhen": "Escalate to the Secretary / Principal Secretary (PWD) when the matter is administrative, policy, or budgetary rather than purely technical."
       },
       {
@@ -329,7 +329,7 @@ export const ESCALATION_CHAINS: Record<ChainKey, EscalationChainDef> = {
         "level": "state",
         "jurisdiction": "Whole state (administrative head of the department, IAS-rank)",
         "handles": "Administrative and policy head of the department reporting to the Minister; final departmental authority on grievances, funds, and policy.",
-        "escalateWhen": "Beyond this, use external levers — Chief Secretary, State Grievance Portal/CPGRAMS, RTI, Lokayukta, or the courts — not a higher PWD rung."
+        "escalateWhen": "Beyond this, use external levers - Chief Secretary, State Grievance Portal/CPGRAMS, RTI, Lokayukta, or the courts - not a higher PWD rung."
       }
     ],
     "citizenStartIndex": 0,
@@ -350,8 +350,8 @@ export const ESCALATION_CHAINS: Record<ChainKey, EscalationChainDef> = {
         "title": "Junior Engineer (JE)",
         "short": "JE",
         "level": "station",
-        "jurisdiction": "One section — a cluster of villages / a group of schemes within a sub-division",
-        "handles": "Ground-level, citizen-facing officer: no water / dry tap, leaking or burst pipeline, broken handpump or tubewell, contaminated or dirty supply, choked village sewer line — first to log and attend a local complaint.",
+        "jurisdiction": "One section - a cluster of villages / a group of schemes within a sub-division",
+        "handles": "Ground-level, citizen-facing officer: no water / dry tap, leaking or burst pipeline, broken handpump or tubewell, contaminated or dirty supply, choked village sewer line - first to log and attend a local complaint.",
         "escalateWhen": "Escalate if the JE does not respond within the charter time, the fault needs materials/funds or a work order he cannot sanction, or the problem spans more than his section."
       },
       {
@@ -369,7 +369,7 @@ export const ESCALATION_CHAINS: Record<ChainKey, EscalationChainDef> = {
         "short": "EE",
         "level": "division",
         "jurisdiction": "One PHE Division (roughly a district or part of one; supervises several sub-divisions)",
-        "handles": "Key decision officer at district level — chronic supply failure across many villages, division-wide scheme execution and maintenance, tenders and larger works, and formal grievance redressal when lower rungs fail.",
+        "handles": "Key decision officer at district level - chronic supply failure across many villages, division-wide scheme execution and maintenance, tenders and larger works, and formal grievance redressal when lower rungs fail.",
         "escalateWhen": "Escalate if the issue is division-wide or systemic, involves major capital works/large funds, or the EE does not resolve a formally lodged complaint."
       },
       {
@@ -377,7 +377,7 @@ export const ESCALATION_CHAINS: Record<ChainKey, EscalationChainDef> = {
         "title": "Superintending Engineer (SE), head of the PHE Circle",
         "short": "SE",
         "level": "range",
-        "jurisdiction": "One PHE Circle — a group of divisions, roughly a cluster of districts / a region (tier sits above division, below zone)",
+        "jurisdiction": "One PHE Circle - a group of divisions, roughly a cluster of districts / a region (tier sits above division, below zone)",
         "handles": "Circle-level oversight of multiple divisions; escalation point for persistent multi-district problems, delayed major schemes, and to press action when an EE has not delivered.",
         "escalateWhen": "Escalate if the matter spans multiple circles, needs zone/state-level policy or budget decisions, or the SE fails to act."
       },
@@ -395,7 +395,7 @@ export const ESCALATION_CHAINS: Record<ChainKey, EscalationChainDef> = {
         "title": "Engineer-in-Chief (EnC) / Chief Engineer (State Head), technical head of PHED",
         "short": "EnC",
         "level": "state",
-        "jurisdiction": "Entire state — head of the PHED engineering cadre",
+        "jurisdiction": "Entire state - head of the PHED engineering cadre",
         "handles": "Top technical head of the department; the final engineering-side escalation for state-wide policy, standards, and unresolved major grievances.",
         "escalateWhen": "Escalate to the administrative/secretariat head if the matter needs policy, inter-departmental, or governance-level decisions beyond the engineering cadre."
       },
@@ -404,7 +404,7 @@ export const ESCALATION_CHAINS: Record<ChainKey, EscalationChainDef> = {
         "title": "Principal Secretary / Secretary, PHED (Public Health Engineering / Drinking Water & Sanitation Dept)",
         "short": "Secretary",
         "level": "state",
-        "jurisdiction": "Entire state — administrative head of the department in the Secretariat (IAS officer)",
+        "jurisdiction": "Entire state - administrative head of the department in the Secretariat (IAS officer)",
         "handles": "Administrative and policy head above the engineering cadre; highest departmental authority for budgets, policy, and grievances not resolved by the technical chain (above this sit the Chief Secretary and the Minister as political head).",
         "escalateWhen": "Top of the departmental reporting chain; beyond this lies the Chief Secretary / State Government and the parallel political lever (Minister / elected representatives)."
       }
@@ -610,7 +610,7 @@ export const ESCALATION_CHAINS: Record<ChainKey, EscalationChainDef> = {
         "level": "state",
         "jurisdiction": "Entire state (directorate head)",
         "handles": "Statewide implementation of school education, senior transfers, policy grievances, escalated complaints not settled at district/division.",
-        "escalateWhen": "Issue is a policy or funding decision, or the directorate itself has not acted — take it to the Secretariat."
+        "escalateWhen": "Issue is a policy or funding decision, or the directorate itself has not acted - take it to the Secretariat."
       },
       {
         "id": "ps-secy",
@@ -655,30 +655,30 @@ export const ESCALATION_CHAINS: Record<ChainKey, EscalationChainDef> = {
       },
       {
         "id": "ee-gro",
-        "title": "Executive Engineer / Divisional Engineer (EE / XEN) — often the designated Grievance Redressal Officer (GRO)",
+        "title": "Executive Engineer / Divisional Engineer (EE / XEN) - often the designated Grievance Redressal Officer (GRO)",
         "short": "EE / GRO",
         "level": "division",
         "jurisdiction": "One division (several sub-divisions covering a town or taluka)",
         "handles": "Divisional head and usually the DISCOM's designated GRO; handles unresolved billing disputes, refund/adjustment demands, load and transformer issues, and formal written grievances against the sub-division.",
-        "escalateWhen": "Escalate if the GRO/EE fails to decide within the notified period (often 15–45 days) or the decision is unsatisfactory — the next step is the statutory CGRF."
+        "escalateWhen": "Escalate if the GRO/EE fails to decide within the notified period (often 15-45 days) or the decision is unsatisfactory - the next step is the statutory CGRF."
       },
       {
         "id": "se",
-        "title": "Superintending Engineer (SE) — Circle head",
+        "title": "Superintending Engineer (SE) - Circle head",
         "short": "SE",
         "level": "district",
-        "jurisdiction": "One circle (several divisions — typically a district or two)",
+        "jurisdiction": "One circle (several divisions - typically a district or two)",
         "handles": "Circle-level administrative head; takes up systemic problems (chronic circle-wide outages, mass wrong billing, delayed connections) and internal appeals against the Executive Engineer within the DISCOM chain.",
-        "escalateWhen": "Escalate if the internal DISCOM chain is exhausted or unresponsive — file with the statutory Consumer Grievance Redressal Forum for a binding, time-bound order."
+        "escalateWhen": "Escalate if the internal DISCOM chain is exhausted or unresponsive - file with the statutory Consumer Grievance Redressal Forum for a binding, time-bound order."
       },
       {
         "id": "cgrf",
         "title": "Consumer Grievance Redressal Forum (CGRF)",
         "short": "CGRF",
         "level": "utility",
-        "jurisdiction": "The DISCOM licence area — statutory forum under Sec. 42(5), Electricity Act 2003",
-        "handles": "Independent statutory forum a consumer approaches after the DISCOM's internal process fails; can set aside wrong bills, order refunds/adjustments, direct meter replacement and restoration — free of cost, decided in a fixed period (commonly ~15–45 days).",
-        "escalateWhen": "Escalate if dissatisfied with the CGRF order or the DISCOM does not comply — represent to the Electricity Ombudsman."
+        "jurisdiction": "The DISCOM licence area - statutory forum under Sec. 42(5), Electricity Act 2003",
+        "handles": "Independent statutory forum a consumer approaches after the DISCOM's internal process fails; can set aside wrong bills, order refunds/adjustments, direct meter replacement and restoration - free of cost, decided in a fixed period (commonly ~15-45 days).",
+        "escalateWhen": "Escalate if dissatisfied with the CGRF order or the DISCOM does not comply - represent to the Electricity Ombudsman."
       },
       {
         "id": "ombudsman",
@@ -687,16 +687,16 @@ export const ESCALATION_CHAINS: Record<ChainKey, EscalationChainDef> = {
         "level": "state",
         "jurisdiction": "State-level appellate authority appointed by the State Electricity Regulatory Commission (Sec. 42(6))",
         "handles": "Hears representations against a CGRF decision; issues binding directions to the DISCOM on billing disputes, wrongful disconnection, and unresolved service failures (usually within ~60 days).",
-        "escalateWhen": "Escalate if the Ombudsman's finding is unsatisfactory or the matter is systemic/tariff/regulatory rather than an individual grievance — approach the State Regulatory Commission (policy) or a writ/consumer court (the individual order)."
+        "escalateWhen": "Escalate if the Ombudsman's finding is unsatisfactory or the matter is systemic/tariff/regulatory rather than an individual grievance - approach the State Regulatory Commission (policy) or a writ/consumer court (the individual order)."
       },
       {
         "id": "serc",
-        "title": "State Electricity Regulatory Commission (SERC — e.g., MERC / DERC / UPERC / TNERC)",
+        "title": "State Electricity Regulatory Commission (SERC - e.g., MERC / DERC / UPERC / TNERC)",
         "short": "SERC",
         "level": "state",
-        "jurisdiction": "The whole state — apex regulator of the electricity distribution sector",
+        "jurisdiction": "The whole state - apex regulator of the electricity distribution sector",
         "handles": "The state regulator that sets tariffs, licence conditions and standards of performance, and appoints the Ombudsman/CGRFs; approach it for systemic tariff-category, standard-of-performance or policy grievances affecting many consumers (not as a routine appeal against an individual Ombudsman order).",
-        "escalateWhen": "Beyond the SERC, remedies lie with the Appellate Tribunal for Electricity (APTEL) and the High Court/Supreme Court, and the State Power/Energy Department for administrative/policy matters — outside the routine consumer chain."
+        "escalateWhen": "Beyond the SERC, remedies lie with the Appellate Tribunal for Electricity (APTEL) and the High Court/Supreme Court, and the State Power/Energy Department for administrative/policy matters - outside the routine consumer chain."
       }
     ],
     "citizenStartIndex": 0,
@@ -727,7 +727,7 @@ export const ESCALATION_CHAINS: Record<ChainKey, EscalationChainDef> = {
       },
       {
         "id": "tso",
-        "title": "Taluk / Tehsil Supply Officer (TSO) — a.k.a. Assistant Supply Officer",
+        "title": "Taluk / Tehsil Supply Officer (TSO) - a.k.a. Assistant Supply Officer",
         "short": "TSO",
         "level": "tehsil",
         "jurisdiction": "One taluk / tehsil / block",
@@ -745,7 +745,7 @@ export const ESCALATION_CHAINS: Record<ChainKey, EscalationChainDef> = {
       },
       {
         "id": "dm-collector-dgro",
-        "title": "District Magistrate / District Collector / Deputy Commissioner (DM) — also the District Grievance Redressal Officer (DGRO) under NFSA",
+        "title": "District Magistrate / District Collector / Deputy Commissioner (DM) - also the District Grievance Redressal Officer (DGRO) under NFSA",
         "short": "DM / Collector / DGRO",
         "level": "district",
         "jurisdiction": "The entire district",
@@ -763,7 +763,7 @@ export const ESCALATION_CHAINS: Record<ChainKey, EscalationChainDef> = {
       },
       {
         "id": "secretary-state-food-commission",
-        "title": "Principal Secretary / Secretary, Food, Civil Supplies & Consumer Affairs Department (State) — with the State Food Commission as the NFSA appellate body",
+        "title": "Principal Secretary / Secretary, Food, Civil Supplies & Consumer Affairs Department (State) - with the State Food Commission as the NFSA appellate body",
         "short": "Secretary / State Food Commission",
         "level": "state",
         "jurisdiction": "State government department head; State Food Commission hears NFSA appeals",

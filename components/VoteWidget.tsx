@@ -79,7 +79,7 @@ export default function VoteWidget({
   }
 
   // The turnstile script survives client-side navigations, so <Script onLoad>
-  // only fires on the FIRST page that loads it — every later person page must
+  // only fires on the FIRST page that loads it - every later person page must
   // render the widget itself on mount, or voting silently breaks.
   useEffect(() => {
     renderTurnstile();
@@ -118,7 +118,7 @@ export default function VoteWidget({
       });
       const data = await res.json();
       // The server has now consumed the token whether it accepted the vote or
-      // not — mint a fresh one so the voter can retry / change their rating.
+      // not - mint a fresh one so the voter can retry / change their rating.
       resetTurnstile();
       if (!res.ok) {
         setStatus('error');
@@ -172,7 +172,7 @@ export default function VoteWidget({
             aria-label={`${n} ${labels[n - 1] || ''}`.trim()}
             // Selected = a SOLID fill, matching how every other active chip on the
             // site reads. `rating-ink` (not plain amber) because white text on
-            // #f59e0b is only 2.15:1 — it fails WCAG AA; #b45309 gives 5.02:1 for
+            // #f59e0b is only 2.15:1 - it fails WCAG AA; #b45309 gives 5.02:1 for
             // the label AND 5.02:1 against the unselected white buttons, so the
             // choice is obvious at a glance and without relying on hue alone.
             className={`grid h-10 w-10 place-items-center rounded-lg border text-sm font-semibold transition ${

@@ -4,7 +4,7 @@
 export type House = 'Lok Sabha' | 'Rajya Sabha' | 'Vidhan Sabha' | 'Vidhan Parishad';
 // PC = parliamentary (Lok Sabha), AC = assembly (Vidhan Sabha), RS = Rajya Sabha
 // (state-elected, no territorial constituency), MLC = legislative council (Vidhan
-// Parishad — elected by MLAs/local bodies/graduates/teachers or Governor-nominated,
+// Parishad - elected by MLAs/local bodies/graduates/teachers or Governor-nominated,
 // so likewise no territorial constituency).
 export type ConstituencyType = 'PC' | 'AC' | 'RS' | 'MLC';
 export type RankingLevel = 'national' | 'state' | 'district' | 'constituency';
@@ -76,7 +76,7 @@ export interface Politician {
   terms_served?: number;
   active: boolean;
   /** Citation for the core identity (name/party/constituency) when the detailed
-   *  fact record hasn't been added yet — so an identity-only profile is still cited. */
+   *  fact record hasn't been added yet - so an identity-only profile is still cited. */
   identity_source?: { url: string; name: string; retrieved_date: string };
   /** A sourced note for by-election / status context that isn't a party switch,
    *  e.g. "Won the by-election, elected on 23 November 2024." */
@@ -115,13 +115,13 @@ export interface SentimentScore {
   politician_id: string;
   /**
    * Bayesian-shrunk mean on a 1..5 scale (3 = neutral prior). For ORDERING only
-   * — it stops a lone 5-star vote topping the list. It must never be shown as
+   * - it stops a lone 5-star vote topping the list. It must never be shown as
    * "the rating": it is not what anyone actually voted, and printing it next to
    * the vote breakdown produces a visible contradiction (five 1-star votes
    * reading as "2.3"). Display `raw_mean` and let `confidence` convey thinness.
    */
   bayesian_mean: number | null;
-  /** The plain average of the votes actually cast — the number we display. */
+  /** The plain average of the votes actually cast - the number we display. */
   raw_mean: number | null;
   n_votes: number;
   distribution: Record<string, number>; // {"1":..,"5":..}
@@ -141,9 +141,9 @@ export interface RankingEntry {
   performance_cohort: string;
   /** How many verified metrics fed the composite (0 → unranked). */
   metrics_used?: number;
-  /** Bayesian-shrunk — SORT by this, never print it (see SentimentScore). */
+  /** Bayesian-shrunk - SORT by this, never print it (see SentimentScore). */
   sentiment_mean: number | null;
-  /** The plain average of votes cast — print this. */
+  /** The plain average of votes cast - print this. */
   sentiment_raw_mean: number | null;
   sentiment_votes: number;
   photo_url?: string;
@@ -218,13 +218,13 @@ export interface OfficeSeat {
 }
 
 /**
- * A published, citable way to actually reach an office — a helpline number or a
+ * A published, citable way to actually reach an office - a helpline number or a
  * grievance/portal URL.
  *
  * Naming every DM/SP in ~600 districts is not sustainable (officers transfer
  * constantly), so most rungs of the escalation ladder have no incumbent. A
  * channel is the durable answer: it stays correct as officers change, and it is
- * what a citizen actually needs — somewhere to call, write or file. Every
+ * what a citizen actually needs - somewhere to call, write or file. Every
  * channel carries the official source that publishes it; an uncited helpline is
  * never shown, since a wrong number in an emergency is worse than none.
  */

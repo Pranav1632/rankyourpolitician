@@ -63,7 +63,7 @@ function main() {
       wikidata_qid: m.wikidata_qid || undefined,
       politicianId,
       source_url: m.source_url || 'https://en.wikipedia.org/wiki/Third_Modi_ministry',
-      source_name: m.source_name || 'Wikipedia – Third Modi ministry',
+      source_name: m.source_name || 'Wikipedia - Third Modi ministry',
       retrieved_date: today,
     };
   });

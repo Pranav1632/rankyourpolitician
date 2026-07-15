@@ -1,6 +1,6 @@
 'use client';
 // Client search: fetch the prebuilt static index once (~150KB gzipped), then
-// every keystroke is answered locally in <5ms — no server round-trip, no
+// every keystroke is answered locally in <5ms - no server round-trip, no
 // Firestore reads, no cold starts.
 import { useCallback, useEffect, useRef, useState } from 'react';
 import {
@@ -92,7 +92,7 @@ export function addRecentSearch(q: string) {
     const cur = getRecentSearches().filter((x) => x.toLowerCase() !== t.toLowerCase());
     localStorage.setItem(RECENTS_KEY, JSON.stringify([t, ...cur].slice(0, RECENTS_MAX)));
   } catch {
-    /* private mode etc. — fine */
+    /* private mode etc. - fine */
   }
 }
 

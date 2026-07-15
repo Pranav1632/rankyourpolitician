@@ -4,13 +4,13 @@
  * Why this exists: naming each District Magistrate / SP nationally is not
  * sustainable (there are ~600 districts and officers transfer constantly), so
  * most rungs of the escalation ladder have no incumbent. But a citizen does not
- * actually need the officer's *name* — they need a real, current PLACE to go.
+ * actually need the officer's *name* - they need a real, current PLACE to go.
  * Every district in India runs an official site (usually <slug>.nic.in) carrying
  * a "Who's Who" directory and a contact page with the collectorate's phone/email,
  * and those pages stay current as officers change. So we ship the durable
  * pointer instead of a name that rots.
  *
- * How a URL earns its place (never a guess — slug patterns are unreliable:
+ * How a URL earns its place (never a guess - slug patterns are unreliable:
  * jaipur.nic.in and kanpur.nic.in do not exist, while dk.nic.in is Dakshina
  * Kannada). Two independent discovery routes, both then PROVEN by fetching:
  *   1. Wikidata: districts of India (P31/P279* Q1149652, P17 = India) with an
@@ -19,7 +19,7 @@
  *      used only where Wikidata has no P856.
  * A candidate is ACCEPTED only if it responds 200 AND the page identifies itself
  * as that district (title/body mentions the district name, or an Indic-script
- * page carries a district-site marker). Everything else is dropped — a dead or
+ * page carries a district-site marker). Everything else is dropped - a dead or
  * mismatched link in an accountability ladder is worse than no link.
  *
  * We additionally look for the site's "Who's Who" / contact / grievance page and
@@ -70,7 +70,7 @@ const norm = (s: string) =>
     .replace(/[^a-z0-9]+/g, ' ').trim();
 const compact = (s: string) => norm(s).replace(/ /g, '');
 
-/** Edit distance — used only for same-state near-miss district spellings. */
+/** Edit distance - used only for same-state near-miss district spellings. */
 function lev(a: string, b: string): number {
   if (a === b) return 0;
   const m = a.length, n = b.length;
@@ -88,8 +88,8 @@ function lev(a: string, b: string): number {
 // almost always dead, and misses dominate this run's wall-clock.
 //
 // One retry on a transient failure (timeout / reset / 5xx): district portals
-// flake constantly — jorhat.assam.gov.in answers 503 one minute and 200 the
-// next — and a single probe silently under-reports live sites. DNS-level misses
+// flake constantly - jorhat.assam.gov.in answers 503 one minute and 200 the
+// next - and a single probe silently under-reports live sites. DNS-level misses
 // (the host genuinely does not exist) fail fast and are not retried.
 async function fetchOnce(u: string, ms: number): Promise<{ status: number; html: string; url: string } | null> {
   try {
@@ -107,7 +107,7 @@ async function fetchOnce(u: string, ms: number): Promise<{ status: number; html:
 async function fetchText(u: string, ms = 9000): Promise<{ status: number; html: string; url: string } | null> {
   const first = await fetchOnce(u, ms);
   if (first && first.status === 200) return first;
-  // Retry only when the host answered badly or timed out — i.e. it may be real.
+  // Retry only when the host answered badly or timed out - i.e. it may be real.
   const transient = first === null || first.status >= 500 || first.status === 429;
   if (!transient) return first;
   await sleep(1200);
@@ -135,7 +135,7 @@ function identify(
   if (!d) return null;
 
   // Slug-probed hosts are unscoped: hamirpur.nic.in could be UP's Hamirpur when we
-  // want Himachal's. Make such a page prove its state before we accept it — but
+  // want Himachal's. Make such a page prove its state before we accept it - but
   // ONLY when the district name is actually ambiguous (see AMBIGUOUS), because
   // most district sites render solely in the state language and carry no Latin
   // state name at all (mysore.nic.in is Kannada-only), so demanding one would
@@ -145,7 +145,7 @@ function identify(
   // Matched on TOKENS, not the full string: sites routinely shorten the official
   // name ("Government of Andaman and Nicobar" for "Andaman & Nicobar Islands"),
   // so an exact-substring test rejects genuine matches. Requiring ~60% of the
-  // distinctive tokens still separates the lookalikes that matter — "Uttar
+  // distinctive tokens still separates the lookalikes that matter - "Uttar
   // Pradesh" and "Himachal Pradesh" share only `pradesh`, and both 2-token names
   // need BOTH tokens to pass.
   if (requireState && stateName) {
@@ -354,7 +354,7 @@ SELECT ?d ?dLabel ?stateLabel ?site WHERE {
     } catch { /* retry */ }
     await sleep(1500 * (a + 1));
   }
-  console.warn('Wikidata SPARQL failed — falling back to slug probes only.');
+  console.warn('Wikidata SPARQL failed - falling back to slug probes only.');
   return [];
 }
 
@@ -456,7 +456,7 @@ async function main() {
       if (exact) return exact;
     }
     // Fuzzy, but ONLY within the same state, and only if exactly one candidate
-    // is close enough — otherwise we would be guessing.
+    // is close enough - otherwise we would be guessing.
     const near: { site: string; qid: string }[] = [];
     for (const [k, v] of wdByStateName) {
       const [sc, n] = k.split('|');
@@ -519,8 +519,8 @@ async function main() {
         phone, email,
         source_url: c.src === 'wikidata' ? `https://www.wikidata.org/wiki/${c.qid}` : res.url,
         source_name: c.src === 'wikidata'
-          ? 'Wikidata (official website, P856) — verified live'
-          : 'Official district portal — verified live',
+          ? 'Wikidata (official website, P856) - verified live'
+          : 'Official district portal - verified live',
         retrieved_date: TODAY,
         verified,
       };
@@ -565,7 +565,7 @@ async function main() {
 
   // Global pass: only possible once every district is in hand.
   const sharedDropped = stripSharedPhones(out);
-  if (sharedDropped) console.log(`  dropped ${sharedDropped} shared/footer phone number(s) — not district-specific`);
+  if (sharedDropped) console.log(`  dropped ${sharedDropped} shared/footer phone number(s) - not district-specific`);
 
   writeFileSync(OUT, JSON.stringify(out, null, 2) + '\n');
   const withWho = Object.values(out).filter((p) => p.whosWhoUrl).length;

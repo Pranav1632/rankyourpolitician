@@ -163,7 +163,7 @@
         {
           "kind": "url",
           "topic": "general",
-          "label": "Andaman & Nicobar Administration — official UT portal",
+          "label": "Andaman & Nicobar Administration - official UT portal",
           "value": "https://andamannicobar.gov.in/",
           "scope": "state",
           "source_url": "https://andamannicobar.gov.in/",
@@ -174,7 +174,7 @@
         {
           "kind": "url",
           "topic": "general",
-          "label": "District directory — Andaman & Nicobar district portals",
+          "label": "District directory - Andaman & Nicobar district portals",
           "value": "https://andamannicobar.s3waas.gov.in/",
           "scope": "state",
           "source_url": "https://andamannicobar.s3waas.gov.in/",
@@ -185,7 +185,7 @@
         {
           "kind": "url",
           "topic": "grievance",
-          "label": "LG Helpdesk — Citizen Grievance Filing & Redressal (A&N public grievance portal)",
+          "label": "LG Helpdesk - Citizen Grievance Filing & Redressal (A&N public grievance portal)",
           "value": "https://db.and.nic.in/lghelpdesk/",
           "scope": "state",
           "source_url": "https://db.and.nic.in/lghelpdesk/",
@@ -196,7 +196,7 @@
         {
           "kind": "url",
           "topic": "police",
-          "label": "Andaman & Nicobar Police — Citizen Services Portal",
+          "label": "Andaman & Nicobar Police - Citizen Services Portal",
           "value": "https://citizen.andamannicobar.gov.in/",
           "scope": "state",
           "source_url": "https://citizen.andamannicobar.gov.in/",
@@ -211,9 +211,9 @@
           "value": "100",
           "scope": "state",
           "source_url": "https://andamannicobar.gov.in/",
-          "source_name": "Andaman & Nicobar Administration (official website) — Emergency contacts block",
+          "source_name": "Andaman & Nicobar Administration (official website) - Emergency contacts block",
           "retrieved_date": "2026-07-15",
-          "note": "Published as \"Police: 100\" in the emergency contact block on the UT portal homepage; also published as \"POLICE CONTROL ROOM — 100\" on the official district helpline pages (southandaman.nic.in/helpline/, nicobars.andaman.nic.in/helpline/, northmiddle.andaman.nic.in/helpline/)."
+          "note": "Published as \"Police: 100\" in the emergency contact block on the UT portal homepage; also published as \"POLICE CONTROL ROOM - 100\" on the official district helpline pages (southandaman.nic.in/helpline/, nicobars.andaman.nic.in/helpline/, northmiddle.andaman.nic.in/helpline/)."
         },
         {
           "kind": "phone",
@@ -222,29 +222,29 @@
           "value": "03192238881",
           "scope": "state",
           "source_url": "https://andamannicobar.gov.in/",
-          "source_name": "Andaman & Nicobar Administration (official website) — Emergency contacts block",
+          "source_name": "Andaman & Nicobar Administration (official website) - Emergency contacts block",
           "retrieved_date": "2026-07-15",
           "note": "Published verbatim on the UT portal homepage as \"Disaster: 1070/03192 238881\"."
         },
         {
           "kind": "phone",
           "topic": "ambulance",
-          "label": "Ambulance — G.B. Pant Hospital",
+          "label": "Ambulance - G.B. Pant Hospital",
           "value": "03192232102",
           "scope": "state",
           "source_url": "https://andamannicobar.gov.in/",
-          "source_name": "Andaman & Nicobar Administration (official website) — Emergency contacts block",
+          "source_name": "Andaman & Nicobar Administration (official website) - Emergency contacts block",
           "retrieved_date": "2026-07-15",
           "note": "Published verbatim on the UT portal homepage as \"Ambulance (G.B. Pant): 03192 232102\"."
         },
         {
           "kind": "phone",
           "topic": "health",
-          "label": "Blood Bank — G.B. Pant Hospital",
+          "label": "Blood Bank - G.B. Pant Hospital",
           "value": "03192230628",
           "scope": "state",
           "source_url": "https://andamannicobar.gov.in/",
-          "source_name": "Andaman & Nicobar Administration (official website) — Emergency contacts block",
+          "source_name": "Andaman & Nicobar Administration (official website) - Emergency contacts block",
           "retrieved_date": "2026-07-15",
           "note": "Published verbatim on the UT portal homepage as \"Blood Bank (G.B. Pant): 03192 230628\"."
         },
@@ -255,25 +255,25 @@
           "value": "03192245555",
           "scope": "state",
           "source_url": "https://andamannicobar.gov.in/",
-          "source_name": "Andaman & Nicobar Administration (official website) — Emergency contacts block",
+          "source_name": "Andaman & Nicobar Administration (official website) - Emergency contacts block",
           "retrieved_date": "2026-07-15",
-          "note": "Published verbatim on the UT portal homepage as \"Shipping: 03192 245555\"; also listed as \"SHIPPING — 245555\" on the South Andaman district helpline page. Included because shipping is a core citizen service in this island UT."
+          "note": "Published verbatim on the UT portal homepage as \"Shipping: 03192 245555\"; also listed as \"SHIPPING - 245555\" on the South Andaman district helpline page. Included because shipping is a core citizen service in this island UT."
         },
         {
           "kind": "phone",
           "topic": "electricity",
-          "label": "Electricity Department — Central Control Room (toll-free, no-light/power complaints)",
+          "label": "Electricity Department - Central Control Room (toll-free, no-light/power complaints)",
           "value": "18003451111",
           "scope": "state",
           "source_url": "https://vidyut.andamannicobar.gov.in/",
           "source_name": "Electricity Department, Andaman & Nicobar Administration (official website)",
           "retrieved_date": "2026-07-15",
-          "note": "CAVEAT — verify before publishing prominently. The only official publication of this number I could read is a notice on the Electricity Department's own site describing it as \"The toll-free number (18003451111) of the Central Control Room of the Electricity Department\"; that notice (dated around April 2025) announced the line was temporarily under fault and gave 03192-235250 as an interim alternate, saying the issue would be resolved the next morning. No current standing \"contact us\" page on an official domain restates it (vidyut.andaman.gov.in and police-style contact pages were unreachable from here). The department's site otherwise routes \"Consumer Complaint Redressal\" to the UrjaPay portal (login required)."
+          "note": "CAVEAT - verify before publishing prominently. The only official publication of this number I could read is a notice on the Electricity Department's own site describing it as \"The toll-free number (18003451111) of the Central Control Room of the Electricity Department\"; that notice (dated around April 2025) announced the line was temporarily under fault and gave 03192-235250 as an interim alternate, saying the issue would be resolved the next morning. No current standing \"contact us\" page on an official domain restates it (vidyut.andaman.gov.in and police-style contact pages were unreachable from here). The department's site otherwise routes \"Consumer Complaint Redressal\" to the UrjaPay portal (login required)."
         },
         {
           "kind": "url",
           "topic": "electricity",
-          "label": "Electricity Department, A&N Administration — official site",
+          "label": "Electricity Department, A&N Administration - official site",
           "value": "https://vidyut.andamannicobar.gov.in/",
           "scope": "state",
           "source_url": "https://vidyut.andamannicobar.gov.in/",
@@ -284,7 +284,7 @@
         {
           "kind": "url",
           "topic": "electricity",
-          "label": "UrjaPay — A&N electricity consumer portal (billing & complaint redressal)",
+          "label": "UrjaPay - A&N electricity consumer portal (billing & complaint redressal)",
           "value": "https://urjapay.andamannicobar.gov.in/",
           "scope": "state",
           "source_url": "https://urjapay.andamannicobar.gov.in/",
@@ -301,33 +301,33 @@
         {
           "kind": "url",
           "topic": "grievance",
-          "label": "Meekosam — AP Public Grievance Redressal System (PGRS) portal",
+          "label": "Meekosam - AP Public Grievance Redressal System (PGRS) portal",
           "value": "https://meekosam.ap.gov.in/",
           "scope": "state",
           "source_url": "https://srikakulam.ap.gov.in/service/meekosam/",
-          "source_name": "Srikakulam District Portal, Government of Andhra Pradesh — How to lodge a Grievance through 'Meekosam' Portal",
+          "source_name": "Srikakulam District Portal, Government of Andhra Pradesh - How to lodge a Grievance through 'Meekosam' Portal",
           "retrieved_date": "2026-07-15",
           "note": "Current official one-stop public grievance portal of the Government of Andhra Pradesh; grievances reach the Chief Minister's Grievance Redressal cell. Accepts petitions via web, mobile app, 1100 call centre and Collectorate Grievance Day (PGRS Monday)."
         },
         {
           "kind": "url",
           "topic": "grievance",
-          "label": "PGRS — Public Grievance Redressal System (alternate official domain)",
+          "label": "PGRS - Public Grievance Redressal System (alternate official domain)",
           "value": "https://pgrs.ap.gov.in/",
           "scope": "state",
           "source_url": "https://eluru.ap.gov.in/grievance-reddressal/",
-          "source_name": "Eluru District Portal, Government of Andhra Pradesh — Grievance Redressal",
+          "source_name": "Eluru District Portal, Government of Andhra Pradesh - Grievance Redressal",
           "retrieved_date": "2026-07-15",
           "note": "Same PGRS system served on an alternate official domain; still live and linked from district portals. Helpdesk email: pgrs-helpdesk@ap.gov.in. Address: CMGRS, Block 1, Secretariat, Velagapudi, Amaravathi."
         },
         {
           "kind": "url",
           "topic": "police",
-          "label": "Andhra Pradesh Police — Citizen Services portal",
+          "label": "Andhra Pradesh Police - Citizen Services portal",
           "value": "https://citizen.appolice.gov.in/",
           "scope": "state",
           "source_url": "https://citizen.appolice.gov.in/",
-          "source_name": "Andhra Pradesh Police — Citizen Services",
+          "source_name": "Andhra Pradesh Police - Citizen Services",
           "retrieved_date": "2026-07-15",
           "note": "Official AP Police citizen portal: e-complaint / lodge petition, view FIR, know case status, petition status, e-challan payment, lost mobile blocking, missing persons. WhatsApp governance services: message 'Hi' to 9552300009."
         },
@@ -356,22 +356,22 @@
         {
           "kind": "phone",
           "topic": "electricity",
-          "label": "Electricity complaints — AP DISCOMs (APSPDCL / APEPDCL) toll-free",
+          "label": "Electricity complaints - AP DISCOMs (APSPDCL / APEPDCL) toll-free",
           "value": "1912",
           "scope": "state",
           "source_url": "https://www.apspdcl.in/",
-          "source_name": "APSPDCL — A.P. Southern Power Distribution Company Ltd (official site)",
+          "source_name": "APSPDCL - A.P. Southern Power Distribution Company Ltd (official site)",
           "retrieved_date": "2026-07-15",
           "note": "Common 24x7 toll-free number for power supply complaints, published by both AP Southern Power Distribution Co. (APSPDCL) and AP Eastern Power Distribution Co. (APEPDCL) on their own sites."
         },
         {
           "kind": "url",
           "topic": "electricity",
-          "label": "APEPDCL — register an electricity complaint online",
+          "label": "APEPDCL - register an electricity complaint online",
           "value": "https://www.apeasternpower.com/customersComplaintRegister",
           "scope": "state",
           "source_url": "https://www.apeasternpower.com/customersComplaintRegister",
-          "source_name": "APEPDCL (Eastern Power Distribution Company of A.P. Ltd) — Register A Complaint",
+          "source_name": "APEPDCL (Eastern Power Distribution Company of A.P. Ltd) - Register A Complaint",
           "retrieved_date": "2026-07-15",
           "note": "Official online complaint registration for Eastern Power Distribution Company of AP; enter 16 or 8 digit Consumer Service Number. Also lists toll-free 1912."
         },
@@ -382,7 +382,7 @@
           "value": "14400",
           "scope": "state",
           "source_url": "https://prakasam.ap.gov.in/helpline/",
-          "source_name": "Prakasam District Portal, Government of Andhra Pradesh — Helpline",
+          "source_name": "Prakasam District Portal, Government of Andhra Pradesh - Helpline",
           "retrieved_date": "2026-07-15",
           "note": "Published by the state district portal as the Anti-Corruption Bureau complaint line."
         },
@@ -393,7 +393,7 @@
           "value": "14500",
           "scope": "state",
           "source_url": "https://prakasam.ap.gov.in/helpline/",
-          "source_name": "Prakasam District Portal, Government of Andhra Pradesh — Helpline",
+          "source_name": "Prakasam District Portal, Government of Andhra Pradesh - Helpline",
           "retrieved_date": "2026-07-15",
           "note": "Andhra Pradesh-specific toll-free line for complaints on illegal sand and liquor."
         },
@@ -404,7 +404,7 @@
           "value": "108",
           "scope": "state",
           "source_url": "https://prakasam.ap.gov.in/helpline/",
-          "source_name": "Prakasam District Portal, Government of Andhra Pradesh — Helpline",
+          "source_name": "Prakasam District Portal, Government of Andhra Pradesh - Helpline",
           "retrieved_date": "2026-07-15",
           "note": "Published by the state as the health/medical emergency ambulance number."
         },
@@ -415,7 +415,7 @@
           "value": "104",
           "scope": "state",
           "source_url": "https://prakasam.ap.gov.in/helpline/",
-          "source_name": "Prakasam District Portal, Government of Andhra Pradesh — Helpline",
+          "source_name": "Prakasam District Portal, Government of Andhra Pradesh - Helpline",
           "retrieved_date": "2026-07-15",
           "note": "Published by the state alongside 108 for health and medical emergency assistance."
         }
@@ -533,7 +533,7 @@
         {
           "kind": "url",
           "topic": "general",
-          "label": "Districts List — directory of all district websites",
+          "label": "Districts List - directory of all district websites",
           "value": "https://assam.gov.in/districts-page.html",
           "scope": "state",
           "source_url": "https://assam.gov.in/districts-page.html",
@@ -559,9 +559,9 @@
           "value": "https://cm.assam.gov.in/write-to-cm",
           "scope": "state",
           "source_url": "https://cm.assam.gov.in/write-to-cm",
-          "source_name": "Chief Minister of Assam — official website",
+          "source_name": "Chief Minister of Assam - official website",
           "retrieved_date": "2026-07-15",
-          "note": "Assam does NOT publish a short-code CM helpline. Aggregator sites claiming '1100' for Assam are wrong — the NEGD directory entry behind that claim is Tamil Nadu's. Use this channel plus the CMO numbers instead."
+          "note": "Assam does NOT publish a short-code CM helpline. Aggregator sites claiming '1100' for Assam are wrong - the NEGD directory entry behind that claim is Tamil Nadu's. Use this channel plus the CMO numbers instead."
         },
         {
           "kind": "phone",
@@ -570,7 +570,7 @@
           "value": "03612262222",
           "scope": "state",
           "source_url": "https://cm.assam.gov.in/write-to-cm",
-          "source_name": "Chief Minister of Assam — Write to CM",
+          "source_name": "Chief Minister of Assam - Write to CM",
           "retrieved_date": "2026-07-15",
           "note": "Published on the CMO site and CM homepage. Office: Lok Sewa Bhawan, J Block, Janata Bhawan, Dispur, Guwahati 781006. Email cm@assam.gov.in"
         },
@@ -581,20 +581,20 @@
           "value": "03612237043",
           "scope": "state",
           "source_url": "https://cm.assam.gov.in/write-to-cm",
-          "source_name": "Chief Minister of Assam — Write to CM",
+          "source_name": "Chief Minister of Assam - Write to CM",
           "retrieved_date": "2026-07-15",
           "note": "Second CMO line published on the same official page."
         },
         {
           "kind": "url",
           "topic": "grievance",
-          "label": "Sewa Setu — Public Grievance Redressal service",
+          "label": "Sewa Setu - Public Grievance Redressal service",
           "value": "https://sewasetu.assam.gov.in/site/service-apply/public-grievance-redressal",
           "scope": "state",
           "source_url": "https://sewasetu.assam.gov.in/site/service-apply/public-grievance-redressal",
           "source_name": "Sewa Setu, Government of Assam (ARTPS portal)",
           "retrieved_date": "2026-07-15",
-          "note": "State citizen-services portal under the Assam RTPS Act 2012; grievance can be lodged and a report downloaded. NOTE: the Sewa Setu toll-free number (18003453574) is deliberately omitted — the portal itself states the helpline is temporarily unavailable and directs users to email."
+          "note": "State citizen-services portal under the Assam RTPS Act 2012; grievance can be lodged and a report downloaded. NOTE: the Sewa Setu toll-free number (18003453574) is deliberately omitted - the portal itself states the helpline is temporarily unavailable and directs users to email."
         },
         {
           "kind": "phone",
@@ -605,12 +605,12 @@
           "source_url": "https://assampolice.assam.gov.in/citizen/login.aspx",
           "source_name": "Assam Police Citizen Portal",
           "retrieved_date": "2026-07-15",
-          "note": "Published on the portal as 'Call us now (0361)-2460303'. This is the citizen-portal support line, not an emergency line — for emergencies use 112."
+          "note": "Published on the portal as 'Call us now (0361)-2460303'. This is the citizen-portal support line, not an emergency line - for emergencies use 112."
         },
         {
           "kind": "url",
           "topic": "police",
-          "label": "Assam Police — official website",
+          "label": "Assam Police - official website",
           "value": "https://police.assam.gov.in/",
           "scope": "state",
           "source_url": "https://police.assam.gov.in/",
@@ -625,7 +625,7 @@
           "value": "03612450555",
           "scope": "state",
           "source_url": "https://police.assam.gov.in/contact-us",
-          "source_name": "Assam Police — Contact Us",
+          "source_name": "Assam Police - Contact Us",
           "retrieved_date": "2026-07-15",
           "note": "Police HQ, Ulubari, Guwahati. Email dgp@assampolice.gov.in. No state-level control-room number is published on a fetchable official page; the Assam Police control-room listing page returns HTTP 403."
         },
@@ -647,7 +647,7 @@
           "value": "9345215029",
           "scope": "state",
           "source_url": "https://police.assam.gov.in/frontimpotentdata/womens-rights-and-helpline",
-          "source_name": "Assam Police — Women's Rights and Helpline",
+          "source_name": "Assam Police - Women's Rights and Helpline",
           "retrieved_date": "2026-07-15",
           "note": "Assam-specific women's helpline run by Assam Police CID. Email ssp-cid@assampolice.gov.in with subject 'Helpline for Women'. Verified on two separate fetches of the official page."
         },
@@ -658,25 +658,25 @@
           "value": "03612521242",
           "scope": "state",
           "source_url": "https://police.assam.gov.in/frontimpotentdata/womens-rights-and-helpline",
-          "source_name": "Assam Police — Women's Rights and Helpline",
+          "source_name": "Assam Police - Women's Rights and Helpline",
           "retrieved_date": "2026-07-15",
           "note": "Second Assam-specific women's helpline line published on the same official Assam Police page."
         },
         {
           "kind": "url",
           "topic": "electricity",
-          "label": "APDCL — file an electricity complaint online (CGRF)",
+          "label": "APDCL - file an electricity complaint online (CGRF)",
           "value": "https://www.apdcl.org/cgrf/noauth/fileComplaint",
           "scope": "state",
           "source_url": "https://www.apdcl.org/cgrf/noauth/fileComplaint",
-          "source_name": "Assam Power Distribution Company Limited (APDCL) — Consumer Grievance Redressal Forum",
+          "source_name": "Assam Power Distribution Company Limited (APDCL) - Consumer Grievance Redressal Forum",
           "retrieved_date": "2026-07-15",
           "note": "Official DISCOM online complaint form (consumer number + OTP). Categories include interruption, voltage, load shedding, meter, bill, disconnection, new connection. The widely-quoted APDCL number 1912 is omitted: it appears only on aggregator sites and on JS-rendered APDCL pages that could not be fetched and read."
         },
         {
           "kind": "url",
           "topic": "electricity",
-          "label": "AERC — how to file an electricity bill/service complaint",
+          "label": "AERC - how to file an electricity bill/service complaint",
           "value": "https://aerc.assam.gov.in/how-to/file-complain-electricity-bill-or-service-connection",
           "scope": "state",
           "source_url": "https://aerc.assam.gov.in/how-to/file-complain-electricity-bill-or-service-connection",
@@ -693,7 +693,7 @@
           "source_url": "https://aerc.assam.gov.in/how-to/file-complain-electricity-bill-or-service-connection",
           "source_name": "Assam Electricity Regulatory Commission (AERC)",
           "retrieved_date": "2026-07-15",
-          "note": "Escalation body only — consumers must approach APDCL's CGRF first. Office at ASEB Campus, Sixth Mile, Guwahati."
+          "note": "Escalation body only - consumers must approach APDCL's CGRF first. Office at ASEB Campus, Sixth Mile, Guwahati."
         }
       ]
     },
@@ -704,7 +704,7 @@
         {
           "kind": "phone",
           "topic": "grievance",
-          "label": "Bihar Lok Shikayat Nivaran — grievance toll-free helpline",
+          "label": "Bihar Lok Shikayat Nivaran - grievance toll-free helpline",
           "value": "18003456284",
           "scope": "state",
           "source_url": "https://lokshikayat.bihar.gov.in/DefaultEn.aspx",
@@ -715,7 +715,7 @@
         {
           "kind": "url",
           "topic": "grievance",
-          "label": "Bihar Lok Shikayat Nivaran — online public grievance portal",
+          "label": "Bihar Lok Shikayat Nivaran - online public grievance portal",
           "value": "https://lokshikayat.bihar.gov.in/",
           "scope": "state",
           "source_url": "https://lokshikayat.bihar.gov.in/DefaultEn.aspx",
@@ -730,18 +730,18 @@
           "value": "06122205800",
           "scope": "state",
           "source_url": "https://patna.nic.in/helpline/",
-          "source_name": "District Patna, Government of Bihar (NIC) — Helpline page",
+          "source_name": "District Patna, Government of Bihar (NIC) - Helpline page",
           "retrieved_date": "2026-07-15",
           "note": "Published as 'CHIEF MINISTER PUBLIC GRIEVANCE OFFICE' on the official NIC district helpline listing; the same number appears identically on madhubani.nic.in/helpline/. A landline, not a short-code helpline."
         },
         {
           "kind": "phone",
           "topic": "general",
-          "label": "Jigyasa — Bihar government general information helpline",
+          "label": "Jigyasa - Bihar government general information helpline",
           "value": "06122233333",
           "scope": "state",
           "source_url": "https://patna.nic.in/helpline/",
-          "source_name": "District Patna, Government of Bihar (NIC) — Helpline page",
+          "source_name": "District Patna, Government of Bihar (NIC) - Helpline page",
           "retrieved_date": "2026-07-15",
           "note": "Published as 'JIGYASA (FOR GENERAL INFORMATION)'. Same number appears identically on madhubani.nic.in/helpline/, and the Bihar state portal links a 'Jigyasa-Helpline' asset."
         },
@@ -752,14 +752,14 @@
           "value": "1800110180",
           "scope": "state",
           "source_url": "https://patna.nic.in/helpline/",
-          "source_name": "District Patna, Government of Bihar (NIC) — Helpline page",
+          "source_name": "District Patna, Government of Bihar (NIC) - Helpline page",
           "retrieved_date": "2026-07-15",
           "note": "Published as 'VIGILANCE' on Bihar's official district helpline listing; same number appears identically on madhubani.nic.in/helpline/. Appears on the Bihar-specific list (alongside Bihar Krishak Aayog, Mahadalit Commission), not a generic national directory."
         },
         {
           "kind": "url",
           "topic": "police",
-          "label": "Bihar Police — CCTNS Citizen Service Portal",
+          "label": "Bihar Police - CCTNS Citizen Service Portal",
           "value": "https://citizenservicesportal.bihar.gov.in/portal/",
           "scope": "state",
           "source_url": "https://citizenservicesportal.bihar.gov.in/portal/",
@@ -770,40 +770,40 @@
         {
           "kind": "url",
           "topic": "police",
-          "label": "Bihar Police — official website",
+          "label": "Bihar Police - official website",
           "value": "https://police.bihar.gov.in/",
           "scope": "state",
           "source_url": "https://police.bihar.gov.in/",
-          "source_name": "Bihar Police, Government of Bihar — official website",
+          "source_name": "Bihar Police, Government of Bihar - official website",
           "retrieved_date": "2026-07-15",
           "note": "Official Bihar Police website (meta author: Government of Bihar). Note: it is a JavaScript single-page app that returns HTTP 200 for any path, so only the root URL is cited here."
         },
         {
           "kind": "url",
           "topic": "general",
-          "label": "Government of Bihar — official state portal",
+          "label": "Government of Bihar - official state portal",
           "value": "https://state.bihar.gov.in/main/CitizenHome.html",
           "scope": "state",
           "source_url": "https://state.bihar.gov.in/main/CitizenHome.html",
-          "source_name": "Government of Bihar — official state portal",
+          "source_name": "Government of Bihar - official state portal",
           "retrieved_date": "2026-07-15",
           "note": "Official state portal homepage (page title: 'Government of Bihar'). Verified live 2026-07-15. Requires cookies on first load."
         },
         {
           "kind": "url",
           "topic": "general",
-          "label": "Districts of Bihar — district website directory",
+          "label": "Districts of Bihar - district website directory",
           "value": "https://state.bihar.gov.in/main/SectionInformation.html?editForm&rowId=19",
           "scope": "state",
           "source_url": "https://state.bihar.gov.in/main/SectionInformation.html?editForm&rowId=19",
-          "source_name": "Government of Bihar — official state portal, 'Districts of Bihar'",
+          "source_name": "Government of Bihar - official state portal, 'Districts of Bihar'",
           "retrieved_date": "2026-07-15",
-          "note": "Official 'Districts of Bihar' directory on the state portal, linking each district's own website (Araria, Patna, Gaya, Muzaffarpur, West Champaran, etc. — all 38 districts). Verified: contains live links to araria.nic.in, patna.nic.in, gaya.nic.in, madhubani.nic.in and the rest."
+          "note": "Official 'Districts of Bihar' directory on the state portal, linking each district's own website (Araria, Patna, Gaya, Muzaffarpur, West Champaran, etc. - all 38 districts). Verified: contains live links to araria.nic.in, patna.nic.in, gaya.nic.in, madhubani.nic.in and the rest."
         },
         {
           "kind": "url",
           "topic": "women",
-          "label": "Bihar women helpline — district-wise contact directory",
+          "label": "Bihar women helpline - district-wise contact directory",
           "value": "https://wcdc.bihar.gov.in/Helpline",
           "scope": "state",
           "source_url": "https://wcdc.bihar.gov.in/Helpline",
@@ -825,7 +825,7 @@
         {
           "kind": "url",
           "topic": "electricity",
-          "label": "Bihar electricity — Consumer Complaint Redressal System (online)",
+          "label": "Bihar electricity - Consumer Complaint Redressal System (online)",
           "value": "https://ccrs.bsphcl.co.in/",
           "scope": "state",
           "source_url": "https://ccrs.bsphcl.co.in/",
@@ -1002,7 +1002,7 @@
         {
           "kind": "url",
           "topic": "general",
-          "label": "Chandigarh Administration — official portal",
+          "label": "Chandigarh Administration - official portal",
           "value": "https://chandigarh.gov.in/",
           "scope": "state",
           "source_url": "https://chandigarh.gov.in/",
@@ -1013,11 +1013,11 @@
         {
           "kind": "url",
           "topic": "grievance",
-          "label": "LokSamadhan — Unified Grievance Portal, Chandigarh (UT)",
+          "label": "LokSamadhan - Unified Grievance Portal, Chandigarh (UT)",
           "value": "https://loksamadhan.chd.gov.in/",
           "scope": "state",
           "source_url": "https://loksamadhan.chd.gov.in/",
-          "source_name": "LokSamadhan — Unified Grievance Portal of Administrator, Chandigarh (UT)",
+          "source_name": "LokSamadhan - Unified Grievance Portal of Administrator, Chandigarh (UT)",
           "retrieved_date": "2026-07-15",
           "note": "Self-described as 'Unified Grievance Portal of Administrator, Chandigarh (UT)', hosted on the government chd.gov.in domain. Register with a mobile number, lodge and track grievances. Site may present a TLS chain warning in some clients."
         },
@@ -1028,7 +1028,7 @@
           "value": "01722470641",
           "scope": "state",
           "source_url": "https://loksamadhan.chd.gov.in/",
-          "source_name": "LokSamadhan — Contact Us section",
+          "source_name": "LokSamadhan - Contact Us section",
           "retrieved_date": "2026-07-15",
           "note": "Published on the LokSamadhan portal 'Contact Us': Department of Information Technology, Additional Deluxe Building, Sector 9, Chandigarh. This is portal support, not a 24x7 helpline."
         },
@@ -1039,14 +1039,14 @@
           "value": "1091",
           "scope": "state",
           "source_url": "https://chandigarhpolice.gov.in/",
-          "source_name": "Chandigarh Police — official website helpline panel",
+          "source_name": "Chandigarh Police - official website helpline panel",
           "retrieved_date": "2026-07-15",
-          "note": "Published under 'For Crime Against Women & Children — Dial 112 or Women & Child Helpline No. 1091'."
+          "note": "Published under 'For Crime Against Women & Children - Dial 112 or Women & Child Helpline No. 1091'."
         },
         {
           "kind": "url",
           "topic": "police",
-          "label": "Chandigarh Police — citizen portal",
+          "label": "Chandigarh Police - citizen portal",
           "value": "https://chandigarhpolice.gov.in/",
           "scope": "state",
           "source_url": "https://chandigarhpolice.gov.in/",
@@ -1057,11 +1057,11 @@
         {
           "kind": "url",
           "topic": "police",
-          "label": "Chandigarh Police — online complaint registration",
+          "label": "Chandigarh Police - online complaint registration",
           "value": "https://chandigarhpolice.gov.in/complaint-regist.html",
           "scope": "state",
           "source_url": "https://chandigarhpolice.gov.in/complaint-regist.html",
-          "source_name": "Chandigarh Police — Complaint Registration page",
+          "source_name": "Chandigarh Police - Complaint Registration page",
           "retrieved_date": "2026-07-15",
           "note": "Describes how to file a complaint and lists the Police Control Room numbers plus contacts for police stations/posts and senior officers."
         },
@@ -1072,7 +1072,7 @@
           "value": "01722749194",
           "scope": "state",
           "source_url": "https://chandigarhpolice.gov.in/complaint-regist.html",
-          "source_name": "Chandigarh Police — Complaint Registration page",
+          "source_name": "Chandigarh Police - Complaint Registration page",
           "retrieved_date": "2026-07-15",
           "note": "Published verbatim: 'one may call the Chandigarh Police Control Room No. 112 or 0172-2749194 or 0172-2744100'."
         },
@@ -1083,7 +1083,7 @@
           "value": "01722744100",
           "scope": "state",
           "source_url": "https://chandigarhpolice.gov.in/complaint-regist.html",
-          "source_name": "Chandigarh Police — Complaint Registration page",
+          "source_name": "Chandigarh Police - Complaint Registration page",
           "retrieved_date": "2026-07-15",
           "note": "Second control-room number published on the same page."
         },
@@ -1094,7 +1094,7 @@
           "value": "8699300112",
           "scope": "state",
           "source_url": "https://chandigarhpolice.gov.in/",
-          "source_name": "Chandigarh Police — official website",
+          "source_name": "Chandigarh Police - official website",
           "retrieved_date": "2026-07-15",
           "note": "Published as 'For Deaf & Dumb Whatsapp Number 8699300112'. WhatsApp only."
         },
@@ -1105,7 +1105,7 @@
           "value": "01722970400",
           "scope": "state",
           "source_url": "https://chandigarhpolice.gov.in/",
-          "source_name": "Chandigarh Police — official website helpline panel",
+          "source_name": "Chandigarh Police - official website helpline panel",
           "retrieved_date": "2026-07-15",
           "note": "Published as 'Dial - 0172 - 2970400, 2970600' for cyber crime complaints. Alternate: 01722970600."
         },
@@ -1116,9 +1116,9 @@
           "value": "1090",
           "scope": "state",
           "source_url": "https://chandigarhpolice.gov.in/",
-          "source_name": "Chandigarh Police — official website helpline panel",
+          "source_name": "Chandigarh Police - official website helpline panel",
           "retrieved_date": "2026-07-15",
-          "note": "Published as 'For any Senior Citizens Complaint — Dial 112 or Senior Citizens Helpline No. 1090'. Caution: the district administration site labels the same number 1090 as 'All India Crime Stopper'. Both are official sources; the label differs."
+          "note": "Published as 'For any Senior Citizens Complaint - Dial 112 or Senior Citizens Helpline No. 1090'. Caution: the district administration site labels the same number 1090 as 'All India Crime Stopper'. Both are official sources; the label differs."
         },
         {
           "kind": "phone",
@@ -1127,14 +1127,14 @@
           "value": "7087116999",
           "scope": "state",
           "source_url": "https://chandigarhpolice.gov.in/",
-          "source_name": "Chandigarh Police — official website helpline panel",
+          "source_name": "Chandigarh Police - official website helpline panel",
           "retrieved_date": "2026-07-15",
           "note": "Published as 'Dial - 70871 16999 or Dial - 112'. A separate 'Protection of Run-Away Couples Helpline 9855702356' is also listed on the same panel."
         },
         {
           "kind": "url",
           "topic": "general",
-          "label": "District Administration Chandigarh — district portal",
+          "label": "District Administration Chandigarh - district portal",
           "value": "https://chandigarhdistrict.nic.in/",
           "scope": "state",
           "source_url": "https://chandigarhdistrict.nic.in/",
@@ -1149,18 +1149,18 @@
           "value": "01722700109",
           "scope": "state",
           "source_url": "https://chandigarhdistrict.nic.in/contact-us/",
-          "source_name": "District Administration Chandigarh — Contact Us",
+          "source_name": "District Administration Chandigarh - Contact Us",
           "retrieved_date": "2026-07-15",
-          "note": "Deputy Commissioner Office, Sector 17, Chandigarh (UT) – 160017."
+          "note": "Deputy Commissioner Office, Sector 17, Chandigarh (UT) - 160017."
         },
         {
           "kind": "url",
           "topic": "general",
-          "label": "Chandigarh Administration — official helpline directory",
+          "label": "Chandigarh Administration - official helpline directory",
           "value": "https://chandigarh.gov.in/helpline",
           "scope": "state",
           "source_url": "https://chandigarh.gov.in/helpline",
-          "source_name": "Chandigarh Administration — Helpline page",
+          "source_name": "Chandigarh Administration - Helpline page",
           "retrieved_date": "2026-07-15",
           "note": "Directory of hospital, police station, fire station and transport numbers. CAUTION: this page appears stale (it still lists Jet Airways, defunct since 2019) and most numbers are 7-digit local numbers with no 0172 STD code printed. Treat individual landline entries with care."
         },
@@ -1171,20 +1171,20 @@
           "value": "1950",
           "scope": "state",
           "source_url": "https://chandigarhdistrict.nic.in/",
-          "source_name": "District Administration Chandigarh (NIC) — 'Helpline Numbers' panel",
+          "source_name": "District Administration Chandigarh (NIC) - 'Helpline Numbers' panel",
           "retrieved_date": "2026-07-15",
-          "note": "Also published on https://chandigarh.gov.in/helpline under 'Others — Election Helpline 1950'."
+          "note": "Also published on https://chandigarh.gov.in/helpline under 'Others - Election Helpline 1950'."
         },
         {
           "kind": "url",
           "topic": "electricity",
-          "label": "Chandigarh Power Distribution Ltd (CPDL) — electricity billing & complaints",
+          "label": "Chandigarh Power Distribution Ltd (CPDL) - electricity billing & complaints",
           "value": "https://chandigarhpower.com/",
           "scope": "state",
           "source_url": "https://chandigarhpower.com/",
-          "source_name": "Chandigarh Power Distribution Limited (CPDL) — official discom site",
+          "source_name": "Chandigarh Power Distribution Limited (CPDL) - official discom site",
           "retrieved_date": "2026-07-15",
-          "note": "CPDL is the licensed electricity distribution company for Chandigarh. This is the discom's own site, not a .gov.in domain — no central .gov.in page publishing these numbers was found."
+          "note": "CPDL is the licensed electricity distribution company for Chandigarh. This is the discom's own site, not a .gov.in domain - no central .gov.in page publishing these numbers was found."
         },
         {
           "kind": "phone",
@@ -1193,7 +1193,7 @@
           "value": "19121",
           "scope": "state",
           "source_url": "https://chandigarhpower.com/",
-          "source_name": "Chandigarh Power Distribution Limited (CPDL) — official discom site",
+          "source_name": "Chandigarh Power Distribution Limited (CPDL) - official discom site",
           "retrieved_date": "2026-07-15",
           "note": "CPDL's own homepage states '24x7 Call Center: 19121, +91 9240216666. Email: connectcpdl@rpsg.in'. Confidence lower than the police/administration numbers: the site is JavaScript-rendered and this string was read from the page's own metadata rather than rendered body text."
         },
@@ -1204,14 +1204,14 @@
           "value": "9240216666",
           "scope": "state",
           "source_url": "https://chandigarhpower.com/",
-          "source_name": "Chandigarh Power Distribution Limited (CPDL) — official discom site",
+          "source_name": "Chandigarh Power Distribution Limited (CPDL) - official discom site",
           "retrieved_date": "2026-07-15",
           "note": "Confirmed twice on CPDL's own site: in the page metadata and in the site's structured organisation data, which tags '+91 9240216666' as contactType 'customer service'."
         },
         {
           "kind": "url",
           "topic": "general",
-          "label": "Sampark — Chandigarh online payments (electricity/water bills, property tax)",
+          "label": "Sampark - Chandigarh online payments (electricity/water bills, property tax)",
           "value": "http://sampark.chd.nic.in/",
           "scope": "state",
           "source_url": "https://chandigarh.gov.in/",
@@ -1272,7 +1272,7 @@
         {
           "kind": "url",
           "topic": "general",
-          "label": "Government of NCT of Delhi — official state portal",
+          "label": "Government of NCT of Delhi - official state portal",
           "value": "https://delhi.gov.in/",
           "scope": "state",
           "source_url": "https://delhi.gov.in/",
@@ -1289,7 +1289,7 @@
           "source_url": "https://revenue.delhi.gov.in/revenue/district-offices",
           "source_name": "Department of Revenue, Government of NCT of Delhi",
           "retrieved_date": "2026-07-15",
-          "note": "IMPORTANT CAVEAT: Delhi's state portal has NO 'Districts' listing page that links to each district's own website — this was checked against delhi.gov.in/sitemap, delhi.gov.in/departments-offices and revenue.delhi.gov.in, and delhi.gov.in/page/districts returns 404. As a city-state Delhi appears not to publish such an index. This Revenue Department page is the closest official directory: it lists all districts (North, Central, South, New Delhi, South West, West, North East, East, North West, South East, Old Delhi, Central North, Outer North) with office addresses, phone numbers and emails, but does NOT hyperlink the individual district sites. Individual district sites do exist and follow the pattern dm<district>.delhi.gov.in (e.g. dmnorth.delhi.gov.in, dmnewdelhi.delhi.gov.in) or dccentral.delhi.gov.in — but no official page indexes them, so that pattern is NOT asserted here as a sourced claim. Site last updated 14/07/2026."
+          "note": "IMPORTANT CAVEAT: Delhi's state portal has NO 'Districts' listing page that links to each district's own website - this was checked against delhi.gov.in/sitemap, delhi.gov.in/departments-offices and revenue.delhi.gov.in, and delhi.gov.in/page/districts returns 404. As a city-state Delhi appears not to publish such an index. This Revenue Department page is the closest official directory: it lists all districts (North, Central, South, New Delhi, South West, West, North East, East, North West, South East, Old Delhi, Central North, Outer North) with office addresses, phone numbers and emails, but does NOT hyperlink the individual district sites. Individual district sites do exist and follow the pattern dm<district>.delhi.gov.in (e.g. dmnorth.delhi.gov.in, dmnewdelhi.delhi.gov.in) or dccentral.delhi.gov.in - but no official page indexes them, so that pattern is NOT asserted here as a sourced claim. Site last updated 14/07/2026."
         },
         {
           "kind": "url",
@@ -1305,7 +1305,7 @@
         {
           "kind": "url",
           "topic": "police",
-          "label": "Delhi Police — official portal",
+          "label": "Delhi Police - official portal",
           "value": "https://delhipolice.gov.in/",
           "scope": "state",
           "source_url": "https://delhipolice.gov.in/",
@@ -1333,12 +1333,12 @@
           "source_url": "https://wcd.delhi.gov.in/wcd/helplines-women-distress-delhi",
           "source_name": "Department of Women and Child Development, Government of NCT of Delhi",
           "retrieved_date": "2026-07-15",
-          "note": "Office line, Monday to Friday, 9:30 AM to 6 PM. This is the office number, not the 24x7 helpline — use 181 for emergencies."
+          "note": "Office line, Monday to Friday, 9:30 AM to 6 PM. This is the office number, not the 24x7 helpline - use 181 for emergencies."
         },
         {
           "kind": "phone",
           "topic": "women",
-          "label": "DCW Mobile Helpline vans — centralized number",
+          "label": "DCW Mobile Helpline vans - centralized number",
           "value": "1800119292",
           "scope": "state",
           "source_url": "https://wcd.delhi.gov.in/wcd/helplines-women-distress-delhi",
@@ -1419,7 +1419,7 @@
           "source_url": "https://power.delhi.gov.in/power/citizen-charter",
           "source_name": "Power Department, Government of NCT of Delhi",
           "retrieved_date": "2026-07-15",
-          "note": "The centrally-published Delhi government electricity consumer grievance line, listed as 'Tel: 1800112222 (Toll-free)' for the PG Cell. Page also lists SMS: 9223166166 for the same cell. Page last updated 03/07/2026. Delhi's discoms are private (BSES Rajdhani, BSES Yamuna, Tata Power-DDL) and the state does not publish their retail complaint numbers centrally; the same page lists CGRF (Consumer Grievance Redressal Forum) contacts instead — CGRF-BRPL 8468952631 / 8468935702, CGRF-BYPL 8010939760, CGRF-TPDDL 27466601-03 / 27463809 — which may be approached only after exhausting the discom's own complaint procedure."
+          "note": "The centrally-published Delhi government electricity consumer grievance line, listed as 'Tel: 1800112222 (Toll-free)' for the PG Cell. Page also lists SMS: 9223166166 for the same cell. Page last updated 03/07/2026. Delhi's discoms are private (BSES Rajdhani, BSES Yamuna, Tata Power-DDL) and the state does not publish their retail complaint numbers centrally; the same page lists CGRF (Consumer Grievance Redressal Forum) contacts instead - CGRF-BRPL 8468952631 / 8468935702, CGRF-BYPL 8010939760, CGRF-TPDDL 27466601-03 / 27463809 - which may be approached only after exhausting the discom's own complaint procedure."
         },
         {
           "kind": "phone",
@@ -1428,7 +1428,7 @@
           "value": "1916",
           "scope": "state",
           "source_url": "https://delhi.gov.in/page/helpline-center",
-          "source_name": "Government of NCT of Delhi — Helpline Center",
+          "source_name": "Government of NCT of Delhi - Helpline Center",
           "retrieved_date": "2026-07-15",
           "note": "Listed verbatim as 'Water Helpline : 1916'. Page last updated 14/07/2026."
         },
@@ -1439,7 +1439,7 @@
           "value": "1077",
           "scope": "state",
           "source_url": "https://delhi.gov.in/page/helpline-center",
-          "source_name": "Government of NCT of Delhi — Helpline Center",
+          "source_name": "Government of NCT of Delhi - Helpline Center",
           "retrieved_date": "2026-07-15",
           "note": "Listed verbatim as 'DDMA Helpline : 1077'. Page last updated 14/07/2026."
         },
@@ -1450,18 +1450,18 @@
           "value": "1097",
           "scope": "state",
           "source_url": "https://delhi.gov.in/page/helpline-center",
-          "source_name": "Government of NCT of Delhi — Helpline Center",
+          "source_name": "Government of NCT of Delhi - Helpline Center",
           "retrieved_date": "2026-07-15",
           "note": "Listed verbatim as 'Toll free AIDS Helpline number : 1097'. Page last updated 14/07/2026."
         },
         {
           "kind": "phone",
           "topic": "road",
-          "label": "PWD (Public Works Department) helpline — toll free",
+          "label": "PWD (Public Works Department) helpline - toll free",
           "value": "1800110093",
           "scope": "state",
           "source_url": "https://delhi.gov.in/page/helpline-center",
-          "source_name": "Government of NCT of Delhi — Helpline Center",
+          "source_name": "Government of NCT of Delhi - Helpline Center",
           "retrieved_date": "2026-07-15",
           "note": "Listed verbatim as 'PWD Helpline : Toll Free Number : +91-1800110093'. For roads/public works complaints. Page last updated 14/07/2026."
         },
@@ -1472,7 +1472,7 @@
           "value": "01127357169",
           "scope": "state",
           "source_url": "https://delhi.gov.in/page/helpline-center",
-          "source_name": "Government of NCT of Delhi — Helpline Center",
+          "source_name": "Government of NCT of Delhi - Helpline Center",
           "retrieved_date": "2026-07-15",
           "note": "The page's entry reads verbatim '1031 anti-corruption : +91-11-27357169'. The dialable number published there is the landline given here; '1031' appears as part of the label. Because the page does not unambiguously present 1031 as a standalone dialable short code, only the landline is asserted as a sourced value. Page last updated 14/07/2026."
         },
@@ -1483,7 +1483,7 @@
           "value": "180042500025",
           "scope": "state",
           "source_url": "https://delhitradetax.delhi.gov.in/dvat-contact-us",
-          "source_name": "Government of NCT of Delhi — Helpline Center",
+          "source_name": "Government of NCT of Delhi - Helpline Center",
           "retrieved_date": "2026-07-15",
           "note": "Listed verbatim as 'Businessmen/Taxation Helpline : +91-1800 4250 0025'. Page last updated 14/07/2026."
         },
@@ -1494,7 +1494,7 @@
           "value": "01123958836",
           "scope": "state",
           "source_url": "https://delhi.gov.in/page/helpline-center",
-          "source_name": "Government of NCT of Delhi — Helpline Center",
+          "source_name": "Government of NCT of Delhi - Helpline Center",
           "retrieved_date": "2026-07-15",
           "note": "Listed verbatim as 'Auto/Transport Department Helpline : +91-11-23958836'. Page last updated 14/07/2026."
         }
@@ -1511,7 +1511,7 @@
           "value": "100",
           "scope": "state",
           "source_url": "https://ddd.gov.in/helpline/",
-          "source_name": "UT of Dadra and Nagar Haveli and Daman and Diu — Helpline",
+          "source_name": "UT of Dadra and Nagar Haveli and Daman and Diu - Helpline",
           "retrieved_date": "2026-07-15"
         },
         {
@@ -1521,7 +1521,7 @@
           "value": "108",
           "scope": "state",
           "source_url": "https://ddd.gov.in/helpline/",
-          "source_name": "UT of Dadra and Nagar Haveli and Daman and Diu — Helpline",
+          "source_name": "UT of Dadra and Nagar Haveli and Daman and Diu - Helpline",
           "retrieved_date": "2026-07-15"
         },
         {
@@ -1531,13 +1531,13 @@
           "value": "1077",
           "scope": "state",
           "source_url": "https://ddd.gov.in/helpline/",
-          "source_name": "UT of Dadra and Nagar Haveli and Daman and Diu — Helpline",
+          "source_name": "UT of Dadra and Nagar Haveli and Daman and Diu - Helpline",
           "retrieved_date": "2026-07-15"
         },
         {
           "kind": "url",
           "topic": "police",
-          "label": "Police Department, DNH & DD — citizen portal",
+          "label": "Police Department, DNH & DD - citizen portal",
           "value": "https://police.ddd.gov.in/",
           "scope": "state",
           "source_url": "https://police.ddd.gov.in/",
@@ -1552,7 +1552,7 @@
           "value": "https://ddd.gov.in/grievances-complaints/",
           "scope": "state",
           "source_url": "https://ddd.gov.in/grievances-complaints/",
-          "source_name": "UT of DNH & DD — Grievances / Complaints",
+          "source_name": "UT of DNH & DD - Grievances / Complaints",
           "retrieved_date": "2026-07-15",
           "note": "Hosts an on-page complaint form (name, email, subject, message)."
         },
@@ -1563,7 +1563,7 @@
           "value": "https://ddd.gov.in/",
           "scope": "state",
           "source_url": "https://ddd.gov.in/",
-          "source_name": "UT of Dadra and Nagar Haveli and Daman and Diu — Homepage",
+          "source_name": "UT of Dadra and Nagar Haveli and Daman and Diu - Homepage",
           "retrieved_date": "2026-07-15"
         },
         {
@@ -1573,7 +1573,7 @@
           "value": "https://ddd.gov.in/introduction/",
           "scope": "state",
           "source_url": "https://ddd.gov.in/introduction/",
-          "source_name": "UT of DNH & DD — About UT Administration",
+          "source_name": "UT of DNH & DD - About UT Administration",
           "retrieved_date": "2026-07-15",
           "note": "No dedicated /districts/ page exists (it 404s). This page links all three districts: Dadra & Nagar Haveli (https://dnh.gov.in/), Daman (https://daman.nic.in/), Diu (http://diu.gov.in/). The NIC district portal https://ddd.s3waas.gov.in/ lists only DNH and Diu."
         },
@@ -1584,7 +1584,7 @@
           "value": "https://dnh.gov.in/",
           "scope": "state",
           "source_url": "https://ddd.gov.in/introduction/",
-          "source_name": "UT of DNH & DD — About UT Administration",
+          "source_name": "UT of DNH & DD - About UT Administration",
           "retrieved_date": "2026-07-15"
         },
         {
@@ -1594,39 +1594,39 @@
           "value": "https://diu.gov.in/",
           "scope": "state",
           "source_url": "https://ddd.gov.in/introduction/",
-          "source_name": "UT of DNH & DD — About UT Administration",
+          "source_name": "UT of DNH & DD - About UT Administration",
           "retrieved_date": "2026-07-15"
         },
         {
           "kind": "phone",
           "topic": "electricity",
-          "label": "DNH & DD Power Corporation Ltd (electricity) — office",
+          "label": "DNH & DD Power Corporation Ltd (electricity) - office",
           "value": "02602406500",
           "scope": "state",
           "source_url": "https://dnh.gov.in/public-utility/dnh-power-distribution-corporation-limited/",
-          "source_name": "Dadra & Nagar Haveli District Website — DNH Power Distribution Corporation Limited",
+          "source_name": "Dadra & Nagar Haveli District Website - DNH Power Distribution Corporation Limited",
           "retrieved_date": "2026-07-15",
           "note": "Published as +91-260-2406500 on the gov.in public-utility page and confirmed on the corporation's own site. This is the main office line; the DISCOM does not publish a dedicated toll-free consumer complaint number on its official pages."
         },
         {
           "kind": "url",
           "topic": "electricity",
-          "label": "DNH & DD Power Corporation Ltd — contact / complaints",
+          "label": "DNH & DD Power Corporation Ltd - contact / complaints",
           "value": "https://dnhddpcl.in/contact-us",
           "scope": "state",
           "source_url": "https://dnhddpcl.in/contact-us",
-          "source_name": "DNH and DD Power Corporation Ltd — Contact Us",
+          "source_name": "DNH and DD Power Corporation Ltd - Contact Us",
           "retrieved_date": "2026-07-15",
           "note": "The DISCOM's own website. The gov.in public-utility page also lists https://www.dnhpdcl.in/ and email support.dnhpdcl@gov.in."
         },
         {
           "kind": "url",
           "topic": "general",
-          "label": "SUGAM — UT online citizen services (Revenue Dept)",
+          "label": "SUGAM - UT online citizen services (Revenue Dept)",
           "value": "https://sugam.dddgov.in/",
           "scope": "state",
           "source_url": "https://ddd.gov.in/",
-          "source_name": "UT of DNH & DD — Homepage",
+          "source_name": "UT of DNH & DD - Homepage",
           "retrieved_date": "2026-07-15",
           "note": "Linked from the UT homepage; includes a 'Queries and Grievance Handling' section under Help."
         }
@@ -1847,9 +1847,9 @@
           "value": "100",
           "scope": "state",
           "source_url": "https://gujhome.gujarat.gov.in/portal/web?requestType=ApplicationRH&actionVal=showCenterContent&screenId=115&targetPage=helpLineNo",
-          "source_name": "Gujarat Police Citizen Portal — Helpline Numbers (Home Department, Govt. of Gujarat)",
+          "source_name": "Gujarat Police Citizen Portal - Helpline Numbers (Home Department, Govt. of Gujarat)",
           "retrieved_date": "2026-07-15",
-          "note": "Listed by Gujarat Police as \"Police Helpline — 100/112\"."
+          "note": "Listed by Gujarat Police as \"Police Helpline - 100/112\"."
         },
         {
           "kind": "url",
@@ -1865,7 +1865,7 @@
         {
           "kind": "url",
           "topic": "police",
-          "label": "Director General of Police, Gujarat — official website",
+          "label": "Director General of Police, Gujarat - official website",
           "value": "https://police.gujarat.gov.in/",
           "scope": "state",
           "source_url": "https://police.gujarat.gov.in/",
@@ -1880,7 +1880,7 @@
           "value": "18002331122",
           "scope": "state",
           "source_url": "https://gujhome.gujarat.gov.in/portal/web?requestType=ApplicationRH&actionVal=showCenterContent&screenId=115&targetPage=helpLineNo",
-          "source_name": "Gujarat Police Citizen Portal — Helpline Numbers (Home Department, Govt. of Gujarat)",
+          "source_name": "Gujarat Police Citizen Portal - Helpline Numbers (Home Department, Govt. of Gujarat)",
           "retrieved_date": "2026-07-15",
           "note": "Gujarat-specific toll-free traffic grievance line; email trafficgrievance@gujarat.gov.in."
         },
@@ -1891,35 +1891,35 @@
           "value": "108",
           "scope": "state",
           "source_url": "https://gujhome.gujarat.gov.in/portal/web?requestType=ApplicationRH&actionVal=showCenterContent&screenId=115&targetPage=helpLineNo",
-          "source_name": "Gujarat Police Citizen Portal — Helpline Numbers (Home Department, Govt. of Gujarat)",
+          "source_name": "Gujarat Police Citizen Portal - Helpline Numbers (Home Department, Govt. of Gujarat)",
           "retrieved_date": "2026-07-15"
         },
         {
           "kind": "phone",
           "topic": "grievance",
-          "label": "CM Helpline — grievance number (WhatsApp)",
+          "label": "CM Helpline - grievance number (WhatsApp)",
           "value": "7030930344",
           "scope": "state",
           "source_url": "https://swagat.gujarat.gov.in/",
-          "source_name": "SWAGAT Online — Public Grievance Redressal, Govt. of Gujarat",
+          "source_name": "SWAGAT Online - Public Grievance Redressal, Govt. of Gujarat",
           "retrieved_date": "2026-07-15",
-          "note": "Labelled on the SWAGAT portal as \"CM Helpline grievance number\". It is a WhatsApp chatbot for filing grievances with the CMO, not a voice short code — Gujarat does not publish a 3-4 digit CM helpline. Also published as https://wa.me/917030930344 on the CMO site."
+          "note": "Labelled on the SWAGAT portal as \"CM Helpline grievance number\". It is a WhatsApp chatbot for filing grievances with the CMO, not a voice short code - Gujarat does not publish a 3-4 digit CM helpline. Also published as https://wa.me/917030930344 on the CMO site."
         },
         {
           "kind": "url",
           "topic": "grievance",
-          "label": "SWAGAT Online — state public grievance redressal portal",
+          "label": "SWAGAT Online - state public grievance redressal portal",
           "value": "https://swagat.gujarat.gov.in/",
           "scope": "state",
           "source_url": "https://swagat.gujarat.gov.in/",
-          "source_name": "SWAGAT Online — Public Grievance Redressal, Govt. of Gujarat",
+          "source_name": "SWAGAT Online - Public Grievance Redressal, Govt. of Gujarat",
           "retrieved_date": "2026-07-15",
           "note": "\"State Wide Attention on Grievances by Application of Technology\". Gujarat's flagship grievance system, with Gram, Taluka, Jilla and Rajya (CM-level) SWAGAT tiers. Citizens can file online and track status by mobile number."
         },
         {
           "kind": "url",
           "topic": "grievance",
-          "label": "Write to CMO Gujarat — grievances, suggestions, appointments",
+          "label": "Write to CMO Gujarat - grievances, suggestions, appointments",
           "value": "https://cmogujarat.gov.in/en/write-to-cmo",
           "scope": "state",
           "source_url": "https://cmogujarat.gov.in/en/write-to-cmo",
@@ -1929,13 +1929,13 @@
         {
           "kind": "phone",
           "topic": "grievance",
-          "label": "CMO Gujarat — Jansampark (public liaison) unit",
+          "label": "CMO Gujarat - Jansampark (public liaison) unit",
           "value": "07923250072",
           "scope": "state",
           "source_url": "https://swagat.gujarat.gov.in/cmog/Home/contactus.html",
-          "source_name": "SWAGAT Online — Contact Us, Govt. of Gujarat",
+          "source_name": "SWAGAT Online - Contact Us, Govt. of Gujarat",
           "retrieved_date": "2026-07-15",
-          "note": "Jansampark Unit, Ground floor, Swarnim Sankul-2, New Sachivalay, Sector 10, Gandhinagar — the contact published for SWAGAT grievances."
+          "note": "Jansampark Unit, Ground floor, Swarnim Sankul-2, New Sachivalay, Sector 10, Gandhinagar - the contact published for SWAGAT grievances."
         },
         {
           "kind": "phone",
@@ -1944,14 +1944,14 @@
           "value": "07923250073",
           "scope": "state",
           "source_url": "https://cmogujarat.gov.in/en/contact-us/",
-          "source_name": "Chief Minister's Office, Govt. of Gujarat — Contact Us",
+          "source_name": "Chief Minister's Office, Govt. of Gujarat - Contact Us",
           "retrieved_date": "2026-07-15",
           "note": "CMO office line (alternate: 07923250074). 3rd floor, Swarnim Sankul-1, New Sachivalay, Sector 10, Gandhinagar."
         },
         {
           "kind": "url",
           "topic": "general",
-          "label": "Gujarat State Portal — official state government homepage",
+          "label": "Gujarat State Portal - official state government homepage",
           "value": "https://gujaratindia.gov.in/",
           "scope": "state",
           "source_url": "https://gujaratindia.gov.in/",
@@ -1962,7 +1962,7 @@
         {
           "kind": "url",
           "topic": "general",
-          "label": "Districts of Gujarat — district website directory",
+          "label": "Districts of Gujarat - district website directory",
           "value": "https://gujarat.s3waas.gov.in/",
           "scope": "state",
           "source_url": "https://gujarat.s3waas.gov.in/",
@@ -1973,55 +1973,55 @@
         {
           "kind": "url",
           "topic": "electricity",
-          "label": "Gujarat electricity helplines — Energy & Petrochemicals Department",
+          "label": "Gujarat electricity helplines - Energy & Petrochemicals Department",
           "value": "https://guj-epd.gujarat.gov.in/Home/HelpLine",
           "scope": "state",
           "source_url": "https://guj-epd.gujarat.gov.in/Home/HelpLine",
-          "source_name": "Energy & Petrochemicals Department, Govt. of Gujarat — Helpline",
+          "source_name": "Energy & Petrochemicals Department, Govt. of Gujarat - Helpline",
           "retrieved_date": "2026-07-15",
-          "note": "The state's central page listing consumer helplines for all four government DISCOMs. Gujarat does NOT publish a single statewide electricity number — the number depends on your DISCOM."
+          "note": "The state's central page listing consumer helplines for all four government DISCOMs. Gujarat does NOT publish a single statewide electricity number - the number depends on your DISCOM."
         },
         {
           "kind": "phone",
           "topic": "electricity",
-          "label": "PGVCL — Paschim Gujarat Vij Company (Saurashtra/Kutch) complaints",
+          "label": "PGVCL - Paschim Gujarat Vij Company (Saurashtra/Kutch) complaints",
           "value": "19122",
           "scope": "state",
           "source_url": "https://guj-epd.gujarat.gov.in/Home/HelpLine",
-          "source_name": "Energy & Petrochemicals Department, Govt. of Gujarat — Helpline",
+          "source_name": "Energy & Petrochemicals Department, Govt. of Gujarat - Helpline",
           "retrieved_date": "2026-07-15",
           "note": "Toll-free alternate: 1800233155333."
         },
         {
           "kind": "phone",
           "topic": "electricity",
-          "label": "UGVCL — Uttar Gujarat Vij Company (North Gujarat) complaints",
+          "label": "UGVCL - Uttar Gujarat Vij Company (North Gujarat) complaints",
           "value": "19121",
           "scope": "state",
           "source_url": "https://guj-epd.gujarat.gov.in/Home/HelpLine",
-          "source_name": "Energy & Petrochemicals Department, Govt. of Gujarat — Helpline",
+          "source_name": "Energy & Petrochemicals Department, Govt. of Gujarat - Helpline",
           "retrieved_date": "2026-07-15",
           "note": "Toll-free alternate: 1800233155335."
         },
         {
           "kind": "phone",
           "topic": "electricity",
-          "label": "MGVCL — Madhya Gujarat Vij Company (Central Gujarat) complaints",
+          "label": "MGVCL - Madhya Gujarat Vij Company (Central Gujarat) complaints",
           "value": "19124",
           "scope": "state",
           "source_url": "https://guj-epd.gujarat.gov.in/Home/HelpLine",
-          "source_name": "Energy & Petrochemicals Department, Govt. of Gujarat — Helpline",
+          "source_name": "Energy & Petrochemicals Department, Govt. of Gujarat - Helpline",
           "retrieved_date": "2026-07-15",
           "note": "Toll-free alternate: 18002332670."
         },
         {
           "kind": "phone",
           "topic": "electricity",
-          "label": "DGVCL — Dakshin Gujarat Vij Company (South Gujarat) complaints",
+          "label": "DGVCL - Dakshin Gujarat Vij Company (South Gujarat) complaints",
           "value": "19123",
           "scope": "state",
           "source_url": "https://guj-epd.gujarat.gov.in/Home/HelpLine",
-          "source_name": "Energy & Petrochemicals Department, Govt. of Gujarat — Helpline",
+          "source_name": "Energy & Petrochemicals Department, Govt. of Gujarat - Helpline",
           "retrieved_date": "2026-07-15",
           "note": "Toll-free alternate: 18002333003."
         }
@@ -2040,12 +2040,12 @@
           "source_url": "https://ddtg.hp.gov.in/cm-helpline/",
           "source_name": "Department of Digital Technologies and Governance, Government of Himachal Pradesh",
           "retrieved_date": "2026-07-15",
-          "note": "Himachal Pradesh's own CM helpline — toll-free, one-stop line for public grievances, demands and suggestions. Call centre at Shimla, operational all days 7:00 am to 10:00 pm. Also linked as 'Mukhyamantri Seva Sankalp Helpline 1100' from the state portal homepage."
+          "note": "Himachal Pradesh's own CM helpline - toll-free, one-stop line for public grievances, demands and suggestions. Call centre at Shimla, operational all days 7:00 am to 10:00 pm. Also linked as 'Mukhyamantri Seva Sankalp Helpline 1100' from the state portal homepage."
         },
         {
           "kind": "url",
           "topic": "grievance",
-          "label": "Mukhyamantri Seva Sankalp — CM grievance portal",
+          "label": "Mukhyamantri Seva Sankalp - CM grievance portal",
           "value": "https://cmsankalp.hp.gov.in/",
           "scope": "state",
           "source_url": "https://cmsankalp.hp.gov.in/",
@@ -2056,7 +2056,7 @@
         {
           "kind": "url",
           "topic": "grievance",
-          "label": "eSamadhan — Online Public Grievance Monitoring System",
+          "label": "eSamadhan - Online Public Grievance Monitoring System",
           "value": "https://esamadhan.nic.in/",
           "scope": "state",
           "source_url": "https://esamadhan.nic.in/",
@@ -2073,16 +2073,16 @@
           "source_url": "https://citizenportal.hppolice.gov.in/citizen/login.htm",
           "source_name": "Himachal Pradesh Police (HP CCTNS)",
           "retrieved_date": "2026-07-15",
-          "note": "Official HP Police citizen portal (Project HP CCTNS). Online complaint, citizen tip, view FIR, FIR/complaint status search, tenant/employee/domestic-help verification, police clearance and character certificates, traffic challan. Note: the domain root (citizenportal.hppolice.gov.in/) returns 404 — this /citizen/login.htm path is the working landing page. The site's TLS chain omits an intermediate certificate, so some clients warn; the certificate itself is valid and issued to 'Himachal Pradesh Police'."
+          "note": "Official HP Police citizen portal (Project HP CCTNS). Online complaint, citizen tip, view FIR, FIR/complaint status search, tenant/employee/domestic-help verification, police clearance and character certificates, traffic challan. Note: the domain root (citizenportal.hppolice.gov.in/) returns 404 - this /citizen/login.htm path is the working landing page. The site's TLS chain omits an intermediate certificate, so some clients warn; the certificate itself is valid and issued to 'Himachal Pradesh Police'."
         },
         {
           "kind": "phone",
           "topic": "police",
-          "label": "Police (To Report a Crime — Control Room)",
+          "label": "Police (To Report a Crime - Control Room)",
           "value": "100",
           "scope": "state",
           "source_url": "https://himachal.nic.in/Content/HtmlPage?qs=LdEF%2BAuYkB7rMRolWuVbNg%3D%3D",
-          "source_name": "Government of Himachal Pradesh — official state portal (Helpline page)",
+          "source_name": "Government of Himachal Pradesh - official state portal (Helpline page)",
           "retrieved_date": "2026-07-15",
           "note": "Published as 'Police' on the state portal helpline page and as 'To Report a Crime - Control Room' in the HP Police Citizen Portal telephone directory."
         },
@@ -2093,7 +2093,7 @@
           "value": "01772621711",
           "scope": "state",
           "source_url": "https://citizenportal.hppolice.gov.in/citizen/openTeleDir.htm",
-          "source_name": "HP Police Citizen Portal — Telephone Directory",
+          "source_name": "HP Police Citizen Portal - Telephone Directory",
           "retrieved_date": "2026-07-15",
           "note": "Published as 'State Police Control Room Shimla' with lines (0177) 2621711, 2621618, 2621723, 2621736, 2621714, 2621614, 2621746, 2621796. The PHQ Control Room at Nigam Vihar, Shimla is separately listed under I/C State Control Room as 0177-2621614."
         },
@@ -2104,7 +2104,7 @@
           "value": "1515",
           "scope": "state",
           "source_url": "https://himachal.nic.in/Content/HtmlPage?qs=LdEF%2BAuYkB7rMRolWuVbNg%3D%3D",
-          "source_name": "Government of Himachal Pradesh — official state portal (Helpline page)",
+          "source_name": "Government of Himachal Pradesh - official state portal (Helpline page)",
           "retrieved_date": "2026-07-15",
           "note": "Himachal-specific helpline published by the state government. Listed on the state portal's helpline page alongside Women Helpline 1091 and Child Helpline 1098, and in the HP Police Citizen Portal telephone directory. Also listed on district sites (e.g. Shimla, Una, Chamba). Official pages list the number without an explicit stated scope; it was launched as a women's safety helpline alongside the Shakti women-safety app."
         },
@@ -2115,9 +2115,9 @@
           "value": "1090",
           "scope": "state",
           "source_url": "https://himachal.nic.in/Content/HtmlPage?qs=LdEF%2BAuYkB7rMRolWuVbNg%3D%3D",
-          "source_name": "Government of Himachal Pradesh — official state portal (Helpline page)",
+          "source_name": "Government of Himachal Pradesh - official state portal (Helpline page)",
           "retrieved_date": "2026-07-15",
-          "note": "Himachal-specific. The state portal helpline page lists 1090 twice — as 'Crime Stopper' and as 'Hoshiyar Singh Helpline' — indicating it is a crime-information reporting line. Also listed in the HP Police Citizen Portal telephone directory and on district sites (Shimla, Una, Chamba)."
+          "note": "Himachal-specific. The state portal helpline page lists 1090 twice - as 'Crime Stopper' and as 'Hoshiyar Singh Helpline' - indicating it is a crime-information reporting line. Also listed in the HP Police Citizen Portal telephone directory and on district sites (Shimla, Una, Chamba)."
         },
         {
           "kind": "phone",
@@ -2126,18 +2126,18 @@
           "value": "01772620331",
           "scope": "state",
           "source_url": "https://himachal.nic.in/Content/HtmlPage?qs=LdEF%2BAuYkB7rMRolWuVbNg%3D%3D",
-          "source_name": "Government of Himachal Pradesh — official state portal (Helpline page)",
+          "source_name": "Government of Himachal Pradesh - official state portal (Helpline page)",
           "retrieved_date": "2026-07-15",
           "note": "State cyber crime cell number published on the state portal helpline page as 'Cyber Crime Cell: 1930, 0177-2620331'. The HP Police telephone directory lists the same number under 'Report Cyber Crime' and for Dy.SP Cyber Crime PS SR Shimla. (1930 is the national NCRP line.)"
         },
         {
           "kind": "phone",
           "topic": "corruption",
-          "label": "Report Against Corruption — Vigilance & Anti-Corruption Bureau",
+          "label": "Report Against Corruption - Vigilance & Anti-Corruption Bureau",
           "value": "01772629893",
           "scope": "state",
           "source_url": "https://himachal.nic.in/Content/HtmlPage?qs=LdEF%2BAuYkB7rMRolWuVbNg%3D%3D",
-          "source_name": "Government of Himachal Pradesh — official state portal (Helpline page)",
+          "source_name": "Government of Himachal Pradesh - official state portal (Helpline page)",
           "retrieved_date": "2026-07-15",
           "note": "Published as 'Report Against Corruption' on the state portal helpline page and as 'Vigilance & Anti-Corruption Bureau' in the HP Police Citizen Portal telephone directory. The police directory additionally lists 'Report Corruption through WhatsApp: 8988700100'."
         },
@@ -2148,7 +2148,7 @@
           "value": "01772929688",
           "scope": "state",
           "source_url": "https://himachal.nic.in/Content/HtmlPage?qs=LdEF%2BAuYkB7rMRolWuVbNg%3D%3D",
-          "source_name": "Government of Himachal Pradesh — official state portal (Helpline page)",
+          "source_name": "Government of Himachal Pradesh - official state portal (Helpline page)",
           "retrieved_date": "2026-07-15",
           "note": "Published on the state portal helpline page as 'Disaster Management Control Room: 0177-2929688, 2629439, 2629939, 2628940'."
         },
@@ -2183,27 +2183,27 @@
           "source_url": "https://www.hpseb.in/irj/go/km/docs/internet/New_Website/Pages/consumercallcentre.html",
           "source_name": "Himachal Pradesh State Electricity Board Limited (HPSEBL)",
           "retrieved_date": "2026-07-15",
-          "note": "HPSEBL's Consumer Call Centre page describing its 24x7 complaint handling. The page itself describes the service but does not print the numbers — those are published on the HPSEBL homepage (1800-180-8060 / 1912)."
+          "note": "HPSEBL's Consumer Call Centre page describing its 24x7 complaint handling. The page itself describes the service but does not print the numbers - those are published on the HPSEBL homepage (1800-180-8060 / 1912)."
         },
         {
           "kind": "url",
           "topic": "general",
-          "label": "Government of Himachal Pradesh — official state portal",
+          "label": "Government of Himachal Pradesh - official state portal",
           "value": "https://himachal.nic.in/",
           "scope": "state",
           "source_url": "https://himachal.nic.in/",
-          "source_name": "Government of Himachal Pradesh — official state portal",
+          "source_name": "Government of Himachal Pradesh - official state portal",
           "retrieved_date": "2026-07-15",
           "note": "The official state web portal ('This is the official web portal of the Himachal Pradesh Government, India'), developed and hosted by NIC Himachal Pradesh State Centre. HP Secretariat, Shimla: +91-177-2622204 / +91-177-2621154. Note: the widely-indexed helpline URL himachal.nic.in/en-IN/helpline.html is dead (redirects to an error page); the live helpline listing is at himachal.nic.in/Content/HtmlPage?qs=LdEF%2BAuYkB7rMRolWuVbNg%3D%3D."
         },
         {
           "kind": "url",
           "topic": "general",
-          "label": "District Portal of Himachal Pradesh — district directory",
+          "label": "District Portal of Himachal Pradesh - district directory",
           "value": "https://himachalpradesh.s3waas.gov.in/",
           "scope": "state",
           "source_url": "https://himachalpradesh.s3waas.gov.in/",
-          "source_name": "Government of Himachal Pradesh — District Portal (S3WaaS/NIC)",
+          "source_name": "Government of Himachal Pradesh - District Portal (S3WaaS/NIC)",
           "retrieved_date": "2026-07-15",
           "note": "Official 'District Portal of Himachal Pradesh' listing and linking all 12 district websites (Bilaspur, Chamba, Hamirpur, Kangra, Kinnaur, Kullu, Lahaul and Spiti, Mandi, Shimla, Sirmaur, Solan, Una), each with English and Hindi options. District sites follow the hp<district>.nic.in pattern (e.g. hpshimla.nic.in, hpuna.nic.in, hpchamba.nic.in), and each publishes its own /helpline/ page."
         }
@@ -2260,7 +2260,7 @@
         {
           "kind": "url",
           "topic": "grievance",
-          "label": "CM Window — Haryana public grievance portal",
+          "label": "CM Window - Haryana public grievance portal",
           "value": "https://cmharyanacell.nic.in/cm_window_index",
           "scope": "state",
           "source_url": "https://cmharyanacell.nic.in/cm_window_index",
@@ -2282,7 +2282,7 @@
         {
           "kind": "url",
           "topic": "grievance",
-          "label": "CM Window — official state page",
+          "label": "CM Window - official state page",
           "value": "https://www.haryana.gov.in/cm-window/",
           "scope": "state",
           "source_url": "https://www.haryana.gov.in/cm-window/",
@@ -2314,7 +2314,7 @@
         {
           "kind": "url",
           "topic": "general",
-          "label": "Antyodaya SARAL — Haryana citizen services portal",
+          "label": "Antyodaya SARAL - Haryana citizen services portal",
           "value": "https://saralharyana.gov.in/",
           "scope": "state",
           "source_url": "https://saralharyana.gov.in/",
@@ -2342,7 +2342,7 @@
           "source_url": "http://www.uhbvn.org.in/web/portal/home",
           "source_name": "Uttar Haryana Bijli Vitran Nigam (UHBVN)",
           "retrieved_date": "2026-07-15",
-          "note": "Common no-supply/complaint short code published by both Haryana DISCOMs — UHBVN (north Haryana) and DHBVN (south Haryana)."
+          "note": "Common no-supply/complaint short code published by both Haryana DISCOMs - UHBVN (north Haryana) and DHBVN (south Haryana)."
         },
         {
           "kind": "phone",
@@ -2391,7 +2391,7 @@
         {
           "kind": "phone",
           "topic": "police",
-          "label": "STF Haryana — organized crime reporting",
+          "label": "STF Haryana - organized crime reporting",
           "value": "01242265900",
           "scope": "state",
           "source_url": "https://hr.erss.in/p/",
@@ -2412,7 +2412,7 @@
           "value": "06512282201",
           "scope": "state",
           "source_url": "https://pakur.nic.in/helpline/",
-          "source_name": "District Pakur, Government of Jharkhand (pakur.nic.in) — Helpline page",
+          "source_name": "District Pakur, Government of Jharkhand (pakur.nic.in) - Helpline page",
           "retrieved_date": "2026-07-15",
           "note": "Listed on the district helpline page as 'CM Help Line 181/06512282201', and corroborated as the Jan Samvad Kendra phone number on pakur.nic.in/service/cm-jansamvad/. Unambiguous state-specific landline."
         },
@@ -2423,7 +2423,7 @@
           "value": "https://www.jharkhand.gov.in/",
           "scope": "state",
           "source_url": "https://www.jharkhand.gov.in/",
-          "source_name": "Government of Jharkhand — official state portal",
+          "source_name": "Government of Jharkhand - official state portal",
           "retrieved_date": "2026-07-15"
         },
         {
@@ -2433,7 +2433,7 @@
           "value": "https://www.jharkhand.gov.in/Home/DistrictList",
           "scope": "state",
           "source_url": "https://www.jharkhand.gov.in/Home/DistrictList",
-          "source_name": "Government of Jharkhand — District list page on the state portal",
+          "source_name": "Government of Jharkhand - District list page on the state portal",
           "retrieved_date": "2026-07-15",
           "note": "Verified live (HTTP 200). Lists all 24 districts, each linking to its own https://<district>.nic.in site."
         },
@@ -2454,7 +2454,7 @@
           "value": "https://citizen.jhpolice.gov.in/%20%E2%80%94%20Jharkhand%20Police%20Citizen%20Portal%20(view/download%20FIR%20copy,%20character%20certificate%20request,%20tenant%20&%20employee%20verification;%20portal%20states%20nine%20citizen%20services)",
           "scope": "state",
           "source_url": "https://www.jhpolice.gov.in/",
-          "source_name": "Department of Police, State Government of Jharkhand — homepage citizen services links",
+          "source_name": "Department of Police, State Government of Jharkhand - homepage citizen services links",
           "retrieved_date": "2026-07-15",
           "note": "Verified live (HTTP 200); page reads 'Welcome to Jharkhand Police Citizen Portal'. Requires JavaScript."
         },
@@ -2465,7 +2465,7 @@
           "value": "06512446607",
           "scope": "state",
           "source_url": "https://www.jhpolice.gov.in/",
-          "source_name": "Department of Police, State Government of Jharkhand — homepage contact block",
+          "source_name": "Department of Police, State Government of Jharkhand - homepage contact block",
           "retrieved_date": "2026-07-15"
         },
         {
@@ -2475,7 +2475,7 @@
           "value": "100",
           "scope": "state",
           "source_url": "https://www.jharkhand.gov.in/",
-          "source_name": "Government of Jharkhand — official state portal footer",
+          "source_name": "Government of Jharkhand - official state portal footer",
           "retrieved_date": "2026-07-15"
         },
         {
@@ -2485,7 +2485,7 @@
           "value": "9771432103",
           "scope": "state",
           "source_url": "https://www.jhpolice.gov.in/",
-          "source_name": "Department of Police, State Government of Jharkhand — homepage helpline block",
+          "source_name": "Department of Police, State Government of Jharkhand - homepage helpline block",
           "retrieved_date": "2026-07-15",
           "note": "State-specific Jharkhand Police women helpline (distinct from the national 181/1091)."
         },
@@ -2496,7 +2496,7 @@
           "value": "8877444444",
           "scope": "state",
           "source_url": "https://www.jhpolice.gov.in/",
-          "source_name": "Department of Police, State Government of Jharkhand — homepage helpline block",
+          "source_name": "Department of Police, State Government of Jharkhand - homepage helpline block",
           "retrieved_date": "2026-07-15",
           "note": "State-specific Jharkhand Police child helpline (distinct from the national 1098)."
         },
@@ -2507,7 +2507,7 @@
           "value": "9771432133",
           "scope": "state",
           "source_url": "https://www.jhpolice.gov.in/",
-          "source_name": "Department of Police, State Government of Jharkhand — homepage helpline block",
+          "source_name": "Department of Police, State Government of Jharkhand - homepage helpline block",
           "retrieved_date": "2026-07-15"
         },
         {
@@ -2517,7 +2517,7 @@
           "value": "06512281530",
           "scope": "state",
           "source_url": "https://www.jhpolice.gov.in/",
-          "source_name": "Department of Police, State Government of Jharkhand — homepage contact block",
+          "source_name": "Department of Police, State Government of Jharkhand - homepage contact block",
           "retrieved_date": "2026-07-15"
         },
         {
@@ -2527,7 +2527,7 @@
           "value": "1912",
           "scope": "state",
           "source_url": "https://jbvnl.co.in/contact-us",
-          "source_name": "Jharkhand Bijli Vitran Nigam Limited (JBVNL) — Contact Us",
+          "source_name": "Jharkhand Bijli Vitran Nigam Limited (JBVNL) - Contact Us",
           "retrieved_date": "2026-07-15",
           "note": "Jharkhand Bijli Vitran Nigam Ltd (state DISCOM). Published in the header/footer of the DISCOM's own official site."
         },
@@ -2538,7 +2538,7 @@
           "value": "18003456570",
           "scope": "state",
           "source_url": "https://jbvnl.co.in/contact-us",
-          "source_name": "Jharkhand Bijli Vitran Nigam Limited (JBVNL) — Contact Us",
+          "source_name": "Jharkhand Bijli Vitran Nigam Limited (JBVNL) - Contact Us",
           "retrieved_date": "2026-07-15"
         },
         {
@@ -2548,19 +2548,19 @@
           "value": "https://jbvnl.co.in/",
           "scope": "state",
           "source_url": "https://jbvnl.co.in/contact-us",
-          "source_name": "Jharkhand Bijli Vitran Nigam Limited (JBVNL) — Contact Us",
+          "source_name": "Jharkhand Bijli Vitran Nigam Limited (JBVNL) - Contact Us",
           "retrieved_date": "2026-07-15"
         },
         {
           "kind": "url",
           "topic": "general",
-          "label": "JharSewa — Jharkhand e-District citizen services portal (certificates, pensions, land records)",
+          "label": "JharSewa - Jharkhand e-District citizen services portal (certificates, pensions, land records)",
           "value": "https://jharsewa.jharkhand.gov.in/",
           "scope": "state",
           "source_url": "https://www.jharkhand.gov.in/",
-          "source_name": "Government of Jharkhand — official state portal (links to JharSewa)",
+          "source_name": "Government of Jharkhand - official state portal (links to JharSewa)",
           "retrieved_date": "2026-07-15",
-          "note": "Service-DELIVERY portal, NOT a grievance portal — do not label it as grievance redressal. Linked from the official state portal homepage. Live (HTTP 200) but its TLS chain is incomplete (missing intermediate), so some browsers show a certificate warning; the cert itself is a genuine GlobalSign cert for *.jharkhand.gov.in."
+          "note": "Service-DELIVERY portal, NOT a grievance portal - do not label it as grievance redressal. Linked from the official state portal homepage. Live (HTTP 200) but its TLS chain is incomplete (missing intermediate), so some browsers show a certificate warning; the cert itself is a genuine GlobalSign cert for *.jharkhand.gov.in."
         }
       ]
     },
@@ -2835,7 +2835,7 @@
         {
           "kind": "phone",
           "topic": "grievance",
-          "label": "CM Helpline — Chief Minister's Public Grievance Redressal Cell",
+          "label": "CM Helpline - Chief Minister's Public Grievance Redressal Cell",
           "value": "1076",
           "scope": "state",
           "source_url": "https://cmo.kerala.gov.in/help-en.php",
@@ -2846,7 +2846,7 @@
         {
           "kind": "url",
           "topic": "grievance",
-          "label": "CM's Public Grievance Redressal System — file and track complaints",
+          "label": "CM's Public Grievance Redressal System - file and track complaints",
           "value": "https://complaints.cmo.kerala.gov.in/",
           "scope": "state",
           "source_url": "https://cmo.kerala.gov.in/",
@@ -2900,7 +2900,7 @@
         {
           "kind": "phone",
           "topic": "women",
-          "label": "Pink Patrol — Kerala Police women's safety patrol",
+          "label": "Pink Patrol - Kerala Police women's safety patrol",
           "value": "1515",
           "scope": "state",
           "source_url": "https://keralapolice.gov.in/page/contacts",
@@ -2921,7 +2921,7 @@
         {
           "kind": "url",
           "topic": "general",
-          "label": "Government of Kerala — official state portal",
+          "label": "Government of Kerala - official state portal",
           "value": "https://kerala.gov.in/",
           "scope": "state",
           "source_url": "https://kerala.s3waas.gov.in/",
@@ -2932,7 +2932,7 @@
         {
           "kind": "url",
           "topic": "general",
-          "label": "Kerala district directory — links to all 14 district websites",
+          "label": "Kerala district directory - links to all 14 district websites",
           "value": "https://kerala.s3waas.gov.in/",
           "scope": "state",
           "source_url": "https://kerala.s3waas.gov.in/",
@@ -2954,7 +2954,7 @@
         {
           "kind": "url",
           "topic": "electricity",
-          "label": "KSEB — register an electricity complaint / service request",
+          "label": "KSEB - register an electricity complaint / service request",
           "value": "https://wss.kseb.in/selfservices/showAnonymousComplaint.do",
           "scope": "state",
           "source_url": "https://kseb.in/",
@@ -2971,7 +2971,7 @@
         {
           "kind": "url",
           "topic": "general",
-          "label": "Administration of UT of Ladakh — Official Portal",
+          "label": "Administration of UT of Ladakh - Official Portal",
           "value": "https://ladakh.gov.in/",
           "scope": "state",
           "source_url": "https://ladakh.gov.in/",
@@ -2986,25 +2986,25 @@
           "value": "https://grievance.ladakh.gov.in/",
           "scope": "state",
           "source_url": "https://ladakh.gov.in/online-citizen-services/",
-          "source_name": "Administration of UT of Ladakh — Online Citizen Services",
+          "source_name": "Administration of UT of Ladakh - Online Citizen Services",
           "retrieved_date": "2026-07-15",
           "note": "Listed by the UT's official Online Citizen Services page as the 'Grievance Monitoring System'. Portal is live (HTTP 200) but currently serves an incomplete TLS certificate chain, which may trigger browser warnings."
         },
         {
           "kind": "phone",
           "topic": "grievance",
-          "label": "Ladakh Central Grievance Cell — Helpline",
+          "label": "Ladakh Central Grievance Cell - Helpline",
           "value": "8588816003",
           "scope": "state",
           "source_url": "https://grievance.ladakh.gov.in/",
           "source_name": "Ladakh Integrated Grievance Redressal & Monitoring System",
           "retrieved_date": "2026-07-15",
-          "note": "Published as a tel: link on the live grievance portal and independently confirmed by the UT's press release announcing the system's launch (https://ladakh.gov.in/honble-lt-governor-brig-dr-bd-mishra-retd-launches-integrated-grievance-redressal-and-monitoring-system-reinforcing-transparent-and-efficient-governance/). Ladakh is a UT without a legislature and has no Chief Minister, so there is no 'CM Helpline' — this grievance cell number is the equivalent citizen grievance line."
+          "note": "Published as a tel: link on the live grievance portal and independently confirmed by the UT's press release announcing the system's launch (https://ladakh.gov.in/honble-lt-governor-brig-dr-bd-mishra-retd-launches-integrated-grievance-redressal-and-monitoring-system-reinforcing-transparent-and-efficient-governance/). Ladakh is a UT without a legislature and has no Chief Minister, so there is no 'CM Helpline' - this grievance cell number is the equivalent citizen grievance line."
         },
         {
           "kind": "phone",
           "topic": "grievance",
-          "label": "Ladakh Grievance Cell — WhatsApp",
+          "label": "Ladakh Grievance Cell - WhatsApp",
           "value": "9541786450",
           "scope": "state",
           "source_url": "https://grievance.ladakh.gov.in/",
@@ -3026,7 +3026,7 @@
         {
           "kind": "url",
           "topic": "police",
-          "label": "Ladakh Police — Official Website",
+          "label": "Ladakh Police - Official Website",
           "value": "https://police.ladakh.gov.in/",
           "scope": "state",
           "source_url": "https://police.ladakh.gov.in/",
@@ -3037,7 +3037,7 @@
         {
           "kind": "url",
           "topic": "police",
-          "label": "Ladakh Police — Citizen Services Portal",
+          "label": "Ladakh Police - Citizen Services Portal",
           "value": "https://citizenportalpolice.ladakh.gov.in/citizen/",
           "scope": "state",
           "source_url": "https://police.ladakh.gov.in/",
@@ -3052,47 +3052,47 @@
           "value": "01982260887",
           "scope": "state",
           "source_url": "https://police.ladakh.gov.in/pages/contact.html",
-          "source_name": "Ladakh Police — Contact",
+          "source_name": "Ladakh Police - Contact",
           "retrieved_date": "2026-07-15",
           "note": "UT-level police control room at Police Headquarters Ladakh."
         },
         {
           "kind": "phone",
           "topic": "police",
-          "label": "Police Control Room — District Leh",
+          "label": "Police Control Room - District Leh",
           "value": "01982258880",
           "scope": "state",
           "source_url": "https://police.ladakh.gov.in/pages/contact.html",
-          "source_name": "Ladakh Police — Contact",
+          "source_name": "Ladakh Police - Contact",
           "retrieved_date": "2026-07-15",
           "note": "Page also lists mobile 6006028084 for the Leh control room."
         },
         {
           "kind": "phone",
           "topic": "police",
-          "label": "Police Control Room — District Kargil",
+          "label": "Police Control Room - District Kargil",
           "value": "01985232275",
           "scope": "state",
           "source_url": "https://police.ladakh.gov.in/pages/contact.html",
-          "source_name": "Ladakh Police — Contact",
+          "source_name": "Ladakh Police - Contact",
           "retrieved_date": "2026-07-15",
           "note": "Page also lists mobiles 9469232222 and 8491938293 for the Kargil control room."
         },
         {
           "kind": "url",
           "topic": "general",
-          "label": "District Leh — Official District Website",
+          "label": "District Leh - Official District Website",
           "value": "https://leh.nic.in/",
           "scope": "state",
           "source_url": "https://ladakh.gov.in/",
           "source_name": "Administration of Union Territory of Ladakh",
           "retrieved_date": "2026-07-15",
-          "note": "Ladakh has only two districts (Leh and Kargil). The UT portal has no dedicated 'Districts' listing page — /districts/ returns 404 — so both district sites are linked directly from the homepage."
+          "note": "Ladakh has only two districts (Leh and Kargil). The UT portal has no dedicated 'Districts' listing page - /districts/ returns 404 - so both district sites are linked directly from the homepage."
         },
         {
           "kind": "url",
           "topic": "general",
-          "label": "District Kargil — Official District Website",
+          "label": "District Kargil - Official District Website",
           "value": "https://kargil.nic.in/",
           "scope": "state",
           "source_url": "https://ladakh.gov.in/",
@@ -3103,13 +3103,13 @@
         {
           "kind": "url",
           "topic": "general",
-          "label": "Ladakh Administration — Helpline Directory",
+          "label": "Ladakh Administration - Helpline Directory",
           "value": "https://ladakh.gov.in/helpline/",
           "scope": "state",
           "source_url": "https://ladakh.gov.in/helpline/",
-          "source_name": "Administration of UT of Ladakh — Helpline",
+          "source_name": "Administration of UT of Ladakh - Helpline",
           "retrieved_date": "2026-07-15",
-          "note": "Official UT helpline listing page. Publishes only the standard national short codes (100 police, 101 fire, 102 medical, 1091 women, 1950 election) — no Ladakh-specific women/child helpline is published."
+          "note": "Official UT helpline listing page. Publishes only the standard national short codes (100 police, 101 fire, 102 medical, 1091 women, 1950 election) - no Ladakh-specific women/child helpline is published."
         }
       ]
     },
@@ -3124,14 +3124,14 @@
           "value": "04896263100",
           "scope": "state",
           "source_url": "https://lakshadweeppolice.gov.in/contactus",
-          "source_name": "Lakshadweep Police — Contact Us",
+          "source_name": "Lakshadweep Police - Contact Us",
           "retrieved_date": "2026-07-15",
           "note": "Independently confirmed on two official sources: the Lakshadweep Police 'Contact Us' page (\"Police Control Room (Kavaratti): 04896-263100\") and the Lakshadweep Disaster Management Authority emergency contacts table (row 19, Kavaratti, 'Police Control', '04896 - 263100'). Email: phq-ctrlroom-lk[at]nic[dot]in"
         },
         {
           "kind": "url",
           "topic": "police",
-          "label": "Lakshadweep Police — official website",
+          "label": "Lakshadweep Police - official website",
           "value": "https://lakshadweeppolice.gov.in/",
           "scope": "state",
           "source_url": "https://lakshadweeppolice.gov.in/",
@@ -3142,13 +3142,13 @@
         {
           "kind": "url",
           "topic": "police",
-          "label": "Lakshadweep Police Citizen Portal (CCTNS) — online FIR, missing persons, stolen property",
+          "label": "Lakshadweep Police Citizen Portal (CCTNS) - online FIR, missing persons, stolen property",
           "value": "https://citizen.lakshadweeppolice.gov.in/",
           "scope": "state",
           "source_url": "https://lakshadweeppolice.gov.in/",
-          "source_name": "Lakshadweep Police (official site) — Citizen Portal / CCTNS link",
+          "source_name": "Lakshadweep Police (official site) - Citizen Portal / CCTNS link",
           "retrieved_date": "2026-07-15",
-          "note": "CAVEAT: published by the official police site (which links it as \"http://citizen.lakshadweeppolice.gov.in\" for online FIR filing, arrested/wanted persons, missing persons and stolen/recovered property), but I could NOT load it — the TLS certificate has expired, so browsers will show a security warning. Verified only via the linking page, not the portal itself. Consider flagging or withholding until the cert is renewed."
+          "note": "CAVEAT: published by the official police site (which links it as \"http://citizen.lakshadweeppolice.gov.in\" for online FIR filing, arrested/wanted persons, missing persons and stolen/recovered property), but I could NOT load it - the TLS certificate has expired, so browsers will show a security warning. Verified only via the linking page, not the portal itself. Consider flagging or withholding until the cert is renewed."
         },
         {
           "kind": "phone",
@@ -3157,14 +3157,14 @@
           "value": "04896262258",
           "scope": "state",
           "source_url": "https://lakshadweeppolice.gov.in/contactus",
-          "source_name": "Lakshadweep Police — Contact Us",
+          "source_name": "Lakshadweep Police - Contact Us",
           "retrieved_date": "2026-07-15",
           "note": "Confirmed on the police 'Contact Us' page (\"04896-262258 (O)\") and on the UT portal's Police Department page (\"04896262258\"). DISCREPANCY: the lakshadweep.gov.in department directory lists the SP as 04896-262273; two of three official sources give 262258, so 262258 is used here. Email: lak-sop[at]nic[dot]in"
         },
         {
           "kind": "url",
           "topic": "general",
-          "label": "Administration of Lakshadweep — official UT portal",
+          "label": "Administration of Lakshadweep - official UT portal",
           "value": "https://lakshadweep.gov.in/",
           "scope": "state",
           "source_url": "https://lakshadweep.gov.in/",
@@ -3179,18 +3179,18 @@
           "value": "https://lakshadweep.gov.in/islands/",
           "scope": "state",
           "source_url": "https://lakshadweep.gov.in/islands/",
-          "source_name": "Administration of Lakshadweep — Islands",
+          "source_name": "Administration of Lakshadweep - Islands",
           "retrieved_date": "2026-07-15",
-          "note": "IMPORTANT CONTEXT: Lakshadweep has NO district directory because the entire UT is a single district — the administrative setup page states \"The entire Union Territory of Lakshadweep is considered as one district.\" This islands page is the nearest equivalent: it links to a dedicated page for each of the 11 islands (Agatti, Amini, Andrott, Bangaram, Bitra, Chetlat, Kadmat, Kalpeni, Kavaratti, Kiltan, Minicoy). There are no separate per-district websites."
+          "note": "IMPORTANT CONTEXT: Lakshadweep has NO district directory because the entire UT is a single district - the administrative setup page states \"The entire Union Territory of Lakshadweep is considered as one district.\" This islands page is the nearest equivalent: it links to a dedicated page for each of the 11 islands (Agatti, Amini, Andrott, Bangaram, Bitra, Chetlat, Kadmat, Kalpeni, Kavaratti, Kiltan, Minicoy). There are no separate per-district websites."
         },
         {
           "kind": "url",
           "topic": "general",
-          "label": "Administrative setup — districts, sub-divisions and blocks",
+          "label": "Administrative setup - districts, sub-divisions and blocks",
           "value": "https://lakshadweep.gov.in/about-lakshadweep/administrative-setup/",
           "scope": "state",
           "source_url": "https://lakshadweep.gov.in/about-lakshadweep/administrative-setup/",
-          "source_name": "Administration of Lakshadweep — Administrative Setup",
+          "source_name": "Administration of Lakshadweep - Administrative Setup",
           "retrieved_date": "2026-07-15",
           "note": "Confirms one district, 10 sub-divisions and 5 community development blocks (HQ at Kavaratti, Amini, Andrott, Minicoy, Kiltan). Links to Subdivision & Blocks, Village Panchayats, Judicial Setup and Constituencies pages."
         },
@@ -3201,7 +3201,7 @@
           "value": "https://lakshadweep.gov.in/directory/",
           "scope": "state",
           "source_url": "https://lakshadweep.gov.in/directory/",
-          "source_name": "Administration of Lakshadweep — Directory",
+          "source_name": "Administration of Lakshadweep - Directory",
           "retrieved_date": "2026-07-15",
           "note": "Official contact details of departments functioning under the Administration of UT of Lakshadweep."
         },
@@ -3212,14 +3212,14 @@
           "value": "04896262255",
           "scope": "state",
           "source_url": "https://lakshadweep.gov.in/office-of-hon-administrator-contact-details/",
-          "source_name": "Administration of Lakshadweep — Office of the Hon'ble Administrator",
+          "source_name": "Administration of Lakshadweep - Office of the Hon'ble Administrator",
           "retrieved_date": "2026-07-15",
-          "note": "Lakshadweep is a Union Territory WITHOUT a legislature and has no Chief Minister, therefore no CM Helpline exists — this is the head-of-administration office, the nearest equivalent escalation point, NOT a helpline short code. Do not present it as a CM helpline. Alternate: 04896-262497. Email: lk-admin[at]nic[dot]in. Corroborated by the LDMA emergency contacts page (\"04896-262255/ 262497 – Administrator\")."
+          "note": "Lakshadweep is a Union Territory WITHOUT a legislature and has no Chief Minister, therefore no CM Helpline exists - this is the head-of-administration office, the nearest equivalent escalation point, NOT a helpline short code. Do not present it as a CM helpline. Alternate: 04896-262497. Email: lk-admin[at]nic[dot]in. Corroborated by the LDMA emergency contacts page (\"04896-262255/ 262497 - Administrator\")."
         },
         {
           "kind": "phone",
           "topic": "electricity",
-          "label": "Electricity grievances — Department of Electricity, UT of Lakshadweep",
+          "label": "Electricity grievances - Department of Electricity, UT of Lakshadweep",
           "value": "04896263709",
           "scope": "state",
           "source_url": "https://powerlak.gov.in/",
@@ -3230,7 +3230,7 @@
         {
           "kind": "url",
           "topic": "electricity",
-          "label": "POWERLAK — electricity consumer portal (bills, new connections, complaints, CGRF)",
+          "label": "POWERLAK - electricity consumer portal (bills, new connections, complaints, CGRF)",
           "value": "https://powerlak.gov.in/",
           "scope": "state",
           "source_url": "https://powerlak.gov.in/",
@@ -3245,9 +3245,9 @@
           "value": "https://powerlak.utl.gov.in/EBCMsConsumerPortal/FrmComplaint_Registration.aspx",
           "scope": "state",
           "source_url": "https://powerlak.utl.gov.in/EBCMsConsumerPortal/FrmComplaint_Registration.aspx",
-          "source_name": "POWERLAK — Complaint Registration",
+          "source_name": "POWERLAK - Complaint Registration",
           "retrieved_date": "2026-07-15",
-          "note": "Fetched and confirmed live: online form for outages, damaged lines and meter faults. Consumer number is not mandatory — only name and location are required."
+          "note": "Fetched and confirmed live: online form for outages, damaged lines and meter faults. Consumer number is not mandatory - only name and location are required."
         },
         {
           "kind": "phone",
@@ -3256,7 +3256,7 @@
           "value": "1967",
           "scope": "state",
           "source_url": "https://lakshadweep.gov.in/",
-          "source_name": "Administration of Lakshadweep (official portal) — helplines",
+          "source_name": "Administration of Lakshadweep (official portal) - helplines",
           "retrieved_date": "2026-07-15",
           "note": "Published in the helpline block on the official UT portal homepage as \"PDS Grievances: 1967\"."
         },
@@ -3267,9 +3267,9 @@
           "value": "108",
           "scope": "state",
           "source_url": "https://lakshadweep.gov.in/",
-          "source_name": "Administration of Lakshadweep (official portal) — helplines",
+          "source_name": "Administration of Lakshadweep (official portal) - helplines",
           "retrieved_date": "2026-07-15",
-          "note": "National short code, published in the helpline block on the official UT portal homepage as \"Ambulance: 102, 108\" — 102 is also published as an alternate."
+          "note": "National short code, published in the helpline block on the official UT portal homepage as \"Ambulance: 102, 108\" - 102 is also published as an alternate."
         },
         {
           "kind": "phone",
@@ -3278,18 +3278,18 @@
           "value": "04896262104",
           "scope": "state",
           "source_url": "https://lakshadweep.gov.in/directory/",
-          "source_name": "Administration of Lakshadweep — Directory",
+          "source_name": "Administration of Lakshadweep - Directory",
           "retrieved_date": "2026-07-15",
           "note": "Listed in the official department contact directory of the Administration of UT of Lakshadweep. Handles complaints/irregularities in government operations; the directory does not label it as a dedicated public anti-corruption helpline, so present it as a departmental contact rather than a helpline."
         },
         {
           "kind": "url",
           "topic": "disaster",
-          "label": "Lakshadweep Disaster Management Authority — emergency contacts directory",
+          "label": "Lakshadweep Disaster Management Authority - emergency contacts directory",
           "value": "https://ldma.utl.gov.in/en-in/emergency/contacts.html",
           "scope": "state",
           "source_url": "https://ldma.utl.gov.in/en-in/emergency/contacts.html",
-          "source_name": "Lakshadweep Disaster Management Authority — Emergency Contacts",
+          "source_name": "Lakshadweep Disaster Management Authority - Emergency Contacts",
           "retrieved_date": "2026-07-15",
           "note": "Official LDMA island-by-island emergency contacts table: Police Control, DM Control, Collector, Deputy Collectors, Indian Navy and Coast Guard, Health, Port Authority. Useful as a verified directory for island-level escalation."
         }
@@ -3306,36 +3306,36 @@
           "value": "18001208040",
           "scope": "state",
           "source_url": "https://aaplesarkar.maharashtra.gov.in/en/",
-          "source_name": "Aaple Sarkar — Government of Maharashtra (official state portal)",
+          "source_name": "Aaple Sarkar - Government of Maharashtra (official state portal)",
           "retrieved_date": "2026-07-15",
-          "note": "Published on the state's Aaple Sarkar portal with the explicit label \"Chief Minister Helpline (Toll Free)\", hours \"12*7 (8AM to 8PM)\", for any information/service/scheme related to State Govt departments. The Aaple Sarkar grievance portal separately publishes the same number as \"Helpline : 1800 120 8040 (Toll Free)\" and describes a \"24 X 7 Citizen Call Center\" — the two official pages disagree on hours, so treat 8AM-8PM as the safer stated window."
+          "note": "Published on the state's Aaple Sarkar portal with the explicit label \"Chief Minister Helpline (Toll Free)\", hours \"12*7 (8AM to 8PM)\", for any information/service/scheme related to State Govt departments. The Aaple Sarkar grievance portal separately publishes the same number as \"Helpline : 1800 120 8040 (Toll Free)\" and describes a \"24 X 7 Citizen Call Center\" - the two official pages disagree on hours, so treat 8AM-8PM as the safer stated window."
         },
         {
           "kind": "url",
           "topic": "grievance",
-          "label": "Aaple Sarkar — Grievance Redressal Portal (file & track a grievance)",
+          "label": "Aaple Sarkar - Grievance Redressal Portal (file & track a grievance)",
           "value": "https://grievances.maharashtra.gov.in/en",
           "scope": "state",
           "source_url": "https://grievances.maharashtra.gov.in/en",
-          "source_name": "Aaple Sarkar Grievance Redressal Portal — Government of Maharashtra",
+          "source_name": "Aaple Sarkar Grievance Redressal Portal - Government of Maharashtra",
           "retrieved_date": "2026-07-15",
           "note": "Maharashtra's official online public grievance portal. Run by the Chief Minister's Office, Mantralaya, Mumbai, supported by the Commissionerate of Electronics, IT and AI. Issues a token number on submission for status tracking."
         },
         {
           "kind": "url",
           "topic": "general",
-          "label": "Maharashtra Government — official state portal",
+          "label": "Maharashtra Government - official state portal",
           "value": "https://maharashtra.gov.in/",
           "scope": "state",
           "source_url": "https://maharashtra.gov.in/",
-          "source_name": "Government of Maharashtra — Official Website",
+          "source_name": "Government of Maharashtra - Official Website",
           "retrieved_date": "2026-07-15",
           "note": "Official Government of Maharashtra website (महाराष्ट्र शासन). Verified live."
         },
         {
           "kind": "url",
           "topic": "general",
-          "label": "Maharashtra District Portal — directory of all 36 district websites",
+          "label": "Maharashtra District Portal - directory of all 36 district websites",
           "value": "https://maharashtra.s3waas.gov.in/",
           "scope": "state",
           "source_url": "https://maharashtra.s3waas.gov.in/",
@@ -3346,66 +3346,66 @@
         {
           "kind": "url",
           "topic": "police",
-          "label": "Maharashtra Police — Citizen Services Portal (CCTNS)",
+          "label": "Maharashtra Police - Citizen Services Portal (CCTNS)",
           "value": "https://citizen.mahapolice.gov.in/citizen/mh/index.aspx",
           "scope": "state",
           "source_url": "https://citizen.mahapolice.gov.in/citizen/mh/index.aspx",
-          "source_name": "Maharashtra Police — Services for Citizen (CCTNS)",
+          "source_name": "Maharashtra Police - Services for Citizen (CCTNS)",
           "retrieved_date": "2026-07-15",
           "note": "Official Maharashtra Police citizen portal on the Crime and Criminal Tracking Network and Systems (CCTNS) platform. Offers e-Complaint registration, missing person search, published FIR access, arrested persons and absconders databases, and festival mandal registration."
         },
         {
           "kind": "url",
           "topic": "police",
-          "label": "Maharashtra State Police — official website",
+          "label": "Maharashtra State Police - official website",
           "value": "https://www.mahapolice.gov.in/",
           "scope": "state",
           "source_url": "https://www.mahapolice.gov.in/",
-          "source_name": "Maharashtra State Police — Official Website",
+          "source_name": "Maharashtra State Police - Official Website",
           "retrieved_date": "2026-07-15",
           "note": "Official Maharashtra State Police site; publishes the state's emergency and helpline short codes on its homepage."
         },
         {
           "kind": "url",
           "topic": "emergency",
-          "label": "Dial 112 Citizen Portal — Maharashtra Emergency Response System",
+          "label": "Dial 112 Citizen Portal - Maharashtra Emergency Response System",
           "value": "https://dial112.mahapolice.gov.in/",
           "scope": "state",
           "source_url": "https://www.mahapolice.gov.in/",
-          "source_name": "Maharashtra State Police — Official Website (links to Dial 112 Citizen Portal)",
+          "source_name": "Maharashtra State Police - Official Website (links to Dial 112 Citizen Portal)",
           "retrieved_date": "2026-07-15",
           "note": "Maharashtra Police emergency response citizen portal, linked from the official mahapolice.gov.in site. For emergencies/incidents requiring immediate intervention; also supports missing person and stolen vehicle reports."
         },
         {
           "kind": "phone",
           "topic": "women",
-          "label": "Women's Safety Helpline — Mumbai, Thane & Navi Mumbai",
+          "label": "Women's Safety Helpline - Mumbai, Thane & Navi Mumbai",
           "value": "103",
           "scope": "state",
           "source_url": "https://www.mahapolice.gov.in/",
-          "source_name": "Maharashtra State Police — Official Website",
+          "source_name": "Maharashtra State Police - Official Website",
           "retrieved_date": "2026-07-15",
           "note": "State-specific split published on the Maharashtra Police homepage under \"महिला सुरक्षा\" (Women's Safety): \"१०३ (मुंबई, ठाणे आणि नवी मुंबई), १०९१ (उर्वरित महाराष्ट्र)\". Use 103 within Mumbai, Thane and Navi Mumbai only."
         },
         {
           "kind": "phone",
           "topic": "women",
-          "label": "Women's Safety Helpline — rest of Maharashtra",
+          "label": "Women's Safety Helpline - rest of Maharashtra",
           "value": "1091",
           "scope": "state",
           "source_url": "https://www.mahapolice.gov.in/",
-          "source_name": "Maharashtra State Police — Official Website",
+          "source_name": "Maharashtra State Police - Official Website",
           "retrieved_date": "2026-07-15",
-          "note": "Published on the Maharashtra Police homepage under \"महिला सुरक्षा\": \"१०३ (मुंबई, ठाणे आणि नवी मुंबई), १०९१ (उर्वरित महाराष्ट्र)\" — 1091 applies outside Mumbai/Thane/Navi Mumbai."
+          "note": "Published on the Maharashtra Police homepage under \"महिला सुरक्षा\": \"१०३ (मुंबई, ठाणे आणि नवी मुंबई), १०९१ (उर्वरित महाराष्ट्र)\" - 1091 applies outside Mumbai/Thane/Navi Mumbai."
         },
         {
           "kind": "phone",
           "topic": "women",
-          "label": "Maharashtra Police Women's Safety — direct line",
+          "label": "Maharashtra Police Women's Safety - direct line",
           "value": "02245161635",
           "scope": "state",
           "source_url": "https://www.mahapolice.gov.in/contact-us",
-          "source_name": "Maharashtra State Police — Contact Us",
+          "source_name": "Maharashtra State Police - Contact Us",
           "retrieved_date": "2026-07-15",
           "note": "Published under \"महिला सुरक्षा\" on both the Maharashtra Police homepage and its Contact Us page as \"८९७६००४१११, ८६५७२२२७७७, ०२२४५१६१६३५\". The two mobile numbers 8976004111 and 8657222777 are published alongside it."
         },
@@ -3416,9 +3416,9 @@
           "value": "108",
           "scope": "state",
           "source_url": "https://phd.maharashtra.gov.in/en/helpline/",
-          "source_name": "Public Health Department, Government of Maharashtra — Helpline",
+          "source_name": "Public Health Department, Government of Maharashtra - Helpline",
           "retrieved_date": "2026-07-15",
-          "note": "Published by the Public Health Department, Government of Maharashtra as \"Emergency Medical Service: 108\". Also appears on the Maharashtra Police homepage as \"महाराष्ट्र आणीबाणी वैद्यकीय सेवा — १०८\"."
+          "note": "Published by the Public Health Department, Government of Maharashtra as \"Emergency Medical Service: 108\". Also appears on the Maharashtra Police homepage as \"महाराष्ट्र आणीबाणी वैद्यकीय सेवा - १०८\"."
         },
         {
           "kind": "phone",
@@ -3427,7 +3427,7 @@
           "value": "104",
           "scope": "state",
           "source_url": "https://phd.maharashtra.gov.in/en/helpline/",
-          "source_name": "Public Health Department, Government of Maharashtra — Helpline",
+          "source_name": "Public Health Department, Government of Maharashtra - Helpline",
           "retrieved_date": "2026-07-15",
           "note": "Published by the Public Health Department, Government of Maharashtra as \"Health Advice, Blood Availability, Grievance Redressal, Mental Health Counseling: 104\"."
         },
@@ -3438,7 +3438,7 @@
           "value": "155388",
           "scope": "state",
           "source_url": "https://phd.maharashtra.gov.in/en/helpline/",
-          "source_name": "Public Health Department, Government of Maharashtra — Helpline",
+          "source_name": "Public Health Department, Government of Maharashtra - Helpline",
           "retrieved_date": "2026-07-15",
           "note": "State-specific health scheme helpline published by the Public Health Department, Government of Maharashtra."
         },
@@ -3449,40 +3449,40 @@
           "value": "14416",
           "scope": "state",
           "source_url": "https://phd.maharashtra.gov.in/en/helpline/",
-          "source_name": "Public Health Department, Government of Maharashtra — Helpline",
+          "source_name": "Public Health Department, Government of Maharashtra - Helpline",
           "retrieved_date": "2026-07-15",
           "note": "Published by the Public Health Department, Government of Maharashtra as \"Mental Health Rehabilitation Counseling: 14416\"."
         },
         {
           "kind": "phone",
           "topic": "electricity",
-          "label": "MSEDCL / Mahavitaran — electricity consumer complaints (centralised customer care)",
+          "label": "MSEDCL / Mahavitaran - electricity consumer complaints (centralised customer care)",
           "value": "1912",
           "scope": "state",
           "source_url": "https://www.mahadiscom.in/en/contact-us/",
-          "source_name": "MSEDCL (Mahavitaran) — Contact Us (official DISCOM site)",
+          "source_name": "MSEDCL (Mahavitaran) - Contact Us (official DISCOM site)",
           "retrieved_date": "2026-07-15",
-          "note": "MSEDCL (Maharashtra State Electricity Distribution Co. Ltd) publishes \"1912, 19120, 1800-233-3435, 1800-212-3435\" as its centralised customer care lines. MSEDCL covers most of Maharashtra but NOT all of Mumbai — parts of Mumbai are served by BEST, Adani Electricity and Tata Power, which have their own numbers."
+          "note": "MSEDCL (Maharashtra State Electricity Distribution Co. Ltd) publishes \"1912, 19120, 1800-233-3435, 1800-212-3435\" as its centralised customer care lines. MSEDCL covers most of Maharashtra but NOT all of Mumbai - parts of Mumbai are served by BEST, Adani Electricity and Tata Power, which have their own numbers."
         },
         {
           "kind": "phone",
           "topic": "electricity",
-          "label": "MSEDCL / Mahavitaran — electricity complaints (alternate toll-free)",
+          "label": "MSEDCL / Mahavitaran - electricity complaints (alternate toll-free)",
           "value": "18002333435",
           "scope": "state",
           "source_url": "https://www.mahadiscom.in/en/contact-us/",
-          "source_name": "MSEDCL (Mahavitaran) — Contact Us (official DISCOM site)",
+          "source_name": "MSEDCL (Mahavitaran) - Contact Us (official DISCOM site)",
           "retrieved_date": "2026-07-15",
           "note": "One of four centralised customer care numbers published by MSEDCL: \"1912, 19120, 1800-233-3435, 1800-212-3435\". The alternate 1800-212-3435 and the short code 19120 are published alongside it."
         },
         {
           "kind": "url",
           "topic": "electricity",
-          "label": "MSEDCL / Mahavitaran — consumer contact & complaint registration",
+          "label": "MSEDCL / Mahavitaran - consumer contact & complaint registration",
           "value": "https://www.mahadiscom.in/en/contact-us/",
           "scope": "state",
           "source_url": "https://www.mahadiscom.in/en/contact-us/",
-          "source_name": "MSEDCL (Mahavitaran) — Contact Us (official DISCOM site)",
+          "source_name": "MSEDCL (Mahavitaran) - Contact Us (official DISCOM site)",
           "retrieved_date": "2026-07-15",
           "note": "Official MSEDCL contact page. Also publishes customercare@mahadiscom.in, an HT consumer helpdesk (022-26478989 / 022-26478899), an online payment helpdesk (022-26478246), and a missed-call power-failure registration line (022-50897100)."
         }
@@ -3495,7 +3495,7 @@
         {
           "kind": "phone",
           "topic": "grievance",
-          "label": "CM Connect — Chief Minister's citizen grievance helpline",
+          "label": "CM Connect - Chief Minister's citizen grievance helpline",
           "value": "1971",
           "scope": "state",
           "source_url": "https://meghalaya.gov.in/",
@@ -3506,40 +3506,40 @@
         {
           "kind": "phone",
           "topic": "grievance",
-          "label": "CM Connect — alternate toll-free number",
+          "label": "CM Connect - alternate toll-free number",
           "value": "18003456851",
           "scope": "state",
           "source_url": "https://negd.gov.in/isl/Directory/statedata/353",
-          "source_name": "National e-Governance Division (NeGD), MeitY — India Stack Local directory, Meghalaya CM Connect entry",
+          "source_name": "National e-Governance Division (NeGD), MeitY - India Stack Local directory, Meghalaya CM Connect entry",
           "retrieved_date": "2026-07-15",
           "note": "Listed alongside 1971 as a designated toll-free helpline for CM Connect. Sourced from the NeGD/MeitY official catalogue entry; not currently repeated on meghalaya.gov.in itself."
         },
         {
           "kind": "phone",
           "topic": "grievance",
-          "label": "CM Connect — WhatsApp chatbot",
+          "label": "CM Connect - WhatsApp chatbot",
           "value": "9436394363",
           "scope": "state",
           "source_url": "https://negd.gov.in/isl/Directory/statedata/353",
-          "source_name": "National e-Governance Division (NeGD), MeitY — India Stack Local directory, Meghalaya CM Connect entry",
+          "source_name": "National e-Governance Division (NeGD), MeitY - India Stack Local directory, Meghalaya CM Connect entry",
           "retrieved_date": "2026-07-15",
           "note": "WhatsApp chatbot channel for raising CM Connect grievances. Sourced from the NeGD/MeitY official catalogue entry."
         },
         {
           "kind": "url",
           "topic": "grievance",
-          "label": "Meghalaya One — citizen grievance redressal and services portal",
+          "label": "Meghalaya One - citizen grievance redressal and services portal",
           "value": "https://meghalayaone.gov.in/",
           "scope": "state",
           "source_url": "https://meghalayaone.gov.in/",
-          "source_name": "Meghalaya One — Government of Meghalaya",
+          "source_name": "Meghalaya One - Government of Meghalaya",
           "retrieved_date": "2026-07-15",
           "note": "Live (HTTP 200, valid TLS). The site's own meta description reads: 'Meghalaya One - One digital Gateway for Citizen Grievance Redressal, Service Delivery and Engagement'. NOTE: the older MegPGRAMS portal (megpgrams.gov.in), still linked from meghalaya.gov.in/services/content/19327, no longer resolves (DNS ENOTFOUND) and was deliberately excluded."
         },
         {
           "kind": "url",
           "topic": "police",
-          "label": "Meghalaya Police — Citizen Portal (e-FIR, complaints, verifications)",
+          "label": "Meghalaya Police - Citizen Portal (e-FIR, complaints, verifications)",
           "value": "https://citizen.megpolice.gov.in/",
           "scope": "state",
           "source_url": "https://citizen.megpolice.gov.in/",
@@ -3550,11 +3550,11 @@
         {
           "kind": "url",
           "topic": "police",
-          "label": "Meghalaya Police — official website",
+          "label": "Meghalaya Police - official website",
           "value": "https://megpolice.gov.in/",
           "scope": "state",
           "source_url": "https://megpolice.gov.in/citizen-services",
-          "source_name": "Meghalaya Police, Government of Meghalaya — Citizen Services page",
+          "source_name": "Meghalaya Police, Government of Meghalaya - Citizen Services page",
           "retrieved_date": "2026-07-15",
           "note": "Official state police website; Citizen Services page indexes the citizen portal, FIR services, daily crime reports and legal services information."
         },
@@ -3565,14 +3565,14 @@
           "value": "03642222001",
           "scope": "state",
           "source_url": "https://megpolice.gov.in/telephone-directory",
-          "source_name": "Meghalaya Police — Telephone Directory",
+          "source_name": "Meghalaya Police - Telephone Directory",
           "retrieved_date": "2026-07-15",
-          "note": "Published as 'Office of the Director General of Police :: Meghalaya : Shillong : (Police Exchange Nos. 2222001/ 2222033/2222043)' under 'Civil (STD-0364)'. This is the DGP office exchange, NOT a 24x7 police control room. Alternates: 03642222033, 03642222043. Meghalaya Police does not publicly publish a state control-room number — its 'Control Rooms' and 'Other Important Telephone Numbers' pages both return 'You are not authorized to access this page'."
+          "note": "Published as 'Office of the Director General of Police :: Meghalaya : Shillong : (Police Exchange Nos. 2222001/ 2222033/2222043)' under 'Civil (STD-0364)'. This is the DGP office exchange, NOT a 24x7 police control room. Alternates: 03642222033, 03642222043. Meghalaya Police does not publicly publish a state control-room number - its 'Control Rooms' and 'Other Important Telephone Numbers' pages both return 'You are not authorized to access this page'."
         },
         {
           "kind": "url",
           "topic": "general",
-          "label": "Meghalaya Government Portal — official state portal",
+          "label": "Meghalaya Government Portal - official state portal",
           "value": "https://meghalaya.gov.in/",
           "scope": "state",
           "source_url": "https://meghalaya.gov.in/",
@@ -3583,11 +3583,11 @@
         {
           "kind": "url",
           "topic": "general",
-          "label": "Meghalaya districts directory — links to each district website",
+          "label": "Meghalaya districts directory - links to each district website",
           "value": "https://meghalaya.gov.in/districts",
           "scope": "state",
           "source_url": "https://meghalaya.gov.in/districts",
-          "source_name": "Meghalaya Government Portal — Districts",
+          "source_name": "Meghalaya Government Portal - Districts",
           "retrieved_date": "2026-07-15",
           "note": "Official district directory listing all districts with headquarters, area and population, each linking to its own district site: eastgarohills.gov.in, northgarohills.gov.in, southgarohills.gov.in, westgarohills.gov.in, southwestgarohills.gov.in, eastkhasihills.gov.in, westkhasihills.gov.in, southwestkhasihills.gov.in, westjaintiahills.gov.in, eastjaintiahills.gov.in, ribhoi.gov.in."
         },
@@ -3598,20 +3598,20 @@
           "value": "https://meghalaya.gov.in/helpline",
           "scope": "state",
           "source_url": "https://meghalaya.gov.in/helpline",
-          "source_name": "Meghalaya Government Portal — Helpline Numbers",
+          "source_name": "Meghalaya Government Portal - Helpline Numbers",
           "retrieved_date": "2026-07-15",
           "note": "State's own consolidated helpline table (table itself last updated 30 Jan 2024). Lists Police 100, Fire 101, Medical 108, Disaster 112, Women 1091/181, Child 1098, Electricity 1912, PDS/NFSA 1967 and 1800-345-3670. Note: the women/child numbers it lists are the national helplines, not Meghalaya-specific, so they are not returned separately here."
         },
         {
           "kind": "phone",
           "topic": "electricity",
-          "label": "Electricity complaint (MePDCL/MeECL) — toll-free",
+          "label": "Electricity complaint (MePDCL/MeECL) - toll-free",
           "value": "1912",
           "scope": "state",
           "source_url": "https://meghalaya.gov.in/helpline",
-          "source_name": "Meghalaya Government Portal — Helpline Numbers",
+          "source_name": "Meghalaya Government Portal - Helpline Numbers",
           "retrieved_date": "2026-07-15",
-          "note": "Published centrally by the state as 'Electricity Complaint — 1912'. Meghalaya's distribution utility is MePDCL, under Meghalaya Energy Corporation Ltd (MeECL)."
+          "note": "Published centrally by the state as 'Electricity Complaint - 1912'. Meghalaya's distribution utility is MePDCL, under Meghalaya Energy Corporation Ltd (MeECL)."
         },
         {
           "kind": "phone",
@@ -3620,7 +3620,7 @@
           "value": "03642591932",
           "scope": "state",
           "source_url": "https://meecl.nic.in/index.php/customer-care-centre/",
-          "source_name": "Meghalaya Energy Corporation Ltd (MeECL) — Customer Care Centre",
+          "source_name": "Meghalaya Energy Corporation Ltd (MeECL) - Customer Care Centre",
           "retrieved_date": "2026-07-15",
           "note": "Published as 'Customer Care: (0364) 2591932 | 2591088 | 2591335 | 2590656'. Alternates: 03642591088, 03642591335, 03642590656. Customer care email: customercare.mepdcl@meghalaya.gov.in."
         },
@@ -3631,20 +3631,20 @@
           "value": "https://meecl.nic.in/index.php/customer-care-centre/",
           "scope": "state",
           "source_url": "https://meecl.nic.in/index.php/customer-care-centre/",
-          "source_name": "Meghalaya Energy Corporation Ltd (MeECL) — Customer Care Centre",
+          "source_name": "Meghalaya Energy Corporation Ltd (MeECL) - Customer Care Centre",
           "retrieved_date": "2026-07-15",
           "note": "Official DISCOM customer care page; also links the consumer portal, online bill payment and service-centre jurisdiction lists in English, Khasi and Garo."
         },
         {
           "kind": "phone",
           "topic": "ration",
-          "label": "PDS / NFSA (ration) helpline — Meghalaya toll-free",
+          "label": "PDS / NFSA (ration) helpline - Meghalaya toll-free",
           "value": "18003453670",
           "scope": "state",
           "source_url": "https://meghalaya.gov.in/helpline",
-          "source_name": "Meghalaya Government Portal — Helpline Numbers",
+          "source_name": "Meghalaya Government Portal - Helpline Numbers",
           "retrieved_date": "2026-07-15",
-          "note": "Published as 'PDS/NFSA — 1967 / 1800-345-3670'. The 1800-345-xxxx series is Meghalaya's state-specific toll-free range; 1967 is the national NFSA short code."
+          "note": "Published as 'PDS/NFSA - 1967 / 1800-345-3670'. The 1800-345-xxxx series is Meghalaya's state-specific toll-free range; 1967 is the national NFSA short code."
         }
       ]
     },
@@ -3655,29 +3655,29 @@
         {
           "kind": "url",
           "topic": "general",
-          "label": "Government of Manipur — official state portal",
+          "label": "Government of Manipur - official state portal",
           "value": "https://manipur.gov.in/",
           "scope": "state",
           "source_url": "https://manipur.gov.in/",
           "source_name": "Government of Manipur official state portal",
           "retrieved_date": "2026-07-15",
-          "note": "Verified live (HTTP 200). Page title: \"Official Website of Manipur | Manipur – Manipur State Govt.\""
+          "note": "Verified live (HTTP 200). Page title: \"Official Website of Manipur | Manipur - Manipur State Govt.\""
         },
         {
           "kind": "url",
           "topic": "general",
-          "label": "Districts in Manipur — district directory (links to all 16 district sites)",
+          "label": "Districts in Manipur - district directory (links to all 16 district sites)",
           "value": "https://manipur.gov.in/?page_id=619",
           "scope": "state",
           "source_url": "https://manipur.gov.in/?page_id=619",
-          "source_name": "Government of Manipur official state portal — Districts in Manipur",
+          "source_name": "Government of Manipur official state portal - Districts in Manipur",
           "retrieved_date": "2026-07-15",
           "note": "Verified live. Links to all 16 districts on *.nic.in: Bishnupur, Chandel, Churachandpur, Imphal-East, Imphal-West, Senapati, Tamenglong, Thoubal, Ukhrul, Kangpokpi, Tengnoupal, Pherzawl, Noney, Kamjong, Jiribam, Kakching."
         },
         {
           "kind": "url",
           "topic": "police",
-          "label": "Manipur Police — official website",
+          "label": "Manipur Police - official website",
           "value": "https://manipurpolice.gov.in/",
           "scope": "state",
           "source_url": "https://manipurpolice.gov.in/",
@@ -3699,29 +3699,29 @@
         {
           "kind": "url",
           "topic": "police",
-          "label": "Manipur Police — district-wise Police Control Room directory",
+          "label": "Manipur Police - district-wise Police Control Room directory",
           "value": "https://manipurpolice.gov.in/?page_id=3257",
           "scope": "state",
           "source_url": "https://manipurpolice.gov.in/?page_id=3257",
-          "source_name": "Manipur Police — Police Control Room directory",
+          "source_name": "Manipur Police - Police Control Room directory",
           "retrieved_date": "2026-07-15",
           "note": "Verified live. Official table of control-room telephone/fax numbers for the DG Control Room and each district."
         },
         {
           "kind": "phone",
           "topic": "police",
-          "label": "Manipur Police — DG Control Room (state police control room)",
+          "label": "Manipur Police - DG Control Room (state police control room)",
           "value": "03852451100",
           "scope": "state",
           "source_url": "https://manipurpolice.gov.in/?page_id=3257",
-          "source_name": "Manipur Police — Police Control Room directory",
+          "source_name": "Manipur Police - Police Control Room directory",
           "retrieved_date": "2026-07-15",
-          "note": "Printed as \"DG Control Room 0385-2451100\" in the official control-room table; independently confirmed on the DG Control Room page (https://manipurpolice.gov.in/?p=90) and the site footer, both as \"Phone: 0385-2451 100\". Caveat: the Manipur Police CCTNS citizen portal lists this same number as the DG Control Room FAX and gives 0385-2440100 as the telephone — the two official sources disagree, so pair this with the mobile control-room number below."
+          "note": "Printed as \"DG Control Room 0385-2451100\" in the official control-room table; independently confirmed on the DG Control Room page (https://manipurpolice.gov.in/?p=90) and the site footer, both as \"Phone: 0385-2451 100\". Caveat: the Manipur Police CCTNS citizen portal lists this same number as the DG Control Room FAX and gives 0385-2440100 as the telephone - the two official sources disagree, so pair this with the mobile control-room number below."
         },
         {
           "kind": "phone",
           "topic": "police",
-          "label": "Manipur Police — DG Control Room (mobile)",
+          "label": "Manipur Police - DG Control Room (mobile)",
           "value": "6009559363",
           "scope": "state",
           "source_url": "https://mnpcitizenportal.mn.gov.in/",
@@ -3732,46 +3732,46 @@
         {
           "kind": "phone",
           "topic": "electricity",
-          "label": "MSPDCL (Manipur State Power Distribution Company Ltd) — electricity complaint toll-free",
+          "label": "MSPDCL (Manipur State Power Distribution Company Ltd) - electricity complaint toll-free",
           "value": "1912",
           "scope": "state",
           "source_url": "https://mspdcl.in/contact",
-          "source_name": "MSPDCL — official website, Contact page",
+          "source_name": "MSPDCL - official website, Contact page",
           "retrieved_date": "2026-07-15",
           "note": "Printed verbatim as \"Toll Free: 1912\" under Emergency & Helpline. mspdcl.in is confirmed as the official DISCOM site by the Government of Manipur Electricity Department (Office of the Chief Engineer (Power)), which links to https://mspdcl.in/ from https://aopower.mn.gov.in/."
         },
         {
           "kind": "phone",
           "topic": "electricity",
-          "label": "MSPDCL — Customer Care Centre (CCC) helpline",
+          "label": "MSPDCL - Customer Care Centre (CCC) helpline",
           "value": "03852410060",
           "scope": "state",
           "source_url": "https://mspdcl.in/contact",
-          "source_name": "MSPDCL — official website, Contact page",
+          "source_name": "MSPDCL - official website, Contact page",
           "retrieved_date": "2026-07-15",
           "note": "Printed verbatim as \"CCC Helpline (0385) 2410060\"."
         },
         {
           "kind": "phone",
           "topic": "electricity",
-          "label": "MSPDCL — electricity complaint WhatsApp",
+          "label": "MSPDCL - electricity complaint WhatsApp",
           "value": "7640081238",
           "scope": "state",
           "source_url": "https://mspdcl.in/contact",
-          "source_name": "MSPDCL — official website, Contact page",
+          "source_name": "MSPDCL - official website, Contact page",
           "retrieved_date": "2026-07-15",
           "note": "Printed verbatim as \"WhatsApp +91 7640081238\". A second WhatsApp number, +91 7640081232, is listed alongside it."
         },
         {
           "kind": "url",
           "topic": "electricity",
-          "label": "MSPDCL — electricity consumer contact & complaint page",
+          "label": "MSPDCL - electricity consumer contact & complaint page",
           "value": "https://mspdcl.in/contact",
           "scope": "state",
           "source_url": "https://aopower.mn.gov.in/",
           "source_name": "Office of the Chief Engineer (Power), Electricity Department, Government of Manipur",
           "retrieved_date": "2026-07-15",
-          "note": "The Electricity Department's official mn.gov.in site links to https://mspdcl.in/ as MSPDCL. WARNING for the site's link data: the older domain mspdcl.com — still linked from kangpokpi.nic.in — has lapsed and now serves an online gambling site. Do not use mspdcl.com."
+          "note": "The Electricity Department's official mn.gov.in site links to https://mspdcl.in/ as MSPDCL. WARNING for the site's link data: the older domain mspdcl.com - still linked from kangpokpi.nic.in - has lapsed and now serves an online gambling site. Do not use mspdcl.com."
         },
         {
           "kind": "phone",
@@ -3780,7 +3780,7 @@
           "value": "03852450137",
           "scope": "state",
           "source_url": "https://manipur.gov.in/?page_id=920",
-          "source_name": "Government of Manipur official state portal — Contact Us",
+          "source_name": "Government of Manipur official state portal - Contact Us",
           "retrieved_date": "2026-07-15",
           "note": "Printed verbatim as \"Chief Minister's Secretariat, Contact Number: 0385-2450137\". This is an office line, not a citizen helpline."
         },
@@ -3791,7 +3791,7 @@
           "value": "03852451144",
           "scope": "state",
           "source_url": "https://manipur.gov.in/?page_id=920",
-          "source_name": "Government of Manipur official state portal — Contact Us",
+          "source_name": "Government of Manipur official state portal - Contact Us",
           "retrieved_date": "2026-07-15",
           "note": "Printed verbatim as \"Contact Number: 0385-2451144, 2450064\". Office line, not a citizen helpline."
         }
@@ -3808,14 +3808,14 @@
           "value": "7552555582",
           "scope": "state",
           "source_url": "https://cmhelpline.mp.gov.in/About.aspx",
-          "source_name": "CM Helpline Madhya Pradesh — About (cmhelpline.mp.gov.in)",
+          "source_name": "CM Helpline Madhya Pradesh - About (cmhelpline.mp.gov.in)",
           "retrieved_date": "2026-07-15",
           "note": "WhatsApp number published as +917552555582 for grievance status and scheme information."
         },
         {
           "kind": "url",
           "topic": "grievance",
-          "label": "CM Helpline — online grievance portal (lodge & track complaints)",
+          "label": "CM Helpline - online grievance portal (lodge & track complaints)",
           "value": "https://cmhelpline.mp.gov.in/",
           "scope": "state",
           "source_url": "https://cmhelpline.mp.gov.in/",
@@ -3826,7 +3826,7 @@
         {
           "kind": "url",
           "topic": "general",
-          "label": "Government of Madhya Pradesh — official state portal",
+          "label": "Government of Madhya Pradesh - official state portal",
           "value": "https://mp.gov.in/",
           "scope": "state",
           "source_url": "https://mp.gov.in/",
@@ -3836,7 +3836,7 @@
         {
           "kind": "url",
           "topic": "general",
-          "label": "Madhya Pradesh District Portal — directory of all district websites",
+          "label": "Madhya Pradesh District Portal - directory of all district websites",
           "value": "https://mpdistricts.nic.in/",
           "scope": "state",
           "source_url": "https://mpdistricts.nic.in/",
@@ -3857,7 +3857,7 @@
         {
           "kind": "url",
           "topic": "police",
-          "label": "Madhya Pradesh Police — official website",
+          "label": "Madhya Pradesh Police - official website",
           "value": "https://www.mppolice.gov.in/en",
           "scope": "state",
           "source_url": "https://www.mppolice.gov.in/en",
@@ -3882,7 +3882,7 @@
           "value": "100",
           "scope": "state",
           "source_url": "https://bhopal.mppolice.gov.in/helpline-number/",
-          "source_name": "Commissionerate of Police Bhopal — Helpline Numbers (bhopal.mppolice.gov.in)",
+          "source_name": "Commissionerate of Police Bhopal - Helpline Numbers (bhopal.mppolice.gov.in)",
           "retrieved_date": "2026-07-15",
           "note": "Published as the police emergency number on official MP Police and MP district pages. Caveat: MP Police news content also references 'Dial-112' (national ERSS), so 112 may also connect; no official page fetched publishes 112 as the listed number."
         },
@@ -3893,18 +3893,18 @@
           "value": "07552555922",
           "scope": "state",
           "source_url": "https://bhopal.mppolice.gov.in/helpline-number/",
-          "source_name": "Commissionerate of Police Bhopal — Helpline Numbers (bhopal.mppolice.gov.in)",
+          "source_name": "Commissionerate of Police Bhopal - Helpline Numbers (bhopal.mppolice.gov.in)",
           "retrieved_date": "2026-07-15",
           "note": "City-level (Bhopal) police control room, not a statewide control room."
         },
         {
           "kind": "phone",
           "topic": "cyber",
-          "label": "Cyber Crime Helpline — Bhopal Police",
+          "label": "Cyber Crime Helpline - Bhopal Police",
           "value": "07552677339",
           "scope": "state",
           "source_url": "https://bhopal.mppolice.gov.in/helpline-number/",
-          "source_name": "Commissionerate of Police Bhopal — Helpline Numbers (bhopal.mppolice.gov.in)",
+          "source_name": "Commissionerate of Police Bhopal - Helpline Numbers (bhopal.mppolice.gov.in)",
           "retrieved_date": "2026-07-15",
           "note": "MP-specific cyber helpline published by Commissionerate of Police Bhopal (city-level)."
         },
@@ -3915,18 +3915,18 @@
           "value": "1912",
           "scope": "state",
           "source_url": "https://dhar.nic.in/en/public-utility-category/electricity/",
-          "source_name": "District Dhar, Government of Madhya Pradesh — Electricity (dhar.nic.in)",
+          "source_name": "District Dhar, Government of Madhya Pradesh - Electricity (dhar.nic.in)",
           "retrieved_date": "2026-07-15",
           "note": "Published on official MP district government pages as the electricity complaint number for MP Paschim Kshetra Vidyut Vitaran Company Ltd. MP has three DISCOMs (MPCZ/Central, MPWZ/West, MPEZ/East); 1912 is the common electricity complaint short code."
         },
         {
           "kind": "url",
           "topic": "electricity",
-          "label": "MP Madhya Kshetra Vidyut Vitaran Co. Ltd (MPCZ) — official consumer portal",
+          "label": "MP Madhya Kshetra Vidyut Vitaran Co. Ltd (MPCZ) - official consumer portal",
           "value": "https://portal.mpcz.in/",
           "scope": "state",
           "source_url": "https://bhopal.nic.in/en/public-utility-category/electricity/",
-          "source_name": "District Bhopal, Government of Madhya Pradesh — Electricity (bhopal.nic.in)",
+          "source_name": "District Bhopal, Government of Madhya Pradesh - Electricity (bhopal.nic.in)",
           "retrieved_date": "2026-07-15",
           "note": "Official website of the Central Zone DISCOM as published on the District Bhopal government site. Office phone listed there: 0755-2602033."
         }
@@ -4092,20 +4092,20 @@
           "value": "https://nagaland.gov.in/districts",
           "scope": "state",
           "source_url": "https://nagaland.gov.in/districts",
-          "source_name": "Nagaland State Portal — Districts",
+          "source_name": "Nagaland State Portal - Districts",
           "retrieved_date": "2026-07-15",
           "note": "Linked directly from the nagaland.gov.in homepage. Lists 16 districts; 11 link to live NIC district sites (kohima.nic.in, dimapur.nic.in, mokokchung.nic.in, mon.nic.in, phek.nic.in, wokha.nic.in, zunheboto.nic.in, tuensang.nic.in, longleng.nic.in, kiphire.nic.in, peren-district.nic.in, noklak.nic.in). Newer districts (Chumoukedima, Niuland, Shamator, Tseminyu) have no dedicated government site yet and the page points them at Wikipedia."
         },
         {
           "kind": "url",
           "topic": "police",
-          "label": "Nagaland Police Citizen Portal (CCTNS — online police service requests)",
+          "label": "Nagaland Police Citizen Portal (CCTNS - online police service requests)",
           "value": "https://cp.police.nagaland.gov.in/",
           "scope": "state",
           "source_url": "https://cp.police.nagaland.gov.in/",
           "source_name": "Citizen Portal, Nagaland Police",
           "retrieved_date": "2026-07-15",
-          "note": "Verified live. Part of CCTNS. Coverage is limited: the portal itself states it is active for district police offices and police stations ONLY — currently Kohima (North PS, South PS) and Dimapur (East PS, West PS). Contact: scrb-ngl@nic.in."
+          "note": "Verified live. Part of CCTNS. Coverage is limited: the portal itself states it is active for district police offices and police stations ONLY - currently Kohima (North PS, South PS) and Dimapur (East PS, West PS). Contact: scrb-ngl@nic.in."
         },
         {
           "kind": "url",
@@ -4125,18 +4125,18 @@
           "value": "03702243711",
           "scope": "state",
           "source_url": "https://police.nagaland.gov.in/contact-us/",
-          "source_name": "Nagaland Police Headquarters — Contact Us",
+          "source_name": "Nagaland Police Headquarters - Contact Us",
           "retrieved_date": "2026-07-15",
           "note": "Administrative HQ line, NOT an emergency number. Page also lists 0370 2243713. Address: P.R. Hill, Kohima-797001. Page last modified 2021 per its metadata."
         },
         {
           "kind": "phone",
           "topic": "disaster",
-          "label": "State Emergency Operation Centre (SEOC), NSDMA — control room landline",
+          "label": "State Emergency Operation Centre (SEOC), NSDMA - control room landline",
           "value": "03702291122",
           "scope": "state",
           "source_url": "https://nsdma.nagaland.gov.in/contact-us",
-          "source_name": "Nagaland State Disaster Management Authority — Contact Us",
+          "source_name": "Nagaland State Disaster Management Authority - Contact Us",
           "retrieved_date": "2026-07-15",
           "note": "Listed as 'Tel: 0370-2291122/2291120'. Alternate line: 03702291120. Fax 0370-2291123."
         },
@@ -4147,7 +4147,7 @@
           "value": "03702270050",
           "scope": "state",
           "source_url": "https://nsdma.nagaland.gov.in/contact-us",
-          "source_name": "Nagaland State Disaster Management Authority — Contact Us",
+          "source_name": "Nagaland State Disaster Management Authority - Contact Us",
           "retrieved_date": "2026-07-15",
           "note": "Office line. Also independently listed on the DIPR helpline page (ipr.nagaland.gov.in/node/19618) as 'NSDMA 0370-2270050'."
         },
@@ -4165,11 +4165,11 @@
         {
           "kind": "phone",
           "topic": "health",
-          "label": "Chief Minister's Health Insurance Scheme (CMHIS) Nagaland — toll free helpline",
+          "label": "Chief Minister's Health Insurance Scheme (CMHIS) Nagaland - toll free helpline",
           "value": "18002023380",
           "scope": "state",
           "source_url": "https://cmhis.nagaland.gov.in/",
-          "source_name": "CMHIS Nagaland — official scheme portal",
+          "source_name": "CMHIS Nagaland - official scheme portal",
           "retrieved_date": "2026-07-15",
           "note": "Verified on the official CMHIS portal, displayed site-wide as '1800 202 3380'. Also corroborated by the DIPR helpline listing. This is a health-insurance scheme helpline, not a general grievance line."
         },
@@ -4193,7 +4193,7 @@
         {
           "kind": "url",
           "topic": "general",
-          "label": "Government of Odisha — official state portal",
+          "label": "Government of Odisha - official state portal",
           "value": "https://odisha.gov.in/en",
           "scope": "state",
           "source_url": "https://odisha.gov.in/en",
@@ -4204,7 +4204,7 @@
         {
           "kind": "url",
           "topic": "general",
-          "label": "Odisha district directory — all 30 districts",
+          "label": "Odisha district directory - all 30 districts",
           "value": "https://district.odisha.gov.in/",
           "scope": "state",
           "source_url": "http://district.odisha.gov.in/or",
@@ -4215,11 +4215,11 @@
         {
           "kind": "url",
           "topic": "grievance",
-          "label": "Jana Sunani — Odisha public grievance redressal portal",
+          "label": "Jana Sunani - Odisha public grievance redressal portal",
           "value": "https://janasunani.odisha.gov.in/",
           "scope": "state",
           "source_url": "https://janasunani.odisha.gov.in/",
-          "source_name": "Jana Sunani — Public Grievance Redressal Portal, Govt. of Odisha",
+          "source_name": "Jana Sunani - Public Grievance Redressal Portal, Govt. of Odisha",
           "retrieved_date": "2026-07-15",
           "note": "Odisha's integrated public grievance redressal system, run by the Dept. of General Administration & Public Grievances under the Office of the Chief Minister. This is the state's CM grievance cell portal."
         },
@@ -4230,14 +4230,14 @@
           "value": "6370951930",
           "scope": "state",
           "source_url": "https://janasunani.odisha.gov.in/",
-          "source_name": "Jana Sunani — Public Grievance Redressal Portal, Govt. of Odisha",
+          "source_name": "Jana Sunani - Public Grievance Redressal Portal, Govt. of Odisha",
           "retrieved_date": "2026-07-15",
-          "note": "WhatsApp ONLY — not a voice helpline. Send 'Hi' to this number to register a grievance or check status."
+          "note": "WhatsApp ONLY - not a voice helpline. Send 'Hi' to this number to register a grievance or check status."
         },
         {
           "kind": "phone",
           "topic": "grievance",
-          "label": "Sanjog Helpline — Odisha citizen grievance/scheme helpline (short code)",
+          "label": "Sanjog Helpline - Odisha citizen grievance/scheme helpline (short code)",
           "value": "155335",
           "scope": "state",
           "source_url": "https://www.ocac.in/en/services/state-initiatives/sanjog-helpline",
@@ -4248,7 +4248,7 @@
         {
           "kind": "phone",
           "topic": "grievance",
-          "label": "Sanjog Helpline — Odisha citizen grievance/scheme helpline (toll-free)",
+          "label": "Sanjog Helpline - Odisha citizen grievance/scheme helpline (toll-free)",
           "value": "18003456770",
           "scope": "state",
           "source_url": "https://www.ocac.in/en/services/state-initiatives/sanjog-helpline",
@@ -4274,7 +4274,7 @@
           "value": "100",
           "scope": "state",
           "source_url": "https://odisha.gov.in/en/contacts/emergency",
-          "source_name": "Government of Odisha — Emergency Contacts",
+          "source_name": "Government of Odisha - Emergency Contacts",
           "retrieved_date": "2026-07-15",
           "note": "Police number as published on the official Odisha state portal emergency contacts page."
         },
@@ -4285,7 +4285,7 @@
           "value": "108",
           "scope": "state",
           "source_url": "https://odisha.gov.in/en/contacts/emergency",
-          "source_name": "Government of Odisha — Emergency Contacts",
+          "source_name": "Government of Odisha - Emergency Contacts",
           "retrieved_date": "2026-07-15",
           "note": "As published on the official Odisha state portal emergency contacts page. The same page also lists 102 for the Janani (maternal) ambulance."
         },
@@ -4296,7 +4296,7 @@
           "value": "104",
           "scope": "state",
           "source_url": "https://odisha.gov.in/en/contacts/emergency",
-          "source_name": "Government of Odisha — Emergency Contacts",
+          "source_name": "Government of Odisha - Emergency Contacts",
           "retrieved_date": "2026-07-15",
           "note": "Listed on the state portal emergency page as the Odisha health/Covid helpline. Treat the Covid framing as dated; 104 remains the state health helpline short code."
         },
@@ -4307,7 +4307,7 @@
           "value": "1091",
           "scope": "state",
           "source_url": "https://odisha.gov.in/en/contacts/emergency",
-          "source_name": "Government of Odisha — Emergency Contacts",
+          "source_name": "Government of Odisha - Emergency Contacts",
           "retrieved_date": "2026-07-15",
           "note": "Listed alongside 181 as a women helpline on Odisha's official emergency contacts page. Standard national short code republished by the state."
         },
@@ -4318,7 +4318,7 @@
           "value": "1090",
           "scope": "state",
           "source_url": "https://odisha.gov.in/en/contacts/emergency",
-          "source_name": "Government of Odisha — Emergency Contacts",
+          "source_name": "Government of Odisha - Emergency Contacts",
           "retrieved_date": "2026-07-15",
           "note": "As published on the official Odisha state portal emergency contacts page."
         },
@@ -4329,9 +4329,9 @@
           "value": "1912",
           "scope": "state",
           "source_url": "https://www.tpnodl.com/customer-zone/complaints",
-          "source_name": "TP Northern Odisha Distribution Ltd (TPNODL) — official DISCOM site",
+          "source_name": "TP Northern Odisha Distribution Ltd (TPNODL) - official DISCOM site",
           "retrieved_date": "2026-07-15",
-          "note": "Odisha has NO central state electricity complaint number — the Energy Department site publishes none. 1912 is the common complaint short code used by all four Odisha DISCOMs; independently confirmed on TPNODL's and TPSODL's own official sites. DISCOM-specific toll-free lines also exist (TPNODL 18003456718, TPSODL 18002026)."
+          "note": "Odisha has NO central state electricity complaint number - the Energy Department site publishes none. 1912 is the common complaint short code used by all four Odisha DISCOMs; independently confirmed on TPNODL's and TPSODL's own official sites. DISCOM-specific toll-free lines also exist (TPNODL 18003456718, TPSODL 18002026)."
         }
       ]
     },
@@ -4346,25 +4346,25 @@
           "value": "1100",
           "scope": "state",
           "source_url": "https://punjab.gov.in/contact-us/",
-          "source_name": "Government of Punjab — Contact Us (punjab.gov.in)",
+          "source_name": "Government of Punjab - Contact Us (punjab.gov.in)",
           "retrieved_date": "2026-07-15",
           "note": "Published as \"Helpline Number: 1100\" on the official Government of Punjab Contact Us page. Feeds the state Public Grievance Redressal System (PGRS); the page directs grievances to connect.punjab.gov.in."
         },
         {
           "kind": "url",
           "topic": "grievance",
-          "label": "Connect Punjab — Public Grievance Redressal System (PGRS)",
+          "label": "Connect Punjab - Public Grievance Redressal System (PGRS)",
           "value": "https://connect.punjab.gov.in/",
           "scope": "state",
           "source_url": "https://punjab.gov.in/notifications/this-portal-aims-to-provide-an-accessible-transparent-robust-effective-and-time-bound-public-grievance-redressal-system-pgrs-for-citizens-of-punjab/",
-          "source_name": "Government of Punjab — PGRS portal notification (punjab.gov.in)",
+          "source_name": "Government of Punjab - PGRS portal notification (punjab.gov.in)",
           "retrieved_date": "2026-07-15",
           "note": "Official Punjab online grievance portal. Confirmed by a punjab.gov.in notification announcing the PGRS portal, and the site itself resolves as \"Connect Punjab\"."
         },
         {
           "kind": "url",
           "topic": "general",
-          "label": "Government of Punjab — Official State Portal",
+          "label": "Government of Punjab - Official State Portal",
           "value": "https://punjab.gov.in/",
           "scope": "state",
           "source_url": "https://punjab.gov.in/",
@@ -4375,7 +4375,7 @@
         {
           "kind": "url",
           "topic": "general",
-          "label": "District Portal of Punjab — directory of all 23 district websites",
+          "label": "District Portal of Punjab - directory of all 23 district websites",
           "value": "https://punjab.s3waas.gov.in/",
           "scope": "state",
           "source_url": "https://punjab.s3waas.gov.in/",
@@ -4386,11 +4386,11 @@
         {
           "kind": "url",
           "topic": "police",
-          "label": "SAANJH — Punjab Police Online Citizen Services",
+          "label": "SAANJH - Punjab Police Online Citizen Services",
           "value": "https://saanjh.punjabpolice.gov.in/",
           "scope": "state",
           "source_url": "https://saanjh.punjabpolice.gov.in/",
-          "source_name": "SAANJH — Punjab Police Online Citizen Services (punjabpolice.gov.in)",
+          "source_name": "SAANJH - Punjab Police Online Citizen Services (punjabpolice.gov.in)",
           "retrieved_date": "2026-07-15",
           "note": "Official Punjab Police citizen services portal on the punjabpolice.gov.in domain."
         },
@@ -4401,7 +4401,7 @@
           "value": "1912",
           "scope": "state",
           "source_url": "https://pspcl.in/Customer-Care.aspx",
-          "source_name": "Punjab State Power Corporation Ltd (PSPCL) — Customer Care (pspcl.in)",
+          "source_name": "Punjab State Power Corporation Ltd (PSPCL) - Customer Care (pspcl.in)",
           "retrieved_date": "2026-07-15",
           "note": "Published as \"Customer Care Number: 1912\" on PSPCL's official site. PSPCL is Punjab's state electricity distribution utility. Complaint email: 1912@pspcl.in. SMS 'No Supply' to 1912 also works."
         },
@@ -4412,18 +4412,18 @@
           "value": "18001801512",
           "scope": "state",
           "source_url": "https://www.pspcl.in/Otherlinks/nodal-complaint-center.aspx",
-          "source_name": "PSPCL — Nodal Complaint Centre (pspcl.in)",
+          "source_name": "PSPCL - Nodal Complaint Centre (pspcl.in)",
           "retrieved_date": "2026-07-15",
           "note": "Published on PSPCL's official Nodal Complaint Centre page as the toll-free missed-call number for booking supply complaints. Same page lists PSPCL Central Control Room escalation numbers 96461-06835 / 96461-06836 if the division does not respond."
         },
         {
           "kind": "url",
           "topic": "electricity",
-          "label": "PSPCL Nodal Complaint Centre — division-wise complaint numbers",
+          "label": "PSPCL Nodal Complaint Centre - division-wise complaint numbers",
           "value": "https://www.pspcl.in/Otherlinks/nodal-complaint-center.aspx",
           "scope": "state",
           "source_url": "https://www.pspcl.in/Otherlinks/nodal-complaint-center.aspx",
-          "source_name": "PSPCL — Nodal Complaint Centre (pspcl.in)",
+          "source_name": "PSPCL - Nodal Complaint Centre (pspcl.in)",
           "retrieved_date": "2026-07-15",
           "note": "Official PSPCL page listing Nodal Complaint Centre (NCC) numbers by circle and zone across Punjab, plus central escalation contacts."
         }
@@ -4436,7 +4436,7 @@
         {
           "kind": "url",
           "topic": "general",
-          "label": "Government of Puducherry — Official State Portal",
+          "label": "Government of Puducherry - Official State Portal",
           "value": "https://www.py.gov.in/",
           "scope": "state",
           "source_url": "https://www.py.gov.in/",
@@ -4447,29 +4447,29 @@
         {
           "kind": "url",
           "topic": "general",
-          "label": "Districts of Puducherry — District Directory",
+          "label": "Districts of Puducherry - District Directory",
           "value": "https://www.py.gov.in/districts",
           "scope": "state",
           "source_url": "https://www.py.gov.in/districts",
-          "source_name": "Government of Puducherry — Districts",
+          "source_name": "Government of Puducherry - Districts",
           "retrieved_date": "2026-07-15",
           "note": "Links to each district/region site: Puducherry (puducherry-dt.gov.in), Karaikal (karaikal.gov.in), Mahe (mahe.gov.in), Yanam (yanam.gov.in)."
         },
         {
           "kind": "phone",
           "topic": "grievance",
-          "label": "Collectorate, Puducherry District — Public Grievance",
+          "label": "Collectorate, Puducherry District - Public Grievance",
           "value": "04132299502",
           "scope": "state",
           "source_url": "https://puducherry-dt.gov.in/service/public-grievance/",
-          "source_name": "Puducherry District — Public Grievance",
+          "source_name": "Puducherry District - Public Grievance",
           "retrieved_date": "2026-07-15",
           "note": "District Collector office contact published for public grievance."
         },
         {
           "kind": "url",
           "topic": "police",
-          "label": "Puducherry Police — Official Website",
+          "label": "Puducherry Police - Official Website",
           "value": "https://police.py.gov.in/",
           "scope": "state",
           "source_url": "https://police.py.gov.in/",
@@ -4480,7 +4480,7 @@
         {
           "kind": "url",
           "topic": "police",
-          "label": "Puducherry Police — Citizen Services Portal (CCTNS)",
+          "label": "Puducherry Police - Citizen Services Portal (CCTNS)",
           "value": "https://cctnscitizen.py.gov.in/citizen/login.aspx",
           "scope": "state",
           "source_url": "https://police.py.gov.in/",
@@ -4506,7 +4506,7 @@
           "value": "100",
           "scope": "state",
           "source_url": "https://puducherry-dt.gov.in/helpline/",
-          "source_name": "Puducherry District — Helpline",
+          "source_name": "Puducherry District - Helpline",
           "retrieved_date": "2026-07-15",
           "note": "Published as 'Police Control Room'."
         },
@@ -4528,7 +4528,7 @@
           "value": "108",
           "scope": "state",
           "source_url": "https://puducherry-dt.gov.in/helpline/",
-          "source_name": "Puducherry District — Helpline",
+          "source_name": "Puducherry District - Helpline",
           "retrieved_date": "2026-07-15",
           "note": "Published as 'Ambulance (Health Department)'."
         },
@@ -4539,7 +4539,7 @@
           "value": "1077",
           "scope": "state",
           "source_url": "https://puducherry-dt.gov.in/helpline/",
-          "source_name": "Puducherry District — Helpline",
+          "source_name": "Puducherry District - Helpline",
           "retrieved_date": "2026-07-15",
           "note": "District-level disaster helpline."
         },
@@ -4550,7 +4550,7 @@
           "value": "1912",
           "scope": "state",
           "source_url": "https://puducherry-dt.gov.in/helpline/",
-          "source_name": "Puducherry District — Helpline",
+          "source_name": "Puducherry District - Helpline",
           "retrieved_date": "2026-07-15",
           "note": "Published as 'Electricity: 1912, 1800 425 1912'."
         },
@@ -4561,18 +4561,18 @@
           "value": "18004251912",
           "scope": "state",
           "source_url": "https://puducherry-dt.gov.in/helpline/",
-          "source_name": "Puducherry District — Helpline",
+          "source_name": "Puducherry District - Helpline",
           "retrieved_date": "2026-07-15",
           "note": "Toll-free consumer complaint number for the Puducherry Electricity Department."
         },
         {
           "kind": "url",
           "topic": "electricity",
-          "label": "Puducherry Electricity Department — Online Services",
+          "label": "Puducherry Electricity Department - Online Services",
           "value": "https://pedservices.py.gov.in/",
           "scope": "state",
           "source_url": "https://py.gov.in/onlineservices",
-          "source_name": "Government of Puducherry — Online Services",
+          "source_name": "Government of Puducherry - Online Services",
           "retrieved_date": "2026-07-15",
           "note": "Official electricity services portal listed on the UT portal."
         },
@@ -4583,7 +4583,7 @@
           "value": "04132334277",
           "scope": "state",
           "source_url": "https://puducherry-dt.gov.in/public-utility-category/electricity/",
-          "source_name": "Puducherry District — Electricity (Public Utility)",
+          "source_name": "Puducherry District - Electricity (Public Utility)",
           "retrieved_date": "2026-07-15",
           "note": "Office at No. 137, NSC Bose Salai, Puducherry - 605 001."
         }
@@ -4596,11 +4596,11 @@
         {
           "kind": "url",
           "topic": "grievance",
-          "label": "Rajasthan Sampark — online grievance portal",
+          "label": "Rajasthan Sampark - online grievance portal",
           "value": "https://sampark.rajasthan.gov.in/",
           "scope": "state",
           "source_url": "https://udh.rajasthan.gov.in/content/raj/udh/udh-department/en/grievance-redressal--cm-helpline.html",
-          "source_name": "Urban Development & Housing Dept, Govt of Rajasthan — Grievance Redressal / CM Helpline",
+          "source_name": "Urban Development & Housing Dept, Govt of Rajasthan - Grievance Redressal / CM Helpline",
           "retrieved_date": "2026-07-15",
           "note": "State online public grievance portal (lodge/track complaints). Page title confirmed as 'Rajasthan Sampark | 181'; URL also published on the UDH Department's official grievance redressal page."
         },
@@ -4611,25 +4611,25 @@
           "value": "100",
           "scope": "state",
           "source_url": "https://home.rajasthan.gov.in/content/homeportal/en/homedepartment/contact-us/Helpline.html",
-          "source_name": "Home Department, Government of Rajasthan — Help Line Numbers",
+          "source_name": "Home Department, Government of Rajasthan - Help Line Numbers",
           "retrieved_date": "2026-07-15",
           "note": "State police control room number published by the Home Department (the department that administers Rajasthan Police)."
         },
         {
           "kind": "url",
           "topic": "police",
-          "label": "Rajasthan Police — official website / citizen portal",
+          "label": "Rajasthan Police - official website / citizen portal",
           "value": "https://police.rajasthan.gov.in/",
           "scope": "state",
           "source_url": "https://police.rajasthan.gov.in/",
-          "source_name": "Rajasthan Police — Official Website",
+          "source_name": "Rajasthan Police - Official Website",
           "retrieved_date": "2026-07-15",
           "note": "Official Rajasthan Police site; citizen services (FIR status, complaints, RajCop) are reached from here. Base URL cited because the site is a single-page app whose sub-routes cannot be independently verified."
         },
         {
           "kind": "url",
           "topic": "general",
-          "label": "Government of Rajasthan — State Portal",
+          "label": "Government of Rajasthan - State Portal",
           "value": "https://rajasthan.gov.in/",
           "scope": "state",
           "source_url": "https://rajasthan.gov.in/",
@@ -4644,7 +4644,7 @@
           "value": "https://igod.gov.in/sg/RJ/E042/organizations",
           "scope": "state",
           "source_url": "https://igod.gov.in/sg/RJ/E042/organizations",
-          "source_name": "Integrated Government Online Directory (IGOD) — Rajasthan: Districts",
+          "source_name": "Integrated Government Online Directory (IGOD) - Rajasthan: Districts",
           "retrieved_date": "2026-07-15",
           "note": "Official NIC-run Integrated Government Online Directory listing every Rajasthan district with a link to that district's own site (e.g. ajmer.rajasthan.gov.in, alwar.rajasthan.gov.in, barmer.rajasthan.gov.in). Cited instead of the state portal because rajasthan.gov.in is a JS app whose district page could not be verified."
         },
@@ -4655,14 +4655,14 @@
           "value": "1090",
           "scope": "state",
           "source_url": "https://home.rajasthan.gov.in/content/homeportal/en/homedepartment/contact-us/Helpline.html",
-          "source_name": "Home Department, Government of Rajasthan — Help Line Numbers",
+          "source_name": "Home Department, Government of Rajasthan - Help Line Numbers",
           "retrieved_date": "2026-07-15",
           "note": "Rajasthan-specific women and senior citizens helpline published in the Home Department's official helpline table."
         },
         {
           "kind": "url",
           "topic": "women",
-          "label": "Rajasthan State Commission for Women — online complaints",
+          "label": "Rajasthan State Commission for Women - online complaints",
           "value": "https://rscw.rajasthan.gov.in/OnlineComplaints.aspx?menu_id=10035",
           "scope": "state",
           "source_url": "https://rscw.rajasthan.gov.in/OnlineComplaints.aspx?menu_id=10035",
@@ -4677,7 +4677,7 @@
           "value": "1912",
           "scope": "state",
           "source_url": "https://jansoochna.rajasthan.gov.in/Images/ClickablePdf/202009091100118854.pdf",
-          "source_name": "Jan Soochna Portal, Govt of Rajasthan — AVVNL Modes of Complaint Registration",
+          "source_name": "Jan Soochna Portal, Govt of Rajasthan - AVVNL Modes of Complaint Registration",
           "retrieved_date": "2026-07-15",
           "note": "Toll-free electricity complaint number published on the Rajasthan Jan Soochna portal in AVVNL's 'Modes of Complaint Registration'. Verified from the official PDF text. Listed there alongside 18001806565."
         },
@@ -4688,9 +4688,9 @@
           "value": "18001806565",
           "scope": "state",
           "source_url": "https://jansoochna.rajasthan.gov.in/Images/ClickablePdf/202009091100118854.pdf",
-          "source_name": "Jan Soochna Portal, Govt of Rajasthan — AVVNL Modes of Complaint Registration",
+          "source_name": "Jan Soochna Portal, Govt of Rajasthan - AVVNL Modes of Complaint Registration",
           "retrieved_date": "2026-07-15",
-          "note": "AVVNL-specific toll-free complaint number. Applies to the Ajmer Vidyut Vitran Nigam area, not statewide — Jaipur (JVVNL) and Jodhpur (JdVVNL) discoms have their own numbers that could not be verified from a fetchable official page."
+          "note": "AVVNL-specific toll-free complaint number. Applies to the Ajmer Vidyut Vitran Nigam area, not statewide - Jaipur (JVVNL) and Jodhpur (JdVVNL) discoms have their own numbers that could not be verified from a fetchable official page."
         },
         {
           "kind": "phone",
@@ -4699,7 +4699,7 @@
           "value": "1064",
           "scope": "state",
           "source_url": "https://home.rajasthan.gov.in/content/homeportal/en/homedepartment/contact-us/Helpline.html",
-          "source_name": "Home Department, Government of Rajasthan — Help Line Numbers",
+          "source_name": "Home Department, Government of Rajasthan - Help Line Numbers",
           "retrieved_date": "2026-07-15",
           "note": "Rajasthan Anti-Corruption Bureau helpline published in the Home Department's official helpline table."
         },
@@ -4710,7 +4710,7 @@
           "value": "1095",
           "scope": "state",
           "source_url": "https://home.rajasthan.gov.in/content/homeportal/en/homedepartment/contact-us/Helpline.html",
-          "source_name": "Home Department, Government of Rajasthan — Help Line Numbers",
+          "source_name": "Home Department, Government of Rajasthan - Help Line Numbers",
           "retrieved_date": "2026-07-15",
           "note": "Traffic police helpline published in the Home Department's official helpline table."
         },
@@ -4721,7 +4721,7 @@
           "value": "108",
           "scope": "state",
           "source_url": "https://home.rajasthan.gov.in/content/homeportal/en/homedepartment/contact-us/Helpline.html",
-          "source_name": "Home Department, Government of Rajasthan — Help Line Numbers",
+          "source_name": "Home Department, Government of Rajasthan - Help Line Numbers",
           "retrieved_date": "2026-07-15",
           "note": "Published by the Rajasthan Home Department as 'Emergency Services' in its official helpline table."
         },
@@ -4732,7 +4732,7 @@
           "value": "18001806025",
           "scope": "state",
           "source_url": "https://home.rajasthan.gov.in/content/homeportal/en/homedepartment/contact-us/Helpline.html",
-          "source_name": "Home Department, Government of Rajasthan — Help Line Numbers",
+          "source_name": "Home Department, Government of Rajasthan - Help Line Numbers",
           "retrieved_date": "2026-07-15",
           "note": "Rajasthan SC/ST helpline. The Home Department page lists three numbers for this service: 18001806025 / 18002021989 / 14566."
         }
@@ -4745,7 +4745,7 @@
         {
           "kind": "url",
           "topic": "general",
-          "label": "Government of Sikkim — Official State Portal",
+          "label": "Government of Sikkim - Official State Portal",
           "value": "https://www.sikkim.gov.in/",
           "scope": "state",
           "source_url": "https://www.sikkim.gov.in/",
@@ -4756,7 +4756,7 @@
         {
           "kind": "url",
           "topic": "general",
-          "label": "Sikkim District Portal — links to all 6 district websites",
+          "label": "Sikkim District Portal - links to all 6 district websites",
           "value": "https://sikkim.s3waas.gov.in/",
           "scope": "state",
           "source_url": "https://sikkim.s3waas.gov.in/",
@@ -4771,14 +4771,14 @@
           "value": "03592202892",
           "scope": "state",
           "source_url": "https://police.sikkim.gov.in/visitor/citizencharter",
-          "source_name": "Sikkim Police — Citizen Charter (Police Department, Government of Sikkim)",
+          "source_name": "Sikkim Police - Citizen Charter (Police Department, Government of Sikkim)",
           "retrieved_date": "2026-07-15",
           "note": "Alternate line: 03592201566. Charter states the Control Room is on the ground floor of PHQ and is the round-the-clock police response centre. Email: pcr@sikkimpolice.nic.in"
         },
         {
           "kind": "url",
           "topic": "police",
-          "label": "Sikkim Police — Official Department & Citizen Services Portal",
+          "label": "Sikkim Police - Official Department & Citizen Services Portal",
           "value": "https://police.sikkim.gov.in/",
           "scope": "state",
           "source_url": "https://police.sikkim.gov.in/visitor/citizencharter",
@@ -4793,7 +4793,7 @@
           "value": "03592202748",
           "scope": "state",
           "source_url": "https://police.sikkim.gov.in/visitor/citizencharter",
-          "source_name": "Sikkim Police — Citizen Charter (Police Department, Government of Sikkim)",
+          "source_name": "Sikkim Police - Citizen Charter (Police Department, Government of Sikkim)",
           "retrieved_date": "2026-07-15",
           "note": "Alternate line: 03592203732. Sikkim Fire & Emergency Services runs 8 fire stations covering all districts."
         },
@@ -4804,36 +4804,36 @@
           "value": "18003453225",
           "scope": "state",
           "source_url": "https://police.sikkim.gov.in/visitor/suicideprevention",
-          "source_name": "Sikkim Police — Suicide Prevention Helpline (Police Department, Government of Sikkim)",
+          "source_name": "Sikkim Police - Suicide Prevention Helpline (Police Department, Government of Sikkim)",
           "retrieved_date": "2026-07-15",
           "note": "State-specific helpline published by Sikkim Police. Landline alternate: 03592202111."
         },
         {
           "kind": "phone",
           "topic": "electricity",
-          "label": "Sikkim Power Department — Electricity Complaints (toll-free)",
+          "label": "Sikkim Power Department - Electricity Complaints (toll-free)",
           "value": "1912",
           "scope": "state",
           "source_url": "https://power.sikkim.gov.in/visitor/consumercor/3",
-          "source_name": "Power Department, Government of Sikkim — Consumer Corner: Query & Complaints",
+          "source_name": "Power Department, Government of Sikkim - Consumer Corner: Query & Complaints",
           "retrieved_date": "2026-07-15",
           "note": "Toll-free number published by the Power Department, Government of Sikkim (the state's distribution utility)."
         },
         {
           "kind": "phone",
           "topic": "electricity",
-          "label": "Sikkim Power Department — Power Supply Complaint Helpline (Gangtok & surrounding areas)",
+          "label": "Sikkim Power Department - Power Supply Complaint Helpline (Gangtok & surrounding areas)",
           "value": "8597123322",
           "scope": "state",
           "source_url": "https://power.sikkim.gov.in/visitor/consumercor/3",
-          "source_name": "Power Department, Government of Sikkim — Consumer Corner: Query & Complaints",
+          "source_name": "Power Department, Government of Sikkim - Consumer Corner: Query & Complaints",
           "retrieved_date": "2026-07-15",
           "note": "One of four published helpline lines: 8597123322, 8597125222, 8597138333, 8597134333. Department states complaint timing is 8am-6pm all days including Sundays and holidays, to be extended to 24x7."
         },
         {
           "kind": "url",
           "topic": "electricity",
-          "label": "Sikkim Power Department — Query & Complaints (Consumer Corner)",
+          "label": "Sikkim Power Department - Query & Complaints (Consumer Corner)",
           "value": "https://power.sikkim.gov.in/visitor/consumercor/3",
           "scope": "state",
           "source_url": "https://power.sikkim.gov.in/visitor/consumercor/3",
@@ -4844,13 +4844,13 @@
         {
           "kind": "url",
           "topic": "grievance",
-          "label": "Grievance Redressal System — Rural Development Department, Sikkim",
+          "label": "Grievance Redressal System - Rural Development Department, Sikkim",
           "value": "https://grievancerdd.sikkim.gov.in/",
           "scope": "state",
           "source_url": "https://grievancerdd.sikkim.gov.in/",
-          "source_name": "Grievance Redressal System — Rural Development Dept & Dept of IT, Government of Sikkim",
+          "source_name": "Grievance Redressal System - Rural Development Dept & Dept of IT, Government of Sikkim",
           "retrieved_date": "2026-07-15",
-          "note": "IMPORTANT SCOPE LIMIT: this covers the Rural Development Department (incl. Jal Jeevan Mission) only — it is NOT a state-wide grievance portal. Sikkim publishes no general public grievance portal; this was the only grievance service listed among the 27 services on the state SSO portal (sso.sikkim.gov.in/services). Accepts guest submissions or login via Sikkim SSO; available 24x7 with unique tracking numbers."
+          "note": "IMPORTANT SCOPE LIMIT: this covers the Rural Development Department (incl. Jal Jeevan Mission) only - it is NOT a state-wide grievance portal. Sikkim publishes no general public grievance portal; this was the only grievance service listed among the 27 services on the state SSO portal (sso.sikkim.gov.in/services). Accepts guest submissions or login via Sikkim SSO; available 24x7 with unique tracking numbers."
         }
       ]
     },
@@ -5552,7 +5552,7 @@
         {
           "kind": "url",
           "topic": "grievance",
-          "label": "Jansunwai-Samadhan — UP online public grievance portal",
+          "label": "Jansunwai-Samadhan - UP online public grievance portal",
           "value": "https://jansunwai.up.nic.in/",
           "scope": "state",
           "source_url": "https://jansunwai.up.nic.in/",
@@ -5611,7 +5611,7 @@
           "value": "https://up.gov.in/en/page/districts",
           "scope": "state",
           "source_url": "https://up.gov.in/en/page/districts",
-          "source_name": "Districts & Divisions — Official State Portal, Government of Uttar Pradesh",
+          "source_name": "Districts & Divisions - Official State Portal, Government of Uttar Pradesh",
           "retrieved_date": "2026-07-15",
           "note": "Official district directory on the state portal: ~75 districts, each linking to its own NIC site (e.g. https://agra.nic.in), plus a table of the 18 administrative divisions and their constituent districts."
         },
@@ -5622,7 +5622,7 @@
           "value": "1912",
           "scope": "state",
           "source_url": "https://maharajganj.nic.in/public-utility-category/electricity/",
-          "source_name": "District Maharajganj, Government of Uttar Pradesh — Electricity",
+          "source_name": "District Maharajganj, Government of Uttar Pradesh - Electricity",
           "retrieved_date": "2026-07-15",
           "note": "Published as \"Toll Free - 1912\" for UPPCL power stations on the Govt of UP Maharajganj district NIC site; corroborated as the DVVNL \"Complaint No\" on the Lalitpur district NIC site and as the KESCO 24-hour helpline on the Kanpur Nagar district NIC site. No UPPCL consumer-complaint URL is cited: uppclonline.com failed TLS handshake and consumer.uppcl.org renders no verifiable content, so it is omitted rather than guessed."
         }
@@ -5657,7 +5657,7 @@
         {
           "kind": "url",
           "topic": "police",
-          "label": "West Bengal Police — official website",
+          "label": "West Bengal Police - official website",
           "value": "https://wbpolice.gov.in/",
           "scope": "state",
           "source_url": "https://wbpolice.gov.in/",
@@ -5668,11 +5668,11 @@
         {
           "kind": "url",
           "topic": "police",
-          "label": "West Bengal Police Citizen Services portal (CCTNS — 'Police Sohaiyota')",
+          "label": "West Bengal Police Citizen Services portal (CCTNS - 'Police Sohaiyota')",
           "value": "https://policesohaiyota.wbpolice.gov.in/",
           "scope": "state",
           "source_url": "https://policesohaiyota.wbpolice.gov.in/",
-          "source_name": "West Bengal Police — Citizen Services (CCTNS)",
+          "source_name": "West Bengal Police - Citizen Services (CCTNS)",
           "retrieved_date": "2026-07-15",
           "note": "The state police citizen-services portal: FIR copy requests, procession permission, C-Form and other citizen services. Linked from wbpolice.gov.in. Verified live 2026-07-15."
         },
@@ -5683,7 +5683,7 @@
           "value": "100",
           "scope": "state",
           "source_url": "https://policesohaiyota.wbpolice.gov.in/",
-          "source_name": "West Bengal Police — Citizen Services (CCTNS)",
+          "source_name": "West Bengal Police - Citizen Services (CCTNS)",
           "retrieved_date": "2026-07-15",
           "note": "Published on the WB Police citizen-services portal explicitly as \"Police Control Room - 100\", and as \"Dial 100\" on the WB Police Emergency Dialling page (https://wbpolice.gov.in/wbp/Common/WBP_Emergency_Dial.aspx). This is the national police short code, but it is what WB Police itself publishes as its control room number. NOTE: the state portal also lists landlines \"West Bengal Police: 033-22144031 / 1946\" and \"Lalbazar Control Room: 033-22143024\", but that page is stamped \"Last updated on: Saturday, 30th April 2022\" and still names the long-dissolved \"West Bengal State Electricity Board\", so I did not treat those landlines as reliable enough to cite."
         },
@@ -5701,11 +5701,11 @@
         {
           "kind": "url",
           "topic": "general",
-          "label": "West Bengal district directory — District & Local Government",
+          "label": "West Bengal district directory - District & Local Government",
           "value": "https://wb.gov.in/government-district-and-localgovt.aspx",
           "scope": "state",
           "source_url": "https://wb.gov.in/government-district-and-localgovt.aspx",
-          "source_name": "Government of West Bengal — District and Local Government",
+          "source_name": "Government of West Bengal - District and Local Government",
           "retrieved_date": "2026-07-15",
           "note": "THE district directory you asked for. Live (HTTP 200) and links out to all 23 district websites on .gov.in/.nic.in (27 official outbound links total), e.g. north24parganas.gov.in, s24pgs.gov.in, bankura.gov.in, birbhum.gov.in, coochbehar.gov.in, ddinajpur.nic.in, darjeeling.gov.in, hooghly.nic.in, howrah.gov.in, jalpaiguri.gov.in, jhargram.gov.in, kalimpong.gov.in, malda.gov.in, murshidabad.gov.in, nadia.gov.in, paschimbardhaman.gov.in, purbabardhaman.nic.in, paschimmedinipur.gov.in, purbamedinipur.gov.in, purulia.gov.in, uttardinajpur.gov.in, alipurduar.gov.in; Kolkata points to the KMC portal. Caveat: page is stamped \"Last updated on: Thursday, 9th Sept 2021\", though the district links themselves still resolve. An alternative official listing is https://wb.gov.in/contact-directories.aspx."
         },
@@ -5716,9 +5716,9 @@
           "value": "19121",
           "scope": "state",
           "source_url": "https://www.wbsedcl.in/irj/go/km/docs/internet/new_website/contactUs.html",
-          "source_name": "West Bengal State Electricity Distribution Company Ltd (WBSEDCL) — Contact Us",
+          "source_name": "West Bengal State Electricity Distribution Company Ltd (WBSEDCL) - Contact Us",
           "retrieved_date": "2026-07-15",
-          "note": "Published on WBSEDCL's official Contact Us page under \"Helpline Number (24X7)\", and on the WBSEDCL homepage as \"Helpline No.: 19121\" with a tel: link. WBSEDCL is the state DISCOM covering West Bengal outside the CESC (greater Kolkata) licence area. Verified 2026-07-15. DELIBERATELY OMITTED: the \"West Bengal State Electricity Board: 033-23591915\" number on the state portal's emergency page — WBSEB was dissolved in 2007 and that page was last updated in 2022, so I judged it unsafe to publish."
+          "note": "Published on WBSEDCL's official Contact Us page under \"Helpline Number (24X7)\", and on the WBSEDCL homepage as \"Helpline No.: 19121\" with a tel: link. WBSEDCL is the state DISCOM covering West Bengal outside the CESC (greater Kolkata) licence area. Verified 2026-07-15. DELIBERATELY OMITTED: the \"West Bengal State Electricity Board: 033-23591915\" number on the state portal's emergency page - WBSEB was dissolved in 2007 and that page was last updated in 2022, so I judged it unsafe to publish."
         },
         {
           "kind": "url",
@@ -5727,7 +5727,7 @@
           "value": "https://www.wbsedcl.in/irj/go/km/docs/internet/new_website/Grievance_Redressal.html",
           "scope": "state",
           "source_url": "https://www.wbsedcl.in/irj/go/km/docs/internet/new_website/Grievance_Redressal.html",
-          "source_name": "WBSEDCL — Grievance Redressal",
+          "source_name": "WBSEDCL - Grievance Redressal",
           "retrieved_date": "2026-07-15",
           "note": "Official WBSEDCL grievance page (Lodge Grievance, contact details, redressal timelines). It links to the no-login complaint form at https://portal.wbsedcl.in/irj/go/km/docs/bills/IFRAME/ComplaintRegistrationWithoutLogin.html, which I also confirmed returns HTTP 200. Verified 2026-07-15."
         }

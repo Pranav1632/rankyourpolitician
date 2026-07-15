@@ -1,6 +1,6 @@
 /**
  * Data-manager step: add the MLAs (state Legislative Assembly members) for every
- * state/UT — the ~4,100 elected representatives — from each assembly's current
+ * state/UT - the ~4,100 elected representatives - from each assembly's current
  * Wikipedia members roster (page titles discovered by the ryp-assembly-pages
  * workflow). Identity-only (name, party, constituency); bio/photo come from the
  * shared Wikidata enrichment. Assembly constituencies (ACs) are added to
@@ -26,7 +26,7 @@ const CODE2STATE: Record<string, string> = {
   OD: 'Odisha', PB: 'Punjab', RJ: 'Rajasthan', SK: 'Sikkim', TN: 'Tamil Nadu', TG: 'Telangana', TR: 'Tripura',
   UP: 'Uttar Pradesh', UK: 'Uttarakhand', WB: 'West Bengal', DL: 'Delhi', PY: 'Puducherry', JK: 'Jammu & Kashmir',
 };
-// Known assembly sizes — a structural check against silent parse drift.
+// Known assembly sizes - a structural check against silent parse drift.
 const EXPECTED: Record<string, number> = {
   AP: 175, AR: 60, AS: 126, BR: 243, CG: 90, GA: 40, GJ: 182, HR: 90, HP: 68, JH: 81, KA: 224, KL: 140, MP: 230,
   MH: 288, MN: 60, ML: 60, MZ: 40, NL: 60, OD: 147, PB: 117, RJ: 200, SK: 32, TN: 234, TG: 119, TR: 60, UP: 403,
@@ -39,7 +39,7 @@ const clean = (s: string) => stripRefs(s)
   .replace(/\[\[[^\]|]*\|([^\]]+)\]\]/g, '$1').replace(/\[\[([^\]]+)\]\]/g, '$1')
   .replace(/\{\{[^}]*\}\}/g, '').replace(/'''?/g, '').replace(/<br\s*\/?>/gi, ' ').replace(/<[^>]+>/g, '')
   .replace(/\s+/g, ' ').trim();
-const normParty = (p: string) => clean(p).replace(/\s*\((?:19|20)\d\d[–-](?:present|\d\d\d\d)\)\s*$/i, '').trim();
+const normParty = (p: string) => clean(p).replace(/\s*\((?:19|20)\d\d[--](?:present|\d\d\d\d)\)\s*$/i, '').trim();
 const cellsOf = (row: string) => ('\n' + row).split(/\n\s*[|!]\s?/).map((c) => c.trim()).filter((c) => c.length);
 const EXCLUDE = /(?:Assembly|Vidhan[a]? Sabha|Legislative) constituency|Lok Sabha| district\b|Party|File:|List of|Chief Minister|Speaker|Deputy Speaker|Governor|\.svg|\.png|\.jpg/i;
 // Constituency wikilink in any spelling used across states.
@@ -128,7 +128,7 @@ function parseMembers(wt: string): MLA[] {
     if (!name || name.length < 2 || /^vacant$/i.test(name)) continue;
     out.push({ cons, name, title, party: curParty || 'Independent' });
   }
-  // Dedup by constituency (keep first) — guards against a stray positions-table row.
+  // Dedup by constituency (keep first) - guards against a stray positions-table row.
   const seen = new Set<string>();
   return out.filter((m) => { const k = slug(m.cons); if (seen.has(k)) return false; seen.add(k); return true; });
 }
@@ -195,7 +195,7 @@ async function main() {
         is_minister: false,
         neutral_summary: `${m.name} is the Member of the Legislative Assembly (MLA) for the ${m.cons} constituency in ${state}. Current party affiliation: ${m.party}.`,
         metrics: {}, facts: [], active: true, generated: true,
-        identity_source: { url: `https://en.wikipedia.org/wiki/${encodeURIComponent(rosterPageTitle.replace(/ /g, '_'))}`, name: `Wikipedia — ${rosterPageTitle} (ECI results)`, retrieved_date: TODAY },
+        identity_source: { url: `https://en.wikipedia.org/wiki/${encodeURIComponent(rosterPageTitle.replace(/ /g, '_'))}`, name: `Wikipedia - ${rosterPageTitle} (ECI results)`, retrieved_date: TODAY },
         ...(qid ? { wikidata_qid: qid } : {}),
       });
       totalAdded++;

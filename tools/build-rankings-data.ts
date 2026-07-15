@@ -1,8 +1,8 @@
 // Generates the static national-rankings payload (public/rankings.json).
 //
 // Why: the home page used to serialize EVERY politician (~5,400 entries) into
-// its React Server Component payload just to show a leaderboard — multi-MB
-// pages and 3–4s route transitions. Instead the full list is precomputed here
+// its React Server Component payload just to show a leaderboard - multi-MB
+// pages and 3-4s route transitions. Instead the full list is precomputed here
 // once per build; the /rankings page fetches it lazily (one cached request,
 // ~130KB gzipped) and paginates client-side. Pages only embed small slices.
 //

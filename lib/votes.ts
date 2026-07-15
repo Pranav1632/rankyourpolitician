@@ -78,7 +78,7 @@ export async function getAggregate(politicianId: string): Promise<VoteAggregate 
     const snap = await db.collection('vote_aggregates').doc(politicianId).get();
     return snap.exists ? (snap.data() as VoteAggregate) : undefined;
   } catch (err) {
-    // e.g. free-tier read quota exhausted — degrade to "no ratings" rather than
+    // e.g. free-tier read quota exhausted - degrade to "no ratings" rather than
     // failing the page render.
     console.error('[votes] vote_aggregates read failed:', err);
     return undefined;

@@ -12,7 +12,7 @@ export interface EscalationChainLabels {
 
 /**
  * Presentational (no i18n hook) so it works in both the client Finder and the
- * server OfficialProfile — the caller passes translated `labels`. Renders the
+ * server OfficialProfile - the caller passes translated `labels`. Renders the
  * chain of appointed officials as a top-to-bottom escalation ladder: the
  * citizen-facing office first, each higher authority below.
  */

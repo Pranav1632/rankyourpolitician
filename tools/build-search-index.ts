@@ -1,7 +1,7 @@
 // Generates the static client-side search index (public/search-index.json).
 //
 // Why: search used to hit a serverless route that imported the full 7.7MB seed
-// and recomputed every ranking on each cold start — seconds of latency per
+// and recomputed every ranking on each cold start - seconds of latency per
 // keystroke. Instead we precompute a compact index at build time; the browser
 // fetches it once (~150KB gzipped) and every search after that is instant and
 // free (no server, no Firestore reads).
@@ -68,11 +68,11 @@ function build(): SearchIndexFile {
       p.stateCode,
       ROLE_BY_HOUSE[p.house] || p.house,
       p.name_hi,
-      p.photo_url, // [7] photo — so search results show faces, not just an icon
+      p.photo_url, // [7] photo - so search results show faces, not just an icon
     ]);
   }
 
-  // Union ministers — upgrade the role label for linked MPs, add unlinked ones.
+  // Union ministers - upgrade the role label for linked MPs, add unlinked ones.
   for (const m of central) {
     const id = m.politicianId || m.id;
     const role = m.rank === 'PM' ? 'Prime Minister' : 'Union Minister';
@@ -85,7 +85,7 @@ function build(): SearchIndexFile {
     }
   }
 
-  // Constitutional offices — upgrade the role label for linked MPs (Speaker,
+  // Constitutional offices - upgrade the role label for linked MPs (Speaker,
   // Leaders of the Opposition). Unlinked holders (President/VP) have no
   // profile page yet, so they are shown on /india and /hierarchy instead.
   for (const o of seedConstitutional as unknown as ConstitutionalOffice[]) {
@@ -94,7 +94,7 @@ function build(): SearchIndexFile {
     if (existing) existing[5] = `${o.title} · ${existing[5]}`;
   }
 
-  // State CMs / ministers — same pattern.
+  // State CMs / ministers - same pattern.
   for (const g of stateGov) {
     for (const sm of g.ministers) {
       const id = sm.politicianId || sm.id;
@@ -122,7 +122,7 @@ function build(): SearchIndexFile {
     }
   }
 
-  // Areas (constituencies) — dedupe by id.
+  // Areas (constituencies) - dedupe by id.
   const seenAreas = new Set<string>();
   const areas: [string, string, string, string][] = [];
   const constituencies = seedConstituencies as unknown as { id: string; name: string; stateCode: string; type: string }[];

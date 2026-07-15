@@ -1,12 +1,12 @@
 /**
  * Data-manager step: small, source-agnostic DATA-QUALITY normalisations applied
- * after enrichment. Idempotent — safe to run repeatedly.
+ * after enrichment. Idempotent - safe to run repeatedly.
  *
  *  1. Party field: strip a leaked role prefix ("(National) (Working) President /
  *     Chairman / Leader of <Party>") down to the actual party name, so the party
  *     chip reads "Telugu Desam Party", not a job title.
  *  2. Age fact: drop a birth year that implies an impossible age for a sitting
- *     legislator (under 21 — the constitutional floor is 25 — or over 105). Such
+ *     legislator (under 21 - the constitutional floor is 25 - or over 105). Such
  *     a value is a source error; we remove it rather than display it.
  *
  * Usage:  npm run dm -- normalize-fields

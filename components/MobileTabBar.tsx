@@ -1,5 +1,5 @@
 'use client';
-// iOS-style bottom tab bar — the primary navigation on phones, where most of
+// iOS-style bottom tab bar - the primary navigation on phones, where most of
 // India browses. Hidden on ≥md screens (the header nav takes over there).
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';

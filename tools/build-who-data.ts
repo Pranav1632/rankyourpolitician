@@ -1,6 +1,6 @@
 // Generates the static "real people" payloads for the responsibility finder:
-//   public/who/index.json  — [[stateCode, stateName], …]
-//   public/who/{ST}.json   — WhoStateFile: CM + ministers (with portfolios),
+//   public/who/index.json  - [[stateCode, stateName], …]
+//   public/who/{ST}.json   - WhoStateFile: CM + ministers (with portfolios),
 //                            and per-district DM/SP + MLAs + MPs
 // Same free-tier philosophy as the search index: built from the committed seed
 // at `prebuild`, served from the CDN, fetched once per state by the client.
@@ -27,7 +27,7 @@ const officials = seedDistrictOfficials as unknown as OfficeSeat[];
 const readJson = <T,>(rel: string, fallback: T): T => {
   const p = join(process.cwd(), rel);
   if (!existsSync(p)) {
-    console.warn(`  (no ${rel} — building without it; run the data-manager step to add it)`);
+    console.warn(`  (no ${rel} - building without it; run the data-manager step to add it)`);
     return fallback;
   }
   return JSON.parse(readFileSync(p, 'utf8')) as T;
@@ -40,7 +40,7 @@ const channelsByState: Record<string, ContactChannel[]> = {};
 for (const s of contacts.states ?? []) channelsByState[s.stateCode] = s.channels ?? [];
 let portalsUsed = 0;
 
-// Minister records carry no images of their own — take the photo from the
+// Minister records carry no images of their own - take the photo from the
 // linked politician profile so CM/minister cards show faces, not initials.
 const photoById = new Map(politicians.filter((p) => p.photo_url).map((p) => [p.id, p.photo_url!]));
 const ministerPhoto = (m: { politicianId?: string; photo_url?: string }): string | undefined =>

@@ -66,9 +66,9 @@ export function rankingDocId(level: RankingLevel, geo: string): string {
 // ---- In-process TTL memoisation ---------------------------------------------
 // Every Firestore collection the site reads at runtime goes through one of
 // these memos, so the worst case is one load per collection per TTL per warm
-// instance — NOT per render. Without this, a crawler sweeping the ~6k person
+// instance - NOT per render. Without this, a crawler sweeping the ~6k person
 // pages cost ~200 reads per page (uncached central/state government scans,
-// doubled by generateMetadata) — millions of billed reads with zero real users.
+// doubled by generateMetadata) - millions of billed reads with zero real users.
 // The PROMISE is cached, not the resolved value, so a burst of concurrent
 // renders on a cold instance shares a single load instead of stampeding the
 // database. Failed loads are evicted so the next call retries.
@@ -93,7 +93,7 @@ const STATIC_TTL_MS = 30 * 60_000;
 const VOTES_TTL_MS = 5 * 60_000;
 
 /**
- * Live vote aggregates — the only frequently-refreshed Firestore read.
+ * Live vote aggregates - the only frequently-refreshed Firestore read.
  * Politician/constituency data is static between deploys and is served from the
  * committed seed. Returns empty during `next build` (getDb() is null) or on any
  * read error, degrading gracefully to "no ratings".
@@ -162,11 +162,11 @@ function buildIndex(ds: Dataset): Index {
   };
 }
 
-// Short memo so a burst of requests shares one computation (the Firestore cost
-// underneath is amortised by loadVoteAggregates' own TTL — rebuilding the index
-// between aggregate refreshes is pure CPU, zero reads). ISR caches the rendered
-// page on top of this; vote updates surface within VOTES_TTL_MS.
-const getIndexCached = ttlCache(60_000, async () => buildIndex(await loadDataset()));
+// Memo aligned with the vote-aggregates TTL: the index's only time-varying
+// input is the aggregates map, so rebuilding more often than it refreshes is
+// pure wasted CPU (percentiles + rankings over ~6k politicians). ISR caches
+// the rendered page on top of this; vote updates surface within VOTES_TTL_MS.
+const getIndexCached = ttlCache(VOTES_TTL_MS, async () => buildIndex(await loadDataset()));
 
 export async function getIndex(): Promise<Index> {
   return getIndexCached();
@@ -269,14 +269,14 @@ export async function getPerson(
   if (p) {
     const roles = central.filter((m) => m.politicianId === id);
     // A linked Council-of-Ministers role (CM / Dy CM / state minister) belongs on
-    // the real profile too — otherwise the person is "just an MLA" here and their
+    // the real profile too - otherwise the person is "just an MLA" here and their
     // executive office only lives on a disconnected stub.
     const stateRoles = (await allStateMinisters()).filter((sm) => sm.politicianId === id);
     const allRoles = [...roles, ...stateRoles];
     const portfolios = [...new Set(allRoles.flatMap((r) => r.portfolios))];
     const extraSources = allRoles.filter((r) => r.source_url).map((r) => [r.source_url, r.source_name] as [string, string]);
     // Constitutional/parliamentary office (Speaker, Leader of the Opposition…)
-    // — lead with it so e.g. the LoP isn't shown as "just an MP".
+    // - lead with it so e.g. the LoP isn't shown as "just an MP".
     const constRoles = (seedConstitutional as unknown as ConstitutionalOffice[]).filter((o) => o.politicianId === id);
     if (constRoles.length) extraSources.push(...constRoles.map((o) => [o.source_url, o.source_name] as [string, string]));
     const sr = stateRoles[0];
@@ -395,7 +395,7 @@ export async function getPerson(
     };
   }
 
-  // Appointed official (incumbent of an office seat) — INFO-ONLY person.
+  // Appointed official (incumbent of an office seat) - INFO-ONLY person.
   const seats = await allOfficeSeats();
   const seat = seats.find((s) => s.incumbent && slugify(s.incumbent.name) === id);
   if (seat && seat.incumbent) {
@@ -498,7 +498,7 @@ export async function getPersonSentiment(id: string): Promise<SentimentScore> {
   return idx.sentiment.get(id) ?? computeSentimentScore(id, undefined);
 }
 
-/** Fill a minister record's missing photo from its linked politician profile —
+/** Fill a minister record's missing photo from its linked politician profile -
  *  minister rows come from council lists (no images), but the politician record
  *  usually has a Commons photo. Without this, the PM/CM cards show initials
  *  even when we have the person's photo. */
@@ -512,7 +512,7 @@ async function joinMinisterPhotos<T extends { politicianId?: string; photo_url?:
 }
 
 /** Constitutional offices (President, VP, LS Speaker, Leaders of the
- *  Opposition) — committed seed only, photos joined from linked profiles. */
+ *  Opposition) - committed seed only, photos joined from linked profiles. */
 export async function getConstitutionalOffices(): Promise<ConstitutionalOffice[]> {
   return joinMinisterPhotos(seedConstitutional as unknown as ConstitutionalOffice[]);
 }
@@ -532,7 +532,7 @@ const loadCentralGovernment = ttlCache(STATIC_TTL_MS, async (): Promise<Minister
 
 export async function getCentralGovernment(): Promise<Minister[]> {
   // Photos are joined OUTSIDE the memo: the join depends on the politician
-  // index, which has its own cache — and it's a cheap in-memory map lookup.
+  // index, which has its own cache - and it's a cheap in-memory map lookup.
   return joinMinisterPhotos(await loadCentralGovernment());
 }
 
@@ -568,7 +568,7 @@ async function allStateMinisters(): Promise<StateMinister[]> {
 
 /**
  * The district's own official website (proven live when the seed was generated).
- * This is what the ladder offers when we cannot name the DM/SP — the district's
+ * This is what the ladder offers when we cannot name the DM/SP - the district's
  * Who's Who page names whoever currently holds the post, so it stays right as
  * officers transfer. See tools/data-manager/discover-district-portals.ts.
  */
@@ -591,7 +591,7 @@ export async function getContactChannels(stateCode: string): Promise<ContactChan
  *  incumbent merged in where we have a cited one. Always returns the 2 core
  *  seats (Collector/DM + SP) so the "who to approach" is shown even without a name. */
 export async function getDistrictOfficials(stateCode: string, district: string): Promise<OfficeSeat[]> {
-  // Filter the TTL-cached full collection in memory — a per-district Firestore
+  // Filter the TTL-cached full collection in memory - a per-district Firestore
   // query per district-page render (~780 districts on ISR) adds up fast.
   const seeded = await allOfficeSeats();
   const core: OfficeType[] = ['collector_dm', 'sp_district'];
@@ -644,7 +644,7 @@ export interface StateView {
   state: string;
   total: number;
   byHouse: { house: House; count: number }[];
-  /** Vidhan Sabha composition (party seat counts) — factual, neutral display. */
+  /** Vidhan Sabha composition (party seat counts) - factual, neutral display. */
   assemblyComposition: { segments: { label: string; count: number }[]; total: number } | null;
   /** district → number of representatives linked to it (for the map choropleth). */
   districtCounts: { district: string; mps: number; mlas: number }[];
@@ -773,7 +773,7 @@ export async function getNationalStats(): Promise<NationalStats> {
     rajyaSabha: by('Rajya Sabha').length,
     mlas: by('Vidhan Sabha').length,
     mlcs: by('Vidhan Parishad').length,
-    // "NOM" groups the President's nominees to the Rajya Sabha — not a geography.
+    // "NOM" groups the President's nominees to the Rajya Sabha - not a geography.
     states: idx.states.filter((s) => s.stateCode !== 'NOM').length,
     districts: districtSet.size,
     constituencies: idx.constituencies.length,

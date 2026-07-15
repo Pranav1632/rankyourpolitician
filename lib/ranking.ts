@@ -1,4 +1,4 @@
-// Pure ranking math — shared by the site (display) and the data manager
+// Pure ranking math - shared by the site (display) and the data manager
 // (precompute). No I/O here. The two axes are computed INDEPENDENTLY so public
 // sentiment can never move the verified-performance number.
 
@@ -17,7 +17,7 @@ export const FORMULA_VERSION = 'perf-v2-weighted-percentile';
 
 // Bayesian prior for the 1..5 sentiment scale: pull thin samples toward neutral.
 const SENTIMENT_PRIOR_MEAN = 3.0; // neutral
-const SENTIMENT_PRIOR_STRENGTH = 10; // "C" — equivalent number of prior votes
+const SENTIMENT_PRIOR_STRENGTH = 10; // "C" - equivalent number of prior votes
 
 // Metrics that ministers/presiding officers are exempt from by convention
 // (they do not ask questions / debate in the ordinary way). Excluding them
@@ -53,7 +53,7 @@ export function minMetricsRequired(p: Politician): number {
  * only meaningful when enough peers are measured the same way. Without this
  * floor, a metric that only a handful of members happen to carry (because it
  * came from a source that doesn't cover everyone) still lands a weighted slice
- * of their composite — e.g. 5 of 529 MPs once had private_member_bills, so one
+ * of their composite - e.g. 5 of 529 MPs once had private_member_bills, so one
  * of them was shown "top 33%" for a percentile computed against four other
  * people, and it moved their rank against 524 MPs who were never measured on it
  * at all. Sparse data must be shown as a fact, never converted into a standing.
@@ -180,7 +180,7 @@ export function computeSentimentScore(
         (SENTIMENT_PRIOR_STRENGTH + n)
       : null;
 
-  // 'none' means literally no votes — it renders as "No ratings yet", which is a
+  // 'none' means literally no votes - it renders as "No ratings yet", which is a
   // false statement next to a rating. A handful of votes is LOW confidence, not
   // absent confidence, so anything from the first vote up is 'low'.
   let confidence: SentimentScore['confidence'] = 'none';
@@ -246,7 +246,7 @@ export function buildRankings(
   const now = new Date().toISOString();
   const active = politicians.filter((p) => p.active);
   const note =
-    'Weighted percentile within a comparable cohort (same house + tenure): attendance 35%, questions 25%, debates 20%, bills 10%, MPLADS 10% — renormalised over verified metrics. Members below the data floor (2 metrics; 1 for ministers) are shown as “not enough data”, never ranked. See the Methodology page.';
+    'Weighted percentile within a comparable cohort (same house + tenure): attendance 35%, questions 25%, debates 20%, bills 10%, MPLADS 10% - renormalised over verified metrics. Members below the data floor (2 metrics; 1 for ministers) are shown as "not enough data", never ranked. See the Methodology page.';
 
   const rankings: Ranking[] = [];
   const mk = (level: Ranking['level'], geo: string, label: string, ps: Politician[]) => {

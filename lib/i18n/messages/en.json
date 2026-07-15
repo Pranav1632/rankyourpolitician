@@ -50,9 +50,9 @@
   },
   "hierarchyPage": {
     "title": "The org chart of India",
-    "subtitle": "One simple chart of who answers to whom — from you, the voter, down to your local office. Tap any level to explore the real people in it.",
+    "subtitle": "One simple chart of who answers to whom - from you, the voter, down to your local office. Tap any level to explore the real people in it.",
     "youEyebrow": "The top of the chart",
-    "youTitle": "You — the citizen and voter",
+    "youTitle": "You - the citizen and voter",
     "youDesc": "In a democracy the chart starts with you. Every elected person below works for you, and every appointed officer works under someone you elected.",
     "youElect": "You elect",
     "unionEyebrow": "Union (national) level",
@@ -66,7 +66,7 @@
     "presidentAppoints": "Appoints the PM who commands the Lok Sabha's confidence",
     "chipNonPartisan": "Non-partisan office",
     "pmTitle": "Prime Minister & Union Ministers",
-    "pmDesc": "Run the country day to day — defence, railways, highways, taxes, telecom. Each minister heads a national department.",
+    "pmDesc": "Run the country day to day - defence, railways, highways, taxes, telecom. Each minister heads a national department.",
     "chipMinisters": "ministers",
     "statesMirror": "Each state mirrors this structure",
     "stateEyebrow": "State level",
@@ -77,21 +77,21 @@
     "stateRuns": "The state administers through districts",
     "districtEyebrow": "District level",
     "districtTitle": "District Administration",
-    "districtDesc": "The Collector / District Magistrate (DM) and the Superintendent of Police (SP) — appointed officers who deliver services and safety in each district.",
+    "districtDesc": "The Collector / District Magistrate (DM) and the Superintendent of Police (SP) - appointed officers who deliver services and safety in each district.",
     "chipAppointed": "Appointed, not elected",
     "districtDelegates": "Day-to-day work happens locally",
     "localEyebrow": "Local level",
     "localTitle": "Municipality / Panchayat",
-    "localDesc": "Your councillor, sarpanch and ward officers — garbage, drains, local roads, street lights and certificates.",
+    "localDesc": "Your councillor, sarpanch and ward officers - garbage, drains, local roads, street lights and certificates.",
     "chipComingSoon": "Data being added",
-    "judiciaryTitle": "The Judiciary — separate on purpose",
-    "judiciaryDesc": "Courts (Supreme Court → High Courts → district courts) are independent of everyone above. They answer to the Constitution, not to ministers — that is what keeps the chart honest.",
+    "judiciaryTitle": "The Judiciary - separate on purpose",
+    "judiciaryDesc": "Courts (Supreme Court → High Courts → district courts) are independent of everyone above. They answer to the Constitution, not to ministers - that is what keeps the chart honest.",
     "howToTitle": "How to use this chart",
     "howToItems": [
-      "Local problem (garbage, drains, streetlight)? Start at the bottom — your local body or ward office.",
+      "Local problem (garbage, drains, streetlight)? Start at the bottom - your local body or ward office.",
       "State subject (police, government school or hospital, state road)? Your MLA and the state government.",
       "National subject (railways, highways, income tax, passports)? Your MP and the Union ministry.",
-      "Not solved? Move ONE level up the chart — that is exactly what escalation means."
+      "Not solved? Move ONE level up the chart - that is exactly what escalation means."
     ],
     "pickState": "See your own state's government",
     "pickStatePlaceholder": "Choose your state or UT…",
@@ -100,13 +100,13 @@
   },
   "finder": {
     "title": "Facing a problem? Find who's responsible",
-    "subtitle": "Pick your problem to see which office is in charge, how to complain, and how to escalate — plus the elected leader you can also press.",
+    "subtitle": "Pick your problem to see which office is in charge, how to complain, and how to escalate - plus the elected leader you can also press.",
     "pickProblem": "What's the problem?",
     "areaType": "Where do you live?",
     "urban": "City / town",
     "rural": "Village / rural",
     "responsible": "Who is responsible",
-    "orderNote": "Approach in this order — start at the top.",
+    "orderNote": "Approach in this order - start at the top.",
     "handlesLabel": "Handles",
     "escalateLabel": "How to escalate",
     "complainCta": "National grievance portal (CPGRAMS)",
@@ -117,7 +117,7 @@
     "chooseAbove": "Choose a problem above to see who's responsible and how to escalate.",
     "learnTiers": "New to this? Learn who does what",
     "disclaimer": "General guidance based on how Indian administration usually works. Exact office names vary by state.",
-    "escalationTitle": "The full escalation ladder — who is above them"
+    "escalationTitle": "The full escalation ladder - who is above them"
   },
   "problems": {
     "roads": "Roads & potholes",
@@ -138,7 +138,7 @@
   "offices": {
     "collector_dm": {
       "label": "District Collector / DM",
-      "handles": "Revenue, land, certificates, disaster relief and overall district coordination — the safe catch-all for your area.",
+      "handles": "Revenue, land, certificates, disaster relief and overall district coordination - the safe catch-all for your area.",
       "escalate": "The top district authority. Escalate here when a department does not respond."
     },
     "sp_district": {
@@ -148,7 +148,7 @@
     },
     "mun_commissioner": {
       "label": "Municipal Commissioner",
-      "handles": "All city civic services — roads, water, garbage, drains, lights, property tax.",
+      "handles": "All city civic services - roads, water, garbage, drains, lights, property tax.",
       "escalate": "Ward Officer → Deputy/Zonal Commissioner → Commissioner / grievance cell."
     },
     "ward_officer": {
@@ -213,12 +213,12 @@
     },
     "chief_secretary": {
       "label": "Chief Secretary",
-      "handles": "The state's top bureaucrat — final administrative escalation.",
+      "handles": "The state's top bureaucrat - final administrative escalation.",
       "escalate": "Use after the district and department have failed to respond."
     },
     "dgp": {
       "label": "Director General of Police (DGP)",
-      "handles": "Head of the state police — final police escalation.",
+      "handles": "Head of the state police - final police escalation.",
       "escalate": "Use after the SP has not acted."
     },
     "cabinet_secretary": {
@@ -229,14 +229,14 @@
   },
   "officials": {
     "title": "Officials for this district",
-    "subtitle": "The appointed officers who run day-to-day services here. Information only — these officers are not rated.",
-    "currentlyUnknown": "We don't name this officer — postings change often. Use the district's own directory below, which is kept current:",
-    "currentlyUnknownBare": "We don't name this officer — postings change often. Search your district's official website for its \"Who's Who\" directory, which is kept current.",
+    "subtitle": "The appointed officers who run day-to-day services here. Information only - these officers are not rated.",
+    "currentlyUnknown": "We don't name this officer - postings change often. Use the district's own directory below, which is kept current:",
+    "currentlyUnknownBare": "We don't name this officer - postings change often. Search your district's official website for its \"Who's Who\" directory, which is kept current.",
     "reportIncorrect": "Report an incorrect posting",
     "officeContact": "Office contact",
     "verifiedAsOf": "verified as of",
     "findCta": "Have a specific problem? Find who's responsible",
-    "chainTitle": "Reporting chain — who this office answers to",
+    "chainTitle": "Reporting chain - who this office answers to",
     "chainIntro": "Where this office sits, and who to approach if it does not act. This is the chain of appointed officials; your elected MLA and MP are a separate, parallel lever."
   },
   "common": {
@@ -293,7 +293,7 @@
   "home": {
     "heroTitle": "Know your leaders.",
     "heroTitle2": "Hold them accountable.",
-    "heroSubtitle": "Find who represents your area, what they are responsible for, and how they are doing — with proof from official records.",
+    "heroSubtitle": "Find who represents your area, what they are responsible for, and how they are doing - with proof from official records.",
     "exploreTitle": "Explore India",
     "exploreHelp": "Every state and UT, one tap away.",
     "statesWithData": "States & Union Territories",
@@ -307,20 +307,20 @@
     "topTitle": "Top leaders",
     "topHelp": "Ranked by their official work record. This is information, not a verdict.",
     "scoresTitle": "Two simple scores",
-    "perfHelp": "How they perform — from official government records.",
-    "ratingHelp": "What people think — from your ratings.",
+    "perfHelp": "How they perform - from official government records.",
+    "ratingHelp": "What people think - from your ratings.",
     "tiersTitle": "Who is responsible for what?",
     "tiersHelp": "Different problems need different leaders. Tap to see who to ask."
   },
   "state": {
-    "subtitle": "Everyone who represents {state} — the state government, MPs in Delhi, MLAs in the assembly, and every district.",
+    "subtitle": "Everyone who represents {state} - the state government, MPs in Delhi, MLAs in the assembly, and every district.",
     "mapTitle": "Districts of the state",
     "mapHelp": "Tap a district to see its MPs, MLAs and officials. Darker = more representatives linked.",
     "mapAria": "District map of {state}. Select a district to view its representatives.",
     "mapDistrictSub": "{n} representatives · tap to open",
     "mapDistrictEmpty": "No linked representatives yet",
     "compositionTitle": "Assembly by party",
-    "compositionHelp": "Seats held in the Vidhan Sabha, from our tracked MLAs. Factual count — not a rating.",
+    "compositionHelp": "Seats held in the Vidhan Sabha, from our tracked MLAs. Factual count - not a rating.",
     "districtsHelp": "Every district, with how many representatives we track there.",
     "houseMps": "Lok Sabha MPs",
     "houseRs": "Rajya Sabha MPs",
@@ -329,7 +329,7 @@
     "hierarchyCta": "See where {state} sits in the org chart of India"
   },
   "district": {
-    "subtitle": "Your representatives and officials in {district} — who they are, what they handle, and how to escalate.",
+    "subtitle": "Your representatives and officials in {district} - who they are, what they handle, and how to escalate.",
     "youAreHere": "You are here",
     "statMps": "MPs",
     "statMlas": "MLAs",
@@ -339,14 +339,14 @@
     "yourMlas": "Members of the Legislative Assembly",
     "chipMp": "MP",
     "chipMla": "MLA",
-    "noReps": "We haven't linked representatives to this district yet — check the constituencies below.",
+    "noReps": "We haven't linked representatives to this district yet - check the constituencies below.",
     "mapTitle": "Where in the state",
     "mapHelp": "This district inside {state}. Tap a neighbouring district to jump to it.",
     "mapAria": "Map showing {district} district highlighted within {state}",
     "areasTitle": "Constituencies in this district",
     "areasHelp": "The Lok Sabha and assembly seats that cover this district.",
     "whoTitle": "Who fixes what in {district}",
-    "whoHelp": "Pick a problem to see the actual people responsible — from the local office up to the Chief Minister.",
+    "whoHelp": "Pick a problem to see the actual people responsible - from the local office up to the Chief Minister.",
     "whoCta": "Open the full finder with escalation steps"
   },
   "area": {
@@ -354,10 +354,10 @@
     "typeAc": "Assembly constituency",
     "typeRs": "Rajya Sabha seat",
     "typeMlc": "Legislative Council seat",
-    "explainPc": "This area elects one Member of Parliament (MP) to the Lok Sabha in New Delhi — your voice in national law-making.",
-    "explainAc": "This area elects one Member of the Legislative Assembly (MLA) to the state assembly — your voice on police, schools, hospitals and state roads.",
+    "explainPc": "This area elects one Member of Parliament (MP) to the Lok Sabha in New Delhi - your voice in national law-making.",
+    "explainAc": "This area elects one Member of the Legislative Assembly (MLA) to the state assembly - your voice on police, schools, hospitals and state roads.",
     "explainRs": "Rajya Sabha members are elected by state legislators, not directly by voters, and represent the whole state in Parliament's upper house.",
-    "explainMlc": "Legislative Council members are chosen by MLAs, local bodies, graduates and teachers — they review state laws in the upper house.",
+    "explainMlc": "Legislative Council members are chosen by MLAs, local bodies, graduates and teachers - they review state laws in the upper house.",
     "repTitle": "Your representative",
     "repHelp": "The person this area elected. See their full record, scores and responsibilities.",
     "noRep": "No sitting representative on record for this seat right now.",
@@ -366,39 +366,39 @@
     "mapTitle": "Where in {state}",
     "mapHelp": "The exact boundary of this seat inside {state}.",
     "mapAria": "Map showing the {name} constituency highlighted within {state}",
-    "districtsHelp": "The civil district(s) this seat falls in — where the DM/Collector and SP for this area sit."
+    "districtsHelp": "The civil district(s) this seat falls in - where the DM/Collector and SP for this area sit."
   },
   "india": {
     "compositionTitle": "Lok Sabha by party",
-    "compositionHelp": "Seats held by each party among the MPs we track. Factual count — not a rating.",
+    "compositionHelp": "Seats held by each party among the MPs we track. Factual count - not a rating.",
     "constitutionalTitle": "President, Parliament & the Opposition",
-    "constitutionalHelp": "The offices the government answers to: the Head of State, the presiding officers of Parliament, and the statutory Leaders of the Opposition. Informational — never rated."
+    "constitutionalHelp": "The offices the government answers to: the Head of State, the presiding officers of Parliament, and the statutory Leaders of the Opposition. Informational - never rated."
   },
   "who": {
     "locate": "Where are you?",
-    "locateHelp": "Pick your district to see the actual people responsible near you — not just the office names.",
+    "locateHelp": "Pick your district to see the actual people responsible near you - not just the office names.",
     "pickState": "State / UT",
     "pickDistrict": "District",
     "pickStateFirst": "Choose your state or UT…",
     "pickDistrictFirst": "Choose your district…",
-    "pickForPeople": "Pick your district above to see the real people responsible — with names, photos and contacts.",
+    "pickForPeople": "Pick your district above to see the real people responsible - with names, photos and contacts.",
     "stepOffice": "Start at the local office",
-    "stepLevel1": "Level 1 — start here, in your area",
-    "stepLevel2": "Level 2 — block / tehsil, if no action",
-    "stepMla": "Your MLA — your area's elected leader",
+    "stepLevel1": "Level 1 - start here, in your area",
+    "stepLevel2": "Level 2 - block / tehsil, if no action",
+    "stepMla": "Your MLA - your area's elected leader",
     "pickAc": "Which assembly constituency (area) are you in?",
-    "mlaEscalateHint": "Your MLA can push every office above and raise your issue in the Assembly — go to them before any minister.",
+    "mlaEscalateHint": "Your MLA can push every office above and raise your issue in the Assembly - go to them before any minister.",
     "moreMlas": "+{n} more MLAs in this district",
-    "titlesVary": "Exact office titles vary by state — the order of levels is what matters.",
+    "titlesVary": "Exact office titles vary by state - the order of levels is what matters.",
     "stepDistrict": "District administration",
-    "stepMinister": "Last resort — the state minister who runs this department",
+    "stepMinister": "Last resort - the state minister who runs this department",
     "stepCm": "Head of the state government",
-    "noMinisterMatch": "No single department minister matched — the Chief Minister's office in {state} owns everything not allocated.",
+    "noMinisterMatch": "No single department minister matched - the Chief Minister's office in {state} owns everything not allocated.",
     "cmHoldsDept": "The Chief Minister holds this department directly.",
     "parallelTitle": "Your elected representatives here",
-    "parallelHelp": "The MLAs and MPs for {district}. Press them in parallel at any step — they answer to voters, and their office can push officials.",
-    "mlasLabel": "MLAs — state subjects (police, schools, water, state roads)",
-    "mpsLabel": "MPs — national subjects (railways, highways, telecom)",
+    "parallelHelp": "The MLAs and MPs for {district}. Press them in parallel at any step - they answer to voters, and their office can push officials.",
+    "mlasLabel": "MLAs - state subjects (police, schools, water, state roads)",
+    "mpsLabel": "MPs - national subjects (railways, highways, telecom)",
     "govAsOf": "State government as of {date}.",
     "openDistrict": "Open the {district} page"
   },
@@ -407,11 +407,11 @@
     "intro": "Different problems are handled by different leaders. Knowing who is in charge helps you ask the right person.",
     "handlesLabel": "What they do",
     "accountableLabel": "You can hold them accountable for",
-    "notResponsibleLabel": "Not their job — ask instead",
+    "notResponsibleLabel": "Not their job - ask instead",
     "jurisdictionLabel": "Areas represented",
     "roles": {
       "lokSabha": {
-        "title": "Member of Parliament (MP) — Lok Sabha",
+        "title": "Member of Parliament (MP) - Lok Sabha",
         "summary": "Your elected leader in India's Parliament, in New Delhi.",
         "oneLine": "Makes national laws and speaks for your area in Parliament (Delhi).",
         "handles": [
@@ -428,13 +428,13 @@
           "Being reachable to people"
         ],
         "notResponsible": [
-          "Local roads, water, electricity, garbage — your Municipality / Panchayat",
-          "Police, state roads, government schools & hospitals — your MLA and state government",
-          "Certificates, property records, local licences — your local office"
+          "Local roads, water, electricity, garbage - your Municipality / Panchayat",
+          "Police, state roads, government schools & hospitals - your MLA and state government",
+          "Certificates, property records, local licences - your local office"
         ]
       },
       "rajyaSabha": {
-        "title": "Member of Parliament (MP) — Rajya Sabha",
+        "title": "Member of Parliament (MP) - Rajya Sabha",
         "summary": "A leader in Parliament's upper house, chosen by state legislatures.",
         "oneLine": "Reviews national laws in Parliament's upper house.",
         "handles": [
@@ -447,14 +447,14 @@
           "Helping review national laws"
         ],
         "notResponsible": [
-          "Local civic issues — your local body",
-          "State matters — your MLA"
+          "Local civic issues - your local body",
+          "State matters - your MLA"
         ]
       },
       "vidhanSabha": {
         "title": "Member of Legislative Assembly (MLA)",
         "summary": "Your elected leader in the state assembly.",
-        "oneLine": "Handles state matters — police, state roads, water, schools.",
+        "oneLine": "Handles state matters - police, state roads, water, schools.",
         "handles": [
           "Making state laws",
           "Police, state roads, water, farming, state schools & hospitals",
@@ -466,14 +466,14 @@
           "Raising your area's problems with the state"
         ],
         "notResponsible": [
-          "National matters — your MP",
-          "Day-to-day local works — often the local body"
+          "National matters - your MP",
+          "Day-to-day local works - often the local body"
         ]
       },
       "localBody": {
         "title": "Municipality / Panchayat",
         "summary": "Your local council for everyday civic needs.",
-        "oneLine": "Handles day-to-day local work — garbage, local roads, water, drains.",
+        "oneLine": "Handles day-to-day local work - garbage, local roads, water, drains.",
         "handles": [
           "Garbage, drainage, local roads, street lights",
           "Local water supply",
@@ -483,8 +483,8 @@
           "Everyday civic upkeep in your neighbourhood"
         ],
         "notResponsible": [
-          "State matters — your MLA",
-          "National matters — your MP"
+          "State matters - your MLA",
+          "National matters - your MP"
         ]
       }
     }
@@ -494,7 +494,7 @@
     "minister": "Minister",
     "scorePerformance": "Performance",
     "scoreRating": "Public rating",
-    "perfHelp": "How well they do their official job — attendance, questions, funds. From government records.",
+    "perfHelp": "How well they do their official job - attendance, questions, funds. From government records.",
     "ratingHelp": "What people think. This is opinion, not an official fact.",
     "topPercent": "Top {n}%",
     "amongCohort": "among {cohort}",
@@ -506,20 +506,20 @@
     "partyHistory": "Party history (this term)",
     "since": "Since",
     "current": "Current",
-    "officialInfoOnly": "Appointed official — information only. Appointed officers are not rated; this page helps you reach the right person and escalate.",
+    "officialInfoOnly": "Appointed official - information only. Appointed officers are not rated; this page helps you reach the right person and escalate.",
     "officialRole": "Role & responsibility",
     "officialContact": "Office contact",
     "govRoleTitle": "Role in the Government of India",
     "govRoleTitleState": "Role in the {state} Government",
     "govRoleDesc": "As {rank}, this leader runs these departments:",
-    "pmRoleNote": "As Prime Minister, {name} leads the entire Union government and Cabinet and oversees every ministry — not only the departments held directly, listed below.",
+    "pmRoleNote": "As Prime Minister, {name} leads the entire Union government and Cabinet and oversees every ministry - not only the departments held directly, listed below.",
     "accountabilityTitle": "What they are accountable for",
     "accountabilityIntro": "As your representative, here is the full list of what a citizen can hold them to account for.",
     "accountabilityIntroMulti": "This person holds more than one office. Here is what they are accountable for in each role.",
-    "accountabilityGlanceIntro": "Everything {name} answers to you for — combined across every office they hold.",
+    "accountabilityGlanceIntro": "Everything {name} answers to you for - combined across every office they hold.",
     "glanceMinistryLead": "Runs and answers for: {list}",
     "fullGuide": "Read the full role-by-role guide (powers, limits, sources)",
-    "roleSeeMore": "What this role covers — and what it does not",
+    "roleSeeMore": "What this role covers - and what it does not",
     "rateThis": "Rate this leader",
     "responsibilitiesTitle": "What they are responsible for",
     "jurisdictionTitle": "Areas represented",
@@ -531,7 +531,7 @@
       "parliamentary": "Work in Parliament",
       "experience": "Experience"
     },
-    "affidavitNote": "These figures are declared by the leader in their official election form. A declared case means a trial is pending — it is not a conviction.",
+    "affidavitNote": "These figures are declared by the leader in their official election form. A declared case means a trial is pending - it is not a conviction.",
     "rightToReplyTitle": "Are you this leader, or spotted a mistake?",
     "rightToReplyBody": "We publish only sourced facts and offer a right to reply. Tell us and we will check.",
     "rightToReplyCta": "Request a correction",
@@ -566,7 +566,7 @@
     "noVotes": "No ratings yet",
     "insufficient": "Not enough data",
     "noData": "no data",
-    "unrankedHeader": "Not enough verified data to rank — listed A–Z",
+    "unrankedHeader": "Not enough verified data to rank - listed A-Z",
     "seeAllCount": "See all {n} leaders",
     "cohortNote": "Top {n}% of {cohort}",
     "basedOn": "Based on {n} verified metrics",
@@ -586,7 +586,7 @@
     "scale5": "Great",
     "submit": "Submit rating",
     "submitting": "Submitting…",
-    "thanks": "Thanks — your rating was counted!",
+    "thanks": "Thanks - your rating was counted!",
     "already": "Your rating was updated.",
     "oncePerPerson": "One rating per person. You can change it later.",
     "notVerifiedNote": "Ratings are people's opinion, shown separately from official facts.",
@@ -625,7 +625,7 @@
   "pager": {
     "prev": "Previous",
     "next": "Next",
-    "showing": "Showing {from}–{to} of {total}"
+    "showing": "Showing {from}-{to} of {total}"
   },
   "stateGov": {
     "title": "{state} Government",
@@ -634,14 +634,14 @@
     "cabinet": "Cabinet Ministers",
     "mos": "Ministers of State",
     "governor": "Governor",
-    "presidentsRule": "This state is currently under President's Rule — there is no elected Council of Ministers.",
-    "beingVerified": "This list is being verified against official sources — please confirm with the official state government portal.",
-    "verifyNote": "Compiled from official portals and recent reporting; governments change with elections and reshuffles — please confirm current office-holders on the official state portal. Spotted an error? Use the report link on any profile."
+    "presidentsRule": "This state is currently under President's Rule - there is no elected Council of Ministers.",
+    "beingVerified": "This list is being verified against official sources - please confirm with the official state government portal.",
+    "verifyNote": "Compiled from official portals and recent reporting; governments change with elections and reshuffles - please confirm current office-holders on the official state portal. Spotted an error? Use the report link on any profile."
   },
   "contacts": {
     "reachTitle": "How to reach this office",
     "whosWho": "District officer directory (Who's Who)",
-    "whosWhoSub": "Official {district} site — names the current officer",
+    "whosWhoSub": "Official {district} site - names the current officer",
     "collectorate": "District office, from the official site",
     "districtSite": "Official district website",
     "stateScope": "State helpline",

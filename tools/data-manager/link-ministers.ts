@@ -1,7 +1,7 @@
 /**
  * Data-manager step: LINK each Council-of-Ministers record (state governments,
  * and any stray central ones) to the sitting-legislator profile it refers to, by
- * setting `politicianId`. Without this a minister — including every CM — renders
+ * setting `politicianId`. Without this a minister - including every CM - renders
  * as a THIN DUPLICATE person page disconnected from their real MLA/MP record
  * (facts, affidavit, constituency), and the minister card links there instead of
  * to the real profile. That is the "the Chief Minister is lost" symptom: the CM
@@ -12,7 +12,7 @@
  *
  * Match is name-within-state, unique: exact normalised name first, then a strong
  * token-overlap fallback; ambiguous or unmatched records are left unlinked (they
- * keep their own stub page — correct for a minister who holds no seat we track).
+ * keep their own stub page - correct for a minister who holds no seat we track).
  *
  * Usage:  npm run dm -- link-ministers
  */
@@ -103,7 +103,7 @@ function main() {
   writeFileSync(cgPath, JSON.stringify(cgRaw, null, 2) + '\n');
 
   console.log(`✓ link-ministers: linked ${linked} (state + ${cLinked} central), ${already} already linked, ${unlinked.length} left unlinked.`);
-  if (unlinked.length) console.log(`  unlinked (kept own stub — likely not a legislator we track): ${unlinked.slice(0, 20).join('; ')}${unlinked.length > 20 ? ` …+${unlinked.length - 20}` : ''}`);
+  if (unlinked.length) console.log(`  unlinked (kept own stub - likely not a legislator we track): ${unlinked.slice(0, 20).join('; ')}${unlinked.length > 20 ? ` …+${unlinked.length - 20}` : ''}`);
 }
 
 main();

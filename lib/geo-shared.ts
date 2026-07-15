@@ -1,6 +1,6 @@
 // Shared server-side projection helpers for the drill-down maps.
 // All geometry is projected to SVG path strings ON THE SERVER, so the browser
-// only ever receives small path data — never raw GeoJSON.
+// only ever receives small path data - never raw GeoJSON.
 import { geoIdentity, geoPath, type GeoPermissibleObjects } from 'd3-geo';
 
 export interface GeoShape {
@@ -22,7 +22,7 @@ export interface ProjectedMap {
 const ROMAN: Record<string, string> = { i: '1', ii: '2', iii: '3', iv: '4', v: '5', vi: '6', vii: '7', viii: '8', ix: '9', x: '10' };
 const NAME_ALIAS: Record<string, string> = { pondicherry: 'puducherry' };
 
-/** Identity-join normalisation — must stay in sync with tools/geo/prepare-geo.ts. */
+/** Identity-join normalisation - must stay in sync with tools/geo/prepare-geo.ts. */
 export function normGeoName(s: string): string {
   const n = s
     .toLowerCase()
@@ -36,7 +36,7 @@ export function normGeoName(s: string): string {
 }
 
 /** Shrink an SVG path string: drop consecutive line-to points that moved less
- *  than `minDelta` px. Full-precision d3 output made pages megabytes heavy —
+ *  than `minDelta` px. Full-precision d3 output made pages megabytes heavy -
  *  at display sizes (≤600px wide) sub-2px detail is invisible but costs real
  *  download + hydration time on every navigation. */
 export function shrinkPathData(d: string, minDelta = 2): string {
@@ -71,7 +71,7 @@ export function shrinkPathData(d: string, minDelta = 2): string {
       lastX = x;
       lastY = y;
     }
-    out += kept >= 2 ? piece : ring; // too small to decimate — keep as-is
+    out += kept >= 2 ? piece : ring; // too small to decimate - keep as-is
   }
   return out;
 }

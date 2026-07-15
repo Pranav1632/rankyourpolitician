@@ -186,7 +186,7 @@ function main() {
     }
 
     report.push(
-      `OK  ${id.name} (${consName}, ${stateCode}) — ${facts.length} facts, metrics: ${Object.keys(metrics).join(', ') || 'none (minister/exempt)'}, minister=${Boolean(id.is_minister)}, terms=${terms}`,
+      `OK  ${id.name} (${consName}, ${stateCode}) - ${facts.length} facts, metrics: ${Object.keys(metrics).join(', ') || 'none (minister/exempt)'}, minister=${Boolean(id.is_minister)}, terms=${terms}`,
     );
   }
 

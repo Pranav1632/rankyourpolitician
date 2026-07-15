@@ -66,7 +66,7 @@ export const PROBLEM_ROUTES: Record<ProblemType, { urban: OfficeType[]; rural: O
   property_tax: { urban: ['ward_officer', 'mun_commissioner'], rural: ['panchayat_secretary'] },
 };
 
-/** National grievance portal (CPGRAMS) — the universal escalation backstop. */
+/** National grievance portal (CPGRAMS) - the universal escalation backstop. */
 export const CPGRAMS_URL = 'https://pgportal.gov.in/';
 
 /** The elected representative you can also press on, by area type. */

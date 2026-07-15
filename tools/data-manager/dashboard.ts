@@ -111,7 +111,7 @@ const PAGE = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewp
   label{font-size:12px;color:#6b7280;display:block;margin-bottom:3px}
   #msg{margin-left:auto;font-size:14px}
 </style></head><body>
-<header><span class="badge">LOCAL</span><h1>RankYourPolitician — Data Manager</h1>
+<header><span class="badge">LOCAL</span><h1>RankYourPolitician - Data Manager</h1>
   <span id="fs"></span><span id="msg"></span>
   <label style="font-size:12px;color:#6b7280;display:flex;align-items:center;gap:4px"><input type="checkbox" id="skipHeavy" style="width:auto"> skip heavy (Wikidata/photos)</label>
   <button class="sec" onclick="updateAll()">⟳ Update all data</button>
@@ -153,7 +153,7 @@ function updateAll(){
   es.onmessage = function(e){ log.textContent += e.data + '\\n'; log.scrollTop = log.scrollHeight; };
   es.addEventListener('done', function(e){
     es.close();
-    document.getElementById('msg').textContent = e.data==='0' ? '✓ Update complete — commit the seed + indexes, then redeploy' : ('✗ Finished with errors (exit '+e.data+')');
+    document.getElementById('msg').textContent = e.data==='0' ? '✓ Update complete - commit the seed + indexes, then redeploy' : ('✗ Finished with errors (exit '+e.data+')');
     load();
   });
   es.onerror = function(){ es.close(); };

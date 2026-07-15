@@ -5,14 +5,14 @@
 // actual people we track for a given state + district:
 //   - the district's verified DM / SP incumbents (info-only, where sourced)
 //   - the state minister(s) whose PORTFOLIO covers the problem's department
-//   - the Chief Minister (heads the state government — final political owner)
+//   - the Chief Minister (heads the state government - final political owner)
 //   - the district's own MLAs and MPs (the parallel elected lever)
 //
 // Pure + isomorphic: used by the client Finder (fed from /who/{ST}.json) and
 // by the district page (fed server-side from the seed).
 import type { ContactChannel, ProblemType } from './types';
 
-/** Compact person for the finder payloads (kept tiny — shipped to clients). */
+/** Compact person for the finder payloads (kept tiny - shipped to clients). */
 export interface WhoPerson {
   id: string;
   name: string;
@@ -34,7 +34,7 @@ export interface WhoOfficial {
   sourceUrl?: string;
 }
 
-/** The district's own official site — the durable fallback when no officer is named. */
+/** The district's own official site - the durable fallback when no officer is named. */
 export interface WhoPortal {
   url: string;
   whosWhoUrl?: string;
@@ -99,7 +99,7 @@ const PROBLEM_PORTFOLIO: Record<ProblemType, { urban: string[]; rural: string[] 
 };
 
 /** The state minister(s) whose portfolios cover this problem (max `limit`).
- *  The CM is excluded here — always shown separately as the final owner. */
+ *  The CM is excluded here - always shown separately as the final owner. */
 export function ministersForProblem(
   ministers: WhoPerson[],
   cmId: string | undefined,

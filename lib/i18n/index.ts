@@ -43,13 +43,23 @@ export function tArr(dict: Dict, path: string, vars?: Record<string, string | nu
 
 export const EN: Dict = en as Dict;
 
+// Merged dictionaries are immutable per deploy, so cache them per locale:
+// without this every server render of a non-English page re-runs the deep
+// merge over the full message tree.
+const mergedCache = new Map<string, Dict>();
+
 /** Load a merged dictionary for a locale (server-side). */
 export async function loadMessages(locale: string): Promise<Dict> {
   if (!locale || locale === 'en') return EN;
+  const cached = mergedCache.get(locale);
+  if (cached) return cached;
+  let dict: Dict;
   try {
     const mod = await import(`./messages/${locale}.json`);
-    return deepMerge(EN, (mod.default ?? mod) as Dict);
+    dict = deepMerge(EN, (mod.default ?? mod) as Dict);
   } catch {
-    return EN; // not translated yet → English
+    dict = EN; // not translated yet → English
   }
+  mergedCache.set(locale, dict);
+  return dict;
 }

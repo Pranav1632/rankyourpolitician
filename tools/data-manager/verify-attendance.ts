@@ -10,17 +10,17 @@
  * cost of a wrong number is a defamatory-by-implication claim about a real person.
  *
  * What it checks, per MP with a stored attendance_pct:
- *   1. SOURCE PURITY  — the cited source must be Digital Sansad. The ranking is a
+ *   1. SOURCE PURITY  - the cited source must be Digital Sansad. The ranking is a
  *      percentile cohort: a value from another aggregator (e.g. PRS MPTrack) is
  *      measured over a different window with a different denominator, so ranking
  *      it against Sansad-derived peers compares apples to oranges. Reported as
  *      `source-mix` and (with --fix) re-fetched from Sansad or dropped.
- *   2. ARITHMETIC     — the "N of D sitting days" in the cited fact must actually
+ *   2. ARITHMETIC     - the "N of D sitting days" in the cited fact must actually
  *      equal the stored percentage.
- *   3. LIVE VALUE     — re-fetch from Sansad and compare. Attendance/questions/
+ *   3. LIVE VALUE     - re-fetch from Sansad and compare. Attendance/questions/
  *      debates only grow between sessions, so a stored value ABOVE live is a red
  *      flag (`stale-high`), while below-live is normal drift (`drift`).
- *   4. COHERENCE      — denominators must match the house's modal sitting-day
+ *   4. COHERENCE      - denominators must match the house's modal sitting-day
  *      count unless the member joined late (by-election), which is legitimate and
  *      reported as `short-tenure` rather than an error.
  *
@@ -101,7 +101,7 @@ const lsCite = (path: string, field: string, value: string): Fact => ({
   field_type: field,
   value,
   source_url: `https://sansad.in${path}`,
-  source_name: 'Digital Sansad — Lok Sabha (official)',
+  source_name: 'Digital Sansad - Lok Sabha (official)',
   retrieved_date: TODAY,
   as_of: '18th Lok Sabha, all sessions to date',
 } as Fact);
@@ -142,7 +142,7 @@ async function main() {
     const f = attFact(p);
     if (!f) { add('error', 'uncited', p, `metrics.attendance_pct=${p.metrics.attendance_pct} with NO cited fact`); continue; }
     if (!isSansad(f)) {
-      add('error', 'source-mix', p, `attendance cited to "${f.source_name}" — not Digital Sansad; cohort mixes measurement windows (as_of "${f.as_of ?? '?'}")`);
+      add('error', 'source-mix', p, `attendance cited to "${f.source_name}" - not Digital Sansad; cohort mixes measurement windows (as_of "${f.as_of ?? '?'}")`);
     }
     const m = String(f.value).match(/([\d,]+)\s+of\s+([\d,]+)\s+sitting days/);
     if (m) {
@@ -163,7 +163,7 @@ async function main() {
   const ml = await getJson('https://sansad.in/api_ls/member?loksabha=18&page=1&size=600&sitting=1&locale=en');
   const rawMembers: any[] = ml?.membersDtoList || [];
   if (!rawMembers.length) {
-    console.error('LS member list empty — API shape changed? Aborting rather than reporting false diffs.');
+    console.error('LS member list empty - API shape changed? Aborting rather than reporting false diffs.');
     process.exit(2);
   }
   const members = rawMembers
@@ -186,7 +186,7 @@ async function main() {
     }
   }
   lsSessions = [...new Set(lsSessions)].sort((a, b) => a - b);
-  if (!lsSessions.length) { console.error('LS session list empty — aborting.'); process.exit(2); }
+  if (!lsSessions.length) { console.error('LS session list empty - aborting.'); process.exit(2); }
   console.log(`LS-18 sessions: ${lsSessions.join(', ')}`);
 
   const ourLs = pols.filter((p) => p.house === 'Lok Sabha');
@@ -241,7 +241,7 @@ async function main() {
       } else {
         const gap = Math.round((live - (cur as number)) * 100) / 100;
         if (Math.abs(gap) > DRIFT_PP) {
-          // Stored ABOVE live is not explainable by new sittings — the number was wrong.
+          // Stored ABOVE live is not explainable by new sittings - the number was wrong.
           const kind = gap < 0 ? 'stale-high' : 'drift';
           add(gap < 0 ? 'error' : 'warn', kind, p, `stored ${cur}% vs live ${live}% (${signed}/${eligible}), gap ${gap > 0 ? '+' : ''}${gap}pp`);
         }
@@ -272,7 +272,7 @@ async function main() {
     for (const [id, den] of lsDen) {
       if (den === modal) continue;
       const p = pols.find((x) => x.id === id)!;
-      add('info', 'short-tenure', p, `${den} eligible sitting days vs modal ${modal} — expected for a by-election joiner; verify the member actually joined late`);
+      add('info', 'short-tenure', p, `${den} eligible sitting days vs modal ${modal} - expected for a by-election joiner; verify the member actually joined late`);
     }
   }
 
@@ -290,7 +290,7 @@ async function main() {
     .slice(0, 6);
 
   if (!rsMembers.length || !rsSessions.length) {
-    console.log('RS: member/session list unavailable — skipping RS verification (not reporting false diffs).');
+    console.log('RS: member/session list unavailable - skipping RS verification (not reporting false diffs).');
   } else {
     console.log(`RS: ${rsMembers.length} members; sessions: ${rsSessions.map((s) => `${s.no}(${s.sittings}d)`).join(', ')}`);
     const present = new Map<number, number>();
@@ -336,9 +336,9 @@ async function main() {
             field_type: 'attendance_pct',
             value: `${live}% (${days} of ${totalSittings} sitting days, recent sessions)`,
             source_url: 'https://sansad.in/rs/attendance',
-            source_name: 'Digital Sansad — Rajya Sabha (official)',
+            source_name: 'Digital Sansad - Rajya Sabha (official)',
             retrieved_date: TODAY,
-            as_of: `Rajya Sabha sessions ${rsSessions[rsSessions.length - 1].no}–${rsSessions[0].no}`,
+            as_of: `Rajya Sabha sessions ${rsSessions[rsSessions.length - 1].no}-${rsSessions[0].no}`,
           } as Fact);
         }
       }
@@ -354,7 +354,7 @@ async function main() {
   // ---------- 4. Report ----------
   if (FIX) {
     // Anything still cited to a non-Sansad source after the refetch cannot be
-    // ranked against Sansad-derived peers — drop rather than mix cohorts.
+    // ranked against Sansad-derived peers - drop rather than mix cohorts.
     for (const p of pols) {
       const f = attFact(p);
       if (f && !isSansad(f)) { dropPerf(p); console.log(`  dropped non-Sansad perf: ${p.id}`); }
@@ -366,9 +366,9 @@ async function main() {
   const bySev = (s: Sev) => issues.filter((i) => i.sev === s);
   const groups = new Map<string, Issue[]>();
   for (const i of issues) { if (!groups.has(i.kind)) groups.set(i.kind, []); groups.get(i.kind)!.push(i); }
-  console.log(`\n${'='.repeat(66)}\nVERIFY-ATTENDANCE — ${stored.length} figures checked`);
+  console.log(`\n${'='.repeat(66)}\nVERIFY-ATTENDANCE - ${stored.length} figures checked`);
   for (const [kind, list] of [...groups.entries()].sort((a, b) => b[1].length - a[1].length)) {
-    console.log(`\n[${list[0].sev.toUpperCase()}] ${kind} — ${list.length}`);
+    console.log(`\n[${list[0].sev.toUpperCase()}] ${kind} - ${list.length}`);
     for (const i of list.slice(0, 12)) console.log(`   ${i.id} (${i.name}): ${i.detail}`);
     if (list.length > 12) console.log(`   …and ${list.length - 12} more`);
   }

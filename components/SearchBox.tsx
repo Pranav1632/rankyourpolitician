@@ -188,7 +188,7 @@ export default function SearchBox({ variant = 'header' }: { variant?: 'header' |
     }
   }
 
-  // Text-entry fields are always SOLID — you read and type in them, so glass
+  // Text-entry fields are always SOLID - you read and type in them, so glass
   // translucency never applies here (this is the "search box too transparent" fix).
   const box =
     variant === 'hero'

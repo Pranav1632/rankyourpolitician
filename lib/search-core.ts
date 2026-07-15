@@ -1,5 +1,5 @@
 // Isomorphic search over the prebuilt static index (public/search-index.json).
-// Pure functions — no fs, no fetch — usable from both server and client.
+// Pure functions - no fs, no fetch - usable from both server and client.
 // The index format is defined by tools/build-search-index.ts.
 
 export interface SearchIndexFile {

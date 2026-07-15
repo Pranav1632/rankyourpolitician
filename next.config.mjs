@@ -15,6 +15,25 @@ const nextConfig = {
   outputFileTracingExcludes: {
     '*': ['./tools/**/*', './data/staging/**/*'],
   },
+  // The big prebuilt JSONs (search index, rankings, who-data) only change on
+  // deploy. Let browsers keep them for an hour and the CDN serve stale while
+  // revalidating, instead of re-negotiating ~1MB per session.
+  async headers() {
+    return [
+      {
+        source: '/:file(search-index.json|rankings.json)',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=3600, stale-while-revalidate=86400' },
+        ],
+      },
+      {
+        source: '/who/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=3600, stale-while-revalidate=86400' },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;

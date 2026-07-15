@@ -1,16 +1,16 @@
 /**
- * Data-manager step: add each MP's ELECTION-AFFIDAVIT figures — declared assets,
- * liabilities and pending criminal cases — from MyNeta (ADR), which compiles the
+ * Data-manager step: add each MP's ELECTION-AFFIDAVIT figures - declared assets,
+ * liabilities and pending criminal cases - from MyNeta (ADR), which compiles the
  * official self-sworn affidavits filed with the Election Commission for the 2024
  * Lok Sabha election. Shown strictly "as declared", each cited to the member's
  * MyNeta page. NO characterisation is added; a declared case is a pending trial,
  * not a conviction (the profile UI states this).
  *
  * Join is by constituency (the winner list has exactly one winner per seat).
- * Only fills gaps — never overwrites a curated fact.
+ * Only fills gaps - never overwrites a curated fact.
  *
  * Usage:  npm run dm -- enrich-affidavits
- *         AFF_LIMIT=3   npm run dm -- enrich-affidavits   (first 3 pages — testing)
+ *         AFF_LIMIT=3   npm run dm -- enrich-affidavits   (first 3 pages - testing)
  */
 import { readFileSync, writeFileSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
@@ -99,7 +99,7 @@ async function main() {
     const row = byCons.get(consKey(p.constituencyName));
     if (!row) { if (p.house === 'Lok Sabha') unmatched.push(`${p.constituencyName} (${p.name})`); continue; }
     matched++;
-    const cite = { source_url: CAND(row.candidateId), source_name: 'MyNeta / ADR — 2024 election affidavit', retrieved_date: TODAY, as_of: '2024 election affidavit' };
+    const cite = { source_url: CAND(row.candidateId), source_name: 'MyNeta / ADR - 2024 election affidavit', retrieved_date: TODAY, as_of: '2024 election affidavit' };
     const have = new Set(p.facts.map((f) => f.field_type));
     const add = (field_type: string, value: string) => {
       if (!have.has(field_type)) { p.facts.push({ field_type, value, ...cite } as Fact); factsAdded++; have.add(field_type); }

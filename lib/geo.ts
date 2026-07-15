@@ -66,7 +66,7 @@ export function buildStatePaths(): StatePath[] {
   // ring order differs from RFC 7946. reflectY flips lat (north = up).
   const projection = geoIdentity().reflectY(true).fitSize([MAP_W, MAP_H], fc as any);
   // Integer coordinates + ≥2px point decimation: the hero map used to be
-  // ~514KB of inline SVG — invisible detail that slowed every page load.
+  // ~514KB of inline SVG - invisible detail that slowed every page load.
   const path = geoPath(projection).digits(0);
   cached = fc.features.map((f: any) => {
     const name = f.properties.ST_NM as string;

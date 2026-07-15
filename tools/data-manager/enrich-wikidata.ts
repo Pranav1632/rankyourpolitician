@@ -1,10 +1,10 @@
 /**
- * Data-manager step: GENERAL Wikidata enrichment for EVERY politician tier —
+ * Data-manager step: GENERAL Wikidata enrichment for EVERY politician tier -
  * MPs, Rajya Sabha, MLAs and MLCs alike (enrich-mps only covered the Lok Sabha).
  *
  * Two jobs:
  *   1. RESOLVE a Wikidata QID for records that carry none, by searching Wikidata
- *      for the name and disambiguating conservatively — a candidate is accepted
+ *      for the name and disambiguating conservatively - a candidate is accepted
  *      only if it is a human, tied to India, a politician / legislature member,
  *      and carries at least one strong signal (matching constituency, home state,
  *      house, or party). Ambiguous or weak matches are LEFT BLANK (an honest gap
@@ -19,11 +19,11 @@
  *      image, but ONLY if that file lives on Commons (i.e. is freely licensed).
  *
  * Curated facts are NEVER overwritten. No financial/criminal numbers are added
- * here — those come only from the ECI-affidavit importer with their own source.
+ * here - those come only from the ECI-affidavit importer with their own source.
  * Every added fact is cited to the member's Wikidata item with today's date.
  *
  * Usage:  npm run dm -- enrich-wikidata
- *         ENRICH_LIMIT=50 npm run dm -- enrich-wikidata     (first 50 — testing)
+ *         ENRICH_LIMIT=50 npm run dm -- enrich-wikidata     (first 50 - testing)
  *         ENRICH_NO_RESOLVE=1 npm run dm -- enrich-wikidata (skip QID search)
  *         ENRICH_NO_PHOTO=1   npm run dm -- enrich-wikidata (skip WP image fallback)
  */
@@ -267,7 +267,7 @@ async function main() {
   }
 
   // Batch-fetch Commons licence for every candidate file. Files that are NOT on
-  // Commons (e.g. local fair-use uploads) return "missing" and are dropped — so a
+  // Commons (e.g. local fair-use uploads) return "missing" and are dropped - so a
   // Wikipedia-lead-image fallback only survives when it is freely licensed.
   const files = [...new Set(fileByQid.values())].map((f) => `File:${f}`);
   const license = new Map<string, string>();
@@ -297,7 +297,7 @@ async function main() {
     if (dobTime) {
       const d = fmtDob(dobTime);
       // A sitting legislator cannot be under 21 (the constitutional floor is 25);
-      // an age below that — or absurdly high — is a source error, so we drop it
+      // an age below that - or absurdly high - is a source error, so we drop it
       // rather than propagate an obviously-wrong birth year.
       if (d && (d.age == null || (d.age >= 21 && d.age <= 105))) {
         facts.push({ field_type: 'age', value: d.age != null ? `Born ${d.display} (age ${d.age})` : `Born ${d.display}`, ...cite });
@@ -324,7 +324,7 @@ async function main() {
     if (terms > 0) facts.push({ field_type: 'terms_served', value: String(terms), ...cite });
     const seen = new Set<string>();
     const prev = others.filter((o) => { if (seen.has(o.label)) return false; seen.add(o.label); return true; })
-      .map((o) => (o.from ? `${o.label} (${o.from}${o.to && o.to !== o.from ? `–${o.to}` : o.to ? '' : '–present'})` : o.label))
+      .map((o) => (o.from ? `${o.label} (${o.from}${o.to && o.to !== o.from ? `-${o.to}` : o.to ? '' : '-present'})` : o.label))
       .slice(0, 6);
     if (prev.length) facts.push({ field_type: 'previous_positions', value: prev.join('; '), ...cite });
 
@@ -354,12 +354,12 @@ async function main() {
 
   writeFileSync(resolve(SEED_DIR, 'politicians.json'), JSON.stringify(pols, null, 2) + '\n');
 
-  console.log(`\n✓ Enriched ${enriched} records — +${factsAdded} facts, +${photos} photos, +${qidsSet} newly-linked QIDs.`);
+  console.log(`\n✓ Enriched ${enriched} records - +${factsAdded} facts, +${photos} photos, +${qidsSet} newly-linked QIDs.`);
   if (resolveLog.length) {
-    console.log(`\nResolved QIDs (${resolveLog.length}) — sample:`);
+    console.log(`\nResolved QIDs (${resolveLog.length}) - sample:`);
     for (const r of resolveLog.slice(0, 25)) console.log(`  ${r.name} (${r.state}) -> ${r.qid}  [${r.why}, score ${r.score}]`);
   }
-  if (unresolved.length) console.log(`\nℹ Left blank — no confident Wikidata match for ${unresolved.length} (e.g. ${unresolved.slice(0, 8).join('; ')}…)`);
+  if (unresolved.length) console.log(`\nℹ Left blank - no confident Wikidata match for ${unresolved.length} (e.g. ${unresolved.slice(0, 8).join('; ')}…)`);
   if (nothing.length) console.log(`\nℹ Wikidata item exists but carries no usable detail for ${nothing.length} records.`);
   console.log('\nNext: npm run dm -- validate   then rebuild indexes + build.');
 }

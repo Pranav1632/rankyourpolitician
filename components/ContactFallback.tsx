@@ -1,12 +1,12 @@
 'use client';
 // What to show on a rung of the accountability ladder when we cannot name the
-// officer — which, for District Magistrates and SPs, is most of India's ~600
+// officer - which, for District Magistrates and SPs, is most of India's ~600
 // districts.
 //
 // The old behaviour was a dead end: "Currently unknown", nothing else. That is
 // the worst possible answer, because the citizen still has the problem. So
 // instead of a name we give the durable, citable ways in:
-//   1. the district's OWN Who's Who directory — the district maintains it, so it
+//   1. the district's OWN Who's Who directory - the district maintains it, so it
 //      names the current collector even though we don't
 //   2. the collectorate phone/email printed on that site
 //   3. the state helpline / grievance portal, then the national helpline

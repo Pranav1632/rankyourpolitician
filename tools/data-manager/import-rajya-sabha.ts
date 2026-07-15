@@ -1,6 +1,6 @@
 /**
- * Data-manager step: add the RAJYA SABHA (Parliament's upper house) — ~245
- * sitting members — from the canonical Wikipedia "List of current members of the
+ * Data-manager step: add the RAJYA SABHA (Parliament's upper house) - ~245
+ * sitting members - from the canonical Wikipedia "List of current members of the
  * Rajya Sabha" (sourced to rajyasabha.nic.in). Members are state-elected (or
  * President-nominated), so they carry a state but NO territorial constituency.
  *
@@ -87,7 +87,7 @@ function parseMembers(wt: string): Member[] {
         const cand = cells.find((c) => /^[A-Za-z]/.test(c) && !/party name with colou?r/i.test(c) && !/^\d/.test(c) && !/^\d{2}-\w{3}-\d{4}/.test(clean(c)));
         if (cand) name = clean(cand);
       }
-      // Reject leaked table markup / vacant / header rows — keep only real names.
+      // Reject leaked table markup / vacant / header rows - keep only real names.
       if (!name || name.length < 2 || name.length > 50) continue;
       if (/[=|!{}#]|bgcolor|colspan|rowspan|style|wikitable|vacant|nominated by|^keys$/i.test(name)) continue;
       if (/\d/.test(name) || !/^[A-Za-z]/.test(name)) continue;
@@ -158,7 +158,7 @@ async function main() {
       facts: [],
       active: true,
       generated: true,
-      identity_source: { url: WIKI_URL, name: 'Rajya Sabha Secretariat (rajyasabha.nic.in) — current members list', retrieved_date: TODAY },
+      identity_source: { url: WIKI_URL, name: 'Rajya Sabha Secretariat (rajyasabha.nic.in) - current members list', retrieved_date: TODAY },
       ...(qid ? { wikidata_qid: qid } : {}),
     });
     existingById.set(id, kept[kept.length - 1]);

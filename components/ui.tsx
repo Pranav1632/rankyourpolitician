@@ -1,4 +1,4 @@
-// Pure presentational bits (no hooks) — safe to use from server or client.
+// Pure presentational bits (no hooks) - safe to use from server or client.
 import { initials, avatarTint } from '@/lib/format';
 import { clsx } from 'clsx';
 import Icon, { type IconName } from './Icon';
@@ -30,7 +30,7 @@ export function Avatar({ name, src, size = 44 }: { name: string; src?: string; s
   );
 }
 
-/** Party label as a NEUTRAL chip — never party colours (bias-safety). */
+/** Party label as a NEUTRAL chip - never party colours (bias-safety). */
 export function PartyChip({ party }: { party: string }) {
   // Show a short form when the party name is long, keep full in title.
   const short = party.replace(/\s*\(([^)]+)\)\s*$/, (_, abbr) => ` (${abbr})`);
@@ -57,7 +57,7 @@ export function Chip({ children, tone = 'neutral', icon }: { children: React.Rea
   );
 }
 
-/** Frosted-glass section container — the standard content surface. */
+/** Frosted-glass section container - the standard content surface. */
 export function SectionCard({
   title,
   subtitle,
@@ -69,7 +69,7 @@ export function SectionCard({
 }: {
   title?: string;
   subtitle?: string;
-  /** Small label above the title — used to name a step in an ordered ladder. */
+  /** Small label above the title - used to name a step in an ordered ladder. */
   eyebrow?: string;
   icon?: IconName;
   aside?: React.ReactNode;
@@ -131,7 +131,7 @@ export function StatPill({
   );
 }
 
-/** Small uppercase section label with a leading icon — quiet hierarchy marker. */
+/** Small uppercase section label with a leading icon - quiet hierarchy marker. */
 export function Eyebrow({ children, icon }: { children: React.ReactNode; icon?: IconName }) {
   return (
     <p className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-ink-faint">
