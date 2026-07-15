@@ -4,6 +4,7 @@ import { useI18n } from '@/lib/i18n/provider';
 import Icon from './Icon';
 
 const REPO_URL = 'https://github.com/ForPublicOrg/rankyourpolitician';
+const ATHENA_URL = 'https://tryathena.dev';
 
 export default function Footer() {
   const { t } = useI18n();
@@ -43,6 +44,16 @@ export default function Footer() {
           >
             <Icon name="code" size={13} />
             {t('footer.openSource')}
+          </a>
+          <span aria-hidden="true">·</span>
+          <a
+            href={ATHENA_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-ink-faint underline-offset-2 hover:text-brand hover:underline"
+          >
+            <img src="/athena.svg" alt="" width={13} height={13} className="opacity-80" />
+            {t('footer.builtWith', { name: 'Athena' })}
           </a>
         </p>
       </div>

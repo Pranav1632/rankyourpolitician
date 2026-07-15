@@ -605,6 +605,7 @@
     "terms": "Terms",
     "grievance": "Grievance / Right to reply",
     "openSource": "Open source",
+    "builtWith": "Built using {name}",
     "disclaimer": "Compiled from public and official sources for civic awareness. Not legal advice."
   },
   "time": {
