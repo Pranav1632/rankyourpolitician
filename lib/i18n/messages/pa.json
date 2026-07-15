@@ -253,8 +253,7 @@
     "howCalculated": "ਇਹ ਕਿਵੇਂ ਕੱਢਿਆ ਜਾਂਦਾ ਹੈ?",
     "cohort": "ਸਮੂਹ",
     "loading": "ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ…",
-    "readMore": "ਹੋਰ ਜਾਣੋ",
-    "seedNotice": "ਨਮੂਨਾ ਡਾਟਾ ਵਿਖਾਇਆ ਜਾ ਰਿਹਾ ਹੈ। ਲਾਈਵ ਡਾਟਾ ਲਈ Firebase ਜੋੜੋ।"
+    "readMore": "ਹੋਰ ਜਾਣੋ"
   },
   "levels": {
     "national": "ਭਾਰਤ",

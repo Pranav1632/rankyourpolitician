@@ -57,7 +57,20 @@ export default async function RootLayout({
   const { locale, dict, dir } = await getI18n(lang);
   return (
     <html lang={locale} dir={dir} data-scroll-behavior="smooth" className={manrope.variable} suppressHydrationWarning>
-      <head>
+
+      <body
+        className="flex min-h-screen flex-col"
+        style={{
+          // Manrope first for Latin; Noto Sans keeps every Indic script crisp.
+          ['--font-sans' as string]:
+            "var(--font-manrope), 'Segoe UI', system-ui, -apple-system, 'Noto Sans', 'Noto Sans Devanagari', 'Noto Sans Tamil', 'Noto Sans Bengali', sans-serif",
+        }}
+      >
+        {/* Theme bootstrap: first child of <body>, NOT a React-rendered <head>.
+            AdSense injects its managed script into <head> before hydration, so
+            any React-owned head node gets a hydration mismatch on every page
+            (React #418). Body-first still runs before any content paints, so
+            there is no flash of the wrong theme. */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -74,15 +87,6 @@ export default async function RootLayout({
             `,
           }}
         />
-      </head>
-      <body
-        className="flex min-h-screen flex-col"
-        style={{
-          // Manrope first for Latin; Noto Sans keeps every Indic script crisp.
-          ['--font-sans' as string]:
-            "var(--font-manrope), 'Segoe UI', system-ui, -apple-system, 'Noto Sans', 'Noto Sans Devanagari', 'Noto Sans Tamil', 'Noto Sans Bengali', sans-serif",
-        }}
-      >
         {/* Google AdSense - RAW script tags (not next/script afterInteractive),
             so they are present in the initial HTML of EVERY page: the AdSense
             crawler reads raw HTML, and an injected-after-hydration tag is

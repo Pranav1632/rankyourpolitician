@@ -22,9 +22,13 @@ function ThemeToggle() {
   useEffect(() => {
     setMounted(true);
     const saved = localStorage.getItem('theme');
-    if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      setTheme('dark');
-    }
+    const dark = saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    setTheme(dark ? 'dark' : 'light');
+    // Re-apply the class, don't just read it: Next's 404/error shell bypasses
+    // the root layout's boot script, so on those pages this mount effect is
+    // the only thing that ever sets .dark. Also keeps state and class from
+    // drifting apart, since both derive from the same computation here.
+    document.documentElement.classList.toggle('dark', dark);
   }, []);
 
   const toggleTheme = () => {

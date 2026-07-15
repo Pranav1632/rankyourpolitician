@@ -254,8 +254,7 @@
     "howCalculated": "How is this worked out?",
     "cohort": "group",
     "loading": "Loading…",
-    "readMore": "Learn more",
-    "seedNotice": "Showing sample data. Connect Firebase to serve live data."
+    "readMore": "Learn more"
   },
   "levels": {
     "national": "India",
