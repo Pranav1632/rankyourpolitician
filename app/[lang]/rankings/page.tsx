@@ -1,4 +1,3 @@
-import { Suspense } from 'react';
 import type { Metadata } from 'next';
 import { getI18n, type LangParams } from '@/lib/i18n/server';
 import { t } from '@/lib/i18n';
@@ -28,10 +27,12 @@ export default async function RankingsPage({ params }: { params: Promise<LangPar
     <>
       <PageHero title={tr('ranking.fullTitle')} subtitle={tr('ranking.fullSubtitle')} />
       <div className="mx-auto max-w-content px-4 py-6">
-        {/* useSearchParams (deep-linked filters) requires a Suspense boundary */}
-        <Suspense fallback={<div className="skeleton h-40 w-full" />}>
-          <RankingsExplorer />
-        </Suspense>
+        {/* RankingsExplorer reads deep-linked filters from window.location on
+            mount (no useSearchParams), so no Suspense boundary is needed - the
+            old one could wedge on its fallback in dev (see Finder.tsx). The
+            filter UI now also prerenders into the static HTML instead of a
+            skeleton. */}
+        <RankingsExplorer />
         <div className="mt-8">
           <AdSlot />
         </div>

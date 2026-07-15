@@ -503,6 +503,23 @@ export async function getPersonSentiment(id: string): Promise<SentimentScore> {
   return idx.sentiment.get(id) ?? computeSentimentScore(id, undefined);
 }
 
+/** Live ratings for every leader with at least one vote, as compact rows of
+ *  [bayesian_mean, raw_mean, n_votes] keyed by person id. The rankings
+ *  explorer merges these into the static rankings.json payload client-side
+ *  (the Bayesian value orders the list, the raw mean is what gets displayed).
+ *  Served from the TTL-cached aggregates - zero extra Firestore reads - and
+ *  only rated leaders are included, so the payload stays tiny. */
+export async function getAllRatings(): Promise<Record<string, [number, number, number]>> {
+  const idx = await getIndex();
+  const out: Record<string, [number, number, number]> = {};
+  for (const [id, s] of idx.sentiment) {
+    if (s.n_votes > 0 && s.bayesian_mean != null && s.raw_mean != null) {
+      out[id] = [s.bayesian_mean, s.raw_mean, s.n_votes];
+    }
+  }
+  return out;
+}
+
 /**
  * Trending leaders: most rating activity in the last week, decayed toward
  * today (see lib/trending.ts for the exact rules). Derived entirely from the
