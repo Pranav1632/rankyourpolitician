@@ -56,6 +56,36 @@ export function validateDataset(): { issues: Issue[]; ok: boolean } {
     if (!p.is_minister && Object.keys(p.metrics || {}).length === 0)
       push(p, 'warn', 'no scored metrics - performance percentile will be unavailable');
   }
+
+  // ONE PERSON, ONE AFFIDAVIT PAGE.
+  // A MyNeta candidate page describes exactly one candidate in one seat, so two
+  // members citing the same page means one of them is publishing somebody else's
+  // sworn declaration - the most damaging error this dataset can carry, and the
+  // one every fuzzy-matching bug eventually produces. It has happened twice:
+  // Bihar's Aurangabad winner attributed to Maharashtra's MP (16 declared
+  // criminal cases against a man who declared 4), and Aizawl North-I's MLA
+  // attributed to Aizawl North-II's. Both were invisible to name- and
+  // seat-similarity checks but trivially visible here, so this is an ERROR and
+  // blocks publish.
+  const byPage = new Map<string, Politician[]>();
+  for (const p of politicians) {
+    const seen = new Set<string>();
+    for (const f of p.facts as Fact[]) {
+      if (!/myneta\.info\/[^/]+\/candidate\.php\?candidate_id=\d+/.test(f.source_url || '')) continue;
+      if (seen.has(f.source_url)) continue; // one member may cite its page for several fields
+      seen.add(f.source_url);
+      if (!byPage.has(f.source_url)) byPage.set(f.source_url, []);
+      byPage.get(f.source_url)!.push(p);
+    }
+  }
+  for (const [url, members] of byPage) {
+    if (members.length < 2) continue;
+    for (const p of members) {
+      const others = members.filter((m) => m.id !== p.id).map((m) => `${m.name} (${m.stateCode} ${m.constituencyName})`);
+      push(p, 'error', `cites the same affidavit page as ${others.join(', ')} - one of them has another person's declaration: ${url}`);
+    }
+  }
+
   return { issues, ok: !issues.some((i) => i.severity === 'error') };
 }
 

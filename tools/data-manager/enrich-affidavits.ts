@@ -15,6 +15,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import type { Politician, Fact } from '../../lib/types';
+import { nameMatches } from './myneta';
 
 const ROOT = resolve(dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')), '..', '..');
 const SEED_DIR = resolve(ROOT, 'data', 'seed');
@@ -96,8 +97,23 @@ async function main() {
   const unmatched: string[] = [];
 
   for (const p of pols) {
+    // Lok Sabha only. This list is the 2024 PARLIAMENTARY winners, and an
+    // assembly seat can share a name with a parliamentary one - without this
+    // an MLA could be handed an MP's affidavit.
+    if (p.house !== 'Lok Sabha') continue;
     const row = byCons.get(consKey(p.constituencyName));
-    if (!row) { if (p.house === 'Lok Sabha') unmatched.push(`${p.constituencyName} (${p.name})`); continue; }
+    if (!row) { unmatched.push(`${p.constituencyName} (${p.name})`); continue; }
+    // The seat name alone is NOT unique across India - Bihar and Maharashtra both
+    // have an Aurangabad, Bihar and UP both a Maharajganj - and this summary list
+    // carries no state column, so the constituency key silently collides. The
+    // winner's NAME is the only available disambiguator here; without it, Bihar's
+    // Aurangabad winner was written onto Maharashtra's MP (16 declared criminal
+    // cases attributed to a man who declared 4). Mismatches are reported, never
+    // guessed; enrich-affidavits-byseat.ts resolves them properly, with state.
+    if (!nameMatches(row.name, p.name)) {
+      unmatched.push(`${p.constituencyName}: roster "${p.name}" vs MyNeta "${row.name}" - AMBIGUOUS SEAT NAME, skipped`);
+      continue;
+    }
     matched++;
     const cite = { source_url: CAND(row.candidateId), source_name: 'MyNeta / ADR - 2024 election affidavit', retrieved_date: TODAY, as_of: '2024 election affidavit' };
     const have = new Set(p.facts.map((f) => f.field_type));

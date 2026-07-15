@@ -72,7 +72,9 @@ const SLUGS: Record<string, { year: string; slugs: string[] }> = {
   AR: { year: '2024', slugs: ['arunachalpradesh2024'] },
   SK: { year: '2024', slugs: ['sikkim2024'] },
   DL: { year: '2025', slugs: ['delhi2025', 'delhi2020'] },
-  BR: { year: '2020', slugs: ['bihar2025', 'bihar2020'] },
+  // Bihar's sitting assembly is the one elected in Nov 2025; bihar2020 is the
+  // superseded house and must never be used for current members.
+  BR: { year: '2025', slugs: ['bihar2025'] },
 };
 
 async function getHtml(u: string): Promise<string | null> {
@@ -253,7 +255,12 @@ async function main() {
       const row = resolved.get(p.id);
       if (!row) continue;
       sMatched++;
-      const cite = { source_url: `https://www.myneta.info/${res.slug}/candidate.php?candidate_id=${row.candidateId}`, source_name: `MyNeta / ADR - ${cfg.year} assembly affidavit`, retrieved_date: TODAY, as_of: `${cfg.year} assembly election affidavit` };
+      // The cited year comes from the slug we actually read, never from cfg.year:
+      // when several slugs are listed, the one that resolves may not be the one
+      // cfg.year describes. That mismatch is exactly how 183 Bihar MLAs came to
+      // cite bihar2025 pages as "2020 assembly election affidavit".
+      const year = (res.slug.match(/(\d{4})/) || [])[1] || cfg.year;
+      const cite = { source_url: `https://www.myneta.info/${res.slug}/candidate.php?candidate_id=${row.candidateId}`, source_name: `MyNeta / ADR - ${year} assembly affidavit`, retrieved_date: TODAY, as_of: `${year} assembly election affidavit` };
       const have = new Set(p.facts.map((f) => f.field_type));
       const add = (ft: string, val: string) => { if (val && !have.has(ft)) { p.facts.push({ field_type: ft, value: val, ...cite } as Fact); have.add(ft); sFacts++; } };
       if (/₹|Rs|\d/.test(row.assets)) add('assets_total', money(row.assets));

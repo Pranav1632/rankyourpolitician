@@ -93,6 +93,19 @@ async function main() {
       await import('./enrich-affidavits-states');
       break;
     }
+    case 'verify-affidavits': {
+      // Read-only audit: does each affidavit fact still match the page it cites,
+      // and is that page really about our member?
+      await import('./verify-affidavits');
+      break;
+    }
+    case 'enrich-affidavits-byseat': {
+      // Gap-filler for both of the above: walks MyNeta's PER-SEAT pages, which
+      // (unlike its summary lists) also cover candidates whose figures are
+      // rendered as images. Fill-only, so run it after the two steps above.
+      await import('./enrich-affidavits-byseat');
+      break;
+    }
     case 'normalize-fields': {
       // Post-enrichment data-quality cleanup (party role prefixes, bad ages).
       await import('./normalize-fields');
