@@ -62,6 +62,15 @@ export default async function HomePage({ params }: { params: Promise<LangParams>
     { role: 'vidhanSabha', icon: 'flag', tint: 'bg-perf-soft text-perf' },
     { role: 'localBody', icon: 'home', tint: 'bg-rating-soft text-rating-ink' },
   ];
+  // "NOM" groups the President's Rajya Sabha nominees - not a geography, so it
+  // gets no state chip (same exclusion as getNationalStats).
+  const geoStates = states.filter((s) => s.stateCode !== 'NOM').sort((a, b) => b.count - a.count);
+  const exploreLinks: { href: string; icon: IconName; label: string }[] = [
+    { href: '/india', icon: 'parliament', label: tr('nav.central') },
+    { href: '/hierarchy', icon: 'network', label: tr('nav.hierarchy') },
+    { href: '/rankings', icon: 'star', label: tr('ranking.fullTitle') },
+    { href: '/accountability', icon: 'people', label: tr('nav.accountability') },
+  ];
 
   return (
     <>
@@ -211,35 +220,50 @@ export default async function HomePage({ params }: { params: Promise<LangParams>
 
         {/* State drill-down + top leaders */}
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_1.15fr]">
-          <Reveal>
-            <SectionCard title={tr('home.exploreTitle')} subtitle={tr('home.exploreHelp')} icon="map">
+          <Reveal className="h-full">
+            {/* Full-height card so the left column visually matches the (tall)
+                trending list. Desktop shows EVERY state/UT - the column is tall
+                anyway; mobile keeps the top 12 + "+N" so the stacked page stays
+                short. A quick-links footer fills the remaining height with the
+                main explore destinations instead of dead space. */}
+            <SectionCard title={tr('home.exploreTitle')} subtitle={tr('home.exploreHelp')} icon="map" className="flex h-full flex-col">
               <Eyebrow>{tr('home.statesWithData')}</Eyebrow>
-              {/* Top 12 only - the hero map covers every state, and /hierarchy
-                  lists them all. Keeps the home page within ~2 screens. */}
-              <ul className="mt-2 flex flex-wrap gap-2">
-                {[...states]
-                  .sort((a, b) => b.count - a.count)
-                  .slice(0, 12)
-                  .map((s) => (
-                    <li key={s.stateCode}>
-                      <Link
-                        href={`/state/${s.stateCode}`}
-                        className="pressable inline-flex items-center gap-1.5 rounded-full bg-brand-soft px-3.5 py-1.5 text-sm font-semibold text-brand-ink hover:bg-brand hover:text-white"
-                      >
-                        {s.state}
-                        <span className="rounded-full bg-white/90 px-1.5 text-xs tabular-nums text-brand-ink">{s.count}</span>
-                      </Link>
-                    </li>
-                  ))}
-                <li>
+              <ul className="mt-2 flex flex-wrap content-start gap-2">
+                {geoStates.map((s, i) => (
+                  <li key={s.stateCode} className={i >= 12 ? 'hidden lg:block' : undefined}>
+                    <Link
+                      href={`/state/${s.stateCode}`}
+                      className="pressable inline-flex items-center gap-1.5 rounded-full bg-brand-soft px-3.5 py-1.5 text-sm font-semibold text-brand-ink hover:bg-brand hover:text-white"
+                    >
+                      {s.state}
+                      <span className="rounded-full bg-white/90 px-1.5 text-xs tabular-nums text-brand-ink">{s.count}</span>
+                    </Link>
+                  </li>
+                ))}
+                <li className="lg:hidden">
                   <Link
                     href="/hierarchy"
                     className="pressable inline-flex items-center gap-1 rounded-full border border-brand/30 px-3.5 py-1.5 text-sm font-bold text-brand hover:bg-brand-soft"
                   >
-                    +{Math.max(0, states.length - 12)} <Icon name="arrow" size={13} />
+                    +{Math.max(0, geoStates.length - 12)} <Icon name="arrow" size={13} />
                   </Link>
                 </li>
               </ul>
+              <div className="mt-auto pt-5">
+                <Eyebrow icon="compass">{tr('home.moreExplore')}</Eyebrow>
+                <div className="mt-2 grid grid-cols-2 gap-2">
+                  {exploreLinks.map((l) => (
+                    <Link
+                      key={l.href}
+                      href={l.href}
+                      className="pressable flex items-center gap-2 rounded-xl border border-line bg-white/85 px-3 py-2.5 text-sm font-semibold text-ink-soft hover:border-brand/40 hover:text-brand"
+                    >
+                      <Icon name={l.icon} size={16} className="shrink-0 text-brand" />
+                      <span className="truncate">{l.label}</span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
             </SectionCard>
           </Reveal>
 
