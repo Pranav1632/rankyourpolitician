@@ -45,8 +45,12 @@
 .dark {
   --color-ink: 240 240 240;
   --color-ink-soft: 180 180 180;
-  --color-ink-faint: 120 120 120;
-  
+  /* 150, not 120: at 120 this hit only 3.78:1 on --color-paper-sink, below the
+     4.5:1 WCAG AA floor for body text. It carries locations, metric labels and
+     timestamps, so it has to clear AA on the LIGHTEST dark surface, not just on
+     pure black. */
+  --color-ink-faint: 150 150 150;
+
   --color-paper: 18 18 18;
   --color-paper-soft: 0 0 0;
   --color-paper-sink: 30 30 30;
@@ -56,7 +60,12 @@
   --color-brand: 99 102 241;
   --color-brand-ink: 199 210 254;
   --color-brand-soft: 28 27 45;
-  --color-brand-deep: 67 56 202;
+  /* Indigo-600, not indigo-700: this is the `via` stop of the hero headline's
+     bg-clip-text gradient, where 67 56 202 fell to 2.66:1 on black - under the
+     3:1 floor for large text. Still deep enough that white stays legible on
+     `hover:bg-brand-deep` fills (6.3:1) and still darker than --color-brand,
+     so the gradient keeps its direction. */
+  --color-brand-deep: 79 70 229;
 
   --color-accent: 251 146 60;
   --color-accent-ink: 255 237 213;
@@ -373,4 +382,20 @@ details > summary::-webkit-details-marker {
 }
 .dark .bg-white\/15 {
   background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* --color-brand has two jobs that conflict on a dark background: it is link
+ * text (113 `text-brand` usages) AND a button fill under white text (12
+ * `bg-brand ... text-white`). To clear 4.5:1 as text on --color-paper-sink it
+ * needs luminance >= 0.233; to keep white legible on top of it, <= 0.183. No
+ * single value satisfies both, so the text role forks to indigo-400 here while
+ * the variable stays dark enough for white button labels and keeps the focus
+ * ring at 3.73:1. Light mode is unaffected - #4f46e5 already passes both.
+ *
+ * :not(:hover) matters: `hover:text-white` has the same specificity as this
+ * rule, so without it source order would win and the hover state on
+ * `bg-brand-soft text-brand hover:bg-brand hover:text-white` chips would keep
+ * indigo text on an indigo fill. */
+.dark .text-brand:not(:hover) {
+  color: rgb(129 140 248);
 }
