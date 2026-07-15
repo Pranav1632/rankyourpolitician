@@ -6,6 +6,7 @@ import { buildStatePaths } from '@/lib/geo';
 import SearchBox from '@/components/SearchBox';
 import GeoMap, { type GeoMapShape } from '@/components/GeoMap';
 import LastUpdated from '@/components/LastUpdated';
+import LeadersTabs from '@/components/LeadersTabs';
 import AdSlot from '@/components/AdSlot';
 import HierarchyLadder from '@/components/HierarchyLadder';
 import { SectionCard, Avatar, PartyChip, StatPill, Eyebrow } from '@/components/ui';
@@ -243,44 +244,53 @@ export default async function HomePage({ params }: { params: Promise<LangParams>
           </Reveal>
 
           <Reveal delay={90}>
-            <SectionCard title={tr('home.topTitle')} subtitle={tr('home.topHelp')} icon="star" aside={<LastUpdated date={meta.lastUpdated} />}>
-              {topLeaders.length > 0 ? (
-                <>
-                  <ol className="space-y-2">
-                    {topLeaders.map((e, i) => (
-                      <li key={e.politician_id}>
-                        <Link
-                          href={`/person/${e.politician_id}`}
-                          className="pressable flex items-center gap-3 rounded-xl border border-line bg-white px-3 py-2 transition hover:border-brand/40 hover:shadow-lift"
-                        >
-                          <RankBadge rank={i + 1} />
-                          <Avatar name={e.name} src={e.photo_url} size={40} />
-                          <div className="min-w-0 flex-1">
-                            <div className="flex flex-wrap items-center gap-x-2">
-                              <span className="truncate text-sm font-bold text-ink">{e.name}</span>
-                              <PartyChip party={e.party} />
-                            </div>
-                            <p className="truncate text-xs text-ink-faint">
-                              {e.constituencyName}, {e.state}
-                            </p>
-                          </div>
-                          <span className="shrink-0 rounded-full bg-perf-soft px-2.5 py-1 text-xs font-bold text-perf">
-                            {tr('ranking.topShort', { n: Math.max(1, Math.round(100 - (e.performance_percentile ?? 0))) })}
-                          </span>
-                        </Link>
-                      </li>
-                    ))}
-                  </ol>
-                  <Link
-                    href="/rankings"
-                    className="mt-3 flex items-center justify-center gap-1.5 rounded-xl border border-line bg-white px-3 py-2.5 text-sm font-semibold text-brand hover:bg-brand-soft/60"
-                  >
-                    {tr('ranking.seeAllCount', { n: totalLeaders })} <Icon name="arrow" size={14} />
-                  </Link>
-                </>
-              ) : (
-                <p className="text-sm text-ink-faint">{tr('search.noResults')}</p>
-              )}
+            {/* Two views of the same card: "Trending" (default - recent rating
+                activity, client-fetched on mount so the page stays static
+                while the list stays fresh) and "Top rated" (this
+                server-rendered list - by verified performance, baked into the
+                ISR page). */}
+            <SectionCard title={tr('home.topTitle')} icon="star" aside={<LastUpdated date={meta.lastUpdated} />}>
+              <LeadersTabs
+                top={
+                  topLeaders.length > 0 ? (
+                    <>
+                      <ol className="space-y-2">
+                        {topLeaders.map((e, i) => (
+                          <li key={e.politician_id}>
+                            <Link
+                              href={`/person/${e.politician_id}`}
+                              className="pressable flex items-center gap-3 rounded-xl border border-line bg-white px-3 py-2 transition hover:border-brand/40 hover:shadow-lift"
+                            >
+                              <RankBadge rank={i + 1} />
+                              <Avatar name={e.name} src={e.photo_url} size={40} />
+                              <div className="min-w-0 flex-1">
+                                <div className="flex flex-wrap items-center gap-x-2">
+                                  <span className="truncate text-sm font-bold text-ink">{e.name}</span>
+                                  <PartyChip party={e.party} />
+                                </div>
+                                <p className="truncate text-xs text-ink-faint">
+                                  {e.constituencyName}, {e.state}
+                                </p>
+                              </div>
+                              <span className="shrink-0 rounded-full bg-perf-soft px-2.5 py-1 text-xs font-bold text-perf">
+                                {tr('ranking.topShort', { n: Math.max(1, Math.round(100 - (e.performance_percentile ?? 0))) })}
+                              </span>
+                            </Link>
+                          </li>
+                        ))}
+                      </ol>
+                      <Link
+                        href="/rankings"
+                        className="mt-3 flex items-center justify-center gap-1.5 rounded-xl border border-line bg-white px-3 py-2.5 text-sm font-semibold text-brand hover:bg-brand-soft/60"
+                      >
+                        {tr('ranking.seeAllCount', { n: totalLeaders })} <Icon name="arrow" size={14} />
+                      </Link>
+                    </>
+                  ) : (
+                    <p className="text-sm text-ink-faint">{tr('search.noResults')}</p>
+                  )
+                }
+              />
             </SectionCard>
           </Reveal>
         </div>

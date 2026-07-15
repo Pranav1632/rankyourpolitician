@@ -75,6 +75,15 @@ This is the most important thing to understand before changing `lib/data.ts`:
   - *Votes* - `VoteWidget` re-fetches the live score from `GET /api/vote` on mount
     (CDN-cached 5 min, served from the in-process aggregate cache: zero extra Firestore
     reads). The static HTML can be up to a day old; the numbers on screen never are.
+  - *Trending* - the home page's "Trending" tab (the default view of the Top-leaders
+    card) fetches `GET /api/trending` on mount (CDN-cached 5 min). The vote
+    transaction keeps per-day event buckets on each
+    aggregate doc (`daily`, pruned to 14 days), and trending is derived from the same
+    in-process aggregate cache: a 7-day window, exponential decay (3-day half-life) so
+    recency beats raw bulk, and a 3-vote floor so one drive-by rating never trends.
+    Ordering is by decayed activity only - the displayed number is the plain mean of
+    the week's ratings, and the list is labelled attention, not a verdict.
+    All rules live in `lib/trending.ts`.
   - *Data publishes* - `npm run dm -- publish` calls `POST /api/revalidate` (Bearer
     `REVALIDATE_SECRET`), which sweeps the page cache; each page regenerates on its next
     visit. A page that regenerates within ~30 min of a publish can still bake the previous
@@ -101,6 +110,8 @@ app/                          Next.js routes
   accountability/ methodology/ about/ privacy/ terms/ grievance/
   api/vote/                   vote endpoint (POST: Turnstile + rate-limit + Firestore
                               transaction; GET: live sentiment for the widget, CDN-cached)
+  api/trending/               trending leaders (decayed 7-day rating activity,
+                              CDN-cached, zero extra Firestore reads)
   api/revalidate/             on-demand cache sweep after `dm publish` (Bearer secret)
   api/health/                 liveness probe (zero Firestore reads)
 components/                   UI (map, search, ranking, vote widget, i18n switcher, …)

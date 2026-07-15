@@ -578,6 +578,17 @@
     "loading": "Loading rankings…",
     "voteOne": "1 rating"
   },
+  "trending": {
+    "tab": "Trending",
+    "tabTop": "Top rated",
+    "help": "Most rated in the last 7 days. This shows attention, not a verdict.",
+    "thisWeek": "{n} ratings this week",
+    "oneThisWeek": "1 rating this week",
+    "empty": "Nothing trending yet - a leader appears here once they get a few ratings in a week.",
+    "error": "Could not load trending right now.",
+    "retry": "Try again",
+    "loading": "Loading trending leaders"
+  },
   "vote": {
     "title": "Rate this leader",
     "prompt": "How would you rate this leader?",

@@ -370,4 +370,31 @@ export interface VoteAggregate {
   total: number;
   sum: number;
   updated_at: string;
+  /**
+   * Rating EVENTS per UTC day, for the trending window - {"2026-07-15":{"5":3}}.
+   * Every vote cast or changed counts as one event on the day it happens;
+   * buckets are never decremented (a changed vote IS that day's activity, and
+   * we could not know which day the earlier vote landed in anyway). The vote
+   * transaction prunes keys older than TRENDING_RETENTION_DAYS, so the doc
+   * stays bounded. Absent on aggregates that predate the trending feature.
+   */
+  daily?: Record<string, Record<string, number>>;
+}
+
+/** One row of the trending list: recent rating ACTIVITY, not a quality verdict.
+ *  `recent_mean` is the plain average of the window's rating events - that is
+ *  what gets displayed; the decayed score is for ordering only (never shown). */
+export interface TrendingEntry {
+  politician_id: string;
+  name: string;
+  party?: string;
+  constituencyName?: string;
+  state?: string;
+  photo_url?: string;
+  /** Rating events inside the trending window. */
+  recent_votes: number;
+  /** Plain average of the window's rating events (1..5). */
+  recent_mean: number | null;
+  /** All-time vote count, for context. */
+  total_votes: number;
 }

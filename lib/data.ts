@@ -17,6 +17,8 @@ import {
   computePerformanceScores,
   computeSentimentScore,
 } from './ranking';
+import { computeTrendingSignals } from './trending';
+import type { TrendingEntry } from './types';
 import { getDb } from './firebase-admin';
 import { datasetLastUpdated } from './format';
 import { MINISTER_RANK_LABEL, type MinisterRank, type Fact, type PerfMetric } from './types';
@@ -42,6 +44,8 @@ export interface Index {
   performance: Map<string, PerformanceScore>;
   sentiment: Map<string, SentimentScore>;
   rankingByKey: Map<string, Ranking>;
+  /** Raw live aggregates (with daily trending buckets), keyed by person id. */
+  voteAggregates: Map<string, VoteAggregate>;
   states: { stateCode: string; state: string; count: number }[];
   source: 'firestore' | 'seed';
   builtAt: string;
@@ -154,6 +158,7 @@ function buildIndex(ds: Dataset): Index {
     performance,
     sentiment,
     rankingByKey,
+    voteAggregates: ds.voteAggregates,
     states: [...stateAgg.entries()]
       .map(([stateCode, v]) => ({ stateCode, state: v.state, count: v.count }))
       .sort((a, b) => a.state.localeCompare(b.state)),
@@ -496,6 +501,71 @@ export async function getDataSource(): Promise<'firestore' | 'seed'> {
 export async function getPersonSentiment(id: string): Promise<SentimentScore> {
   const idx = await getIndex();
   return idx.sentiment.get(id) ?? computeSentimentScore(id, undefined);
+}
+
+/**
+ * Trending leaders: most rating activity in the last week, decayed toward
+ * today (see lib/trending.ts for the exact rules). Derived entirely from the
+ * TTL-cached aggregates the index already loads - zero extra Firestore reads.
+ * Entries are joined to the politician index; a person rated on a
+ * minister-only profile (no linked MP/MLA record) is resolved from the
+ * government rosters. Ids that resolve to no one are skipped - missing beats
+ * wrong.
+ */
+export async function getTrending(limit = 5): Promise<TrendingEntry[]> {
+  const idx = await getIndex();
+  const signals = computeTrendingSignals(idx.voteAggregates.values());
+
+  // Lazily built roster lookup for the rare non-MP case (CM / minister stubs).
+  let rosterById: Map<string, { name: string; party?: string; state?: string; constituency?: string; photo_url?: string }> | null = null;
+  const loadRosters = async () => {
+    if (rosterById) return rosterById;
+    rosterById = new Map();
+    for (const m of await getCentralGovernment()) {
+      rosterById.set(m.politicianId || m.id, { name: m.name, party: m.party, state: m.state, constituency: m.constituency, photo_url: m.photo_url });
+    }
+    for (const sm of await allStateMinisters()) {
+      const key = sm.politicianId || sm.id;
+      if (!rosterById.has(key)) rosterById.set(key, { name: sm.name, party: sm.party, state: sm.state, photo_url: sm.photo_url });
+    }
+    return rosterById;
+  };
+
+  const out: TrendingEntry[] = [];
+  for (const s of signals) {
+    if (out.length >= limit) break;
+    const total = idx.voteAggregates.get(s.politician_id)?.total ?? s.recent_votes;
+    const p = idx.politicianById.get(s.politician_id);
+    if (p) {
+      out.push({
+        politician_id: p.id,
+        name: p.name,
+        party: p.party,
+        constituencyName: p.constituencyName,
+        state: p.state,
+        photo_url: p.photo_url,
+        recent_votes: s.recent_votes,
+        recent_mean: s.recent_mean,
+        total_votes: total,
+      });
+      continue;
+    }
+    const m = (await loadRosters()).get(s.politician_id);
+    if (m) {
+      out.push({
+        politician_id: s.politician_id,
+        name: m.name,
+        party: m.party,
+        constituencyName: m.constituency,
+        state: m.state,
+        photo_url: m.photo_url,
+        recent_votes: s.recent_votes,
+        recent_mean: s.recent_mean,
+        total_votes: total,
+      });
+    }
+  }
+  return out;
 }
 
 /** Fill a minister record's missing photo from its linked politician profile -
