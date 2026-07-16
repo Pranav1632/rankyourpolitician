@@ -172,8 +172,8 @@ export default async function HomePage({ params }: { params: Promise<LangParams>
             }
           >
             {pm ? (
-              <div className="flex flex-wrap items-center gap-3">
-                <Link href={`/person/${pm.politicianId || pm.id}`} className="pressable flex min-w-0 items-center gap-3 rounded-2xl border border-brand/20 bg-gradient-to-br from-brand-soft/70 to-white px-4 py-3 transition hover:shadow-lift">
+              <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3">
+                <Link href={`/person/${pm.politicianId || pm.id}`} className="pressable flex min-w-0 max-w-full items-center gap-3 self-start rounded-2xl border border-brand/20 bg-gradient-to-br from-brand-soft/70 to-white px-4 py-3 transition hover:shadow-lift sm:self-auto">
                   <Avatar name={pm.name} src={pm.photo_url} size={48} />
                   <span className="min-w-0">
                     <span className="block text-[11px] font-bold uppercase tracking-wide text-brand">{tr('central.pm')}</span>
