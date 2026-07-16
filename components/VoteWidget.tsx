@@ -51,6 +51,7 @@ export default function VoteWidget({
   const { t } = useI18n();
   const [sentiment, setSentiment] = useState<Sentiment>(initial);
   const [selected, setSelected] = useState<number | null>(null);
+  const [previousRating, setPreviousRating] = useState<number | null>(null);
   const [status, setStatus] = useState<'idle' | 'submitting' | 'done' | 'error'>('idle');
   const [message, setMessage] = useState('');
   const [token, setToken] = useState('');
@@ -62,7 +63,13 @@ export default function VoteWidget({
     fpRef.current = deviceFingerprint();
     try {
       const prev = localStorage.getItem(`vote:${politicianId}`);
-      if (prev) setSelected(Number(prev));
+      if (prev) {
+        const val = Number(prev);
+        setSelected(val);
+        setPreviousRating(val);
+      } else {
+        setPreviousRating(null);
+      }
     } catch {}
   }, [politicianId]);
 
@@ -150,6 +157,7 @@ export default function VoteWidget({
       }
       setSentiment(data.sentiment);
       setStatus('done');
+      setPreviousRating(selected);
       setMessage(data.updated ? t('vote.already') : t('vote.thanks'));
       try {
         localStorage.setItem(`vote:${politicianId}`, String(selected));
@@ -224,6 +232,12 @@ export default function VoteWidget({
         <span>{t('vote.scale1')}</span>
         <span>{t('vote.scale5')}</span>
       </div>
+
+      {previousRating !== null && (
+        <p className="mt-2 text-xs font-semibold text-brand-ink/80 dark:text-brand-ink/90">
+          {t('vote.alreadyVotedHint', { rating: previousRating })}
+        </p>
+      )}
 
       {SITE_KEY && <div ref={tsRef} className="mt-3" />}
 

@@ -68,6 +68,23 @@ const OFFICIAL_UTILITY_HOSTS = new Set([
   'tsecl.in', 'www.tsecl.in',                           // Tripura State Electricity Corporation
   'dnhddpcl.in', 'www.dnhddpcl.in',                     // DNH & DD Power Corporation
   'chandigarhpower.com', 'www.chandigarhpower.com',     // Chandigarh distribution licensee
+  // Private/city distribution licensees - each is the operator of the licence
+  // area its label names (Kolkata, Mumbai, Delhi, Ahmedabad/Surat/Agra, Greater
+  // Noida). State discoms don't serve these areas, so these hosts are the ONLY
+  // official publishers of the numbers their consumers need.
+  'cesc.co.in', 'www.cesc.co.in',                       // CESC Ltd - Kolkata & Howrah
+  'bestundertaking.com', 'www.bestundertaking.com',     // BEST - Mumbai island city
+  'adanielectricity.com', 'www.adanielectricity.com',   // Adani Electricity - Mumbai suburbs
+  'tatapower.com', 'www.tatapower.com',                 // Tata Power - Mumbai licence area
+  'bsesdelhi.com', 'www.bsesdelhi.com',                 // BSES Rajdhani + Yamuna - Delhi
+  'tatapower-ddl.com', 'www.tatapower-ddl.com',         // Tata Power-DDL - north Delhi
+  'torrentpower.com', 'www.torrentpower.com',           // Torrent - Ahmedabad/Surat/Agra/DNH-DD
+  'noidapower.com', 'www.noidapower.com',               // NPCL - Greater Noida
+  // State discom hosts added with the July 2026 multi-discom coverage pass
+  'apcpdcl.in', 'www.apcpdcl.in',                       // AP Central Power Distribution
+  'consolidatedbill.mpez.co.in', 'www.mpez.co.in',      // MP Poorv Kshetra (Jabalpur)
+  'mpwz.co.in', 'www.mpwz.co.in',                       // MP Paschim Kshetra (Indore)
+  'bijlimitra.com', 'www.bijlimitra.com',               // JVVNL consumer portal (Jaipur discom)
   // Other state agencies that operate the service they publish
   'hr.erss.in',                                         // Haryana Emergency Response Support System
   'www.ocac.in', 'ocac.in',                             // Odisha Computer Application Centre (Sanjog)
@@ -115,6 +132,27 @@ function normaliseUrl(raw: string): string | null {
   }
 }
 
+/** Plausible published contact address - anything else is dropped, not "fixed". */
+function normaliseEmail(raw: string): string | null {
+  const v = (raw || '').trim().toLowerCase();
+  return /^[a-z0-9][a-z0-9._%+-]*@[a-z0-9.-]+\.[a-z]{2,}$/.test(v) ? v : null;
+}
+
+/** District names actually present in the seed, per state - the only names the
+ * `districts` service-area field may use (a misspelt tag silently hides a
+ * helpline from the district it was meant for). */
+function seedDistricts(): Map<string, Set<string>> {
+  const pols = JSON.parse(readFileSync(SEED, 'utf8')) as { stateCode?: string; districts?: string[] }[];
+  const m = new Map<string, Set<string>>();
+  for (const p of pols) {
+    if (!p.stateCode || p.stateCode === 'NOM') continue;
+    let set = m.get(p.stateCode);
+    if (!set) m.set(p.stateCode, (set = new Set()));
+    for (const d of p.districts ?? []) set.add(d);
+  }
+  return m;
+}
+
 /** stateCode -> state name, straight from the seed (the naming we must match). */
 function seedStates(): Map<string, string> {
   const pols = JSON.parse(readFileSync(SEED, 'utf8')) as { stateCode?: string; state?: string }[];
@@ -129,10 +167,17 @@ const normName = (s: string) =>
 
 interface RawChannel {
   kind?: string; topic?: string; label?: string; value?: string;
+  operator?: string; districts?: string[];
   source_url?: string; source_name?: string; note?: string; retrieved_date?: string;
 }
 
-function clean(raw: RawChannel[], scope: 'national' | 'state', where: string, drops: string[]): ContactChannel[] {
+function clean(
+  raw: RawChannel[],
+  scope: 'national' | 'state',
+  where: string,
+  drops: string[],
+  knownDistricts?: Set<string>,
+): ContactChannel[] {
   const out: ContactChannel[] = [];
   const seen = new Set<string>();
   for (const c of raw || []) {
@@ -144,20 +189,39 @@ function clean(raw: RawChannel[], scope: 'national' | 'state', where: string, dr
     if (!VALID_TOPICS.has(topic)) { drops.push(`${where}: "${label}" - unknown topic "${c.topic}"`); continue; }
 
     let value: string | null;
-    const kind = c.kind === 'url' ? 'url' : 'phone';
+    const kind = c.kind === 'url' ? 'url' : c.kind === 'email' ? 'email' : 'phone';
     if (kind === 'phone') {
       value = normalisePhone(c.value || '');
       if (!value) { drops.push(`${where}: "${label}" - implausible phone ${JSON.stringify(c.value)}`); continue; }
+    } else if (kind === 'email') {
+      value = normaliseEmail(c.value || '');
+      if (!value) { drops.push(`${where}: "${label}" - bad email ${JSON.stringify(c.value)}`); continue; }
     } else {
       value = normaliseUrl(c.value || '');
       if (!value) { drops.push(`${where}: "${label}" - bad url ${JSON.stringify(c.value)}`); continue; }
     }
 
+    // Service-area tags must use the seed's district spellings exactly - a tag
+    // the district pages can't match HIDES the channel where it should show, so
+    // an unknown name drops the whole tag list (channel stays, shown state-wide).
+    let districts: string[] | undefined;
+    if (Array.isArray(c.districts) && c.districts.length) {
+      const bad = knownDistricts ? c.districts.filter((d) => !knownDistricts.has(d)) : c.districts;
+      if (bad.length) {
+        drops.push(`${where}: "${label}" - unknown district tag(s) ${bad.join(', ')} (tags removed, channel kept)`);
+      } else {
+        districts = [...new Set(c.districts)].sort();
+      }
+    }
+
     const k = `${kind}:${value}`;
     if (seen.has(k)) continue;
     seen.add(k);
+    const operator = (c.operator || '').trim();
     out.push({
       kind, topic, label, value, scope,
+      ...(operator ? { operator } : {}),
+      ...(districts ? { districts } : {}),
       source_url: src,
       source_name: (c.source_name || 'Official government source').trim(),
       retrieved_date: c.retrieved_date || TODAY,
@@ -184,6 +248,7 @@ function main() {
   // three whole states' helplines.
   const codeByName = new Map<string, string>();
   for (const [code, name] of seedStates()) codeByName.set(normName(name), code);
+  const districtsByState = seedDistricts();
 
   const states: ContactChannelsFile['states'] = [];
   const unmatched: string[] = [];
@@ -191,7 +256,7 @@ function main() {
     const name = s.stateName || '';
     const code = codeByName.get(normName(name)) || (s.stateCode && [...codeByName.values()].includes(s.stateCode) ? s.stateCode : '');
     if (!code) { unmatched.push(`${s.stateCode ?? '?'} / ${name}`); continue; }
-    const channels = clean(s.channels || [], 'state', code, drops)
+    const channels = clean(s.channels || [], 'state', code, drops, districtsByState.get(code))
       // A "state" entry that just repeats the national number adds nothing.
       .filter((c) => !nationalValues.has(`${c.kind}:${c.value}`));
     if (channels.length) states.push({ stateCode: code, stateName: seedStates().get(code) || name, channels });

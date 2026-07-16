@@ -19,7 +19,7 @@ import {
   computeSentimentScore,
 } from './ranking';
 import { computeTrendingSignals } from './trending';
-import type { TrendingEntry } from './types';
+import type { TrendingEntry, TopRatedEntry } from './types';
 import { getDb } from './firebase-admin';
 import { datasetLastUpdated } from './format';
 import { MINISTER_RANK_LABEL, type MinisterRank, type Fact, type PerfMetric } from './types';
@@ -201,7 +201,9 @@ export async function getDistrictsInState(stateCode: string): Promise<string[]> 
   const idx = await getIndex();
   const set = new Set<string>();
   for (const p of idx.politicians) {
-    if (p.stateCode === stateCode) p.districts.forEach((d) => set.add(d));
+    // Blank names guard: a "" district would prerender an unroutable
+    // /district/XX/ page and a nameless dropdown option.
+    if (p.stateCode === stateCode) p.districts.forEach((d) => d?.trim() && set.add(d));
   }
   return [...set].sort();
 }
@@ -509,11 +511,12 @@ export async function getPersonSentiment(id: string): Promise<SentimentScore> {
 }
 
 /** Live ratings for every leader with at least one vote, as compact rows of
- *  [bayesian_mean, raw_mean, n_votes] keyed by person id. The rankings
- *  explorer merges these into the static rankings.json payload client-side
- *  (the Bayesian value orders the list, the raw mean is what gets displayed).
- *  Served from the TTL-cached aggregates - zero extra Firestore reads - and
- *  only rated leaders are included, so the payload stays tiny. */
+ *  [bayesian_mean, raw_mean, n_votes] keyed by person id. RankingList merges
+ *  these into whatever entries it was given - static rankings.json rows and
+ *  ISR-baked state/district/area lists alike - client-side (the Bayesian
+ *  value orders the list, the raw mean is what gets displayed). Served from
+ *  the TTL-cached aggregates - zero extra Firestore reads - and only rated
+ *  leaders are included, so the payload stays tiny. */
 export async function getAllRatings(): Promise<Record<string, [number, number, number]>> {
   const idx = await getIndex();
   const out: Record<string, [number, number, number]> = {};
@@ -534,24 +537,31 @@ export async function getAllRatings(): Promise<Record<string, [number, number, n
  * government rosters. Ids that resolve to no one are skipped - missing beats
  * wrong.
  */
+/** Roster lookup for rated ids with no politician record (CM / minister stubs
+ *  rated from government pages): central council first, then state ministers.
+ *  Built per call from the TTL-cached rosters - call it lazily, only when an
+ *  id actually misses the politician index. */
+async function ministerRosterById(): Promise<
+  Map<string, { name: string; party?: string; state?: string; constituency?: string; photo_url?: string }>
+> {
+  const byId = new Map<string, { name: string; party?: string; state?: string; constituency?: string; photo_url?: string }>();
+  for (const m of await getCentralGovernment()) {
+    byId.set(m.politicianId || m.id, { name: m.name, party: m.party, state: m.state, constituency: m.constituency, photo_url: m.photo_url });
+  }
+  for (const sm of await allStateMinisters()) {
+    const key = sm.politicianId || sm.id;
+    if (!byId.has(key)) byId.set(key, { name: sm.name, party: sm.party, state: sm.state, photo_url: sm.photo_url });
+  }
+  return byId;
+}
+
 export async function getTrending(limit = 5): Promise<TrendingEntry[]> {
   const idx = await getIndex();
   const signals = computeTrendingSignals(idx.voteAggregates.values());
 
   // Lazily built roster lookup for the rare non-MP case (CM / minister stubs).
-  let rosterById: Map<string, { name: string; party?: string; state?: string; constituency?: string; photo_url?: string }> | null = null;
-  const loadRosters = async () => {
-    if (rosterById) return rosterById;
-    rosterById = new Map();
-    for (const m of await getCentralGovernment()) {
-      rosterById.set(m.politicianId || m.id, { name: m.name, party: m.party, state: m.state, constituency: m.constituency, photo_url: m.photo_url });
-    }
-    for (const sm of await allStateMinisters()) {
-      const key = sm.politicianId || sm.id;
-      if (!rosterById.has(key)) rosterById.set(key, { name: sm.name, party: sm.party, state: sm.state, photo_url: sm.photo_url });
-    }
-    return rosterById;
-  };
+  let rosterById: Awaited<ReturnType<typeof ministerRosterById>> | null = null;
+  const loadRosters = async () => (rosterById ??= await ministerRosterById());
 
   const out: TrendingEntry[] = [];
   for (const s of signals) {
@@ -589,6 +599,61 @@ export async function getTrending(limit = 5): Promise<TrendingEntry[]> {
         recent_votes: s.recent_votes,
         rating_mean,
         total_votes: total,
+      });
+    }
+  }
+  return out;
+}
+
+/**
+ * Top-rated leaders: highest PUBLIC rating among everyone with at least one
+ * vote - the user-vote axis, fully separate from the verified-performance
+ * ranking. The Bayesian mean orders the list (thin samples shrink toward
+ * neutral, so a single 5-star vote cannot outrank a well-voted 4.5) and is
+ * never returned; rating_mean is the plain average the profile shows. Same
+ * zero-extra-reads pattern as getTrending: served from the TTL-cached
+ * aggregates, ids that resolve to no known person are skipped.
+ */
+export async function getTopRated(limit = 5): Promise<TopRatedEntry[]> {
+  const idx = await getIndex();
+  const rated = [...idx.sentiment.values()]
+    .filter((s) => s.n_votes > 0 && s.bayesian_mean != null && s.raw_mean != null)
+    .sort(
+      (a, b) =>
+        b.bayesian_mean! - a.bayesian_mean! ||
+        b.n_votes - a.n_votes ||
+        a.politician_id.localeCompare(b.politician_id),
+    );
+
+  let rosterById: Awaited<ReturnType<typeof ministerRosterById>> | null = null;
+  const out: TopRatedEntry[] = [];
+  for (const s of rated) {
+    if (out.length >= limit) break;
+    const p = idx.politicianById.get(s.politician_id);
+    if (p) {
+      out.push({
+        politician_id: p.id,
+        name: p.name,
+        party: p.party,
+        constituencyName: p.constituencyName,
+        state: p.state,
+        photo_url: p.photo_url,
+        rating_mean: s.raw_mean!,
+        total_votes: s.n_votes,
+      });
+      continue;
+    }
+    const m = (rosterById ??= await ministerRosterById()).get(s.politician_id);
+    if (m) {
+      out.push({
+        politician_id: s.politician_id,
+        name: m.name,
+        party: m.party,
+        constituencyName: m.constituency,
+        state: m.state,
+        photo_url: m.photo_url,
+        rating_mean: s.raw_mean!,
+        total_votes: s.n_votes,
       });
     }
   }

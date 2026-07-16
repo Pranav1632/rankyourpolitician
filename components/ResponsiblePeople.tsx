@@ -15,10 +15,11 @@ import { useI18n } from '@/lib/i18n/provider';
 import { PROBLEM_ROUTES } from '@/lib/offices';
 import { ESCALATION_CHAINS, PROBLEM_CHAIN } from '@/lib/escalation';
 import { ministersForProblem, isPoliceProblem, type WhoPerson, type WhoDistrict } from '@/lib/responsibility';
-import { primaryPhone, hasContactFallback, telHref, formatPhone } from '@/lib/contacts';
+import { primaryPhone, hasContactFallback, formatPhone } from '@/lib/contacts';
 import type { ContactChannel, ProblemType, OfficeType } from '@/lib/types';
 import { Avatar } from './ui';
 import ContactFallback from './ContactFallback';
+import PhoneLink from './PhoneLink';
 import Icon, { type IconName } from './Icon';
 
 export interface ResponsiblePeopleProps {
@@ -104,12 +105,13 @@ function OfficeCard({
       <p className="font-bold text-ink">{title}</p>
       <p className="mt-0.5 text-sm text-ink-soft">{handles}</p>
       {call && (
-        <a
-          href={telHref(call.value)}
+        <PhoneLink
+          value={call.value}
+          sourceUrl={call.source_url}
           className="mt-2 inline-flex items-center gap-1.5 rounded-lg bg-brand-soft px-2.5 py-1.5 text-xs font-bold text-brand-ink hover:bg-brand hover:text-white"
         >
           <Icon name="phone" size={12} /> {formatPhone(call.value)} · {call.label}
-        </a>
+        </PhoneLink>
       )}
       {escalate && <p className="mt-1.5 text-xs text-ink-faint">{escalate}</p>}
     </div>
@@ -178,7 +180,7 @@ export default function ResponsiblePeople({
   const districtHref = `/district/${stateCode}/${encodeURIComponent(district)}`;
   const shownMlas = people.mlas.slice(0, 6);
   // Whether the "no named officer" copy can point at something real.
-  const hasFallback = hasContactFallback(people.portal, channels, problem);
+  const hasFallback = hasContactFallback(people.portal, channels, problem, district);
   // The district step lists the SP (police problems only) and the DM; the contact
   // block is worth showing whenever either of them is unnamed.
   const anyOfficerMissing = police ? !dm?.name || !sp?.name : !dm?.name;
@@ -193,7 +195,7 @@ export default function ResponsiblePeople({
             title={level1.title}
             handles={level1.handles}
             escalate={level1.escalateWhen}
-            call={primaryPhone(channels ?? [], problem)}
+            call={primaryPhone(channels ?? [], problem, district)}
           />
         </Step>
 

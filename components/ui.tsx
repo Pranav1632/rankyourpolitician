@@ -79,8 +79,8 @@ export function SectionCard({
   return (
     <section className={clsx('glass rounded-3xl p-5 sm:p-6', className)}>
       {(title || aside) && (
-        <div className="mb-4 flex items-start justify-between gap-3">
-          <div className="flex items-start gap-3">
+        <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-3">
+          <div className="flex min-w-0 items-start gap-3">
             {icon && (
               <span className="mt-0.5 inline-grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-brand-soft text-brand">
                 <Icon name={icon} size={20} />

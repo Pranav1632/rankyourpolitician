@@ -68,6 +68,10 @@ for (const p of politicians) {
   const st = states.get(p.stateCode)!;
   if (p.constituencyType !== 'PC' && p.constituencyType !== 'AC') continue;
   for (const d of p.districts) {
+    // A blank district name must never become a district bucket - it renders as
+    // an empty dropdown option and an unroutable /district/XX/ URL. (UTs where
+    // the UT itself is the district carry the UT's name, e.g. "Delhi".)
+    if (!d?.trim()) continue;
     const key = norm(d);
     if (!st.districts.has(key)) st.districts.set(key, { display: d, mlas: [], mps: [] });
     const bucket = st.districts.get(key)!;

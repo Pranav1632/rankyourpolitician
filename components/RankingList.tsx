@@ -12,6 +12,31 @@ type SortKey = 'performance' | 'rating';
 
 const PAGE_SIZE = 20;
 
+// Live ratings keyed by person id: [bayesian_mean, raw_mean, n_votes]. The
+// entries handed to this component carry sentiment from whenever their page
+// was last baked (build/ISR/compute time) - often empty, so the "Public
+// rating" sort had nothing real to sort by and rated leaders drowned in the
+// unranked tail. One CDN-cached fetch (module-memoised, shared by every list
+// on the page) replaces that snapshot with the votes actually cast. On fetch
+// failure we keep the baked values - stale beats blank.
+type RatingRows = Record<string, [number, number, number]>;
+let ratingsPromise: Promise<RatingRows | null> | null = null;
+function loadRatings(): Promise<RatingRows | null> {
+  if (!ratingsPromise) {
+    ratingsPromise = fetch('/api/ratings')
+      .then((r) => {
+        if (!r.ok) throw new Error(`ratings: HTTP ${r.status}`);
+        return r.json() as Promise<{ ratings?: RatingRows }>;
+      })
+      .then((j) => j.ratings ?? {})
+      .catch(() => {
+        ratingsPromise = null;
+        return null;
+      });
+  }
+  return ratingsPromise;
+}
+
 export default function RankingList({
   entries,
   limit,
@@ -28,10 +53,31 @@ export default function RankingList({
   const { t } = useI18n();
   const [sort, setSort] = useState<SortKey>('performance');
   const [page, setPage] = useState(1);
+  const [live, setLive] = useState<RatingRows | null>(null);
   const topRef = useRef<HTMLDivElement>(null);
 
+  useEffect(() => {
+    loadRatings().then(setLive); // null on failure - baked values stay
+  }, []);
+
+  // Replace the baked sentiment snapshot wholesale with the live aggregates:
+  // they are the authority, including "no votes" (a leader absent from the
+  // live map has no standing votes, whatever the snapshot said).
+  const merged = useMemo(() => {
+    if (!live) return entries;
+    return entries.map((e) => {
+      const l = live[e.politician_id];
+      return {
+        ...e,
+        sentiment_mean: l ? l[0] : null,
+        sentiment_raw_mean: l ? l[1] : null,
+        sentiment_votes: l ? l[2] : 0,
+      };
+    });
+  }, [entries, live]);
+
   const sorted = useMemo(() => {
-    const arr = [...entries];
+    const arr = [...merged];
     const key = (e: RankingEntry) => (sort === 'performance' ? e.performance_percentile : e.sentiment_mean);
     arr.sort((a, b) => {
       const av = key(a),
@@ -42,7 +88,7 @@ export default function RankingList({
       return bv - av || a.name.localeCompare(b.name);
     });
     return limit ? arr.slice(0, limit) : arr;
-  }, [entries, sort, limit]);
+  }, [merged, sort, limit]);
 
   // Entries WITHOUT a value under the current sort are never given a rank
   // number - an alphabetical tail is not a ranking. They render after a
@@ -99,7 +145,10 @@ export default function RankingList({
             <li key={e.politician_id}>
               {showDivider && (
                 <p className="mb-2.5 flex items-center gap-2 px-1 text-xs font-semibold uppercase tracking-wide text-ink-faint">
-                  <Icon name="info" size={14} /> {t('ranking.unrankedHeader')}
+                  {/* The tail means different things per axis: no verified
+                      data (performance) vs no votes cast (public rating). */}
+                  <Icon name="info" size={14} />{' '}
+                  {t(sort === 'performance' ? 'ranking.unrankedHeader' : 'ranking.unratedHeader')}
                 </p>
               )}
               <Link

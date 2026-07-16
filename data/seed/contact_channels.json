@@ -268,7 +268,8 @@
           "source_url": "https://vidyut.andamannicobar.gov.in/",
           "source_name": "Electricity Department, Andaman & Nicobar Administration (official website)",
           "retrieved_date": "2026-07-15",
-          "note": "CAVEAT - verify before publishing prominently. The only official publication of this number I could read is a notice on the Electricity Department's own site describing it as \"The toll-free number (18003451111) of the Central Control Room of the Electricity Department\"; that notice (dated around April 2025) announced the line was temporarily under fault and gave 03192-235250 as an interim alternate, saying the issue would be resolved the next morning. No current standing \"contact us\" page on an official domain restates it (vidyut.andaman.gov.in and police-style contact pages were unreachable from here). The department's site otherwise routes \"Consumer Complaint Redressal\" to the UrjaPay portal (login required)."
+          "note": "CAVEAT - verify before publishing prominently. The only official publication of this number I could read is a notice on the Electricity Department's own site describing it as \"The toll-free number (18003451111) of the Central Control Room of the Electricity Department\"; that notice (dated around April 2025) announced the line was temporarily under fault and gave 03192-235250 as an interim alternate, saying the issue would be resolved the next morning. No current standing \"contact us\" page on an official domain restates it (vidyut.andaman.gov.in and police-style contact pages were unreachable from here). The department's site otherwise routes \"Consumer Complaint Redressal\" to the UrjaPay portal (login required).",
+          "operator": "Electricity Department, A&N Administration"
         },
         {
           "kind": "url",
@@ -279,7 +280,8 @@
           "source_url": "https://vidyut.andamannicobar.gov.in/",
           "source_name": "Electricity Department, Andaman & Nicobar Administration (official website)",
           "retrieved_date": "2026-07-15",
-          "note": "Official department site; its \"Consumer Complaint Redressal\" link points to the UrjaPay consumer portal."
+          "note": "Official department site; its \"Consumer Complaint Redressal\" link points to the UrjaPay consumer portal.",
+          "operator": "Electricity Department, A&N Administration"
         },
         {
           "kind": "url",
@@ -290,7 +292,8 @@
           "source_url": "https://urjapay.andamannicobar.gov.in/",
           "source_name": "UrjaPay, Electricity Department, Andaman & Nicobar Administration",
           "retrieved_date": "2026-07-15",
-          "note": "Official consumer portal; footer states \"Data on this website is published by 'Electricity Department Andaman & Nicobar Administration'\". Complaint redressal requires sign-in. No phone numbers are published on the portal's public pages."
+          "note": "Official consumer portal; footer states \"Data on this website is published by 'Electricity Department Andaman & Nicobar Administration'\". Complaint redressal requires sign-in. No phone numbers are published on the portal's public pages.",
+          "operator": "Electricity Department, A&N Administration"
         }
       ]
     },
@@ -356,13 +359,14 @@
         {
           "kind": "phone",
           "topic": "electricity",
-          "label": "Electricity complaints - AP DISCOMs (APSPDCL / APEPDCL) toll-free",
+          "label": "Electricity complaints - AP DISCOMs (APSPDCL / APEPDCL / APCPDCL) toll-free",
           "value": "1912",
           "scope": "state",
           "source_url": "https://www.apspdcl.in/",
           "source_name": "APSPDCL - A.P. Southern Power Distribution Company Ltd (official site)",
-          "retrieved_date": "2026-07-15",
-          "note": "Common 24x7 toll-free number for power supply complaints, published by both AP Southern Power Distribution Co. (APSPDCL) and AP Eastern Power Distribution Co. (APEPDCL) on their own sites."
+          "retrieved_date": "2026-07-16",
+          "note": "Common 24x7 toll-free number for power supply complaints, published by both AP Southern Power Distribution Co. (APSPDCL) and AP Eastern Power Distribution Co. (APEPDCL) on their own sites. AP's third discom, APCPDCL (central AP, HQ Vijayawada), also publishes 1912 on its official site (apcpdcl.in/phone-numbers.php).",
+          "operator": "All AP discoms (1912)"
         },
         {
           "kind": "url",
@@ -373,7 +377,66 @@
           "source_url": "https://www.apeasternpower.com/customersComplaintRegister",
           "source_name": "APEPDCL (Eastern Power Distribution Company of A.P. Ltd) - Register A Complaint",
           "retrieved_date": "2026-07-15",
-          "note": "Official online complaint registration for Eastern Power Distribution Company of AP; enter 16 or 8 digit Consumer Service Number. Also lists toll-free 1912."
+          "note": "Official online complaint registration for Eastern Power Distribution Company of AP; enter 16 or 8 digit Consumer Service Number. Also lists toll-free 1912.",
+          "operator": "APEPDCL",
+          "districts": [
+            "East Godavari",
+            "Srikakulam",
+            "Visakhapatnam",
+            "Vizianagaram",
+            "West Godavari"
+          ]
+        },
+        {
+          "kind": "phone",
+          "topic": "electricity",
+          "label": "APCPDCL toll-free helpline - central Andhra Pradesh (Vijayawada region)",
+          "value": "18004255058",
+          "scope": "state",
+          "source_url": "https://apcpdcl.in/",
+          "source_name": "AP Central Power Distribution Corporation Ltd (official site)",
+          "retrieved_date": "2026-07-16",
+          "note": "Shown on the homepage as 'Toll Free : 1800-425-5058' and on phone-numbers.php alongside 1912. Circles: Krishna, NTR, CRDA, Guntur, Bapatla, Palnadu, Prakasam.",
+          "operator": "APCPDCL",
+          "districts": [
+            "Guntur",
+            "Krishna",
+            "Prakasam"
+          ]
+        },
+        {
+          "kind": "url",
+          "topic": "electricity",
+          "label": "APCPDCL online consumer complaint portal - central Andhra Pradesh",
+          "value": "https://www.apcpdcl.in/ConsumerDashboard/login.jsp",
+          "scope": "state",
+          "source_url": "https://apcpdcl.in/",
+          "source_name": "AP Central Power Distribution Corporation Ltd (official site)",
+          "retrieved_date": "2026-07-16",
+          "operator": "APCPDCL",
+          "districts": [
+            "Guntur",
+            "Krishna",
+            "Prakasam"
+          ]
+        },
+        {
+          "kind": "email",
+          "topic": "electricity",
+          "label": "APSPDCL (Southern AP) customer-care email",
+          "value": "customercare@apspdcl.in",
+          "scope": "state",
+          "operator": "APSPDCL",
+          "districts": [
+            "Anantapur",
+            "Chittoor",
+            "Cuddapah",
+            "Kurnool",
+            "Nellore"
+          ],
+          "source_url": "https://www.apspdcl.in/",
+          "source_name": "APSPDCL official website homepage",
+          "retrieved_date": "2026-07-16"
         },
         {
           "kind": "phone",
@@ -478,7 +541,8 @@
           "source_url": "https://www.arpdop.gov.in/",
           "source_name": "Department of Power, Government of Arunachal Pradesh (ARPDOP)",
           "retrieved_date": "2026-07-15",
-          "note": "Toll-free helpline published by the Department of Power; hours shown as 9:30 AM to 4:00 PM. Complaints can also be emailed to support@arpdop.gov.in."
+          "note": "Toll-free helpline published by the Department of Power; hours shown as 9:30 AM to 4:00 PM. Complaints can also be emailed to support@arpdop.gov.in.",
+          "operator": "Department of Power, Arunachal Pradesh"
         },
         {
           "kind": "url",
@@ -489,7 +553,8 @@
           "source_url": "https://www.arpdop.gov.in/",
           "source_name": "Department of Power, Government of Arunachal Pradesh (ARPDOP)",
           "retrieved_date": "2026-07-15",
-          "note": "Official DISCOM site with 'Register complaints' and 'Consumers Grievances' sections for filing and tracking electricity complaints."
+          "note": "Official DISCOM site with 'Register complaints' and 'Consumers Grievances' sections for filing and tracking electricity complaints.",
+          "operator": "Department of Power, Arunachal Pradesh"
         },
         {
           "kind": "phone",
@@ -671,7 +736,8 @@
           "source_url": "https://www.apdcl.org/cgrf/noauth/fileComplaint",
           "source_name": "Assam Power Distribution Company Limited (APDCL) - Consumer Grievance Redressal Forum",
           "retrieved_date": "2026-07-15",
-          "note": "Official DISCOM online complaint form (consumer number + OTP). Categories include interruption, voltage, load shedding, meter, bill, disconnection, new connection. The widely-quoted APDCL number 1912 is omitted: it appears only on aggregator sites and on JS-rendered APDCL pages that could not be fetched and read."
+          "note": "Official DISCOM online complaint form (consumer number + OTP). Categories include interruption, voltage, load shedding, meter, bill, disconnection, new connection. The widely-quoted APDCL number 1912 is omitted: it appears only on aggregator sites and on JS-rendered APDCL pages that could not be fetched and read.",
+          "operator": "APDCL"
         },
         {
           "kind": "url",
@@ -682,7 +748,8 @@
           "source_url": "https://aerc.assam.gov.in/how-to/file-complain-electricity-bill-or-service-connection",
           "source_name": "Assam Electricity Regulatory Commission (AERC), Government of Assam",
           "retrieved_date": "2026-07-15",
-          "note": "Official escalation ladder: APDCL level 1-2, then CGRF (Tezpur, Dibrugarh, Jorhat, Silchar, Rangia, Bongaigaon, Nagaon, Guwahati), then Electricity Ombudsman."
+          "note": "Official escalation ladder: APDCL level 1-2, then CGRF (Tezpur, Dibrugarh, Jorhat, Silchar, Rangia, Bongaigaon, Nagaon, Guwahati), then Electricity Ombudsman.",
+          "operator": "AERC (Electricity Regulator)"
         },
         {
           "kind": "phone",
@@ -693,7 +760,8 @@
           "source_url": "https://aerc.assam.gov.in/how-to/file-complain-electricity-bill-or-service-connection",
           "source_name": "Assam Electricity Regulatory Commission (AERC)",
           "retrieved_date": "2026-07-15",
-          "note": "Escalation body only - consumers must approach APDCL's CGRF first. Office at ASEB Campus, Sixth Mile, Guwahati."
+          "note": "Escalation body only - consumers must approach APDCL's CGRF first. Office at ASEB Campus, Sixth Mile, Guwahati.",
+          "operator": "Assam Electricity Ombudsman"
         }
       ]
     },
@@ -820,7 +888,8 @@
           "source_url": "https://ccrs.bsphcl.co.in/",
           "source_name": "Consumer Complaint Redressal System (CHS-Bihar), Bihar State Power Holding Company Ltd (BSPHCL)",
           "retrieved_date": "2026-07-15",
-          "note": "Toll-free consumer complaint number published on the DISCOMs' own Consumer Complaint Redressal System. Same page also lists WhatsApp +91-9031683592, missed-call +91-9953101311 and SMS short code 5667700."
+          "note": "Toll-free consumer complaint number published on the DISCOMs' own Consumer Complaint Redressal System. Same page also lists WhatsApp +91-9031683592, missed-call +91-9953101311 and SMS short code 5667700.",
+          "operator": "BSPHCL (NBPDCL / SBPDCL)"
         },
         {
           "kind": "url",
@@ -831,7 +900,8 @@
           "source_url": "https://ccrs.bsphcl.co.in/",
           "source_name": "Consumer Complaint Redressal System (CHS-Bihar), BSPHCL",
           "retrieved_date": "2026-07-15",
-          "note": "Centrally published online electricity complaint system covering both Bihar DISCOMs (NBPDCL and SBPDCL) under BSPHCL. Verified live 2026-07-15. Domain is the utility's own site (.co.in), not .gov.in."
+          "note": "Centrally published online electricity complaint system covering both Bihar DISCOMs (NBPDCL and SBPDCL) under BSPHCL. Verified live 2026-07-15. Domain is the utility's own site (.co.in), not .gov.in.",
+          "operator": "BSPHCL (NBPDCL / SBPDCL)"
         }
       ]
     },
@@ -958,7 +1028,8 @@
           "source_url": "https://www.cspdcl.co.in/cseb/frmContactUs.aspx",
           "source_name": "Chhattisgarh State Power Distribution Company Ltd (CSPDCL) - Contact Us",
           "retrieved_date": "2026-07-15",
-          "note": "Chhattisgarh State Power Distribution Company Ltd (CSPDCL), the state DISCOM. Page states (in Hindi) to call toll-free number 1912 from within Chhattisgarh for electricity/billing complaints. The official state portal cgstate.gov.in links to cspdcl.co.in as the state's electricity service."
+          "note": "Chhattisgarh State Power Distribution Company Ltd (CSPDCL), the state DISCOM. Page states (in Hindi) to call toll-free number 1912 from within Chhattisgarh for electricity/billing complaints. The official state portal cgstate.gov.in links to cspdcl.co.in as the state's electricity service.",
+          "operator": "CSPDCL"
         },
         {
           "kind": "phone",
@@ -969,7 +1040,8 @@
           "source_url": "https://www.cspdcl.co.in/cseb/frmContactUs.aspx",
           "source_name": "Chhattisgarh State Power Distribution Company Ltd (CSPDCL) - Contact Us",
           "retrieved_date": "2026-07-15",
-          "note": "Published on CSPDCL's official Contact Us page as toll-free \"1800-233-1920\", available 24 X 7. Use this alternative when 1912 is not reachable (e.g. calling from outside Chhattisgarh)."
+          "note": "Published on CSPDCL's official Contact Us page as toll-free \"1800-233-1920\", available 24 X 7. Use this alternative when 1912 is not reachable (e.g. calling from outside Chhattisgarh).",
+          "operator": "CSPDCL"
         },
         {
           "kind": "phone",
@@ -980,7 +1052,8 @@
           "source_url": "https://www.cspdcl.co.in/cseb/frmContactUs.aspx",
           "source_name": "Chhattisgarh State Power Distribution Company Ltd (CSPDCL) - Contact Us",
           "retrieved_date": "2026-07-15",
-          "note": "Published on CSPDCL's official Contact Us page as toll-free \"1800-203-1912\", available 24 X 7."
+          "note": "Published on CSPDCL's official Contact Us page as toll-free \"1800-203-1912\", available 24 X 7.",
+          "operator": "CSPDCL"
         },
         {
           "kind": "url",
@@ -991,7 +1064,8 @@
           "source_url": "https://www.cspdcl.co.in/cseb/frmContactUs.aspx",
           "source_name": "Chhattisgarh State Power Distribution Company Ltd (CSPDCL)",
           "retrieved_date": "2026-07-15",
-          "note": "State DISCOM website for bill payment, complaints and consumer services. Linked from the official state portal cgstate.gov.in as the state's electricity service."
+          "note": "State DISCOM website for bill payment, complaints and consumer services. Linked from the official state portal cgstate.gov.in as the state's electricity service.",
+          "operator": "CSPDCL"
         }
       ]
     },
@@ -1184,7 +1258,8 @@
           "source_url": "https://chandigarhpower.com/",
           "source_name": "Chandigarh Power Distribution Limited (CPDL) - official discom site",
           "retrieved_date": "2026-07-15",
-          "note": "CPDL is the licensed electricity distribution company for Chandigarh. This is the discom's own site, not a .gov.in domain - no central .gov.in page publishing these numbers was found."
+          "note": "CPDL is the licensed electricity distribution company for Chandigarh. This is the discom's own site, not a .gov.in domain - no central .gov.in page publishing these numbers was found.",
+          "operator": "Chandigarh Power Distribution Ltd (CPDL)"
         },
         {
           "kind": "phone",
@@ -1195,7 +1270,8 @@
           "source_url": "https://chandigarhpower.com/",
           "source_name": "Chandigarh Power Distribution Limited (CPDL) - official discom site",
           "retrieved_date": "2026-07-15",
-          "note": "CPDL's own homepage states '24x7 Call Center: 19121, +91 9240216666. Email: connectcpdl@rpsg.in'. Confidence lower than the police/administration numbers: the site is JavaScript-rendered and this string was read from the page's own metadata rather than rendered body text."
+          "note": "CPDL's own homepage states '24x7 Call Center: 19121, +91 9240216666. Email: connectcpdl@rpsg.in'. Confidence lower than the police/administration numbers: the site is JavaScript-rendered and this string was read from the page's own metadata rather than rendered body text.",
+          "operator": "Chandigarh Power Distribution Ltd (CPDL)"
         },
         {
           "kind": "phone",
@@ -1206,7 +1282,8 @@
           "source_url": "https://chandigarhpower.com/",
           "source_name": "Chandigarh Power Distribution Limited (CPDL) - official discom site",
           "retrieved_date": "2026-07-15",
-          "note": "Confirmed twice on CPDL's own site: in the page metadata and in the site's structured organisation data, which tags '+91 9240216666' as contactType 'customer service'."
+          "note": "Confirmed twice on CPDL's own site: in the page metadata and in the site's structured organisation data, which tags '+91 9240216666' as contactType 'customer service'.",
+          "operator": "Chandigarh Power Distribution Ltd (CPDL)"
         },
         {
           "kind": "url",
@@ -1413,13 +1490,74 @@
         {
           "kind": "phone",
           "topic": "electricity",
-          "label": "Power Department Public Grievances Cell (toll-free)",
+          "label": "BSES Rajdhani (BRPL) 24x7 electricity helpline - south & west Delhi",
+          "value": "19123",
+          "scope": "state",
+          "source_url": "https://www.bsesdelhi.com/web/brpl/no-supply-complaint",
+          "source_name": "BSES Rajdhani Power Ltd - No Supply Complaint (official site)",
+          "retrieved_date": "2026-07-16",
+          "note": "24x7 toll-free short code published on BRPL's official complaint page; WhatsApp 8800919123 and streetlight emergency 011-49516707 also listed. Online no-supply complaints on the same page.",
+          "operator": "BSES Rajdhani (BRPL)"
+        },
+        {
+          "kind": "phone",
+          "topic": "electricity",
+          "label": "BSES Yamuna (BYPL) 24x7 electricity helpline - east & central Delhi",
+          "value": "19122",
+          "scope": "state",
+          "source_url": "https://www.bsesdelhi.com/web/bypl/no-supply-complaint",
+          "source_name": "BSES Yamuna Power Ltd - No Supply Complaint (official site)",
+          "retrieved_date": "2026-07-16",
+          "note": "24x7 helpline published on BYPL's official complaint page (divisions incl. Chandni Chowk, Daryaganj, Pahar Ganj, Patel Nagar, Karawal Nagar, Nand Nagri, Yamuna Vihar, Krishna Nagar, Laxmi Nagar, Mayur Vihar); streetlight emergency 011-41999808.",
+          "operator": "BSES Yamuna (BYPL)"
+        },
+        {
+          "kind": "phone",
+          "topic": "electricity",
+          "label": "Tata Power-DDL 24x7 helpline - north & north-west Delhi",
+          "value": "19124",
+          "scope": "state",
+          "source_url": "https://www.tatapower-ddl.com/contact-us/touchpoints/locate-us",
+          "source_name": "Tata Power Delhi Distribution Ltd - Customer Care / Locate Us",
+          "retrieved_date": "2026-07-16",
+          "note": "Round-the-clock customer care short code; from outside Delhi or if 19124 is unreachable use 1800-208-9124 (published on the same page).",
+          "operator": "Tata Power-DDL"
+        },
+        {
+          "kind": "phone",
+          "topic": "electricity",
+          "label": "Power Department Public Grievances Cell (toll-free) - statewide escalation",
           "value": "1800112222",
           "scope": "state",
           "source_url": "https://power.delhi.gov.in/power/citizen-charter",
           "source_name": "Power Department, Government of NCT of Delhi",
           "retrieved_date": "2026-07-15",
-          "note": "The centrally-published Delhi government electricity consumer grievance line, listed as 'Tel: 1800112222 (Toll-free)' for the PG Cell. Page also lists SMS: 9223166166 for the same cell. Page last updated 03/07/2026. Delhi's discoms are private (BSES Rajdhani, BSES Yamuna, Tata Power-DDL) and the state does not publish their retail complaint numbers centrally; the same page lists CGRF (Consumer Grievance Redressal Forum) contacts instead - CGRF-BRPL 8468952631 / 8468935702, CGRF-BYPL 8010939760, CGRF-TPDDL 27466601-03 / 27463809 - which may be approached only after exhausting the discom's own complaint procedure."
+          "note": "The centrally-published Delhi government electricity consumer grievance line, listed as 'Tel: 1800112222 (Toll-free)' for the PG Cell. Page also lists SMS: 9223166166 for the same cell. Page last updated 03/07/2026. Delhi's discoms are private (BSES Rajdhani, BSES Yamuna, Tata Power-DDL) and the state does not publish their retail complaint numbers centrally; the same page lists CGRF (Consumer Grievance Redressal Forum) contacts instead - CGRF-BRPL 8468952631 / 8468935702, CGRF-BYPL 8010939760, CGRF-TPDDL 27466601-03 / 27463809 - which may be approached only after exhausting the discom's own complaint procedure.",
+          "operator": "Power Department, Delhi (PG Cell)"
+        },
+        {
+          "kind": "phone",
+          "topic": "electricity",
+          "label": "NDMC 24/7 helpline (incl. electricity) - Lutyens' Delhi (NDMC area)",
+          "value": "1533",
+          "scope": "state",
+          "source_url": "https://www.ndmc.gov.in/contact_us/contact_us.aspx",
+          "source_name": "New Delhi Municipal Council - Contact Us",
+          "retrieved_date": "2026-07-16",
+          "note": "NDMC's general 24/7 toll-free helpline; NDMC supplies electricity in the New Delhi (Lutyens) municipal area.",
+          "operator": "NDMC Electricity"
+        },
+        {
+          "kind": "url",
+          "topic": "electricity",
+          "label": "NDMC electricity no-current complaint centres - Lutyens' Delhi",
+          "value": "https://www.ndmc.gov.in/departments/electricity_nocurrent_complaint.aspx",
+          "scope": "state",
+          "source_url": "https://www.ndmc.gov.in/departments/electricity_nocurrent_complaint.aspx",
+          "source_name": "New Delhi Municipal Council - No Current Complaint Centers",
+          "retrieved_date": "2026-07-16",
+          "note": "Area-wise complaint centre landlines for NDMC's electricity supply area (e.g. Vidyut Bhawan 011-23013511, Connaught Place 011-23413882).",
+          "operator": "NDMC Electricity"
         },
         {
           "kind": "phone",
@@ -1605,8 +1743,9 @@
           "scope": "state",
           "source_url": "https://dnh.gov.in/public-utility/dnh-power-distribution-corporation-limited/",
           "source_name": "Dadra & Nagar Haveli District Website - DNH Power Distribution Corporation Limited",
-          "retrieved_date": "2026-07-15",
-          "note": "Published as +91-260-2406500 on the gov.in public-utility page and confirmed on the corporation's own site. This is the main office line; the DISCOM does not publish a dedicated toll-free consumer complaint number on its official pages."
+          "retrieved_date": "2026-07-16",
+          "note": "Published as +91-260-2406500 on the gov.in public-utility page and confirmed on the corporation's own site. This is the main office line; the DISCOM does not publish a dedicated toll-free consumer complaint number on its official pages. Distribution operations were privatised in April 2022 to DNH and DD Power Distribution Corporation Ltd, a Torrent Power (51%) joint venture with the UT administration.",
+          "operator": "DNHDD Power Distribution Corp (Torrent Power JV)"
         },
         {
           "kind": "url",
@@ -1617,7 +1756,20 @@
           "source_url": "https://dnhddpcl.in/contact-us",
           "source_name": "DNH and DD Power Corporation Ltd - Contact Us",
           "retrieved_date": "2026-07-15",
-          "note": "The DISCOM's own website. The gov.in public-utility page also lists https://www.dnhpdcl.in/ and email support.dnhpdcl@gov.in."
+          "note": "The DISCOM's own website. The gov.in public-utility page also lists https://www.dnhpdcl.in/ and email support.dnhpdcl@gov.in.",
+          "operator": "DNHDD Power Distribution Corp (Torrent Power JV)"
+        },
+        {
+          "kind": "url",
+          "topic": "electricity",
+          "label": "Torrent Power distribution helplines - Dadra & Nagar Haveli and Daman & Diu",
+          "value": "https://www.torrentpower.com/index.php/site/info/contactus_dist",
+          "scope": "state",
+          "source_url": "https://www.torrentpower.com/index.php/site/info/contactus_dist",
+          "source_name": "Torrent Power Ltd - Distribution contact page (official site)",
+          "retrieved_date": "2026-07-16",
+          "note": "Torrent Power's official distribution contact page includes IVR options for Dadra & Nagar Haveli and Daman & Diu consumers (DNHDD Power Distribution Corporation Ltd, a Torrent Power-led JV since April 2022).",
+          "operator": "DNHDD Power Distribution Corp (Torrent Power JV)"
         },
         {
           "kind": "url",
@@ -1810,7 +1962,8 @@
           "source_url": "https://www.goaelectricity.gov.in/customer-services/complaint-mechanism/",
           "source_name": "Complaint Mechanism - Electricity Department, Government of Goa",
           "retrieved_date": "2026-07-15",
-          "note": "Toll-free complaint number of the Electricity Department, Government of Goa (Goa has a state-run Electricity Department rather than a separate DISCOM)."
+          "note": "Toll-free complaint number of the Electricity Department, Government of Goa (Goa has a state-run Electricity Department rather than a separate DISCOM).",
+          "operator": "Goa Electricity Department"
         },
         {
           "kind": "phone",
@@ -1821,7 +1974,8 @@
           "source_url": "https://www.goaelectricity.gov.in/customer-services/complaint-mechanism/",
           "source_name": "Complaint Mechanism - Electricity Department, Government of Goa",
           "retrieved_date": "2026-07-15",
-          "note": "Published as '91-832-2490800' alongside the 1912 toll-free number for callers who cannot reach the short code."
+          "note": "Published as '91-832-2490800' alongside the 1912 toll-free number for callers who cannot reach the short code.",
+          "operator": "Goa Electricity Department"
         },
         {
           "kind": "url",
@@ -1832,7 +1986,8 @@
           "source_url": "https://www.goaelectricity.gov.in/customer-services/complaint-mechanism/",
           "source_name": "Complaint Mechanism - Electricity Department, Government of Goa",
           "retrieved_date": "2026-07-15",
-          "note": "Official complaint mechanism page of the Electricity Department, Government of Goa."
+          "note": "Official complaint mechanism page of the Electricity Department, Government of Goa.",
+          "operator": "Goa Electricity Department"
         }
       ]
     },
@@ -1979,7 +2134,8 @@
           "source_url": "https://guj-epd.gujarat.gov.in/Home/HelpLine",
           "source_name": "Energy & Petrochemicals Department, Govt. of Gujarat - Helpline",
           "retrieved_date": "2026-07-15",
-          "note": "The state's central page listing consumer helplines for all four government DISCOMs. Gujarat does NOT publish a single statewide electricity number - the number depends on your DISCOM."
+          "note": "The state's central page listing consumer helplines for all four government DISCOMs. Gujarat does NOT publish a single statewide electricity number - the number depends on your DISCOM.",
+          "operator": "All Gujarat DISCOMs (guj-epd helplines)"
         },
         {
           "kind": "phone",
@@ -1990,7 +2146,39 @@
           "source_url": "https://guj-epd.gujarat.gov.in/Home/HelpLine",
           "source_name": "Energy & Petrochemicals Department, Govt. of Gujarat - Helpline",
           "retrieved_date": "2026-07-15",
-          "note": "Toll-free alternate: 1800233155333."
+          "note": "Toll-free alternate: 1800233155333.",
+          "operator": "PGVCL",
+          "districts": [
+            "Amreli",
+            "Bhavnagar",
+            "Jamnagar",
+            "Junagadh",
+            "Kachchh",
+            "Porbandar",
+            "Rajkot",
+            "Surendranagar"
+          ]
+        },
+        {
+          "kind": "email",
+          "topic": "electricity",
+          "label": "PGVCL support (online payment / consumer query)",
+          "value": "info.pgvcl@gebmail.com",
+          "scope": "state",
+          "operator": "PGVCL",
+          "districts": [
+            "Amreli",
+            "Bhavnagar",
+            "Jamnagar",
+            "Junagadh",
+            "Kachchh",
+            "Porbandar",
+            "Rajkot",
+            "Surendranagar"
+          ],
+          "source_url": "https://www.pgvcl.com/about_us/contactus.php",
+          "source_name": "PGVCL official website - Contact Us",
+          "retrieved_date": "2026-07-16"
         },
         {
           "kind": "phone",
@@ -2001,7 +2189,41 @@
           "source_url": "https://guj-epd.gujarat.gov.in/Home/HelpLine",
           "source_name": "Energy & Petrochemicals Department, Govt. of Gujarat - Helpline",
           "retrieved_date": "2026-07-15",
-          "note": "Toll-free alternate: 1800233155335."
+          "note": "Toll-free alternate: 1800233155335.",
+          "operator": "UGVCL",
+          "districts": [
+            "Ahmadabad",
+            "Anand",
+            "Banas Kantha",
+            "Gandhinagar",
+            "Kheda",
+            "Mahesana",
+            "Patan",
+            "Sabar Kantha",
+            "Surendranagar"
+          ]
+        },
+        {
+          "kind": "email",
+          "topic": "electricity",
+          "label": "UGVCL Customer Care Center (consumer complaints)",
+          "value": "ccc@ugvcl.com",
+          "scope": "state",
+          "operator": "UGVCL",
+          "districts": [
+            "Ahmadabad",
+            "Anand",
+            "Banas Kantha",
+            "Gandhinagar",
+            "Kheda",
+            "Mahesana",
+            "Patan",
+            "Sabar Kantha",
+            "Surendranagar"
+          ],
+          "source_url": "https://www.ugvcl.com/companyprofile",
+          "source_name": "UGVCL official website - Company Profile",
+          "retrieved_date": "2026-07-16"
         },
         {
           "kind": "phone",
@@ -2012,7 +2234,33 @@
           "source_url": "https://guj-epd.gujarat.gov.in/Home/HelpLine",
           "source_name": "Energy & Petrochemicals Department, Govt. of Gujarat - Helpline",
           "retrieved_date": "2026-07-15",
-          "note": "Toll-free alternate: 18002332670."
+          "note": "Toll-free alternate: 18002332670.",
+          "operator": "MGVCL",
+          "districts": [
+            "Anand",
+            "Dohad",
+            "Kheda",
+            "Panch Mahals",
+            "Vadodara"
+          ]
+        },
+        {
+          "kind": "email",
+          "topic": "electricity",
+          "label": "MGVCL customer support (general / e-payment)",
+          "value": "support.mgvcl@gebmail.com",
+          "scope": "state",
+          "operator": "MGVCL",
+          "districts": [
+            "Anand",
+            "Dohad",
+            "Kheda",
+            "Panch Mahals",
+            "Vadodara"
+          ],
+          "source_url": "https://www.mgvcl.com/contact-us.php",
+          "source_name": "MGVCL official website - Contact Us",
+          "retrieved_date": "2026-07-16"
         },
         {
           "kind": "phone",
@@ -2023,7 +2271,52 @@
           "source_url": "https://guj-epd.gujarat.gov.in/Home/HelpLine",
           "source_name": "Energy & Petrochemicals Department, Govt. of Gujarat - Helpline",
           "retrieved_date": "2026-07-15",
-          "note": "Toll-free alternate: 18002333003."
+          "note": "Toll-free alternate: 18002333003.",
+          "operator": "DGVCL",
+          "districts": [
+            "Bharuch",
+            "Narmada",
+            "Navsari",
+            "Surat",
+            "The Dangs",
+            "Valsad"
+          ]
+        },
+        {
+          "kind": "email",
+          "topic": "electricity",
+          "label": "DGVCL corporate office contact email",
+          "value": "contactus@dgvcl.com",
+          "scope": "state",
+          "operator": "DGVCL",
+          "districts": [
+            "Bharuch",
+            "Narmada",
+            "Navsari",
+            "Surat",
+            "The Dangs",
+            "Valsad"
+          ],
+          "source_url": "http://dgvcl.com/contact.php",
+          "source_name": "DGVCL official website - Contact Us",
+          "retrieved_date": "2026-07-16"
+        },
+        {
+          "kind": "phone",
+          "topic": "electricity",
+          "label": "Torrent Power customer care - Ahmedabad, Gandhinagar & Surat",
+          "value": "9099991912",
+          "scope": "state",
+          "source_url": "https://www.torrentpower.com/index.php/site/info/contactus_dist",
+          "source_name": "Torrent Power Ltd - Distribution contact page (official site)",
+          "retrieved_date": "2026-07-16",
+          "note": "Torrent Power (not the four state Vij companies) is the distribution licensee in Ahmedabad, Gandhinagar, Surat, Dahej SEZ and Dholera SIR. +91 90 9999 1912 is printed for both Ahmedabad/Gandhinagar and Surat on the official contact page.",
+          "operator": "Torrent Power",
+          "districts": [
+            "Ahmadabad",
+            "Gandhinagar",
+            "Surat"
+          ]
         }
       ]
     },
@@ -2161,7 +2454,8 @@
           "source_url": "https://www.hpseb.in/",
           "source_name": "Himachal Pradesh State Electricity Board Limited (HPSEBL)",
           "retrieved_date": "2026-07-15",
-          "note": "Published on the HPSEBL homepage as 'Helpline: 1800-180-8060 / 1912'. HPSEBL is Himachal's state electricity distribution utility; its Consumer Call Centre operates 24x7. General email: info@hpseb.in."
+          "note": "Published on the HPSEBL homepage as 'Helpline: 1800-180-8060 / 1912'. HPSEBL is Himachal's state electricity distribution utility; its Consumer Call Centre operates 24x7. General email: info@hpseb.in.",
+          "operator": "HPSEBL"
         },
         {
           "kind": "phone",
@@ -2172,7 +2466,8 @@
           "source_url": "https://www.hpseb.in/",
           "source_name": "Himachal Pradesh State Electricity Board Limited (HPSEBL)",
           "retrieved_date": "2026-07-15",
-          "note": "Published on the HPSEBL homepage as 'Helpline: 1800-180-8060 / 1912'. A separate pension-only line, 0177-2658908 (working days 10 am to 5 pm), is listed for pension queries."
+          "note": "Published on the HPSEBL homepage as 'Helpline: 1800-180-8060 / 1912'. A separate pension-only line, 0177-2658908 (working days 10 am to 5 pm), is listed for pension queries.",
+          "operator": "HPSEBL"
         },
         {
           "kind": "url",
@@ -2183,7 +2478,8 @@
           "source_url": "https://www.hpseb.in/irj/go/km/docs/internet/New_Website/Pages/consumercallcentre.html",
           "source_name": "Himachal Pradesh State Electricity Board Limited (HPSEBL)",
           "retrieved_date": "2026-07-15",
-          "note": "HPSEBL's Consumer Call Centre page describing its 24x7 complaint handling. The page itself describes the service but does not print the numbers - those are published on the HPSEBL homepage (1800-180-8060 / 1912)."
+          "note": "HPSEBL's Consumer Call Centre page describing its 24x7 complaint handling. The page itself describes the service but does not print the numbers - those are published on the HPSEBL homepage (1800-180-8060 / 1912).",
+          "operator": "HPSEBL"
         },
         {
           "kind": "url",
@@ -2342,7 +2638,8 @@
           "source_url": "http://www.uhbvn.org.in/web/portal/home",
           "source_name": "Uttar Haryana Bijli Vitran Nigam (UHBVN)",
           "retrieved_date": "2026-07-15",
-          "note": "Common no-supply/complaint short code published by both Haryana DISCOMs - UHBVN (north Haryana) and DHBVN (south Haryana)."
+          "note": "Common no-supply/complaint short code published by both Haryana DISCOMs - UHBVN (north Haryana) and DHBVN (south Haryana).",
+          "operator": "All Haryana DISCOMs (1912)"
         },
         {
           "kind": "phone",
@@ -2353,7 +2650,43 @@
           "source_url": "http://www.uhbvn.org.in/web/portal/home",
           "source_name": "Uttar Haryana Bijli Vitran Nigam (UHBVN)",
           "retrieved_date": "2026-07-15",
-          "note": "Uttar Haryana Bijli Vitran Nigam serves northern Haryana. Also 1912; email 1912@uhbvn.org.in; mobile 9815961912."
+          "note": "Uttar Haryana Bijli Vitran Nigam serves northern Haryana. Also 1912; email 1912@uhbvn.org.in; mobile 9815961912.",
+          "operator": "UHBVN",
+          "districts": [
+            "Ambala",
+            "Jhajjar",
+            "Kaithal",
+            "Karnal",
+            "Kurukshetra",
+            "Panchkula",
+            "Panipat",
+            "Rohtak",
+            "Sonipat",
+            "Yamunanagar"
+          ]
+        },
+        {
+          "kind": "email",
+          "topic": "electricity",
+          "label": "UHBVN electricity complaints email (north Haryana)",
+          "value": "1912@uhbvn.org.in",
+          "scope": "state",
+          "operator": "UHBVN",
+          "districts": [
+            "Ambala",
+            "Jhajjar",
+            "Kaithal",
+            "Karnal",
+            "Kurukshetra",
+            "Panchkula",
+            "Panipat",
+            "Rohtak",
+            "Sonipat",
+            "Yamunanagar"
+          ],
+          "source_url": "https://www.uhbvn.org.in/web/portal/contact-us",
+          "source_name": "UHBVN - Contact Us",
+          "retrieved_date": "2026-07-16"
         },
         {
           "kind": "phone",
@@ -2364,7 +2697,41 @@
           "source_url": "http://www.dhbvn.org.in/web/portal/home",
           "source_name": "Dakshin Haryana Bijli Vitran Nigam (DHBVN)",
           "retrieved_date": "2026-07-15",
-          "note": "Dakshin Haryana Bijli Vitran Nigam serves southern Haryana (incl. Gurugram). Also 1912; WhatsApp 8813999708; email 1912@dhbvn.org.in."
+          "note": "Dakshin Haryana Bijli Vitran Nigam serves southern Haryana (incl. Gurugram). Also 1912; WhatsApp 8813999708; email 1912@dhbvn.org.in.",
+          "operator": "DHBVN",
+          "districts": [
+            "Bhiwani",
+            "Faridabad",
+            "Fatehabad",
+            "Gurgaon",
+            "Hisar",
+            "Jind",
+            "Mahendragarh",
+            "Rewari",
+            "Sirsa"
+          ]
+        },
+        {
+          "kind": "email",
+          "topic": "electricity",
+          "label": "DHBVN electricity complaints email (south Haryana)",
+          "value": "1912@dhbvn.org.in",
+          "scope": "state",
+          "operator": "DHBVN",
+          "districts": [
+            "Bhiwani",
+            "Faridabad",
+            "Fatehabad",
+            "Gurgaon",
+            "Hisar",
+            "Jind",
+            "Mahendragarh",
+            "Rewari",
+            "Sirsa"
+          ],
+          "source_url": "https://www.dhbvn.org.in/web/portal/contact-us",
+          "source_name": "DHBVN - Contact Us",
+          "retrieved_date": "2026-07-16"
         },
         {
           "kind": "phone",
@@ -2529,7 +2896,8 @@
           "source_url": "https://jbvnl.co.in/contact-us",
           "source_name": "Jharkhand Bijli Vitran Nigam Limited (JBVNL) - Contact Us",
           "retrieved_date": "2026-07-15",
-          "note": "Jharkhand Bijli Vitran Nigam Ltd (state DISCOM). Published in the header/footer of the DISCOM's own official site."
+          "note": "Jharkhand Bijli Vitran Nigam Ltd (state DISCOM). Published in the header/footer of the DISCOM's own official site.",
+          "operator": "JBVNL"
         },
         {
           "kind": "phone",
@@ -2539,7 +2907,8 @@
           "scope": "state",
           "source_url": "https://jbvnl.co.in/contact-us",
           "source_name": "Jharkhand Bijli Vitran Nigam Limited (JBVNL) - Contact Us",
-          "retrieved_date": "2026-07-15"
+          "retrieved_date": "2026-07-15",
+          "operator": "JBVNL"
         },
         {
           "kind": "url",
@@ -2549,7 +2918,8 @@
           "scope": "state",
           "source_url": "https://jbvnl.co.in/contact-us",
           "source_name": "Jharkhand Bijli Vitran Nigam Limited (JBVNL) - Contact Us",
-          "retrieved_date": "2026-07-15"
+          "retrieved_date": "2026-07-15",
+          "operator": "JBVNL"
         },
         {
           "kind": "url",
@@ -2653,7 +3023,16 @@
           "source_url": "https://pdd.jk.gov.in/",
           "source_name": "Power Development Department, Government of Jammu & Kashmir",
           "retrieved_date": "2026-07-15",
-          "note": "Published by the J&K Power Development Department for the Jammu region (JPDCL)."
+          "note": "Published by the J&K Power Development Department for the Jammu region (JPDCL).",
+          "operator": "JPDCL",
+          "districts": [
+            "Doda",
+            "Jammu",
+            "Kathua",
+            "Punch",
+            "Rajouri",
+            "Udhampur"
+          ]
         },
         {
           "kind": "phone",
@@ -2664,7 +3043,16 @@
           "source_url": "https://pdd.jk.gov.in/",
           "source_name": "Power Development Department, Government of Jammu & Kashmir",
           "retrieved_date": "2026-07-15",
-          "note": "Published by the J&K Power Development Department for the Kashmir region (KPDCL). Department page also lists 6006613056 as a direct Kashmir contact."
+          "note": "Published by the J&K Power Development Department for the Kashmir region (KPDCL). Department page also lists 6006613056 as a direct Kashmir contact.",
+          "operator": "KPDCL",
+          "districts": [
+            "Anantnag",
+            "Badgam",
+            "Baramula",
+            "Kupwara",
+            "Pulwama",
+            "Srinagar"
+          ]
         },
         {
           "kind": "phone",
@@ -2675,7 +3063,8 @@
           "source_url": "https://pdd.jk.gov.in/",
           "source_name": "Power Development Department, Government of Jammu & Kashmir",
           "retrieved_date": "2026-07-15",
-          "note": "Short code published by the J&K Power Development Department as customer care for the Jammu region. 1912 is the standard national electricity-complaint short code, but is officially published here by the state PDD."
+          "note": "Short code published by the J&K Power Development Department as customer care for the Jammu region. 1912 is the standard national electricity-complaint short code, but is officially published here by the state PDD.",
+          "operator": "JPDCL & KPDCL (1912)"
         },
         {
           "kind": "url",
@@ -2686,7 +3075,8 @@
           "source_url": "https://pdd.jk.gov.in/",
           "source_name": "Power Development Department, Government of Jammu & Kashmir",
           "retrieved_date": "2026-07-15",
-          "note": "Central state page for electricity consumer services; links to JPDCL and KPDCL, online bill payment and new connections."
+          "note": "Central state page for electricity consumer services; links to JPDCL and KPDCL, online bill payment and new connections.",
+          "operator": "J&K Power Development Department"
         },
         {
           "kind": "url",
@@ -2697,7 +3087,16 @@
           "source_url": "https://kpdcl.jk.gov.in/",
           "source_name": "Kashmir Power Distribution Corporation Limited",
           "retrieved_date": "2026-07-15",
-          "note": "DISCOM for 10 Kashmir-division districts (Srinagar, Ganderbal, Baramulla, Anantnag, Budgam, Pulwama, Shopian, Kupwara, Kulgam, Bandipora). Homepage does not itself publish a complaint number; use the PDD-published 18001807666."
+          "note": "DISCOM for 10 Kashmir-division districts (Srinagar, Ganderbal, Baramulla, Anantnag, Budgam, Pulwama, Shopian, Kupwara, Kulgam, Bandipora). Homepage does not itself publish a complaint number; use the PDD-published 18001807666.",
+          "operator": "KPDCL",
+          "districts": [
+            "Anantnag",
+            "Badgam",
+            "Baramula",
+            "Kupwara",
+            "Pulwama",
+            "Srinagar"
+          ]
         }
       ]
     },
@@ -2774,13 +3173,91 @@
         {
           "kind": "phone",
           "topic": "electricity",
-          "label": "BESCOM 24x7 Electricity Helpline (Bengaluru)",
+          "label": "Electricity helpline 1912 - all Karnataka ESCOMs (BESCOM/MESCOM/CESC/HESCOM/GESCOM)",
           "value": "1912",
           "scope": "state",
-          "source_url": "https://bescom.karnataka.gov.in/new-page/Contact%20Us/en",
-          "source_name": "Bangalore Electricity Supply Company Limited (BESCOM) - Contact Us",
-          "retrieved_date": "2026-07-15",
-          "note": "Published on BESCOM's own Contact Us page as \"24x7 Helpline- 1912\". BESCOM serves Bengaluru and surrounding districts only; Karnataka's other DISCOMs are MESCOM, HESCOM, GESCOM and CESC. The state helpline directory lists 1912 under BESCOM. WhatsApp complaint numbers 9449844640 and (safety) 9483191212 / 9483191222 are also published there."
+          "source_url": "https://bescom.karnataka.gov.in/page/Contact+Us/Helpline/en",
+          "source_name": "BESCOM - Helpline (bescom.karnataka.gov.in)",
+          "retrieved_date": "2026-07-16",
+          "note": "1912 is published as the electricity complaint helpline by each of Karnataka's five distribution companies on their own official karnataka.gov.in sites - BESCOM (Bengaluru region), MESCOM (coastal Karnataka), CESC Mysuru, HESCOM (north-west) and GESCOM (north-east). BESCOM also publishes WhatsApp complaint number 9449844640.",
+          "operator": "All Karnataka ESCOMs (1912)"
+        },
+        {
+          "kind": "phone",
+          "topic": "electricity",
+          "label": "MESCOM toll-free helpline - coastal Karnataka (Mangaluru region)",
+          "value": "18004251917",
+          "scope": "state",
+          "source_url": "https://mescom.karnataka.gov.in/42/customer-care-center-(ccc)/en",
+          "source_name": "MESCOM - Customer Care Center (official site)",
+          "retrieved_date": "2026-07-16",
+          "note": "Printed as 'Call Consumer Helpline Number - 1912 / 18004251917' on MESCOM's Customer Care Center page. MESCOM is the ESCOM for the Mangaluru/coastal region.",
+          "operator": "MESCOM",
+          "districts": [
+            "Chikmagalur",
+            "Dakshina Kannada",
+            "Shimoga",
+            "Udupi"
+          ]
+        },
+        {
+          "kind": "url",
+          "topic": "electricity",
+          "label": "CESC Mysuru complaint portal - Mysuru, Chamarajanagar, Mandya, Hassan, Kodagu",
+          "value": "https://cescmysorepgrs.in/",
+          "scope": "state",
+          "source_url": "https://cescmysore.karnataka.gov.in/english",
+          "source_name": "Chamundeshwari Electricity Supply Corporation (CESC Mysuru) - official site",
+          "retrieved_date": "2026-07-16",
+          "note": "District coverage as stated on CESC Mysuru's official site; helpline 1912. Distinct from CESC Limited of Kolkata.",
+          "operator": "CESC Mysuru",
+          "districts": [
+            "Chamrajnagar",
+            "Hassan",
+            "Kodagu",
+            "Mandya",
+            "Mysore"
+          ]
+        },
+        {
+          "kind": "url",
+          "topic": "electricity",
+          "label": "HESCOM electricity complaints - north-west Karnataka (Hubballi region)",
+          "value": "https://hescom.karnataka.gov.in/",
+          "scope": "state",
+          "source_url": "https://hescom.karnataka.gov.in/",
+          "source_name": "Hubballi Electricity Supply Company (HESCOM) - official site",
+          "retrieved_date": "2026-07-16",
+          "note": "Homepage links online complaint registration; 1912 for electricity complaints and toll-free 1800-425-4754 for transformer-failure complaints.",
+          "operator": "HESCOM",
+          "districts": [
+            "Bagalkot",
+            "Belgaum",
+            "Bijapur",
+            "Dharwad",
+            "Gadag",
+            "Haveri",
+            "Uttara Kannada"
+          ]
+        },
+        {
+          "kind": "url",
+          "topic": "electricity",
+          "label": "GESCOM customer care - north-east Karnataka (Kalaburagi region)",
+          "value": "https://gescom.karnataka.gov.in/info-2/Customer+Care+Center/en",
+          "scope": "state",
+          "source_url": "https://gescom.karnataka.gov.in/info-2/Customer+Care+Center/en",
+          "source_name": "Gulbarga Electricity Supply Company (GESCOM) - Customer Care Center",
+          "retrieved_date": "2026-07-16",
+          "note": "Register complaints on 1912; SMS 'GESCOM' to 9769368959; PGRS portal pgrs.pragyaware.com.",
+          "operator": "GESCOM",
+          "districts": [
+            "Bellary",
+            "Bidar",
+            "Gulbarga",
+            "Koppal",
+            "Raichur"
+          ]
         },
         {
           "kind": "phone",
@@ -2949,7 +3426,8 @@
           "source_url": "https://kseb.in/",
           "source_name": "Kerala State Electricity Board Ltd (KSEB)",
           "retrieved_date": "2026-07-15",
-          "note": "24x7 centralised customer care for electricity complaints and service requests, published on the KSEB homepage. WhatsApp complaints (no calls/SMS): 9496001912."
+          "note": "24x7 centralised customer care for electricity complaints and service requests, published on the KSEB homepage. WhatsApp complaints (no calls/SMS): 9496001912.",
+          "operator": "KSEB"
         },
         {
           "kind": "url",
@@ -2960,7 +3438,8 @@
           "source_url": "https://kseb.in/",
           "source_name": "Kerala State Electricity Board Ltd (KSEB)",
           "retrieved_date": "2026-07-15",
-          "note": "Linked directly from the KSEB homepage as 'Register your Complaint'. No login required."
+          "note": "Linked directly from the KSEB homepage as 'Register your Complaint'. No login required.",
+          "operator": "KSEB"
         }
       ]
     },
@@ -3110,6 +3589,30 @@
           "source_name": "Administration of UT of Ladakh - Helpline",
           "retrieved_date": "2026-07-15",
           "note": "Official UT helpline listing page. Publishes only the standard national short codes (100 police, 101 fire, 102 medical, 1091 women, 1950 election) - no Ladakh-specific women/child helpline is published."
+        },
+        {
+          "kind": "phone",
+          "topic": "electricity",
+          "label": "Ladakh Power Development Department - Chief Engineer (Distribution) office",
+          "value": "01982264231",
+          "scope": "state",
+          "source_url": "https://ladakh.gov.in/power-development-department/",
+          "source_name": "Administration of UT of Ladakh (official portal)",
+          "retrieved_date": "2026-07-16",
+          "note": "Office number, not a dedicated 24x7 consumer helpline - Ladakh publishes none; email cepdladakh@gmail.com.",
+          "operator": "Ladakh Power Development Department"
+        },
+        {
+          "kind": "url",
+          "topic": "electricity",
+          "label": "Ladakh PDD contact & grievance redressal - Leh and Kargil",
+          "value": "https://lpdd.ladakh.gov.in/Contactus.php",
+          "scope": "state",
+          "source_url": "https://lpdd.ladakh.gov.in/Contactus.php",
+          "source_name": "Ladakh Power Development Department (official site)",
+          "retrieved_date": "2026-07-16",
+          "note": "Lists Secretary PDD 01982-259302 and Chief Engineer (D&G) 9419179868; the site carries a Grievance/Complaint Redressal link.",
+          "operator": "Ladakh Power Development Department"
         }
       ]
     },
@@ -3225,7 +3728,8 @@
           "source_url": "https://powerlak.gov.in/",
           "source_name": "Department of Electricity, UT of Lakshadweep (POWERLAK consumer portal)",
           "retrieved_date": "2026-07-15",
-          "note": "Independently confirmed on two official sources: the POWERLAK consumer portal (\"04896-263709\") and the lakshadweep.gov.in homepage helpline block (\"Electricity Grievances: 04896-263709\"). Nodal officer email: lk-ktelect[at]nic[dot]in"
+          "note": "Independently confirmed on two official sources: the POWERLAK consumer portal (\"04896-263709\") and the lakshadweep.gov.in homepage helpline block (\"Electricity Grievances: 04896-263709\"). Nodal officer email: lk-ktelect[at]nic[dot]in",
+          "operator": "Department of Electricity, Lakshadweep"
         },
         {
           "kind": "url",
@@ -3236,7 +3740,8 @@
           "source_url": "https://powerlak.gov.in/",
           "source_name": "Department of Electricity, UT of Lakshadweep (POWERLAK)",
           "retrieved_date": "2026-07-15",
-          "note": "Official Department of Electricity consumer portal. Offers online complaint registration, bill payment, new connections, load alteration and access to the Consumer Grievances Redressal Forum (CGRF)."
+          "note": "Official Department of Electricity consumer portal. Offers online complaint registration, bill payment, new connections, load alteration and access to the Consumer Grievances Redressal Forum (CGRF).",
+          "operator": "Department of Electricity, Lakshadweep"
         },
         {
           "kind": "url",
@@ -3247,7 +3752,8 @@
           "source_url": "https://powerlak.utl.gov.in/EBCMsConsumerPortal/FrmComplaint_Registration.aspx",
           "source_name": "POWERLAK - Complaint Registration",
           "retrieved_date": "2026-07-15",
-          "note": "Fetched and confirmed live: online form for outages, damaged lines and meter faults. Consumer number is not mandatory - only name and location are required."
+          "note": "Fetched and confirmed live: online form for outages, damaged lines and meter faults. Consumer number is not mandatory - only name and location are required.",
+          "operator": "Department of Electricity, Lakshadweep"
         },
         {
           "kind": "phone",
@@ -3456,13 +3962,14 @@
         {
           "kind": "phone",
           "topic": "electricity",
-          "label": "MSEDCL / Mahavitaran - electricity consumer complaints (centralised customer care)",
+          "label": "MSEDCL / Mahavitaran electricity complaints - Maharashtra outside Mumbai city & suburbs",
           "value": "1912",
           "scope": "state",
           "source_url": "https://www.mahadiscom.in/en/contact-us/",
           "source_name": "MSEDCL (Mahavitaran) - Contact Us (official DISCOM site)",
           "retrieved_date": "2026-07-15",
-          "note": "MSEDCL (Maharashtra State Electricity Distribution Co. Ltd) publishes \"1912, 19120, 1800-233-3435, 1800-212-3435\" as its centralised customer care lines. MSEDCL covers most of Maharashtra but NOT all of Mumbai - parts of Mumbai are served by BEST, Adani Electricity and Tata Power, which have their own numbers."
+          "note": "MSEDCL (Maharashtra State Electricity Distribution Co. Ltd) publishes \"1912, 19120, 1800-233-3435, 1800-212-3435\" as its centralised customer care lines. MSEDCL covers most of Maharashtra but NOT all of Mumbai - parts of Mumbai are served by BEST, Adani Electricity and Tata Power, which have their own numbers.",
+          "operator": "MSEDCL (Mahavitaran)"
         },
         {
           "kind": "phone",
@@ -3473,7 +3980,8 @@
           "source_url": "https://www.mahadiscom.in/en/contact-us/",
           "source_name": "MSEDCL (Mahavitaran) - Contact Us (official DISCOM site)",
           "retrieved_date": "2026-07-15",
-          "note": "One of four centralised customer care numbers published by MSEDCL: \"1912, 19120, 1800-233-3435, 1800-212-3435\". The alternate 1800-212-3435 and the short code 19120 are published alongside it."
+          "note": "One of four centralised customer care numbers published by MSEDCL: \"1912, 19120, 1800-233-3435, 1800-212-3435\". The alternate 1800-212-3435 and the short code 19120 are published alongside it.",
+          "operator": "MSEDCL (Mahavitaran)"
         },
         {
           "kind": "url",
@@ -3484,7 +3992,96 @@
           "source_url": "https://www.mahadiscom.in/en/contact-us/",
           "source_name": "MSEDCL (Mahavitaran) - Contact Us (official DISCOM site)",
           "retrieved_date": "2026-07-15",
-          "note": "Official MSEDCL contact page. Also publishes customercare@mahadiscom.in, an HT consumer helpdesk (022-26478989 / 022-26478899), an online payment helpdesk (022-26478246), and a missed-call power-failure registration line (022-50897100)."
+          "note": "Official MSEDCL contact page. Also publishes customercare@mahadiscom.in, an HT consumer helpdesk (022-26478989 / 022-26478899), an online payment helpdesk (022-26478246), and a missed-call power-failure registration line (022-50897100).",
+          "operator": "MSEDCL (Mahavitaran)"
+        },
+        {
+          "kind": "email",
+          "topic": "electricity",
+          "label": "MSEDCL centralised customer care / consumer helpdesk email",
+          "value": "customercare@mahadiscom.in",
+          "scope": "state",
+          "operator": "MSEDCL (Mahavitaran)",
+          "source_url": "https://www.mahadiscom.in/en/contact-us/",
+          "source_name": "MSEDCL (Mahavitaran) - Contact Us",
+          "retrieved_date": "2026-07-16"
+        },
+        {
+          "kind": "phone",
+          "topic": "electricity",
+          "label": "Adani Electricity 24x7 helpline - Mumbai suburbs",
+          "value": "19122",
+          "scope": "state",
+          "source_url": "https://www.adanielectricity.com/contact-us",
+          "source_name": "Adani Electricity Mumbai - Contact Us (official site)",
+          "retrieved_date": "2026-07-16",
+          "note": "Printed as '19122 (24x7)' on the official contact page; WhatsApp 9594519122 for supply complaints and bills, email helpdesk.mumbaielectricity@adani.com. Serves the Mumbai suburban distribution licence area.",
+          "operator": "Adani Electricity (Mumbai)",
+          "districts": [
+            "Mumbai",
+            "Thane"
+          ]
+        },
+        {
+          "kind": "email",
+          "topic": "electricity",
+          "label": "Adani Electricity Mumbai consumer helpdesk email",
+          "value": "helpdesk.mumbaielectricity@adani.com",
+          "scope": "state",
+          "operator": "Adani Electricity (Mumbai)",
+          "districts": [
+            "Mumbai",
+            "Thane"
+          ],
+          "source_url": "https://www.adanielectricity.com/contact-us",
+          "source_name": "Adani Electricity - Contact Us",
+          "retrieved_date": "2026-07-16"
+        },
+        {
+          "kind": "phone",
+          "topic": "electricity",
+          "label": "Tata Power Mumbai consumer helpline - Mumbai licence area (Colaba to Mira-Bhayander)",
+          "value": "19123",
+          "scope": "state",
+          "source_url": "https://www.tatapower.com/energy-solutions/distribution/mumbai",
+          "source_name": "Tata Power - Mumbai distribution (official page)",
+          "retrieved_date": "2026-07-16",
+          "note": "Published on Tata Power's Mumbai distribution page along with toll-free 1800-209-5161 and the customer portal customerportal.tatapower.com. Mumbai licence area of 485 sq km from Colaba to Mira-Bhayander.",
+          "operator": "Tata Power (Mumbai)",
+          "districts": [
+            "Mumbai",
+            "Thane"
+          ]
+        },
+        {
+          "kind": "email",
+          "topic": "electricity",
+          "label": "Tata Power customer care email (Mumbai distribution)",
+          "value": "customercare@tatapower.com",
+          "scope": "state",
+          "operator": "Tata Power (Mumbai)",
+          "districts": [
+            "Mumbai",
+            "Thane"
+          ],
+          "source_url": "https://www.tatapower.com/energy-solutions/distribution/mumbai",
+          "source_name": "Tata Power - Mumbai Distribution",
+          "retrieved_date": "2026-07-16"
+        },
+        {
+          "kind": "phone",
+          "topic": "electricity",
+          "label": "BEST electricity complaints (South Mumbai) - Mumbai island city",
+          "value": "02222085888",
+          "scope": "state",
+          "source_url": "https://www.bestundertaking.com/contact.asp",
+          "source_name": "Brihanmumbai Electric Supply & Transport Undertaking - Contact Us",
+          "retrieved_date": "2026-07-16",
+          "note": "BEST supplies electricity in Mumbai's island city. Complaint numbers published: South Mumbai 022-22085888 / 022-22082875, North (of the island city) 022-24145888 / 022-24114891; email electric@bestundertaking.com.",
+          "operator": "BEST Undertaking",
+          "districts": [
+            "Mumbai"
+          ]
         }
       ]
     },
@@ -3611,7 +4208,8 @@
           "source_url": "https://meghalaya.gov.in/helpline",
           "source_name": "Meghalaya Government Portal - Helpline Numbers",
           "retrieved_date": "2026-07-15",
-          "note": "Published centrally by the state as 'Electricity Complaint - 1912'. Meghalaya's distribution utility is MePDCL, under Meghalaya Energy Corporation Ltd (MeECL)."
+          "note": "Published centrally by the state as 'Electricity Complaint - 1912'. Meghalaya's distribution utility is MePDCL, under Meghalaya Energy Corporation Ltd (MeECL).",
+          "operator": "MeECL / MePDCL"
         },
         {
           "kind": "phone",
@@ -3622,7 +4220,8 @@
           "source_url": "https://meecl.nic.in/index.php/customer-care-centre/",
           "source_name": "Meghalaya Energy Corporation Ltd (MeECL) - Customer Care Centre",
           "retrieved_date": "2026-07-15",
-          "note": "Published as 'Customer Care: (0364) 2591932 | 2591088 | 2591335 | 2590656'. Alternates: 03642591088, 03642591335, 03642590656. Customer care email: customercare.mepdcl@meghalaya.gov.in."
+          "note": "Published as 'Customer Care: (0364) 2591932 | 2591088 | 2591335 | 2590656'. Alternates: 03642591088, 03642591335, 03642590656. Customer care email: customercare.mepdcl@meghalaya.gov.in.",
+          "operator": "MeECL / MePDCL"
         },
         {
           "kind": "url",
@@ -3633,7 +4232,8 @@
           "source_url": "https://meecl.nic.in/index.php/customer-care-centre/",
           "source_name": "Meghalaya Energy Corporation Ltd (MeECL) - Customer Care Centre",
           "retrieved_date": "2026-07-15",
-          "note": "Official DISCOM customer care page; also links the consumer portal, online bill payment and service-centre jurisdiction lists in English, Khasi and Garo."
+          "note": "Official DISCOM customer care page; also links the consumer portal, online bill payment and service-centre jurisdiction lists in English, Khasi and Garo.",
+          "operator": "MeECL / MePDCL"
         },
         {
           "kind": "phone",
@@ -3738,7 +4338,8 @@
           "source_url": "https://mspdcl.in/contact",
           "source_name": "MSPDCL - official website, Contact page",
           "retrieved_date": "2026-07-15",
-          "note": "Printed verbatim as \"Toll Free: 1912\" under Emergency & Helpline. mspdcl.in is confirmed as the official DISCOM site by the Government of Manipur Electricity Department (Office of the Chief Engineer (Power)), which links to https://mspdcl.in/ from https://aopower.mn.gov.in/."
+          "note": "Printed verbatim as \"Toll Free: 1912\" under Emergency & Helpline. mspdcl.in is confirmed as the official DISCOM site by the Government of Manipur Electricity Department (Office of the Chief Engineer (Power)), which links to https://mspdcl.in/ from https://aopower.mn.gov.in/.",
+          "operator": "MSPDCL"
         },
         {
           "kind": "phone",
@@ -3749,7 +4350,8 @@
           "source_url": "https://mspdcl.in/contact",
           "source_name": "MSPDCL - official website, Contact page",
           "retrieved_date": "2026-07-15",
-          "note": "Printed verbatim as \"CCC Helpline (0385) 2410060\"."
+          "note": "Printed verbatim as \"CCC Helpline (0385) 2410060\".",
+          "operator": "MSPDCL"
         },
         {
           "kind": "phone",
@@ -3760,7 +4362,8 @@
           "source_url": "https://mspdcl.in/contact",
           "source_name": "MSPDCL - official website, Contact page",
           "retrieved_date": "2026-07-15",
-          "note": "Printed verbatim as \"WhatsApp +91 7640081238\". A second WhatsApp number, +91 7640081232, is listed alongside it."
+          "note": "Printed verbatim as \"WhatsApp +91 7640081238\". A second WhatsApp number, +91 7640081232, is listed alongside it.",
+          "operator": "MSPDCL"
         },
         {
           "kind": "url",
@@ -3771,7 +4374,8 @@
           "source_url": "https://aopower.mn.gov.in/",
           "source_name": "Office of the Chief Engineer (Power), Electricity Department, Government of Manipur",
           "retrieved_date": "2026-07-15",
-          "note": "The Electricity Department's official mn.gov.in site links to https://mspdcl.in/ as MSPDCL. WARNING for the site's link data: the older domain mspdcl.com - still linked from kangpokpi.nic.in - has lapsed and now serves an online gambling site. Do not use mspdcl.com."
+          "note": "The Electricity Department's official mn.gov.in site links to https://mspdcl.in/ as MSPDCL. WARNING for the site's link data: the older domain mspdcl.com - still linked from kangpokpi.nic.in - has lapsed and now serves an online gambling site. Do not use mspdcl.com.",
+          "operator": "MSPDCL"
         },
         {
           "kind": "phone",
@@ -3916,19 +4520,220 @@
           "scope": "state",
           "source_url": "https://dhar.nic.in/en/public-utility-category/electricity/",
           "source_name": "District Dhar, Government of Madhya Pradesh - Electricity (dhar.nic.in)",
-          "retrieved_date": "2026-07-15",
-          "note": "Published on official MP district government pages as the electricity complaint number for MP Paschim Kshetra Vidyut Vitaran Company Ltd. MP has three DISCOMs (MPCZ/Central, MPWZ/West, MPEZ/East); 1912 is the common electricity complaint short code."
+          "retrieved_date": "2026-07-16",
+          "note": "Published on official MP district government pages as the electricity complaint number for MP Paschim Kshetra Vidyut Vitaran Company Ltd. MP has three DISCOMs (MPCZ/Central, MPWZ/West, MPEZ/East); 1912 is the common electricity complaint short code. All three use 1912, confirmed per-discom on the MP Energy Department complaints page (energy.mp.gov.in/en/complaints).",
+          "operator": "All MP discoms (1912)"
         },
         {
           "kind": "url",
           "topic": "electricity",
-          "label": "MP Madhya Kshetra Vidyut Vitaran Co. Ltd (MPCZ) - official consumer portal",
+          "label": "MPCZ consumer portal - Bhopal / central Madhya Pradesh (Madhya Kshetra discom)",
           "value": "https://portal.mpcz.in/",
           "scope": "state",
           "source_url": "https://bhopal.nic.in/en/public-utility-category/electricity/",
           "source_name": "District Bhopal, Government of Madhya Pradesh - Electricity (bhopal.nic.in)",
           "retrieved_date": "2026-07-15",
-          "note": "Official website of the Central Zone DISCOM as published on the District Bhopal government site. Office phone listed there: 0755-2602033."
+          "note": "Official website of the Central Zone DISCOM as published on the District Bhopal government site. Office phone listed there: 0755-2602033.",
+          "operator": "MP Central Discom (MPMKVVCL)",
+          "districts": [
+            "Ashoknagar",
+            "Betul",
+            "Bhind",
+            "Bhopal",
+            "Datia",
+            "Guna",
+            "Gwalior",
+            "Harda",
+            "Hoshangabad",
+            "Morena",
+            "Raisen",
+            "Rajgarh",
+            "Sehore",
+            "Sheopur",
+            "Shivpuri",
+            "Vidisha"
+          ]
+        },
+        {
+          "kind": "email",
+          "topic": "electricity",
+          "label": "MP Central Discom (MPMKVVCL) general consumer contact email",
+          "value": "contact.mpcz@gmail.com",
+          "scope": "state",
+          "operator": "MP Central Discom (MPMKVVCL)",
+          "districts": [
+            "Ashoknagar",
+            "Betul",
+            "Bhind",
+            "Bhopal",
+            "Datia",
+            "Guna",
+            "Gwalior",
+            "Harda",
+            "Hoshangabad",
+            "Morena",
+            "Raisen",
+            "Rajgarh",
+            "Sehore",
+            "Sheopur",
+            "Shivpuri",
+            "Vidisha"
+          ],
+          "source_url": "https://portal.mpcz.in/web/contact-us/",
+          "source_name": "MPMKVVCL official Contact Us page (portal.mpcz.in)",
+          "retrieved_date": "2026-07-16"
+        },
+        {
+          "kind": "phone",
+          "topic": "electricity",
+          "label": "MPPKVVCL Jabalpur toll-free - east Madhya Pradesh (Poorv Kshetra discom)",
+          "value": "18002331266",
+          "scope": "state",
+          "source_url": "https://consolidatedbill.mpez.co.in/contact.jsp",
+          "source_name": "MP Poorv Kshetra Vidyut Vitaran Co. Ltd, Jabalpur (official site)",
+          "retrieved_date": "2026-07-16",
+          "note": "Printed as Toll Free 1800-233-1266 alongside 1912 on the official MPEZ contact page. Serves Jabalpur and the eastern region of MP.",
+          "operator": "MP East Discom (MPEZ)",
+          "districts": [
+            "Anuppur",
+            "Balaghat",
+            "Chhatarpur",
+            "Chhindwara",
+            "Damoh",
+            "Dindori",
+            "Jabalpur",
+            "Katni",
+            "Mandla",
+            "Narsimhapur",
+            "Panna",
+            "Rewa",
+            "Sagar",
+            "Satna",
+            "Seoni",
+            "Shahdol",
+            "Sidhi",
+            "Tikamgarh",
+            "Umaria"
+          ]
+        },
+        {
+          "kind": "url",
+          "topic": "electricity",
+          "label": "MPEZ online complaint portal - east Madhya Pradesh",
+          "value": "https://mpezccc.in/mppkvvcl/",
+          "scope": "state",
+          "source_url": "https://energy.mp.gov.in/en/complaints",
+          "source_name": "Energy Department, Government of Madhya Pradesh - Complaints",
+          "retrieved_date": "2026-07-16",
+          "note": "Linked as the East Discom 'Call Center-1912' complaint channel on the MP Energy Department complaints page.",
+          "operator": "MP East Discom (MPEZ)",
+          "districts": [
+            "Anuppur",
+            "Balaghat",
+            "Chhatarpur",
+            "Chhindwara",
+            "Damoh",
+            "Dindori",
+            "Jabalpur",
+            "Katni",
+            "Mandla",
+            "Narsimhapur",
+            "Panna",
+            "Rewa",
+            "Sagar",
+            "Satna",
+            "Seoni",
+            "Shahdol",
+            "Sidhi",
+            "Tikamgarh",
+            "Umaria"
+          ]
+        },
+        {
+          "kind": "email",
+          "topic": "electricity",
+          "label": "MP East Discom (MPEZ) consumer complaint email",
+          "value": "MPEASTDiscom@mpez.co.in",
+          "scope": "state",
+          "operator": "MP East Discom (MPEZ)",
+          "districts": [
+            "Anuppur",
+            "Balaghat",
+            "Chhatarpur",
+            "Chhindwara",
+            "Damoh",
+            "Dindori",
+            "Jabalpur",
+            "Katni",
+            "Mandla",
+            "Narsimhapur",
+            "Panna",
+            "Rewa",
+            "Sagar",
+            "Satna",
+            "Seoni",
+            "Shahdol",
+            "Sidhi",
+            "Tikamgarh",
+            "Umaria"
+          ],
+          "source_url": "https://consolidatedbill.mpez.co.in/contact.jsp",
+          "source_name": "MPEZ official contact page (mpez.co.in)",
+          "retrieved_date": "2026-07-16"
+        },
+        {
+          "kind": "phone",
+          "topic": "electricity",
+          "label": "MPPKVVCL Indore centralised call centre - west Madhya Pradesh (Paschim Kshetra)",
+          "value": "07316700000",
+          "scope": "state",
+          "source_url": "https://www.mpwz.co.in/assets/img/pdf/CCC_IR.pdf",
+          "source_name": "MP Paschim Kshetra Vidyut Vitaran Co. Ltd, Indore (official site)",
+          "retrieved_date": "2026-07-16",
+          "note": "Printed as 'Centralized Call Centre Ph. No. For All Towns: 0731-6700000, 1912' in the West Discom call-centre list (Indore region towns incl. Indore, Khargone, Burhanpur, Dhar, Khandwa, Jhabua, Barwani).",
+          "operator": "MP West Discom (MPWZ)",
+          "districts": [
+            "Barwani",
+            "Burhanpur",
+            "Dewas",
+            "Dhar",
+            "East Nimar",
+            "Indore",
+            "Jhabua",
+            "Mandsaur",
+            "Neemuch",
+            "Ratlam",
+            "Shajapur",
+            "Ujjain",
+            "West Nimar"
+          ]
+        },
+        {
+          "kind": "url",
+          "topic": "electricity",
+          "label": "MPWZ online grievance portal - west Madhya Pradesh",
+          "value": "https://mpwzservices.mpwin.co.in/mpeb_english/grievance",
+          "scope": "state",
+          "source_url": "https://energy.mp.gov.in/en/complaints",
+          "source_name": "Energy Department, Government of Madhya Pradesh - Complaints",
+          "retrieved_date": "2026-07-16",
+          "note": "Linked as the West Discom complaint channel on the MP Energy Department complaints page.",
+          "operator": "MP West Discom (MPWZ)",
+          "districts": [
+            "Barwani",
+            "Burhanpur",
+            "Dewas",
+            "Dhar",
+            "East Nimar",
+            "Indore",
+            "Jhabua",
+            "Mandsaur",
+            "Neemuch",
+            "Ratlam",
+            "Shajapur",
+            "Ujjain",
+            "West Nimar"
+          ]
         }
       ]
     },
@@ -4055,7 +4860,8 @@
           "source_url": "https://power.mizoram.gov.in/page/contact-us",
           "source_name": "Power & Electricity Department, Government of Mizoram - Contact Us",
           "retrieved_date": "2026-07-15",
-          "note": "STALENESS WARNING - USE WITH CAUTION: published verbatim as 'Power cut Complaint/enquire : 0389 2321650 / 2322174 / 2310169' at the Engineer-in-Chief's office, Kawlphetha Building, New Secretariat Complex, Khatla, Aizawl 796001. However this official page shows 'Page Created On: 6th Feb 18 / Updated On: 13th Mar 18' - it has not been touched in 8 years, so the number may be outdated. Alternates: 0389-2322174, 0389-2310169. Mizoram has no separate DISCOM - power is run directly by the state department. Consider showing the last-updated date to users or verifying before display."
+          "note": "STALENESS WARNING - USE WITH CAUTION: published verbatim as 'Power cut Complaint/enquire : 0389 2321650 / 2322174 / 2310169' at the Engineer-in-Chief's office, Kawlphetha Building, New Secretariat Complex, Khatla, Aizawl 796001. However this official page shows 'Page Created On: 6th Feb 18 / Updated On: 13th Mar 18' - it has not been touched in 8 years, so the number may be outdated. Alternates: 0389-2322174, 0389-2310169. Mizoram has no separate DISCOM - power is run directly by the state department. Consider showing the last-updated date to users or verifying before display.",
+          "operator": "Power & Electricity Department, Mizoram"
         },
         {
           "kind": "url",
@@ -4066,7 +4872,8 @@
           "source_url": "https://power.mizoram.gov.in/",
           "source_name": "Power & Electricity Department, Government of Mizoram",
           "retrieved_date": "2026-07-15",
-          "note": "Official department site (Mizoram has no separate DISCOM company). Its homepage links an 'Online consumer complaint' portal at https://pedmconsumer.ugoerp.com/ and a 'Consumer Grievance Redressal Forum and Electricity Ombudsman Regulations 2025 & complaint Form' page at https://power.mizoram.gov.in/page/consumer-grievance-redressal-forum-and-electricity-ombudsman-regulations-2025-complaint-form. I did not cite the ugoerp.com portal as a primary channel because it sits on a private vendor domain rather than a .gov.in one, though it is officially linked and returns HTTP 200."
+          "note": "Official department site (Mizoram has no separate DISCOM company). Its homepage links an 'Online consumer complaint' portal at https://pedmconsumer.ugoerp.com/ and a 'Consumer Grievance Redressal Forum and Electricity Ombudsman Regulations 2025 & complaint Form' page at https://power.mizoram.gov.in/page/consumer-grievance-redressal-forum-and-electricity-ombudsman-regulations-2025-complaint-form. I did not cite the ugoerp.com portal as a primary channel because it sits on a private vendor domain rather than a .gov.in one, though it is officially linked and returns HTTP 200.",
+          "operator": "Power & Electricity Department, Mizoram"
         }
       ]
     },
@@ -4183,6 +4990,30 @@
           "source_name": "CMHIS Nagaland",
           "retrieved_date": "2026-07-15",
           "note": "Official state health insurance scheme portal; linked from nagaland.gov.in."
+        },
+        {
+          "kind": "phone",
+          "topic": "electricity",
+          "label": "Department of Power Nagaland helpdesk - Electricity House, Kohima (statewide)",
+          "value": "03702243149",
+          "scope": "state",
+          "source_url": "https://smartmeters.dopn.gov.in/contactus",
+          "source_name": "Department of Power, Government of Nagaland (official site)",
+          "retrieved_date": "2026-07-16",
+          "note": "Published as the Chief Engineer (D&R) helpdesk with email cepower1helpdesk@gmail.com; the same number is listed for Electricity House Kohima on kohima.nic.in. Nagaland publishes no 1912-style consumer helpline on dopn.gov.in.",
+          "operator": "Department of Power, Nagaland"
+        },
+        {
+          "kind": "url",
+          "topic": "electricity",
+          "label": "Department of Power Nagaland - official portal & consumer grievance redressal",
+          "value": "https://www.dopn.gov.in/",
+          "scope": "state",
+          "source_url": "https://www.dopn.gov.in/",
+          "source_name": "Department of Power, Government of Nagaland",
+          "retrieved_date": "2026-07-16",
+          "note": "Portal carries a Consumer Grievance Redressal section.",
+          "operator": "Department of Power, Nagaland"
         }
       ]
     },
@@ -4331,7 +5162,8 @@
           "source_url": "https://www.tpnodl.com/customer-zone/complaints",
           "source_name": "TP Northern Odisha Distribution Ltd (TPNODL) - official DISCOM site",
           "retrieved_date": "2026-07-15",
-          "note": "Odisha has NO central state electricity complaint number - the Energy Department site publishes none. 1912 is the common complaint short code used by all four Odisha DISCOMs; independently confirmed on TPNODL's and TPSODL's own official sites. DISCOM-specific toll-free lines also exist (TPNODL 18003456718, TPSODL 18002026)."
+          "note": "Odisha has NO central state electricity complaint number - the Energy Department site publishes none. 1912 is the common complaint short code used by all four Odisha DISCOMs; independently confirmed on TPNODL's and TPSODL's own official sites. DISCOM-specific toll-free lines also exist (TPNODL 18003456718, TPSODL 18002026).",
+          "operator": "All Odisha discoms (TPCODL/TPWODL/TPSODL/TPNODL)"
         }
       ]
     },
@@ -4403,7 +5235,8 @@
           "source_url": "https://pspcl.in/Customer-Care.aspx",
           "source_name": "Punjab State Power Corporation Ltd (PSPCL) - Customer Care (pspcl.in)",
           "retrieved_date": "2026-07-15",
-          "note": "Published as \"Customer Care Number: 1912\" on PSPCL's official site. PSPCL is Punjab's state electricity distribution utility. Complaint email: 1912@pspcl.in. SMS 'No Supply' to 1912 also works."
+          "note": "Published as \"Customer Care Number: 1912\" on PSPCL's official site. PSPCL is Punjab's state electricity distribution utility. Complaint email: 1912@pspcl.in. SMS 'No Supply' to 1912 also works.",
+          "operator": "PSPCL"
         },
         {
           "kind": "phone",
@@ -4414,7 +5247,8 @@
           "source_url": "https://www.pspcl.in/Otherlinks/nodal-complaint-center.aspx",
           "source_name": "PSPCL - Nodal Complaint Centre (pspcl.in)",
           "retrieved_date": "2026-07-15",
-          "note": "Published on PSPCL's official Nodal Complaint Centre page as the toll-free missed-call number for booking supply complaints. Same page lists PSPCL Central Control Room escalation numbers 96461-06835 / 96461-06836 if the division does not respond."
+          "note": "Published on PSPCL's official Nodal Complaint Centre page as the toll-free missed-call number for booking supply complaints. Same page lists PSPCL Central Control Room escalation numbers 96461-06835 / 96461-06836 if the division does not respond.",
+          "operator": "PSPCL"
         },
         {
           "kind": "url",
@@ -4425,7 +5259,8 @@
           "source_url": "https://www.pspcl.in/Otherlinks/nodal-complaint-center.aspx",
           "source_name": "PSPCL - Nodal Complaint Centre (pspcl.in)",
           "retrieved_date": "2026-07-15",
-          "note": "Official PSPCL page listing Nodal Complaint Centre (NCC) numbers by circle and zone across Punjab, plus central escalation contacts."
+          "note": "Official PSPCL page listing Nodal Complaint Centre (NCC) numbers by circle and zone across Punjab, plus central escalation contacts.",
+          "operator": "PSPCL"
         }
       ]
     },
@@ -4552,7 +5387,8 @@
           "source_url": "https://puducherry-dt.gov.in/helpline/",
           "source_name": "Puducherry District - Helpline",
           "retrieved_date": "2026-07-15",
-          "note": "Published as 'Electricity: 1912, 1800 425 1912'."
+          "note": "Published as 'Electricity: 1912, 1800 425 1912'.",
+          "operator": "Puducherry Electricity Department"
         },
         {
           "kind": "phone",
@@ -4563,7 +5399,8 @@
           "source_url": "https://puducherry-dt.gov.in/helpline/",
           "source_name": "Puducherry District - Helpline",
           "retrieved_date": "2026-07-15",
-          "note": "Toll-free consumer complaint number for the Puducherry Electricity Department."
+          "note": "Toll-free consumer complaint number for the Puducherry Electricity Department.",
+          "operator": "Puducherry Electricity Department"
         },
         {
           "kind": "url",
@@ -4574,7 +5411,8 @@
           "source_url": "https://py.gov.in/onlineservices",
           "source_name": "Government of Puducherry - Online Services",
           "retrieved_date": "2026-07-15",
-          "note": "Official electricity services portal listed on the UT portal."
+          "note": "Official electricity services portal listed on the UT portal.",
+          "operator": "Puducherry Electricity Department"
         },
         {
           "kind": "phone",
@@ -4585,7 +5423,8 @@
           "source_url": "https://puducherry-dt.gov.in/public-utility-category/electricity/",
           "source_name": "Puducherry District - Electricity (Public Utility)",
           "retrieved_date": "2026-07-15",
-          "note": "Office at No. 137, NSC Bose Salai, Puducherry - 605 001."
+          "note": "Office at No. 137, NSC Bose Salai, Puducherry - 605 001.",
+          "operator": "Puducherry Electricity Department"
         }
       ]
     },
@@ -4679,18 +5518,133 @@
           "source_url": "https://jansoochna.rajasthan.gov.in/Images/ClickablePdf/202009091100118854.pdf",
           "source_name": "Jan Soochna Portal, Govt of Rajasthan - AVVNL Modes of Complaint Registration",
           "retrieved_date": "2026-07-15",
-          "note": "Toll-free electricity complaint number published on the Rajasthan Jan Soochna portal in AVVNL's 'Modes of Complaint Registration'. Verified from the official PDF text. Listed there alongside 18001806565."
+          "note": "Toll-free electricity complaint number published on the Rajasthan Jan Soochna portal in AVVNL's 'Modes of Complaint Registration'. Verified from the official PDF text. Listed there alongside 18001806565.",
+          "operator": "All Rajasthan discoms (1912)"
         },
         {
           "kind": "phone",
           "topic": "electricity",
-          "label": "AVVNL (Ajmer Discom) complaint toll-free",
+          "label": "AVVNL toll-free complaint number - Ajmer discom (central Rajasthan)",
           "value": "18001806565",
           "scope": "state",
           "source_url": "https://jansoochna.rajasthan.gov.in/Images/ClickablePdf/202009091100118854.pdf",
           "source_name": "Jan Soochna Portal, Govt of Rajasthan - AVVNL Modes of Complaint Registration",
           "retrieved_date": "2026-07-15",
-          "note": "AVVNL-specific toll-free complaint number. Applies to the Ajmer Vidyut Vitran Nigam area, not statewide - Jaipur (JVVNL) and Jodhpur (JdVVNL) discoms have their own numbers that could not be verified from a fetchable official page."
+          "note": "AVVNL-specific toll-free complaint number. Applies to the Ajmer Vidyut Vitran Nigam area, not statewide - Jaipur (JVVNL) and Jodhpur (JdVVNL) discoms have their own numbers that could not be verified from a fetchable official page.",
+          "operator": "AVVNL (Ajmer Discom)",
+          "districts": [
+            "Ajmer",
+            "Banswara",
+            "Bhilwara",
+            "Chittaurgarh",
+            "Dungarpur",
+            "Jhunjhunun",
+            "Nagaur",
+            "Rajsamand",
+            "Sikar",
+            "Udaipur"
+          ]
+        },
+        {
+          "kind": "phone",
+          "topic": "electricity",
+          "label": "JVVNL toll-free complaint number - Jaipur discom (eastern Rajasthan)",
+          "value": "18001806507",
+          "scope": "state",
+          "source_url": "https://jansoochna.rajasthan.gov.in/Images/ClickablePdf/202009091055039944.pdf",
+          "source_name": "Jan Soochna Portal, Government of Rajasthan - JVVNL Modes of Complaint Registration",
+          "retrieved_date": "2026-07-16",
+          "note": "Official Rajasthan government document; also lists WhatsApp/SMS 9414037085 and helpdesk@jvvnl.org.",
+          "operator": "JVVNL (Jaipur Discom)",
+          "districts": [
+            "Alwar",
+            "Baran",
+            "Bharatpur",
+            "Bundi",
+            "Dausa",
+            "Dhaulpur",
+            "Jaipur",
+            "Jhalawar",
+            "Karauli",
+            "Kota",
+            "Sawai Madhopur",
+            "Tonk"
+          ]
+        },
+        {
+          "kind": "phone",
+          "topic": "electricity",
+          "label": "JdVVNL toll-free complaint number - Jodhpur discom (western Rajasthan)",
+          "value": "18001806045",
+          "scope": "state",
+          "source_url": "https://jansoochna.rajasthan.gov.in/Images/ClickablePdf/202009091058396360.pdf",
+          "source_name": "Jan Soochna Portal, Government of Rajasthan - JdVVNL Modes of Complaint Registration",
+          "retrieved_date": "2026-07-16",
+          "note": "Official Rajasthan government document; also lists WhatsApp/SMS 9413359064.",
+          "operator": "JdVVNL (Jodhpur Discom)",
+          "districts": [
+            "Barmer",
+            "Bikaner",
+            "Churu",
+            "Ganganagar",
+            "Hanumangarh",
+            "Jaisalmer",
+            "Jalor",
+            "Jodhpur",
+            "Pali",
+            "Sirohi"
+          ]
+        },
+        {
+          "kind": "url",
+          "topic": "electricity",
+          "label": "Bijli Mitra - JVVNL online complaints & self-service (Jaipur discom)",
+          "value": "https://www.bijlimitra.com/",
+          "scope": "state",
+          "source_url": "https://www.bijlimitra.com/",
+          "source_name": "Bijli Mitra - JVVNL official consumer portal",
+          "retrieved_date": "2026-07-16",
+          "note": "Complaint registration, bill payment and application tracking for the Jaipur discom area.",
+          "operator": "JVVNL (Jaipur Discom)",
+          "districts": [
+            "Alwar",
+            "Baran",
+            "Bharatpur",
+            "Bundi",
+            "Dausa",
+            "Dhaulpur",
+            "Jaipur",
+            "Jhalawar",
+            "Karauli",
+            "Kota",
+            "Sawai Madhopur",
+            "Tonk"
+          ]
+        },
+        {
+          "kind": "email",
+          "topic": "electricity",
+          "label": "JVVNL complaint helpdesk email (Jaipur discom)",
+          "value": "helpdesk@jvvnl.org",
+          "scope": "state",
+          "operator": "JVVNL (Jaipur Discom)",
+          "districts": [
+            "Alwar",
+            "Baran",
+            "Bharatpur",
+            "Bundi",
+            "Dausa",
+            "Dhaulpur",
+            "Jaipur",
+            "Jhalawar",
+            "Karauli",
+            "Kota",
+            "Sawai Madhopur",
+            "Tonk"
+          ],
+          "source_url": "https://jansoochna.rajasthan.gov.in/Images/ClickablePdf/202009091055039944.pdf",
+          "source_name": "Rajasthan Jan Soochna Portal - JVVNL Modes of Complaint Registration",
+          "retrieved_date": "2026-07-16"
         },
         {
           "kind": "phone",
@@ -4817,7 +5771,8 @@
           "source_url": "https://power.sikkim.gov.in/visitor/consumercor/3",
           "source_name": "Power Department, Government of Sikkim - Consumer Corner: Query & Complaints",
           "retrieved_date": "2026-07-15",
-          "note": "Toll-free number published by the Power Department, Government of Sikkim (the state's distribution utility)."
+          "note": "Toll-free number published by the Power Department, Government of Sikkim (the state's distribution utility).",
+          "operator": "Sikkim Power Department"
         },
         {
           "kind": "phone",
@@ -4828,7 +5783,8 @@
           "source_url": "https://power.sikkim.gov.in/visitor/consumercor/3",
           "source_name": "Power Department, Government of Sikkim - Consumer Corner: Query & Complaints",
           "retrieved_date": "2026-07-15",
-          "note": "One of four published helpline lines: 8597123322, 8597125222, 8597138333, 8597134333. Department states complaint timing is 8am-6pm all days including Sundays and holidays, to be extended to 24x7."
+          "note": "One of four published helpline lines: 8597123322, 8597125222, 8597138333, 8597134333. Department states complaint timing is 8am-6pm all days including Sundays and holidays, to be extended to 24x7.",
+          "operator": "Sikkim Power Department"
         },
         {
           "kind": "url",
@@ -4839,7 +5795,8 @@
           "source_url": "https://power.sikkim.gov.in/visitor/consumercor/3",
           "source_name": "Power Department, Government of Sikkim",
           "retrieved_date": "2026-07-15",
-          "note": "Official page publishing the electricity complaint helplines and the 1912 toll-free number."
+          "note": "Official page publishing the electricity complaint helplines and the 1912 toll-free number.",
+          "operator": "Sikkim Power Department"
         },
         {
           "kind": "url",
@@ -5025,7 +5982,8 @@
           "source_url": "https://www.telangana.gov.in/contacts/emergency-contacts/",
           "source_name": "Telangana State Portal - Emergency Contacts",
           "retrieved_date": "2026-07-15",
-          "note": "Published centrally by the state portal and by TGSPDCL; TGNPDCL also uses 1912."
+          "note": "Published centrally by the state portal and by TGSPDCL; TGNPDCL also uses 1912.",
+          "operator": "TGSPDCL & TGNPDCL (1912)"
         },
         {
           "kind": "url",
@@ -5036,7 +5994,33 @@
           "source_url": "https://tgsouthernpower.org/contact",
           "source_name": "TGSPDCL - Contact Us (official DISCOM site)",
           "retrieved_date": "2026-07-15",
-          "note": "Serves Hyderabad and southern Telangana districts. Toll-free 1912; email customerservice@tgsouthernpower.org."
+          "note": "Serves Hyderabad and southern Telangana districts. Toll-free 1912; email customerservice@tgsouthernpower.org.",
+          "operator": "TGSPDCL",
+          "districts": [
+            "Hyderabad",
+            "Mahbubnagar",
+            "Medak",
+            "Nalgonda",
+            "Rangareddy"
+          ]
+        },
+        {
+          "kind": "email",
+          "topic": "electricity",
+          "label": "TGSPDCL customer service email",
+          "value": "customerservice@tgsouthernpower.org",
+          "scope": "state",
+          "operator": "TGSPDCL",
+          "districts": [
+            "Hyderabad",
+            "Mahbubnagar",
+            "Medak",
+            "Nalgonda",
+            "Rangareddy"
+          ],
+          "source_url": "https://tgsouthernpower.org/contact",
+          "source_name": "TGSPDCL official contact page",
+          "retrieved_date": "2026-07-16"
         },
         {
           "kind": "url",
@@ -5047,7 +6031,15 @@
           "source_url": "https://tgnpdcl.com/",
           "source_name": "TGNPDCL - Official DISCOM site",
           "retrieved_date": "2026-07-15",
-          "note": "Serves northern Telangana districts (Warangal, Karimnagar, Nizamabad, Khammam etc.)."
+          "note": "Serves northern Telangana districts (Warangal, Karimnagar, Nizamabad, Khammam etc.).",
+          "operator": "TGNPDCL",
+          "districts": [
+            "Adilabad",
+            "Karimnagar",
+            "Khammam",
+            "Nizamabad",
+            "Warangal"
+          ]
         },
         {
           "kind": "phone",
@@ -5058,7 +6050,15 @@
           "source_url": "https://tgnpdcl.com/",
           "source_name": "TGNPDCL - Official DISCOM site",
           "retrieved_date": "2026-07-15",
-          "note": "Published as '18004250028 (or) 1912 (24/7)' for supply-related complaints."
+          "note": "Published as '18004250028 (or) 1912 (24/7)' for supply-related complaints.",
+          "operator": "TGNPDCL",
+          "districts": [
+            "Adilabad",
+            "Karimnagar",
+            "Khammam",
+            "Nizamabad",
+            "Warangal"
+          ]
         }
       ]
     },
@@ -5174,7 +6174,8 @@
           "source_url": "https://www.tn.gov.in/help_desk.php",
           "source_name": "Tamil Nadu Government Portal - Help Line Numbers",
           "retrieved_date": "2026-07-15",
-          "note": "Published by the Government of Tamil Nadu as TANGEDCO helpline, Toll Free, 24x7."
+          "note": "Published by the Government of Tamil Nadu as TANGEDCO helpline, Toll Free, 24x7.",
+          "operator": "TNPDCL (TANGEDCO)"
         },
         {
           "kind": "url",
@@ -5185,7 +6186,8 @@
           "source_url": "https://www.tn.gov.in/grievances.php",
           "source_name": "Tamil Nadu Government Portal - Grievances",
           "retrieved_date": "2026-07-15",
-          "note": "Listed as the TANGEDCO grievance portal on the official TN grievances page; fetched and confirmed live as the TNPDCL Consumer Grievance Redressal Forum portal."
+          "note": "Listed as the TANGEDCO grievance portal on the official TN grievances page; fetched and confirmed live as the TNPDCL Consumer Grievance Redressal Forum portal.",
+          "operator": "TNPDCL (TANGEDCO)"
         },
         {
           "kind": "phone",
@@ -5196,7 +6198,8 @@
           "source_url": "https://www.tnebltd.gov.in/cgrfonline/",
           "source_name": "TNPDCL/TANGEDCO Consumer Grievance Redressal Forum portal (tnebltd.gov.in)",
           "retrieved_date": "2026-07-15",
-          "note": "Displayed as 'Power Support Line' on the official TNPDCL/TANGEDCO consumer grievance redressal portal."
+          "note": "Displayed as 'Power Support Line' on the official TNPDCL/TANGEDCO consumer grievance redressal portal.",
+          "operator": "TNPDCL (TANGEDCO)"
         },
         {
           "kind": "phone",
@@ -5334,7 +6337,8 @@
           "source_url": "https://tsecl.in/contact_us",
           "source_name": "Contact Us | Tripura State Electricity Corporation Limited (official)",
           "retrieved_date": "2026-07-15",
-          "note": "Toll-free 24x7 number for power supply complaints, published as 'Dial: 1912 (Toll Free)' on TSECL's official Contact Us page. Additional contact +919863596081. Complaints also accepted via the TSECL web portal and the Tripura Power mobile app. tsecl.in is a non-gov.in domain but is the state utility's own official site, and is the URL linked for 'Tripura State Electricity Corporation Ltd' from the Government of Tripura departments listing (https://tripura.gov.in/departments), which corroborates its authenticity."
+          "note": "Toll-free 24x7 number for power supply complaints, published as 'Dial: 1912 (Toll Free)' on TSECL's official Contact Us page. Additional contact +919863596081. Complaints also accepted via the TSECL web portal and the Tripura Power mobile app. tsecl.in is a non-gov.in domain but is the state utility's own official site, and is the URL linked for 'Tripura State Electricity Corporation Ltd' from the Government of Tripura departments listing (https://tripura.gov.in/departments), which corroborates its authenticity.",
+          "operator": "TSECL"
         },
         {
           "kind": "url",
@@ -5345,7 +6349,8 @@
           "source_url": "https://tripura.gov.in/departments",
           "source_name": "Departments | Official website of Tripura State Portal, India",
           "retrieved_date": "2026-07-15",
-          "note": "Official site of Tripura State Electricity Corporation Limited, the state's electricity utility. Linked as the official Power/electricity body from https://tripura.gov.in/departments. Registered office: Bidyut Bhaban, Banamalipur, Agartala."
+          "note": "Official site of Tripura State Electricity Corporation Limited, the state's electricity utility. Linked as the official Power/electricity body from https://tripura.gov.in/departments. Registered office: Bidyut Bhaban, Banamalipur, Agartala.",
+          "operator": "TSECL"
         }
       ]
     },
@@ -5520,7 +6525,8 @@
           "source_url": "https://upcl.uk.gov.in/contact-us/",
           "source_name": "Uttarakhand Power Corporation Limited (UPCL) - Contact Us",
           "retrieved_date": "2026-07-15",
-          "note": "Toll-free. Uttarakhand Power Corporation Limited (UPCL) is the state DISCOM. Confirmed on UPCL's official .gov.in contact page. Email customercare[at]upcl[dot]org."
+          "note": "Toll-free. Uttarakhand Power Corporation Limited (UPCL) is the state DISCOM. Confirmed on UPCL's official .gov.in contact page. Email customercare[at]upcl[dot]org.",
+          "operator": "UPCL (Uttarakhand)"
         },
         {
           "kind": "url",
@@ -5530,7 +6536,8 @@
           "scope": "state",
           "source_url": "https://upcl.uk.gov.in/contact-us/",
           "source_name": "Uttarakhand Power Corporation Limited (UPCL) - Contact Us",
-          "retrieved_date": "2026-07-15"
+          "retrieved_date": "2026-07-15",
+          "operator": "UPCL (Uttarakhand)"
         }
       ]
     },
@@ -5618,13 +6625,44 @@
         {
           "kind": "phone",
           "topic": "electricity",
-          "label": "Electricity complaint helpline (UPPCL)",
+          "label": "Electricity complaint helpline 1912 (UPPCL discoms statewide)",
           "value": "1912",
           "scope": "state",
           "source_url": "https://maharajganj.nic.in/public-utility-category/electricity/",
           "source_name": "District Maharajganj, Government of Uttar Pradesh - Electricity",
           "retrieved_date": "2026-07-15",
-          "note": "Published as \"Toll Free - 1912\" for UPPCL power stations on the Govt of UP Maharajganj district NIC site; corroborated as the DVVNL \"Complaint No\" on the Lalitpur district NIC site and as the KESCO 24-hour helpline on the Kanpur Nagar district NIC site. No UPPCL consumer-complaint URL is cited: uppclonline.com failed TLS handshake and consumer.uppcl.org renders no verifiable content, so it is omitted rather than guessed."
+          "note": "Published as \"Toll Free - 1912\" for UPPCL power stations on the Govt of UP Maharajganj district NIC site; corroborated as the DVVNL \"Complaint No\" on the Lalitpur district NIC site and as the KESCO 24-hour helpline on the Kanpur Nagar district NIC site. No UPPCL consumer-complaint URL is cited: uppclonline.com failed TLS handshake and consumer.uppcl.org renders no verifiable content, so it is omitted rather than guessed. UPPCL's five discoms - PVVNL (Meerut/west UP), MVVNL (Lucknow/Ayodhya), DVVNL (Agra zone), PuVVNL (Prayagraj/Varanasi) and KESCO (Kanpur city) - share 1912. Agra city and Greater Noida are served by private licensees Torrent Power and NPCL, listed separately.",
+          "operator": "All UPPCL discoms (1912)"
+        },
+        {
+          "kind": "phone",
+          "topic": "electricity",
+          "label": "NPCL 24x7 customer care - Greater Noida licence area",
+          "value": "01206226666",
+          "scope": "state",
+          "source_url": "https://www.noidapower.com/contactOverPhone",
+          "source_name": "Noida Power Company Ltd (official site)",
+          "retrieved_date": "2026-07-16",
+          "note": "Printed as '0120 - 622 6666' (24x7 call centre / customer care). NPCL, not UPPCL, distributes electricity in the Greater Noida licence area. No-power email nocurrentnpcl@rpsg.in.",
+          "operator": "NPCL",
+          "districts": [
+            "Gautam Buddha Nagar"
+          ]
+        },
+        {
+          "kind": "phone",
+          "topic": "electricity",
+          "label": "Torrent Power toll-free helpline - Agra city",
+          "value": "18001803124",
+          "scope": "state",
+          "source_url": "https://www.torrentpower.com/index.php/site/info/contactus_dist",
+          "source_name": "Torrent Power Ltd - Distribution contact page (official site)",
+          "retrieved_date": "2026-07-16",
+          "note": "Torrent Power is the distribution licensee for Agra city; landlines 0562-4242554 / 0562-2424554 are published alongside on the official contact page.",
+          "operator": "Torrent Power (Agra)",
+          "districts": [
+            "Agra"
+          ]
         }
       ]
     },
@@ -5712,13 +6750,34 @@
         {
           "kind": "phone",
           "topic": "electricity",
-          "label": "WBSEDCL electricity helpline (24x7)",
+          "label": "WBSEDCL electricity helpline (24x7) - West Bengal outside CESC's Kolkata-Howrah area",
           "value": "19121",
           "scope": "state",
           "source_url": "https://www.wbsedcl.in/irj/go/km/docs/internet/new_website/contactUs.html",
           "source_name": "West Bengal State Electricity Distribution Company Ltd (WBSEDCL) - Contact Us",
           "retrieved_date": "2026-07-15",
-          "note": "Published on WBSEDCL's official Contact Us page under \"Helpline Number (24X7)\", and on the WBSEDCL homepage as \"Helpline No.: 19121\" with a tel: link. WBSEDCL is the state DISCOM covering West Bengal outside the CESC (greater Kolkata) licence area. Verified 2026-07-15. DELIBERATELY OMITTED: the \"West Bengal State Electricity Board: 033-23591915\" number on the state portal's emergency page - WBSEB was dissolved in 2007 and that page was last updated in 2022, so I judged it unsafe to publish."
+          "note": "Published on WBSEDCL's official Contact Us page under \"Helpline Number (24X7)\", and on the WBSEDCL homepage as \"Helpline No.: 19121\" with a tel: link. WBSEDCL is the state DISCOM covering West Bengal outside the CESC (greater Kolkata) licence area. Verified 2026-07-15. DELIBERATELY OMITTED: the \"West Bengal State Electricity Board: 033-23591915\" number on the state portal's emergency page - WBSEB was dissolved in 2007 and that page was last updated in 2022, so I judged it unsafe to publish.",
+          "operator": "WBSEDCL",
+          "districts": [
+            "Bankura",
+            "Barddhaman",
+            "Birbhum",
+            "Dakshin Dinajpur",
+            "Darjiling",
+            "Haora",
+            "Hugli",
+            "Jalpaiguri",
+            "Koch Bihar",
+            "Maldah",
+            "Murshidabad",
+            "Nadia",
+            "North 24 Parganas",
+            "Pashchim Medinipur",
+            "Purba Medinipur",
+            "Puruliya",
+            "South 24 Parganas",
+            "Uttar Dinajpur"
+          ]
         },
         {
           "kind": "url",
@@ -5729,7 +6788,84 @@
           "source_url": "https://www.wbsedcl.in/irj/go/km/docs/internet/new_website/Grievance_Redressal.html",
           "source_name": "WBSEDCL - Grievance Redressal",
           "retrieved_date": "2026-07-15",
-          "note": "Official WBSEDCL grievance page (Lodge Grievance, contact details, redressal timelines). It links to the no-login complaint form at https://portal.wbsedcl.in/irj/go/km/docs/bills/IFRAME/ComplaintRegistrationWithoutLogin.html, which I also confirmed returns HTTP 200. Verified 2026-07-15."
+          "note": "Official WBSEDCL grievance page (Lodge Grievance, contact details, redressal timelines). It links to the no-login complaint form at https://portal.wbsedcl.in/irj/go/km/docs/bills/IFRAME/ComplaintRegistrationWithoutLogin.html, which I also confirmed returns HTTP 200. Verified 2026-07-15.",
+          "operator": "WBSEDCL",
+          "districts": [
+            "Bankura",
+            "Barddhaman",
+            "Birbhum",
+            "Dakshin Dinajpur",
+            "Darjiling",
+            "Haora",
+            "Hugli",
+            "Jalpaiguri",
+            "Koch Bihar",
+            "Maldah",
+            "Murshidabad",
+            "Nadia",
+            "North 24 Parganas",
+            "Pashchim Medinipur",
+            "Purba Medinipur",
+            "Puruliya",
+            "South 24 Parganas",
+            "Uttar Dinajpur"
+          ]
+        },
+        {
+          "kind": "phone",
+          "topic": "electricity",
+          "label": "CESC electricity helpline - Kolkata & Howrah licence area (24x7)",
+          "value": "18605001912",
+          "scope": "state",
+          "source_url": "https://www.cesc.co.in/connectWithUs",
+          "source_name": "CESC Limited - Connect With Us (official site)",
+          "retrieved_date": "2026-07-16",
+          "note": "CESC Limited is the sole distribution licensee within 567 sq km of Kolkata, Howrah and adjoining areas (per cesc.co.in/aboutUs); WBSEDCL serves the rest of West Bengal. LT helpline numbers published: 1912, 1860 500 1912, 033 3501 1912, 033 4403 1912.",
+          "operator": "CESC Limited",
+          "districts": [
+            "Haora",
+            "Hugli",
+            "Kolkata",
+            "North 24 Parganas",
+            "South 24 Parganas"
+          ]
+        },
+        {
+          "kind": "url",
+          "topic": "electricity",
+          "label": "CESC online complaint registration - Kolkata & Howrah",
+          "value": "https://www.cesc.co.in/complaint",
+          "scope": "state",
+          "source_url": "https://www.cesc.co.in/complaint",
+          "source_name": "CESC Limited - Complaints & Requests (official site)",
+          "retrieved_date": "2026-07-16",
+          "note": "Official complaint registration for CESC consumers (billing/supply), with a separate quick link for reporting supply-off/no-power. Confirmed working 2026-07-16.",
+          "operator": "CESC Limited",
+          "districts": [
+            "Haora",
+            "Hugli",
+            "Kolkata",
+            "North 24 Parganas",
+            "South 24 Parganas"
+          ]
+        },
+        {
+          "kind": "email",
+          "topic": "electricity",
+          "label": "CESC Limited head office / general contact email",
+          "value": "cesclimited@rpsg.in",
+          "scope": "state",
+          "operator": "CESC Limited",
+          "districts": [
+            "Haora",
+            "Hugli",
+            "Kolkata",
+            "North 24 Parganas",
+            "South 24 Parganas"
+          ],
+          "source_url": "https://www.cesc.co.in/connectWithUs",
+          "source_name": "CESC Limited - Connect With Us",
+          "retrieved_date": "2026-07-16"
         }
       ]
     }

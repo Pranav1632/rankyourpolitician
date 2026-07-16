@@ -24,7 +24,39 @@ const nextConfig = {
   // deploy. Let browsers keep them for an hour and the CDN serve stale while
   // revalidating, instead of re-negotiating ~1MB per session.
   async headers() {
+    // Defense-in-depth security headers. Note: 'unsafe-inline'/'unsafe-eval'
+    // are required by the theme-bootstrap inline script and the AdSense inline
+    // push (and Next.js chunk loading), so this CSP mainly hardens transport,
+    // framing, and the set of origins we talk to - it is not a strict XSS CSP.
+    // The Google ad hosts are allowlisted because AdSense Auto ads ship
+    // site-wide from app/[lang]/layout.tsx; without them the CSP would block
+    // every ad. VERIFY on a preview deploy (ads render + no console violations)
+    // before trusting this in production - Auto ads can pull extra ad domains.
+    const csp = [
+      "default-src 'self'",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://challenges.cloudflare.com https://va.vercel-scripts.com https://pagead2.googlesyndication.com https://partner.googleadservices.com https://tpc.googlesyndication.com https://www.googletagservices.com https://adservice.google.com https://ep1.adtrafficquality.google https://ep2.adtrafficquality.google",
+      "style-src 'self' 'unsafe-inline'",
+      "img-src 'self' blob: data: https://upload.wikimedia.org https://commons.wikimedia.org https://*.googlesyndication.com https://*.g.doubleclick.net https://*.google.com https://*.gstatic.com https://*.adtrafficquality.google",
+      "font-src 'self' data:",
+      "object-src 'none'",
+      "base-uri 'self'",
+      "form-action 'self'",
+      "frame-src 'self' https://challenges.cloudflare.com https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://www.google.com https://ep2.adtrafficquality.google",
+      "connect-src 'self' https://challenges.cloudflare.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.google.com https://ep1.adtrafficquality.google https://csi.gstatic.com",
+      "frame-ancestors 'none'",
+      "upgrade-insecure-requests",
+    ].join('; ');
+
     return [
+      {
+        source: '/:path*',
+        headers: [
+          { key: 'Content-Security-Policy', value: csp },
+          { key: 'X-Frame-Options', value: 'DENY' },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+        ],
+      },
       {
         source: '/:file(search-index.json|rankings.json)',
         headers: [

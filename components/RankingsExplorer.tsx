@@ -31,29 +31,6 @@ function loadRankings(): Promise<RankingsFile> {
   return filePromise;
 }
 
-// Live ratings, keyed by person id: [bayesian_mean, raw_mean, n_votes].
-// The static rankings.json never carries vote data, so without this merge the
-// "sort by rating" view had nothing to sort by and rated leaders sank into an
-// alphabetical list of "No ratings yet". CDN-cached 5 min server-side; failure
-// degrades to the unrated view instead of blocking the page.
-type RatingRows = Record<string, [number, number, number]>;
-let ratingsPromise: Promise<RatingRows> | null = null;
-function loadRatings(): Promise<RatingRows> {
-  if (!ratingsPromise) {
-    ratingsPromise = fetch('/api/ratings')
-      .then((r) => {
-        if (!r.ok) throw new Error(`ratings: HTTP ${r.status}`);
-        return r.json() as Promise<{ ratings?: RatingRows }>;
-      })
-      .then((j) => j.ratings ?? {})
-      .catch(() => {
-        ratingsPromise = null;
-        return {};
-      });
-  }
-  return ratingsPromise;
-}
-
 const HOUSE_LABEL: Record<string, string> = {
   LS: 'Lok Sabha (MP)',
   RS: 'Rajya Sabha (MP)',
@@ -64,7 +41,6 @@ const HOUSE_LABEL: Record<string, string> = {
 export default function RankingsExplorer() {
   const { t } = useI18n();
   const [file, setFile] = useState<RankingsFile | null>(null);
-  const [ratings, setRatings] = useState<RatingRows | null>(null);
   const [error, setError] = useState(false);
   const [state, setState] = useState('');
   const [house, setHouse] = useState('');
@@ -81,7 +57,6 @@ export default function RankingsExplorer() {
     setState(q.get('state') || '');
     setHouse(q.get('house') || '');
     loadRankings().then(setFile).catch(() => setError(true));
-    loadRatings().then(setRatings); // never rejects - degrades to {}
   }, []);
 
   const states = useMemo(() => {
@@ -97,9 +72,9 @@ export default function RankingsExplorer() {
     for (const r of file.rows) {
       if (state && r[5] !== state) continue;
       if (house && r[6] !== house) continue;
-      // The prebuilt payload carries no vote data; live ratings are merged in
-      // from /api/ratings so unrated leaders sort to the end, never the top.
-      const live = ratings?.[r[0]];
+      // The prebuilt payload carries no vote data - RankingList itself merges
+      // the live /api/ratings rows in, so the "Public rating" sort reflects
+      // votes actually cast and unrated leaders sort to the end, never the top.
       out.push({
         politician_id: r[0],
         name: r[1],
@@ -110,14 +85,14 @@ export default function RankingsExplorer() {
         performance_percentile: r[7],
         performance_cohort: HOUSE_LABEL[r[6]] || r[6],
         metrics_used: r[8],
-        sentiment_mean: live ? live[0] : null,
-        sentiment_raw_mean: live ? live[1] : null,
-        sentiment_votes: live ? live[2] : 0,
+        sentiment_mean: null,
+        sentiment_raw_mean: null,
+        sentiment_votes: 0,
         photo_url: r[9],
       });
     }
     return out;
-  }, [file, ratings, state, house]);
+  }, [file, state, house]);
 
   return (
     <div>

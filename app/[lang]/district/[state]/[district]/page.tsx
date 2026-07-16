@@ -10,8 +10,9 @@ import { formatDate } from '@/lib/format';
 import { OFFICE_META } from '@/lib/offices';
 import { STATE_RANK_LABEL, type OfficeSeat, type Politician } from '@/lib/types';
 import type { WhoPerson, WhoDistrict, WhoPortal } from '@/lib/responsibility';
-import { telHref, formatPhone } from '@/lib/contacts';
+import { formatPhone } from '@/lib/contacts';
 import DistrictWhoFixes from '@/components/DistrictWhoFixes';
+import PhoneLink from '@/components/PhoneLink';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import RankingList from '@/components/RankingList';
 import AdSlot from '@/components/AdSlot';
@@ -360,12 +361,13 @@ function OfficeSeatCard({
                 <Icon name="law" size={12} /> {tr(portal.whosWhoUrl ? 'contacts.whosWho' : 'contacts.districtSite')}
               </a>
               {portal.phone && (
-                <a
-                  href={telHref(portal.phone)}
+                <PhoneLink
+                  value={portal.phone}
+                  sourceUrl={portal.contactUrl || portal.url}
                   className="inline-flex items-center gap-1.5 rounded-lg border border-line px-2.5 py-1.5 text-xs font-semibold text-ink-soft hover:border-brand/40"
                 >
                   <Icon name="phone" size={12} /> {formatPhone(portal.phone)}
-                </a>
+                </PhoneLink>
               )}
               {portal.email && (
                 <a

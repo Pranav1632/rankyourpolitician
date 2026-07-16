@@ -137,6 +137,7 @@ function build(): SearchIndexFile {
   const districts: [string, string][] = [];
   for (const p of politicians) {
     for (const d of p.districts) {
+      if (!d?.trim()) continue; // blank names must not become searchable districts
       const key = `${p.stateCode}|${d}`;
       if (seenD.has(key)) continue;
       seenD.add(key);

@@ -579,6 +579,7 @@
     "insufficient": "Not enough data",
     "noData": "no data",
     "unrankedHeader": "Not enough verified data to rank - listed A-Z",
+    "unratedHeader": "No ratings yet - listed A-Z",
     "seeAllCount": "See all {n} leaders",
     "cohortNote": "Top {n}% of {cohort}",
     "basedOn": "Based on {n} verified metrics",
@@ -594,6 +595,7 @@
   "trending": {
     "tab": "Trending",
     "tabTop": "Top rated",
+    "tabPerformance": "Top performers",
     "help": "Most rated in the last 7 days. This shows attention, not a verdict.",
     "thisWeek": "{n} ratings this week",
     "oneThisWeek": "1 rating this week",
@@ -601,6 +603,12 @@
     "error": "Could not load trending right now.",
     "retry": "Try again",
     "loading": "Loading trending leaders"
+  },
+  "topRated": {
+    "help": "Highest public rating from votes cast on this site. This is opinion, not a verdict.",
+    "empty": "No one has been rated yet - be the first: open any leader's page and cast a vote.",
+    "error": "Could not load top rated leaders right now.",
+    "loading": "Loading top rated leaders"
   },
   "vote": {
     "title": "Rate this leader",
@@ -611,6 +619,7 @@
     "submitting": "Submitting…",
     "thanks": "Thanks - your rating was counted!",
     "already": "Your rating was updated.",
+    "alreadyVotedHint": "You previously rated this leader {rating}★. Select a new rating to update.",
     "oncePerPerson": "One rating per person. You can change it later.",
     "notVerifiedNote": "Ratings are people's opinion, shown separately from official facts.",
     "distribution": "How people rated",
@@ -670,6 +679,7 @@
     "districtSite": "Official district website",
     "stateScope": "State helpline",
     "nationalScope": "National helpline",
+    "servesArea": "Serves this area",
     "sourceNote": "Numbers and links are published by official government sources.",
     "districtDirectory": "Find your district office (official directory)"
   }
