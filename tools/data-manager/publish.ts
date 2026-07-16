@@ -1,9 +1,9 @@
 // Shared data-manager logic: read the local seed, validate it, and publish to
 // Firestore with the Admin SDK. This runs ONLY on your machine, using a
 // service-account key that never leaves it. Never imported by the deployed site.
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
-import type { Politician, Constituency, Fact } from '../../lib/types';
+import type { Politician, Constituency, Fact, CriminalRecord } from '../../lib/types';
 
 export const ROOT = resolve(
   dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')),
@@ -83,6 +83,51 @@ export function validateDataset(): { issues: Issue[]; ok: boolean } {
     for (const p of members) {
       const others = members.filter((m) => m.id !== p.id).map((m) => `${m.name} (${m.stateCode} ${m.constituencyName})`);
       push(p, 'error', `cites the same affidavit page as ${others.join(', ')} - one of them has another person's declaration: ${url}`);
+    }
+  }
+
+  // CRIMINAL-CASE DETAIL MUST AGREE WITH THE COUNT FACT, PAGE FOR PAGE.
+  // criminal_cases.json republishes what a member's own affidavit page lists
+  // case by case. Wrong here means attributing FIRs and convictions to the
+  // wrong person, so every record must (a) belong to a real member, (b) cite
+  // exactly the page the member's criminal_cases_declared fact cites, and
+  // (c) state the same total as that fact. Any disagreement blocks publish.
+  const casesPath = resolve(SEED_DIR, 'criminal_cases.json');
+  if (existsSync(casesPath)) {
+    const records: CriminalRecord[] = JSON.parse(readFileSync(casesPath, 'utf8'));
+    const byId = new Map(politicians.map((p) => [p.id, p]));
+    const seen = new Set<string>();
+    let covered = 0;
+    for (const r of records) {
+      const p = byId.get(r.politician_id);
+      const rp = p ?? ({ id: r.politician_id, name: r.politician_id } as Politician);
+      if (!p) { push(rp, 'error', 'criminal_cases.json record has no matching politician'); continue; }
+      if (seen.has(r.politician_id)) push(p, 'error', 'duplicate criminal_cases.json record');
+      seen.add(r.politician_id);
+      if (!r.source_url) push(p, 'error', 'criminal-case record has no source_url (no citation, no claim)');
+      if (!r.retrieved_date) push(p, 'warn', 'criminal-case record has no retrieved_date');
+      const fact = p.facts.find((f) => f.field_type === 'criminal_cases_declared');
+      if (!fact) push(p, 'error', 'criminal-case record but no criminal_cases_declared fact');
+      else {
+        if (fact.source_url !== r.source_url)
+          push(p, 'error', `criminal-case record cites ${r.source_url} but the count fact cites ${fact.source_url}`);
+        if (parseInt(fact.value, 10) !== r.declared_total)
+          push(p, 'error', `criminal-case record says ${r.declared_total} cases, the count fact says ${fact.value}`);
+        else covered++;
+      }
+      if (r.cases.length !== r.declared_total)
+        push(p, 'warn', `affidavit declares ${r.declared_total} cases but the page listed ${r.cases.length} case rows`);
+    }
+    // Coverage is a single aggregate note, not 2,000 lines of warnings.
+    const declaring = politicians.filter((p) => {
+      const f = p.facts.find((x) => x.field_type === 'criminal_cases_declared');
+      return f && parseInt(f.value, 10) > 0;
+    }).length;
+    if (covered < declaring) {
+      issues.push({
+        politicianId: '-', name: 'dataset', severity: 'warn',
+        message: `${declaring - covered} of ${declaring} members with declared cases have no case-detail record yet (run "npm run dm -- fetch-criminal-cases")`,
+      });
     }
   }
 

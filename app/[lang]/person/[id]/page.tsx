@@ -23,6 +23,7 @@ import Icon, { type IconName } from '@/components/Icon';
 import LastUpdated from '@/components/LastUpdated';
 import VoteWidget from '@/components/VoteWidget';
 import AdSlot from '@/components/AdSlot';
+import DeclaredCases from '@/components/DeclaredCases';
 
 // Weekly self-heal only. Profile facts change via deploy or /api/revalidate, and
 // the one fast-moving input - live vote numbers - is re-fetched client-side by
@@ -388,6 +389,25 @@ export default async function PersonPage({ params }: { params: Promise<{ lang: s
               <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
                 {(['assets_total', 'liabilities_total', 'criminal_cases_declared'] as const).map((field) => {
                   const f = factByType.get(field);
+                  // The court-cases tile is a click-through: the whole card
+                  // jumps to the case-by-case detail section below.
+                  if (field === 'criminal_cases_declared' && f) {
+                    return (
+                      <a key={field} href="#court-cases" className="block rounded-2xl">
+                        <StatTile
+                          icon={FIELD_ICON[field]}
+                          value={leadNumber(f.value)}
+                          label={tr(`fields.${field}`)}
+                          hint={
+                            <span className="inline-flex items-center gap-1 font-semibold text-brand">
+                              {tr('profile.cases.seeDetail')} <Icon name="chevron" size={12} />
+                            </span>
+                          }
+                          accent="ink"
+                        />
+                      </a>
+                    );
+                  }
                   return <StatTile key={field} icon={FIELD_ICON[field]} value={f ? (field === 'criminal_cases_declared' ? leadNumber(f.value) : shortValue(f.value)) : tr('common.unavailable')} label={tr(`fields.${field}`)} accent="ink" />;
                 })}
               </div>
@@ -429,6 +449,9 @@ export default async function PersonPage({ params }: { params: Promise<{ lang: s
           </>
         )}
       </section>
+
+      {/* Declared court cases - case-by-case affidavit record (own citation). */}
+      <DeclaredCases record={person.criminal_record} fact={factByType.get('criminal_cases_declared')} tr={tr} locale={locale} />
 
       {/* Areas + right to reply */}
       <div className="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2">

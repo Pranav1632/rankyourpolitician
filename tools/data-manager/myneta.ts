@@ -526,6 +526,146 @@ export function parseCandidatePage(html: string): Affidavit {
   return out;
 }
 
+// ---- Criminal-case detail (the "Details of Criminal Cases" section) --------
+import type { CriminalCharge, CriminalCase, CriminalCaseStatus } from '../../lib/types';
+
+export interface CriminalDetail {
+  /** The page's "Number of Criminal Cases" figure; undefined when unstated. */
+  declared_total?: number;
+  charges: CriminalCharge[];
+  cases: CriminalCase[];
+}
+
+/** Candidate name from the page <title>:
+ *  "Gottipati Ravi Kumar(TDP):Constituency- ADDANKI(PRAKASAM) - Affidavit..." */
+export function candidateTitleName(html: string): string | null {
+  const t = clean((html.match(/<title>([\s\S]*?)<\/title>/i) || [])[1] || '');
+  const name = t.split('(')[0].trim();
+  return name || null;
+}
+
+/** Constituency from the page <title>, district parenthetical stripped:
+ *  "...Constituency- ADDANKI(PRAKASAM) - Affidavit..." -> "ADDANKI". */
+export function candidateTitleSeat(html: string): string | null {
+  const t = clean((html.match(/<title>([\s\S]*?)<\/title>/i) || [])[1] || '');
+  const m = t.match(/Constituency-?\s*(.+?)\s*-\s*Affidavit/i);
+  if (!m) return null;
+  // The trailing parenthetical is the district; earlier ones ((SC)/(ST)) are
+  // reservation markers that consKey already ignores.
+  const seat = m[1].replace(/\s*\([^()]*\)\s*$/, '').trim();
+  return seat || null;
+}
+
+/** Cells of every <tr> inside one html slice, tags stripped. */
+function sliceRows(html: string): string[][] {
+  return (html.match(/<tr[^>]*>[\s\S]*?<\/tr>/gi) || []).map((tr) =>
+    [...tr.matchAll(/<t[dh][^>]*>([\s\S]*?)<\/t[dh]>/gi)].map((x) => clean(x[1])),
+  );
+}
+
+/** Header cell text -> CriminalCase field. Column layouts differ by vintage
+ *  (2026 pages add a "LAW / Section Type" column; convicted tables swap the
+ *  charges-framed columns for punishment/conviction-date), so columns are
+ *  mapped by their own header text, never by position. */
+function caseColumn(header: string): keyof CriminalCase | 'serial' | null {
+  const h = header.toLowerCase();
+  if (/^serial/.test(h)) return 'serial';
+  if (/^fir/.test(h)) return 'fir_no';
+  if (/^case no/.test(h)) return 'case_no';
+  if (/^court/.test(h)) return 'court';
+  if (/law.*type/.test(h)) return 'law';
+  if (/sections applicable/.test(h) && !/other/.test(h)) return 'sections';
+  if (/^other details/.test(h)) return 'other_sections';
+  if (/^charges framed/.test(h)) return 'charges_framed';
+  if (/date on which charges/.test(h)) return 'framed_date';
+  if (/punishment/.test(h)) return 'punishment';
+  if (/date on which convicted/.test(h)) return 'convicted_date';
+  if (/^appeal filed/.test(h)) return 'appeal_filed';
+  if (/status of appeal/.test(h)) return 'appeal_details';
+  return null;
+}
+
+/**
+ * Parse the "Details of Criminal Cases" section of a candidate page: the
+ * "Brief Details of IPC / BNS" charge summary plus every "Cases where X"
+ * table (Pending / Convicted / Cognizance Taken...). Everything is stored
+ * verbatim from the page - a cell the affidavit leaves blank is absent,
+ * never invented. Returns empty lists when the page has no such section.
+ */
+export function parseCriminalDetail(html: string): CriminalDetail {
+  const out: CriminalDetail = { charges: [], cases: [] };
+
+  const txt = clean(html);
+  const cm = txt.match(/Number of Criminal Cases:\s*(\d+)/i);
+  if (cm) out.declared_total = parseInt(cm[1], 10);
+  else if (/No criminal cases/i.test(txt)) out.declared_total = 0;
+
+  // Charge summary: the <ul> lists between the "Brief Details" heading and the
+  // first case table (or end of section). Item shape:
+  //   "8 charges related to Punishment for wrongful restraint (IPC Section-341)"
+  // The section token may itself contain parentheses ("191(2)"), so the law
+  // marker is located with lastIndexOf, not a regex across nested parens.
+  const briefAt = html.search(/Brief Details of IPC/i);
+  if (briefAt >= 0) {
+    const end = html.slice(briefAt).search(/<h3>\s*Cases where|<div class='w3-panel w3-leftbar w3-sand'>(?![\s\S]{0,80}Criminal)/i);
+    const block = end > 0 ? html.slice(briefAt, briefAt + end) : html.slice(briefAt, briefAt + 20000);
+    for (const li of block.match(/<li>[\s\S]*?(?=<li>|<\/ul>)/gi) || []) {
+      const item = clean(li);
+      const m = item.match(/^(\d+)\s+charges?\s+related to\s+(.+)$/i);
+      if (!m) continue;
+      const count = parseInt(m[1], 10);
+      const rest = m[2].trim();
+      const ipcAt = rest.toUpperCase().lastIndexOf('(IPC SECTION');
+      const bnsAt = rest.toUpperCase().lastIndexOf('(BNS SECTION');
+      const at = Math.max(ipcAt, bnsAt);
+      if (at >= 0) {
+        const law = at === ipcAt ? 'IPC' : 'BNS';
+        const sec = rest.slice(at).replace(/^\((?:IPC|BNS)\s*Section-?\s*/i, '').replace(/\)\s*$/, '').trim();
+        const description = rest.slice(0, at).trim();
+        out.charges.push({ count, description: description || sec, law, section: sec });
+      } else {
+        // No parseable statute marker - keep the text, claim no section.
+        out.charges.push({ count, description: rest, law: '', section: '' });
+      }
+    }
+  }
+
+  // Case tables: one per "Cases where X" heading.
+  const heads = [...html.matchAll(/<h3>\s*Cases where\s+([^<]+?)\s*<\/h3>/gi)];
+  heads.forEach((h, i) => {
+    const label = clean(h[1]);
+    const start = h.index! + h[0].length;
+    const end = i + 1 < heads.length ? heads[i + 1].index! : html.length;
+    const slice = html.slice(start, end);
+    const tableAt = slice.search(/<table id=cases/i);
+    if (tableAt < 0) return;
+    const table = slice.slice(tableAt, slice.indexOf('</table>', tableAt) + 9);
+    const rows = sliceRows(table);
+    if (rows.length < 2) return;
+    const cols = rows[0].map(caseColumn);
+    const status: CriminalCaseStatus = /convict/i.test(label) ? 'convicted' : /pending/i.test(label) ? 'pending' : 'other';
+    // The sections cell's statute: older tables title it "IPC Sections
+    // Applicable" (statute in the header); 2026 tables title it "IPC/BNS
+    // Sections Applicable" with the statute in the row's LAW column.
+    const sectionsIdx = cols.indexOf('sections');
+    const headerLaw = sectionsIdx >= 0 && /ipc\s*\/\s*bns/i.test(rows[0][sectionsIdx]) ? null : 'IPC';
+    for (const row of rows.slice(1)) {
+      const c: CriminalCase = { status, status_label: label };
+      row.forEach((cell, j) => {
+        const field = cols[j];
+        if (!field || field === 'serial' || !cell) return;
+        (c as any)[field] = cell;
+      });
+      // A row with no substance (all mapped cells blank) is layout noise.
+      if (!c.fir_no && !c.case_no && !c.court && !c.sections && !c.other_sections) continue;
+      if (c.sections && !c.law && headerLaw) c.law = headerLaw;
+      out.cases.push(c);
+    }
+  });
+
+  return out;
+}
+
 /** Add a fact only if that field_type is absent - curated data always wins. */
 export function fillFact(facts: Fact[], field_type: string, value: string, cite: Omit<Fact, 'field_type' | 'value'>): boolean {
   if (facts.some((f) => f.field_type === field_type)) return false;

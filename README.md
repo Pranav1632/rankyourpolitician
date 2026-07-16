@@ -143,9 +143,9 @@ middleware.ts                 locale routing: rewrites clean URLs to /{locale}/.
 components/                   UI (map, search, ranking, vote widget, i18n switcher, …)
 lib/                          types, data layer, ranking + trending math, i18n, geo, vote integrity
 lib/i18n/messages/            en.json (source of truth) + per-locale overrides
-data/seed/                    committed dataset (8 JSON files - politicians, constituencies,
+data/seed/                    committed dataset (9 JSON files - politicians, constituencies,
                               central/state government, constitutional offices, district
-                              officials, district portals, contact channels)
+                              officials, district portals, contact channels, criminal cases)
 data/geo/                     compliant simplified GeoJSON (states, districts, PCs, ACs)
 tools/                        build-time static payload generators (search index, rankings, who)
 tools/data-manager/           LOCAL-ONLY: validate / publish / enrich / import / dashboard
@@ -179,8 +179,15 @@ import-rajya-sabha          import-mlas          import-mlcs          import-sta
 import-contact-channels     discover-district-portals                 import <file.json>
 enrich-mps                  enrich-wikidata      enrich-affidavits    enrich-affidavits-states
 enrich-performance          enrich-photos        link-ministers       normalize-fields
-verify-wikidata             verify-attendance
+verify-wikidata             verify-attendance    fetch-criminal-cases
 ```
+
+`fetch-criminal-cases` fills `data/seed/criminal_cases.json`: the case-by-case detail (FIR/case
+number, court, sections, charges-framed status, convictions with punishment and appeal state)
+behind every `criminal_cases_declared` fact, read verbatim from the exact affidavit page that fact
+already cites. It never does person-matching of its own - a page is accepted only if its title
+still names the member (or their seat), otherwise the member is skipped and reported. `validate`
+blocks publish if a detail record disagrees with its count fact or cites a different page.
 
 Run `npm run dm` with no arguments for the built-in help.
 

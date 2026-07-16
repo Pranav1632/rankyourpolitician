@@ -117,7 +117,7 @@ export function StatTile({
   icon: IconName;
   value: string;
   label: string;
-  hint?: string;
+  hint?: React.ReactNode;
   accent?: 'perf' | 'rating' | 'brand' | 'ink';
 }) {
   const tint = {

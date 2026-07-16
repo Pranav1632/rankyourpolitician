@@ -11,7 +11,7 @@ export { allLocaleStaticParams as generateStaticParams } from '@/lib/i18n/server
 
 export default function MethodologyPage() {
   return (
-    <Prose title="Methodology" updated="15 July 2026">
+    <Prose title="Methodology" updated="17 July 2026">
       <p>
         This site is an information tool, not a verdict. We publish sourced facts and two separate,
         clearly-labelled measures. We never combine them into a single score, and we never editorialise.
@@ -84,6 +84,28 @@ export default function MethodologyPage() {
         <li>Where data is missing, we show "unavailable" - never a zero.</li>
         <li>Scores are displayed as "top X%" of the comparable cohort (e.g. percentile 87 → top 13%).</li>
       </ul>
+
+      <h2>Declared court cases</h2>
+      <p>
+        Criminal cases are shown exactly as each leader declared them in their own sworn election
+        affidavit (Form 26 filed with the Election Commission), as published by MyNeta / the Association
+        for Democratic Reforms. We reproduce the affidavit&apos;s case list verbatim - FIR and case numbers,
+        courts, sections, whether charges have been framed, and any convictions with the punishment and
+        appeal status the leader declared. <strong>A pending case is an accusation before a court, not a
+        conviction</strong>, and we say so wherever cases appear. Cases are never scored and never affect
+        either ranking axis.
+      </p>
+      <p>
+        <strong>What gets highlighted as "serious":</strong> a charge is highlighted purely because its
+        statute section is on a fixed public list, drawn from the offence groups of the Indian Penal Code
+        and the Bharatiya Nyaya Sanhita themselves: offences affecting life (e.g. IPC 302/304/307, BNS
+        103/105/109), sexual offences and offences against women (IPC 354/376/498A, BNS 64-79/85),
+        kidnapping and abduction (IPC 363-369, BNS 137-140), extortion, robbery and dacoity (IPC 383-402,
+        BNS 308-312), promoting enmity (IPC 153A/295A, BNS 196/299), counterfeiting currency, and charges
+        under named special statutes (Prevention of Corruption Act, PMLA, UAPA, NDPS Act, Arms Act, POCSO,
+        SC/ST (Prevention of Atrocities) Act, Explosive Substances Act). The highlight describes the
+        <em> charge</em>, never the person; a section not on the list is simply shown without a highlight.
+      </p>
 
       <h2>Public Sentiment</h2>
       <p>

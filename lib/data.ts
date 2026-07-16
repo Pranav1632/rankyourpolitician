@@ -31,7 +31,19 @@ import seedStateGov from '@/data/seed/state_government.json';
 import seedConstitutional from '@/data/seed/constitutional_offices.json';
 import seedDistrictPortals from '@/data/seed/district_portals.json';
 import seedContactChannels from '@/data/seed/contact_channels.json';
+import seedCriminalCases from '@/data/seed/criminal_cases.json';
+import type { CriminalRecord } from './types';
 import { STATE_RANK_LABEL, type ConstitutionalOffice, type ContactChannel, type ContactChannelsFile, type DistrictPortal, type Minister, type OfficeSeat, type OfficeType, type OfficeLevel, type StateGovernment, type StateMinister, type StateMinisterRank } from './types';
+
+// Affidavit case detail, keyed by person. Seed-only (updated via
+// `dm fetch-criminal-cases` + redeploy) - a person page embeds just its own
+// member's slice, so pages stay static/ISR with no new runtime reads.
+let criminalRecords: Map<string, CriminalRecord> | null = null;
+function criminalRecordById(): Map<string, CriminalRecord> {
+  return (criminalRecords ??= new Map(
+    (seedCriminalCases as unknown as CriminalRecord[]).map((r) => [r.politician_id, r]),
+  ));
+}
 
 function slugify(s: string): string {
   return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
@@ -253,6 +265,8 @@ export interface PersonView {
   neutral_summary?: string;
   terms_served?: number;
   facts: Fact[];
+  /** Case-by-case affidavit detail behind the criminal_cases_declared fact. */
+  criminal_record?: CriminalRecord;
   metrics: Partial<Record<PerfMetric, number>>;
   /** Metrics the house keeps no record of for this member (minister / presiding
    *  officer / LoP) - rendered as "exempt", never as 0 or "unavailable". */
@@ -324,6 +338,7 @@ export async function getPerson(
         neutral_summary: p.neutral_summary,
         terms_served: p.terms_served,
         facts: p.facts,
+        criminal_record: criminalRecordById().get(id),
         metrics: p.metrics,
         metrics_exempt: p.metrics_exempt,
         performance: idx.performance.get(id) ?? null,

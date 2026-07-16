@@ -102,6 +102,12 @@ async function main() {
       await import('./enrich-affidavits-states');
       break;
     }
+    case 'fetch-criminal-cases': {
+      // Per-case detail (FIR/court/sections/convictions) behind every declared
+      // criminal case, from the exact affidavit page the count fact cites.
+      await import('./fetch-criminal-cases');
+      break;
+    }
     case 'verify-affidavits': {
       // Read-only audit: does each affidavit fact still match the page it cites,
       // and is that page really about our member?
@@ -195,7 +201,9 @@ Commands:
   npm run dm -- validate            Check citations + consistency
   npm run dm -- stats               Dataset summary
   npm run dm -- publish             Publish to Firestore (needs .env.local creds)
+  npm run dm -- revalidate          Re-sweep the deployed page cache (run ~35 min after a publish)
   npm run dm -- refresh-mps         Rebuild the all-India Lok Sabha roster (543 seats) from the ECI-sourced list
+  npm run dm -- fetch-criminal-cases  Per-case affidavit detail behind every declared criminal case
   npm run dm -- import <file.json>  Rebuild seed from a sourcing-workflow output
   npm run dm:dashboard              Open the local review dashboard (http://localhost:4321)
 `);

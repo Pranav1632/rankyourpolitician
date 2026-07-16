@@ -51,6 +51,65 @@ export interface Fact {
   as_of?: string; // the period/session the value refers to, if stated by source
 }
 
+// ---- Declared criminal cases (election-affidavit detail) -------------------
+// Everything below is the candidate's OWN sworn Form-26 declaration as
+// published by MyNeta (ADR), stored VERBATIM from the cited page. A pending
+// case is an accusation before a court, not a conviction; the UI must always
+// carry that framing. "No citation, no claim" applies: a record exists only
+// for members whose affidavit page we fetched and re-verified.
+
+/** One charge type from the affidavit's "Brief Details of IPC / BNS" list,
+ *  e.g. 8 × "Punishment for wrongful restraint" (IPC Section-341). */
+export interface CriminalCharge {
+  count: number;
+  /** Offence description as printed by the source (may be the bare section). */
+  description: string;
+  /** Statute the section belongs to: 'IPC' | 'BNS' | '' when not stated. */
+  law: string;
+  /** Section token as printed, e.g. "341", "498A", "191(2)". */
+  section: string;
+}
+
+export type CriminalCaseStatus = 'pending' | 'convicted' | 'other';
+
+/** One row of an affidavit case table. Cells are kept verbatim (trimmed);
+ *  a column the affidavit leaves blank is simply absent. */
+export interface CriminalCase {
+  status: CriminalCaseStatus;
+  /** The source table's own heading, e.g. "Pending", "Convicted",
+   *  "Cognizance Taken" - shown when status is 'other'. */
+  status_label: string;
+  fir_no?: string;
+  case_no?: string;
+  court?: string;
+  /** Statute of `sections`: 'IPC' (older pages) or the row's LAW column
+   *  value on 2026-era pages ('IPC' / 'BNS' / 'BNSS' / ...). */
+  law?: string;
+  /** The "IPC(/BNS) Sections Applicable" cell verbatim, e.g. "143, 149, 341". */
+  sections?: string;
+  /** The "Other Details / Other Acts / Sections Applicable" cell verbatim. */
+  other_sections?: string;
+  charges_framed?: string; // "Yes" / "No" as printed
+  framed_date?: string;
+  punishment?: string; // convicted rows
+  convicted_date?: string; // convicted rows
+  appeal_filed?: string;
+  appeal_details?: string;
+}
+
+/** Per-member affidavit case record (data/seed/criminal_cases.json). */
+export interface CriminalRecord {
+  politician_id: string;
+  /** The page's own "Number of Criminal Cases" figure. */
+  declared_total: number;
+  charges: CriminalCharge[];
+  cases: CriminalCase[];
+  source_url: string;
+  source_name: string;
+  retrieved_date: string; // ISO yyyy-mm-dd
+  as_of?: string; // e.g. "2024 assembly election affidavit"
+}
+
 /**
  * Why a member has NO value for a metric even though the house tracks it:
  *  - 'minister'          members of the Council of Ministers are exempt from the
