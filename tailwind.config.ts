@@ -47,6 +47,7 @@ const config: Config = {
           soft: 'rgb(var(--color-rating-soft) / <alpha-value>)',
         },
         good: '#16a34a',
+        bad: '#dc2626',
         warn: '#d97706',
       },
       fontFamily: {

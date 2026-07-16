@@ -1,31 +1,44 @@
 'use client';
-// "Trending / Top rated / Top performers" switcher inside the home Top-leaders
-// card. The two live views (trending activity, top PUBLIC rating) are
-// client-fetched from CDN-cached APIs on demand - the home page itself stays a
+// "Trending / Top rated / Top performers" switcher inside the Top-leaders
+// card. The live views (trending activity, top PUBLIC rating) are
+// client-fetched from CDN-cached APIs on demand - the page itself stays a
 // static ISR serve, exactly like the VoteWidget pattern on person pages. The
 // performers list (verified work record - the SYSTEM axis, deliberately a
 // separate tab from the user-vote axis) stays server-rendered: it is passed in
 // as children, so it costs no client JS and keeps its SEO.
+//
+// State/district pages mount the same card with `scope`: trending is scoped to
+// their leaders (same API, ?state=/&district= params - each scope is its own
+// CDN cache key), the Top-rated tab is dropped (it has no scoped endpoint),
+// and the trending fetch waits until the card scrolls into view - most visits
+// never reach it, and every skipped fetch is a skipped function invocation.
 import { useCallback, useEffect, useRef, useState } from 'react';
-import Link from 'next/link';
 import { useI18n } from '@/lib/i18n/provider';
-import { Avatar, PartyChip } from '@/components/ui';
-import { RankBadge } from '@/components/viz';
+import { observe } from '@/components/motion';
 import Icon, { type IconName } from '@/components/Icon';
+import { ListSkeleton, LoadError, LeaderRow, TrendingPanel, type Remote } from '@/components/TrendingList';
 import type { TrendingEntry, TopRatedEntry } from '@/lib/types';
 
 type Tab = 'trending' | 'top' | 'performance';
-type Remote<T> =
-  | { status: 'idle' }
-  | { status: 'loading' }
-  | { status: 'error' }
-  | { status: 'ready'; entries: T[] };
 
-export default function LeadersTabs({ performance }: { performance: React.ReactNode }) {
+export default function LeadersTabs({
+  performance,
+  scope,
+  trendingHelp,
+}: {
+  performance: React.ReactNode;
+  /** Geo mode: scope trending to one state (2-letter code) or district. */
+  scope?: { stateCode: string; district?: string };
+  /** Help line for the trending panel - geo pages pass a localised, scoped
+   *  variant (they have the display names); defaults to the national one. */
+  trendingHelp?: string;
+}) {
   const { t } = useI18n();
+  const rows = scope ? 5 : 10;
   const [tab, setTab] = useState<Tab>('trending');
   const [trending, setTrending] = useState<Remote<TrendingEntry>>({ status: 'idle' });
   const [topRated, setTopRated] = useState<Remote<TopRatedEntry>>({ status: 'idle' });
+  const rootRef = useRef<HTMLDivElement>(null);
   const tabRefs = {
     trending: useRef<HTMLButtonElement>(null),
     top: useRef<HTMLButtonElement>(null),
@@ -39,11 +52,17 @@ export default function LeadersTabs({ performance }: { performance: React.ReactN
   const loadTrending = useCallback(() => {
     trendingStarted.current = true;
     setTrending({ status: 'loading' });
-    fetch('/api/trending?limit=10')
+    const qs = new URLSearchParams({ limit: String(rows) });
+    if (scope) {
+      qs.set('state', scope.stateCode);
+      if (scope.district) qs.set('district', scope.district);
+    }
+    fetch(`/api/trending?${qs.toString()}`)
       .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
       .then((data) => setTrending({ status: 'ready', entries: data?.entries ?? [] }))
       .catch(() => setTrending({ status: 'error' }));
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [rows, scope?.stateCode, scope?.district]);
 
   const loadTopRated = useCallback(() => {
     topStarted.current = true;
@@ -54,11 +73,26 @@ export default function LeadersTabs({ performance }: { performance: React.ReactN
       .catch(() => setTopRated({ status: 'error' }));
   }, []);
 
-  // Trending is the default view, so load it on mount; Top rated loads on
-  // first open. The refs (not the state) guard the dev StrictMode
-  // double-invoke from firing a second fetch.
+  // Trending is the default view. On the home page it loads on mount; in geo
+  // mode the fetch is deferred until the card first scrolls into view (the
+  // same shared observer the Reveal animations use). The refs (not the state)
+  // guard the dev StrictMode double-invoke from firing a second fetch.
   useEffect(() => {
-    if (!trendingStarted.current) loadTrending();
+    if (trendingStarted.current) return;
+    if (!scope) {
+      loadTrending();
+      return;
+    }
+    const el = rootRef.current;
+    if (!el) return;
+    if (el.getBoundingClientRect().top < window.innerHeight) {
+      loadTrending();
+      return;
+    }
+    return observe(el, () => {
+      if (!trendingStarted.current) loadTrending();
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loadTrending]);
 
   const switchTab = (next: Tab) => {
@@ -69,12 +103,12 @@ export default function LeadersTabs({ performance }: { performance: React.ReactN
 
   const tabs: { key: Tab; label: string; icon?: IconName }[] = [
     { key: 'trending', label: t('trending.tab'), icon: 'sparkle' },
-    { key: 'top', label: t('trending.tabTop'), icon: 'star' },
+    ...(scope ? [] : [{ key: 'top' as Tab, label: t('trending.tabTop'), icon: 'star' as IconName }]),
     { key: 'performance', label: t('trending.tabPerformance') },
   ];
 
   return (
-    <div>
+    <div ref={rootRef}>
       <div
         role="tablist"
         aria-label={t('home.topTitle')}
@@ -111,118 +145,22 @@ export default function LeadersTabs({ performance }: { performance: React.ReactN
       </div>
 
       <div role="tabpanel" id="leaders-panel-trending" aria-labelledby="leaders-tab-trending" hidden={tab !== 'trending'}>
-        <p className="mb-3 text-sm text-ink-faint">{t('trending.help')}</p>
-        {tab === 'trending' && <TrendingPanel state={trending} onRetry={loadTrending} />}
+        <p className="mb-3 text-sm text-ink-faint">{trendingHelp ?? t('trending.help')}</p>
+        {tab === 'trending' && <TrendingPanel state={trending} onRetry={loadTrending} rows={rows} />}
       </div>
 
-      <div role="tabpanel" id="leaders-panel-top" aria-labelledby="leaders-tab-top" hidden={tab !== 'top'}>
-        <p className="mb-3 text-sm text-ink-faint">{t('topRated.help')}</p>
-        {tab === 'top' && <TopRatedPanel state={topRated} onRetry={loadTopRated} />}
-      </div>
+      {!scope && (
+        <div role="tabpanel" id="leaders-panel-top" aria-labelledby="leaders-tab-top" hidden={tab !== 'top'}>
+          <p className="mb-3 text-sm text-ink-faint">{t('topRated.help')}</p>
+          {tab === 'top' && <TopRatedPanel state={topRated} onRetry={loadTopRated} />}
+        </div>
+      )}
 
       <div role="tabpanel" id="leaders-panel-performance" aria-labelledby="leaders-tab-performance" hidden={tab !== 'performance'}>
         <p className="mb-3 text-sm text-ink-faint">{t('home.topHelp')}</p>
         {performance}
       </div>
     </div>
-  );
-}
-
-function ListSkeleton({ label }: { label: string }) {
-  return (
-    <ul className="space-y-2" aria-label={label} aria-busy="true">
-      {Array.from({ length: 10 }, (_, i) => (
-        <li key={i} className="h-[58px] animate-pulse rounded-xl border border-line bg-paper-sink" />
-      ))}
-    </ul>
-  );
-}
-
-function LoadError({ message, onRetry }: { message: string; onRetry: () => void }) {
-  const { t } = useI18n();
-  return (
-    <div className="rounded-xl border border-dashed border-line bg-paper-soft px-4 py-5 text-sm text-ink-soft">
-      {message}{' '}
-      <button type="button" onClick={onRetry} className="font-semibold text-brand hover:underline">
-        {t('trending.retry')}
-      </button>
-    </div>
-  );
-}
-
-function LeaderRow({
-  entry,
-  rank,
-  aside,
-}: {
-  entry: { politician_id: string; name: string; party?: string; constituencyName?: string; state?: string; photo_url?: string };
-  rank: number;
-  aside: React.ReactNode;
-}) {
-  return (
-    <Link
-      href={`/person/${entry.politician_id}`}
-      className="pressable flex items-center gap-3 rounded-xl border border-line bg-white px-3 py-2 transition hover:border-brand/40 hover:shadow-lift"
-    >
-      <RankBadge rank={rank} />
-      <Avatar name={entry.name} src={entry.photo_url} size={40} />
-      <div className="min-w-0 flex-1">
-        <div className="flex flex-wrap items-center gap-x-2">
-          <span className="truncate text-sm font-bold text-ink">{entry.name}</span>
-          {entry.party && <PartyChip party={entry.party} />}
-        </div>
-        {(entry.constituencyName || entry.state) && (
-          <p className="truncate text-xs text-ink-faint">
-            {[entry.constituencyName, entry.state].filter(Boolean).join(', ')}
-          </p>
-        )}
-      </div>
-      <span className="shrink-0 text-right">{aside}</span>
-    </Link>
-  );
-}
-
-function TrendingPanel({ state, onRetry }: { state: Remote<TrendingEntry>; onRetry: () => void }) {
-  const { t } = useI18n();
-
-  if (state.status === 'idle' || state.status === 'loading') return <ListSkeleton label={t('trending.loading')} />;
-  if (state.status === 'error') return <LoadError message={t('trending.error')} onRetry={onRetry} />;
-
-  if (state.entries.length === 0) {
-    return (
-      <div className="flex items-center gap-3 rounded-xl border border-dashed border-line bg-paper-soft px-4 py-5 text-sm text-ink-soft">
-        <Icon name="sparkle" size={18} className="shrink-0 text-rating-ink" />
-        {t('trending.empty')}
-      </div>
-    );
-  }
-
-  return (
-    <ol className="space-y-2">
-      {state.entries.map((e, i) => (
-        <li key={e.politician_id}>
-          <LeaderRow
-            entry={e}
-            rank={i + 1}
-            aside={
-              <>
-                {/* The leader's actual rating (all-time average, same number as
-                    their profile) - NOT an average of the week's events. */}
-                {e.rating_mean != null && (
-                  <span className="flex items-center justify-end gap-1 text-sm font-bold text-rating-ink">
-                    {e.rating_mean.toFixed(1)}
-                    <Icon name="star" size={13} style={{ fill: 'currentColor' }} />
-                  </span>
-                )}
-                <span className="block text-[11px] text-ink-faint">
-                  {e.recent_votes === 1 ? t('trending.oneThisWeek') : t('trending.thisWeek', { n: e.recent_votes })}
-                </span>
-              </>
-            }
-          />
-        </li>
-      ))}
-    </ol>
   );
 }
 

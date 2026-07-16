@@ -638,7 +638,11 @@
     "empty": "Nothing trending yet - a leader appears here once they get a few ratings in a week.",
     "error": "Could not load trending right now.",
     "retry": "Try again",
-    "loading": "Loading trending leaders"
+    "loading": "Loading trending leaders",
+    "stateHelp": "Leaders from {state} with the most new ratings in the last 7 days. This shows attention, not a verdict.",
+    "districtHelp": "Leaders linked to {district} with the most new ratings in the last 7 days. This shows attention, not a verdict.",
+    "risingAria": "This week's ratings average above this leader's overall rating",
+    "fallingAria": "This week's ratings average below this leader's overall rating"
   },
   "topRated": {
     "help": "Highest public rating from votes cast on this site. This is opinion, not a verdict.",

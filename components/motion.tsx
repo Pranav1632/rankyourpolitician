@@ -7,7 +7,10 @@ import { useEffect, useRef, useState, type ReactNode } from 'react';
 let sharedObserver: IntersectionObserver | null = null;
 const shownCallbacks = new WeakMap<Element, () => void>();
 
-function observe(el: Element, onShown: () => void) {
+/** Run a callback the first time an element scrolls into view, via one shared
+ *  IntersectionObserver. Exported for lazy-fetch widgets (e.g. GeoTrending) so
+ *  they piggyback on this observer instead of creating their own. */
+export function observe(el: Element, onShown: () => void) {
   if (typeof IntersectionObserver === 'undefined') {
     onShown();
     return () => {};

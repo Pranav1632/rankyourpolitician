@@ -15,6 +15,7 @@ import DistrictWhoFixes from '@/components/DistrictWhoFixes';
 import PhoneLink from '@/components/PhoneLink';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import RankingList from '@/components/RankingList';
+import LeadersTabs from '@/components/LeadersTabs';
 import AdSlot from '@/components/AdSlot';
 import GeoMap, { type GeoMapShape } from '@/components/GeoMap';
 import { SectionCard, Avatar, PartyChip, Chip, PageHero, StatPill, Eyebrow } from '@/components/ui';
@@ -226,11 +227,18 @@ export default async function DistrictPage({
     </Reveal>
   );
 
+  // Same card as the home page's Top leaders: a "Trending" tab (scoped to the
+  // district, client-fetched only when the card scrolls into view - the page
+  // stays a static ISR serve) next to the server-rendered performance list.
   const leadersCard =
     ranking && ranking.entries.length > 0 ? (
       <Reveal key="leaders">
-        <SectionCard title={tr('home.topTitle')} subtitle={tr('home.topHelp')} icon="star">
-          <RankingList entries={ranking.entries} />
+        <SectionCard title={tr('home.topTitle')} icon="star">
+          <LeadersTabs
+            scope={{ stateCode: state, district: view.district }}
+            trendingHelp={tr('trending.districtHelp', { district: view.district })}
+            performance={<RankingList entries={ranking.entries} />}
+          />
         </SectionCard>
       </Reveal>
     ) : null;

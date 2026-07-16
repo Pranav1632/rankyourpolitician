@@ -18,9 +18,10 @@ import {
   computePerformanceScores,
   computeSentimentScore,
 } from './ranking';
-import { computeTrendingSignals } from './trending';
+import { computeTrendingSignals, trendDirection } from './trending';
 import type { TrendingEntry, TopRatedEntry } from './types';
-import { getDb } from './firebase-admin';
+import { getDb, isFirestoreConfigured } from './firebase-admin';
+import { memVoteAggregates } from './votes';
 import { datasetLastUpdated } from './format';
 import { MINISTER_RANK_LABEL, type MinisterRank, type Fact, type PerfMetric } from './types';
 import seedPoliticians from '@/data/seed/politicians.json';
@@ -89,11 +90,12 @@ export function rankingDocId(level: RankingLevel, geo: string): string {
 // The PROMISE is cached, not the resolved value, so a burst of concurrent
 // renders on a cold instance shares a single load instead of stampeding the
 // database. Failed loads are evicted so the next call retries.
-function ttlCache<T>(ttlMs: number, load: () => Promise<T>): () => Promise<T> {
+function ttlCache<T>(ttlMs: number | (() => number), load: () => Promise<T>): () => Promise<T> {
   let at = 0;
   let pending: Promise<T> | null = null;
   return () => {
-    if (pending && Date.now() - at < ttlMs) return pending;
+    const ttl = typeof ttlMs === 'number' ? ttlMs : ttlMs();
+    if (pending && Date.now() - at < ttl) return pending;
     at = Date.now();
     const p = load();
     pending = p;
@@ -108,6 +110,10 @@ function ttlCache<T>(ttlMs: number, load: () => Promise<T>): () => Promise<T> {
 // vote aggregates drive the visible scores, so they refresh more often.
 const STATIC_TTL_MS = 30 * 60_000;
 const VOTES_TTL_MS = 5 * 60_000;
+// Credential-less mode has no Firestore to protect - the index's only
+// time-varying input is the in-process vote store - so keep it near-fresh: a
+// locally cast vote reaches trending/rankings in seconds, not five minutes.
+const SEED_TTL_MS = 5_000;
 
 /**
  * Live vote aggregates - the only frequently-refreshed Firestore read.
@@ -140,9 +146,15 @@ function loadFromSeed(): Dataset {
 async function loadDataset(): Promise<Dataset> {
   // Politician/constituency data always comes from the committed seed (the same
   // snapshot we publish, updated via `dm refresh-mps` + redeploy). Only the
-  // dynamic vote aggregates are read live from Firestore at runtime.
+  // dynamic vote aggregates are read live from Firestore at runtime. Without
+  // Firestore (credential-less dev) they come from the in-process vote store,
+  // so voting, trending and live rankings all work with zero setup.
   const db = getDb();
-  return { ...loadFromSeed(), voteAggregates: await loadVoteAggregates(), source: db ? 'firestore' : 'seed' };
+  return {
+    ...loadFromSeed(),
+    voteAggregates: db ? await loadVoteAggregates() : memVoteAggregates(),
+    source: db ? 'firestore' : 'seed',
+  };
 }
 
 function buildIndex(ds: Dataset): Index {
@@ -184,7 +196,13 @@ function buildIndex(ds: Dataset): Index {
 // input is the aggregates map, so rebuilding more often than it refreshes is
 // pure wasted CPU (percentiles + rankings over ~6k politicians). ISR caches
 // the rendered page on top of this; vote updates surface within VOTES_TTL_MS.
-const getIndexCached = ttlCache(VOTES_TTL_MS, async () => buildIndex(await loadDataset()));
+const getIndexCached = ttlCache(
+  // The TTL exists to bound Firestore reads; without Firestore it only delays
+  // locally cast votes, so it drops to seconds (decided per call - a dev
+  // server can gain credentials only by restarting, but it costs nothing).
+  () => (isFirestoreConfigured() ? VOTES_TTL_MS : SEED_TTL_MS),
+  async () => buildIndex(await loadDataset()),
+);
 
 export async function getIndex(): Promise<Index> {
   return getIndexCached();
@@ -570,9 +588,38 @@ async function ministerRosterById(): Promise<
   return byId;
 }
 
-export async function getTrending(limit = 5): Promise<TrendingEntry[]> {
+export interface TrendingScope {
+  /** 2-letter state code - the /state/[state] URL segment. */
+  stateCode: string;
+  /** District name, matched the same way as getDistrictView (normSimple). */
+  district?: string;
+}
+
+export async function getTrending(limit = 5, scope?: TrendingScope): Promise<TrendingEntry[]> {
   const idx = await getIndex();
-  const signals = computeTrendingSignals(idx.voteAggregates.values());
+
+  // Geo scoping filters the already-cached aggregates BEFORE scoring - a few
+  // map lookups per rated leader, zero extra Firestore reads. District links
+  // exist only on politician records; for a state scope, CM/minister stubs
+  // rated from government pages are admitted via the state's roster ids
+  // (their aggregates have no politician record to carry a stateCode).
+  let aggs: Iterable<VoteAggregate> = idx.voteAggregates.values();
+  if (scope) {
+    const wantDistrict = scope.district ? normSimple(scope.district) : null;
+    const stubIds = new Set<string>();
+    if (!wantDistrict) {
+      const gov = (await loadStateGovernments()).find((g) => g.stateCode === scope.stateCode);
+      for (const m of gov?.ministers ?? []) stubIds.add(m.politicianId || m.id);
+    }
+    aggs = [...aggs].filter((a) => {
+      const p = idx.politicianById.get(a.politician_id);
+      if (!p) return stubIds.has(a.politician_id);
+      if (p.stateCode !== scope.stateCode) return false;
+      return !wantDistrict || p.districts.some((d) => normSimple(d) === wantDistrict);
+    });
+  }
+
+  const signals = computeTrendingSignals(aggs);
 
   // Lazily built roster lookup for the rare non-MP case (CM / minister stubs).
   let rosterById: Awaited<ReturnType<typeof ministerRosterById>> | null = null;
@@ -587,6 +634,9 @@ export async function getTrending(limit = 5): Promise<TrendingEntry[]> {
     const agg = idx.voteAggregates.get(s.politician_id);
     const total = agg?.total ?? 0;
     const rating_mean = agg && agg.total > 0 ? Math.round((agg.sum / agg.total) * 100) / 100 : null;
+    // Direction of the week's incoming ratings vs that all-time mean - both
+    // numbers are already in hand, so the arrow costs nothing (lib/trending.ts).
+    const direction = trendDirection(s.recent_mean, rating_mean);
     const p = idx.politicianById.get(s.politician_id);
     if (p) {
       out.push({
@@ -597,6 +647,7 @@ export async function getTrending(limit = 5): Promise<TrendingEntry[]> {
         state: p.state,
         photo_url: p.photo_url,
         recent_votes: s.recent_votes,
+        ...(direction ? { direction } : {}),
         rating_mean,
         total_votes: total,
       });
@@ -612,6 +663,7 @@ export async function getTrending(limit = 5): Promise<TrendingEntry[]> {
         state: m.state,
         photo_url: m.photo_url,
         recent_votes: s.recent_votes,
+        ...(direction ? { direction } : {}),
         rating_mean,
         total_votes: total,
       });

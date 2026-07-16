@@ -65,6 +65,31 @@ export interface TrendingSignal {
   recent_mean: number | null;
 }
 
+/** Minimum gap between the week's new-vote mean and the leader's all-time mean
+ *  before a direction arrow shows. Below this the movement is noise - showing
+ *  an arrow for a 0.1 drift would turn random variation into a verdict. */
+export const TREND_DIRECTION_MIN_DELTA = 0.2;
+
+/**
+ * Direction of a leader's incoming ratings: 'up' when this week's new votes
+ * average above the leader's own all-time mean by at least the threshold,
+ * 'down' when below, null when steady. Derived entirely from numbers we
+ * already have (the window mean from the daily buckets, the all-time mean from
+ * the aggregate) - no extra storage or reads. The baseline CONTAINS the recent
+ * votes, which pulls the delta toward 0 as they dominate; the arrow underclaims
+ * rather than overclaims, and a leader whose votes are all recent shows none.
+ */
+export function trendDirection(
+  recentMean: number | null,
+  overallMean: number | null,
+): 'up' | 'down' | null {
+  if (recentMean == null || overallMean == null) return null;
+  const delta = recentMean - overallMean;
+  if (delta >= TREND_DIRECTION_MIN_DELTA) return 'up';
+  if (delta <= -TREND_DIRECTION_MIN_DELTA) return 'down';
+  return null;
+}
+
 /**
  * Trending signals for every aggregate with enough recent activity, strongest
  * first. Deterministic: ties break on raw recent volume, then id, so the list

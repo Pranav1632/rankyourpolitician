@@ -8,6 +8,7 @@ import { DEFAULT_LOCALE } from '@/lib/i18n/locales';
 import { t } from '@/lib/i18n';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import RankingList from '@/components/RankingList';
+import LeadersTabs from '@/components/LeadersTabs';
 import PagedConstituencies from '@/components/PagedConstituencies';
 import StateGovernmentSection from '@/components/StateGovernment';
 import AdSlot from '@/components/AdSlot';
@@ -156,16 +157,25 @@ export default async function StatePage({ params }: { params: Promise<{ lang: st
     </Reveal>
   );
 
+  // Same card as the home page's Top leaders: a "Trending" tab (scoped to the
+  // state, client-fetched only when the card scrolls into view - the page
+  // stays a static ISR serve) next to the server-rendered performance list.
   const leadersCard = (
     <Reveal key="leaders">
-      <SectionCard title={tr('home.topTitle')} subtitle={tr('home.topHelp')} icon="star">
-        {ranking && ranking.entries.length > 0 ? (
-          // Top 100 only - the full state list lives on /rankings
-          // (keeps this page's payload small and navigation fast).
-          <RankingList entries={ranking.entries.slice(0, 100)} seeAllHref={`/rankings?state=${state}`} total={ranking.entries.length} />
-        ) : (
-          <p className="text-sm text-ink-faint">{tr('search.noResults')}</p>
-        )}
+      <SectionCard title={tr('home.topTitle')} icon="star">
+        <LeadersTabs
+          scope={{ stateCode: state }}
+          trendingHelp={tr('trending.stateHelp', { state: view.state })}
+          performance={
+            ranking && ranking.entries.length > 0 ? (
+              // Top 100 only - the full state list lives on /rankings
+              // (keeps this page's payload small and navigation fast).
+              <RankingList entries={ranking.entries.slice(0, 100)} seeAllHref={`/rankings?state=${state}`} total={ranking.entries.length} />
+            ) : (
+              <p className="text-sm text-ink-faint">{tr('search.noResults')}</p>
+            )
+          }
+        />
       </SectionCard>
     </Reveal>
   );

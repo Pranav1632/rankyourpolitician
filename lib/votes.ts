@@ -82,6 +82,16 @@ export async function recordVote(
   return { aggregate, sentiment: computeSentimentScore(politicianId, aggregate), updated };
 }
 
+/** Snapshot of the in-process aggregates - the credential-less fallback the
+ *  read layer uses instead of Firestore, so locally cast votes flow into
+ *  trending and rankings and the site works end to end with zero setup.
+ *  Firestore-configured runtimes never call this. */
+export function memVoteAggregates(): Map<string, VoteAggregate> {
+  const m = new Map<string, VoteAggregate>();
+  for (const id of memVotes.keys()) m.set(id, aggFromMem(id));
+  return m;
+}
+
 export async function getAggregate(politicianId: string): Promise<VoteAggregate | undefined> {
   const db = getDb();
   if (!db) {

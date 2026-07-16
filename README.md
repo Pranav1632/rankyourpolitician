@@ -105,6 +105,12 @@ important thing to understand before changing `lib/data.ts`:
     drive-by rating never trends. Ordering is by decayed activity only - the rating displayed
     is the leader's real one (the same all-time plain average their profile shows), and the
     list is labelled attention, not a verdict. All rules live in `lib/trending.ts`.
+    State and district pages reuse the same card: their Top-leaders card carries the same
+    Trending tab, scoped via `?state=` / `&district=` params. Scoping filters the same
+    in-process aggregates (zero extra Firestore reads), each scope is its own CDN cache
+    key, and on those pages the fetch fires only when the card scrolls into view. A row
+    can carry an up/down arrow - this week's new-vote mean vs the leader's own all-time
+    mean, shown only past a 0.2 threshold so noise never draws an arrow.
   - *Data publishes* - `npm run dm -- publish` calls `POST /api/revalidate` (Bearer
     `REVALIDATE_SECRET`), which sweeps the page cache; each page regenerates on its next
     visit. A page that regenerates within ~30 min of a publish can still bake the previous
@@ -134,8 +140,8 @@ app/
     accountability/ methodology/ about/ privacy/ terms/ grievance/
   api/vote/                   vote endpoint (POST: Turnstile + rate-limit + Firestore
                               transaction; GET: live sentiment for the widget, CDN-cached)
-  api/trending/               trending leaders (decayed 7-day rating activity,
-                              CDN-cached, zero extra Firestore reads)
+  api/trending/               trending leaders (decayed 7-day rating activity, optional
+                              state/district scope, CDN-cached, zero extra Firestore reads)
   api/revalidate/             on-demand cache sweep after `dm publish` (Bearer secret)
   api/health/                 liveness probe (zero Firestore reads)
 middleware.ts                 locale routing: rewrites clean URLs to /{locale}/... from the

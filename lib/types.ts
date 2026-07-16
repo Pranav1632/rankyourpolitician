@@ -485,6 +485,10 @@ export interface TrendingEntry {
   photo_url?: string;
   /** New votes inside the trending window (the "N this week" line). */
   recent_votes: number;
+  /** Which way this week's incoming ratings lean vs the leader's own all-time
+   *  mean: present only when the gap clears TREND_DIRECTION_MIN_DELTA
+   *  (lib/trending.ts), absent when steady. Movement, never a verdict. */
+  direction?: 'up' | 'down';
   /** The leader's actual rating: plain all-time average of votes cast (1..5),
    *  identical to the profile's displayed number. Never the Bayesian score. */
   rating_mean: number | null;
